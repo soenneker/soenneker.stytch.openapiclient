@@ -17,10 +17,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The connection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OIDCConnection? Connection { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection? Connection { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OIDCConnection Connection { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection Connection { get; set; }
 #endif
         /// <summary>Globally unique UUID that is returned with every API call. This value is important to log for debugging purposes; we may ask for this value to help identify a specific API call when helping you debug an issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,7 +57,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "connection", n => { Connection = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OIDCConnection>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OIDCConnection.CreateFromDiscriminatorValue); } },
+                { "connection", n => { Connection = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection.CreateFromDiscriminatorValue); } },
                 { "request_id", n => { RequestId = n.GetStringValue(); } },
                 { "status_code", n => { StatusCode = n.GetIntValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OIDCConnection>("connection", Connection);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection>("connection", Connection);
             writer.WriteStringValue("request_id", RequestId);
             writer.WriteIntValue("status_code", StatusCode);
             writer.WriteAdditionalData(AdditionalData);

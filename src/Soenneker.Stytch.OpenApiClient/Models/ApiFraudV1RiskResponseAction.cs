@@ -10,15 +10,15 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     {
         [EnumMember(Value = "ALLOW")]
         #pragma warning disable CS1591
-        ALLOW,
+        Allow,
         #pragma warning restore CS1591
         [EnumMember(Value = "CHALLENGE")]
         #pragma warning disable CS1591
-        CHALLENGE,
+        Challenge,
         #pragma warning restore CS1591
         [EnumMember(Value = "BLOCK")]
         #pragma warning disable CS1591
-        BLOCK,
+        Block,
         #pragma warning restore CS1591
     }
 }

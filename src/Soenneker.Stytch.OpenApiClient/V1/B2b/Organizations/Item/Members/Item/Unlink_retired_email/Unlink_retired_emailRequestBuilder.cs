@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Unlink_retired_email
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\b2b\organizations\{organization_id}\members\{member_id}\unlink_retired_email
+    /// Builds and executes requests for operations under \v1\b2b\organizations\{organizationId}\members\{memberId}\unlink_retired_email
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Unlink_retired_emailRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Unlink_retired_emailRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organization_id}/members/{member_id}/unlink_retired_email", pathParameters)
+        public Unlink_retired_emailRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organizationId}/members/{memberId}/unlink_retired_email", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Unlink_retired_emailRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organization_id}/members/{member_id}/unlink_retired_email", rawUrl)
+        public Unlink_retired_emailRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organizationId}/members/{memberId}/unlink_retired_email", rawUrl)
         {
         }
         /// <summary>

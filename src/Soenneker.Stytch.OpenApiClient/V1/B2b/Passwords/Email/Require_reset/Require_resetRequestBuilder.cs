@@ -36,22 +36,22 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Email.Require_reset
         /// <summary>
         /// Require a password be reset by the associated email address. This endpoint is only functional for cross-org password use cases.If there are is only one active Member using the associated email address in the Project, the password will be deleted.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1B2bPasswordsEmailRequireResetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailRequireResetResponse"/></returns>
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1B2bPasswordsEmailRequireResetResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1B2bPasswordsEmailRequireResetRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailRequireResetResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailRequireResetRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1B2bPasswordsEmailRequireResetResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1B2bPasswordsEmailRequireResetRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailRequireResetResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailRequireResetRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1B2bPasswordsEmailRequireResetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1B2bPasswordsEmailRequireResetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailRequireResetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailRequireResetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Require a password be reset by the associated email address. This endpoint is only functional for cross-org password use cases.If there are is only one active Member using the associated email address in the Project, the password will be deleted.
@@ -61,11 +61,11 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Email.Require_reset
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1B2bPasswordsEmailRequireResetRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailRequireResetRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1B2bPasswordsEmailRequireResetRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailRequireResetRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

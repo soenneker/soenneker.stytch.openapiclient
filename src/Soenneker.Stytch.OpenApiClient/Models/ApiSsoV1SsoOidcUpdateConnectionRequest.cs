@@ -18,10 +18,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values, which will appear on the member&apos;s Trusted Metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequest_attribute_mapping? AttributeMapping { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequestAttributeMappingProperty? AttributeMapping { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequest_attribute_mapping AttributeMapping { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequestAttributeMappingProperty AttributeMapping { get; set; }
 #endif
         /// <summary>The location of the URL that starts an OAuth login at the IdP. This will be provided by the IdP.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,7 +122,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attribute_mapping", n => { AttributeMapping = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequest_attribute_mapping>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequest_attribute_mapping.CreateFromDiscriminatorValue); } },
+                { "attribute_mapping", n => { AttributeMapping = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequestAttributeMappingProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequestAttributeMappingProperty.CreateFromDiscriminatorValue); } },
                 { "authorization_url", n => { AuthorizationUrl = n.GetStringValue(); } },
                 { "client_id", n => { ClientId = n.GetStringValue(); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
@@ -142,7 +142,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequest_attribute_mapping>("attribute_mapping", AttributeMapping);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequestAttributeMappingProperty>("attribute_mapping", AttributeMapping);
             writer.WriteStringValue("authorization_url", AuthorizationUrl);
             writer.WriteStringValue("client_id", ClientId);
             writer.WriteStringValue("client_secret", ClientSecret);

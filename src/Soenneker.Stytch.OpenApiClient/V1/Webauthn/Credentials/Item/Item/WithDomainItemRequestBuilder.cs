@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\webauthn\credentials\{user_id}\{domain}
+    /// Builds and executes requests for operations under \v1\webauthn\credentials\{userId}\{domain}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithDomainItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDomainItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/webauthn/credentials/{user_id}/{domain}", pathParameters)
+        public WithDomainItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/webauthn/credentials/{userId}/{domain}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithDomainItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/webauthn/credentials/{user_id}/{domain}", rawUrl)
+        public WithDomainItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/webauthn/credentials/{userId}/{domain}", rawUrl)
         {
         }
         /// <summary>

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Saml.Item.Connections.Item.Url
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\b2b\sso\saml\{organization_id}\connections\{connection_id}\url
+    /// Builds and executes requests for operations under \v1\b2b\sso\saml\{organizationId}\connections\{connectionId}\url
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UrlRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Saml.Item.Connections.Item.U
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UrlRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/sso/saml/{organization_id}/connections/{connection_id}/url", pathParameters)
+        public UrlRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/sso/saml/{organizationId}/connections/{connectionId}/url", pathParameters)
         {
         }
         /// <summary>
@@ -30,28 +30,28 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Saml.Item.Connections.Item.U
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UrlRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/sso/saml/{organization_id}/connections/{connection_id}/url", rawUrl)
+        public UrlRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/sso/saml/{organizationId}/connections/{connectionId}/url", rawUrl)
         {
         }
         /// <summary>
         /// Used to update an existing SAML connection using an IDP metadata URL.A newly created connection will not become active until all the following are provided:* `idp_sso_url`* `idp_entity_id`* `x509_certificate`* `attribute_mapping` (must be supplied using [Update SAML Connection](update-saml-connection))
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByURLResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByUrlResponse"/></returns>
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByURLResponse?> PutAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByURLRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByUrlResponse?> PutAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByUrlRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByURLResponse> PutAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByURLRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByUrlResponse> PutAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByUrlRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByURLResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByURLResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByUrlResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByUrlResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Used to update an existing SAML connection using an IDP metadata URL.A newly created connection will not become active until all the following are provided:* `idp_sso_url`* `idp_entity_id`* `x509_certificate`* `attribute_mapping` (must be supplied using [Update SAML Connection](update-saml-connection))
@@ -61,11 +61,11 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Saml.Item.Connections.Item.U
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByURLRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByUrlRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByURLRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateByUrlRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -10,19 +10,19 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     {
         [EnumMember(Value = "first_party")]
         #pragma warning disable CS1591
-        First_party,
+        FirstParty,
         #pragma warning restore CS1591
         [EnumMember(Value = "first_party_public")]
         #pragma warning disable CS1591
-        First_party_public,
+        FirstPartyPublic,
         #pragma warning restore CS1591
         [EnumMember(Value = "third_party")]
         #pragma warning disable CS1591
-        Third_party,
+        ThirdParty,
         #pragma warning restore CS1591
         [EnumMember(Value = "third_party_public")]
         #pragma warning disable CS1591
-        Third_party_public,
+        ThirdPartyPublic,
         #pragma warning restore CS1591
     }
 }

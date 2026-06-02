@@ -18,10 +18,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The connection_implicit_role_assignments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnectionImplicitRoleAssignment>? ConnectionImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment>? ConnectionImplicitRoleAssignments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnectionImplicitRoleAssignment> ConnectionImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment> ConnectionImplicitRoleAssignments { get; set; }
 #endif
         /// <summary>A human-readable display name for the connection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,10 +50,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The group_implicit_role_assignments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLGroupImplicitRoleAssignment>? GroupImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment>? GroupImplicitRoleAssignments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLGroupImplicitRoleAssignment> GroupImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment> GroupImplicitRoleAssignments { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoExternalCreateConnectionRequest"/> and sets the default values.
@@ -80,11 +80,11 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "connection_implicit_role_assignments", n => { ConnectionImplicitRoleAssignments = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnectionImplicitRoleAssignment>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnectionImplicitRoleAssignment.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "connection_implicit_role_assignments", n => { ConnectionImplicitRoleAssignments = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "external_connection_id", n => { ExternalConnectionId = n.GetStringValue(); } },
                 { "external_organization_id", n => { ExternalOrganizationId = n.GetStringValue(); } },
-                { "group_implicit_role_assignments", n => { GroupImplicitRoleAssignments = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLGroupImplicitRoleAssignment>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLGroupImplicitRoleAssignment.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "group_implicit_role_assignments", n => { GroupImplicitRoleAssignments = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -94,11 +94,11 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnectionImplicitRoleAssignment>("connection_implicit_role_assignments", ConnectionImplicitRoleAssignments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment>("connection_implicit_role_assignments", ConnectionImplicitRoleAssignments);
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteStringValue("external_connection_id", ExternalConnectionId);
             writer.WriteStringValue("external_organization_id", ExternalOrganizationId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLGroupImplicitRoleAssignment>("group_implicit_role_assignments", GroupImplicitRoleAssignments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment>("group_implicit_role_assignments", GroupImplicitRoleAssignments);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

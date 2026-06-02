@@ -25,10 +25,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The list of [OIDC Connections](https://stytch.com/docs/b2b/api/oidc-connection-object) owned by this organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OIDCConnection>? OidcConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection>? OidcConnections { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OIDCConnection> OidcConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection> OidcConnections { get; set; }
 #endif
         /// <summary>Globally unique UUID that is returned with every API call. This value is important to log for debugging purposes; we may ask for this value to help identify a specific API call when helping you debug an issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The list of [SAML Connections](https://stytch.com/docs/b2b/api/saml-connection-object) owned by this organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnection>? SamlConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection>? SamlConnections { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnection> SamlConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection> SamlConnections { get; set; }
 #endif
         /// <summary>The HTTP status code of the response. Stytch follows standard HTTP response status code patterns, e.g. 2XX values equate to success, 3XX values are redirects, 4XX are client errors, and 5XX are server errors.</summary>
         public int? StatusCode { get; set; }
@@ -74,9 +74,9 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "external_connections", n => { ExternalConnections = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1Connection>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1Connection.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "oidc_connections", n => { OidcConnections = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OIDCConnection>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OIDCConnection.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "oidc_connections", n => { OidcConnections = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "request_id", n => { RequestId = n.GetStringValue(); } },
-                { "saml_connections", n => { SamlConnections = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnection>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnection.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "saml_connections", n => { SamlConnections = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status_code", n => { StatusCode = n.GetIntValue(); } },
             };
         }
@@ -88,9 +88,9 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1Connection>("external_connections", ExternalConnections);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OIDCConnection>("oidc_connections", OidcConnections);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection>("oidc_connections", OidcConnections);
             writer.WriteStringValue("request_id", RequestId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnection>("saml_connections", SamlConnections);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection>("saml_connections", SamlConnections);
             writer.WriteIntValue("status_code", StatusCode);
             writer.WriteAdditionalData(AdditionalData);
         }

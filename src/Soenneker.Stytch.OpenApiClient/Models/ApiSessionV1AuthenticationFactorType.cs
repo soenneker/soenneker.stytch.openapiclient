@@ -10,7 +10,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     {
         [EnumMember(Value = "magic_link")]
         #pragma warning disable CS1591
-        Magic_link,
+        MagicLink,
         #pragma warning restore CS1591
         [EnumMember(Value = "otp")]
         #pragma warning disable CS1591
@@ -18,7 +18,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth")]
         #pragma warning disable CS1591
-        Oauth,
+        OAuth,
         #pragma warning restore CS1591
         [EnumMember(Value = "webauthn")]
         #pragma warning disable CS1591
@@ -38,7 +38,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "signature_challenge")]
         #pragma warning disable CS1591
-        Signature_challenge,
+        SignatureChallenge,
         #pragma warning restore CS1591
         [EnumMember(Value = "sso")]
         #pragma warning disable CS1591
@@ -50,11 +50,11 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "recovery_codes")]
         #pragma warning disable CS1591
-        Recovery_codes,
+        RecoveryCodes,
         #pragma warning restore CS1591
         [EnumMember(Value = "email_otp")]
         #pragma warning disable CS1591
-        Email_otp,
+        EmailOtp,
         #pragma warning restore CS1591
         [EnumMember(Value = "impersonated")]
         #pragma warning disable CS1591
@@ -62,7 +62,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "trusted_auth_token")]
         #pragma warning disable CS1591
-        Trusted_auth_token,
+        TrustedAuthToken,
         #pragma warning restore CS1591
     }
 }

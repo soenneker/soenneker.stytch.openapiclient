@@ -64,18 +64,18 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>An arbitrary JSON object for storing application-specific data or identity-provider-specific data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequest_trusted_metadata? TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequestTrustedMetadataProperty? TrustedMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequest_trusted_metadata TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequestTrustedMetadataProperty TrustedMetadata { get; set; }
 #endif
         /// <summary>An arbitrary JSON object of application-specific data. These fields can be edited directly by the  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)  for complete field behavior details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequest_untrusted_metadata? UntrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequestUntrustedMetadataProperty? UntrustedMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequest_untrusted_metadata UntrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequestUntrustedMetadataProperty UntrustedMetadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequest"/> and sets the default values.
@@ -110,8 +110,8 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "mfa_phone_number", n => { MfaPhoneNumber = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequest_trusted_metadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequest_trusted_metadata.CreateFromDiscriminatorValue); } },
-                { "untrusted_metadata", n => { UntrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequest_untrusted_metadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequest_untrusted_metadata.CreateFromDiscriminatorValue); } },
+                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequestTrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequestTrustedMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "untrusted_metadata", n => { UntrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequestUntrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequestUntrustedMetadataProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -129,8 +129,8 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("mfa_phone_number", MfaPhoneNumber);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfPrimitiveValues<string>("roles", Roles);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequest_trusted_metadata>("trusted_metadata", TrustedMetadata);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequest_untrusted_metadata>("untrusted_metadata", UntrustedMetadata);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequestTrustedMetadataProperty>("trusted_metadata", TrustedMetadata);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequestUntrustedMetadataProperty>("untrusted_metadata", UntrustedMetadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -36,22 +36,22 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Idp.Oauth.Authorize.Start
         /// <summary>
         /// Initiates a request for authorization of a Connected App to access a Member&apos;s account.Call this endpoint using the query parameters from an OAuth Authorization request.This endpoint validates various fields (`scope`, `client_id`, `redirect_uri`, `prompt`, etc...) are correct and returnsrelevant information for rendering an OAuth Consent Screen.This endpoint returns:- A public representation of the Connected App requesting authorization- Whether _explicit_ consent must be granted before proceeding with the authorization- A list of scopes the Member has the ability to grant the Connected AppUse this response to prompt the Member for consent (if necessary) before calling the [Submit OAuth Authorization](https://stytch.com/docs/b2b/api/connected-apps-oauth-authorize) endpoint.Exactly one of the following must be provided to identify the Member granting authorization:- `organization_id` + `member_id`- `session_token`- `session_jwt`If a `session_token` or `session_jwt` is passed, the OAuth Authorization will be linked to the Member&apos;s session for tracking purposes.One of these fields must be used if the Connected App intends to complete the [Exchange Access Token](https://stytch.com/docs/b2b/api/connected-app-access-token-exchange) flow.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bIdpV1B2bIdpOauthAuthorizeStartResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse"/></returns>
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bIdpV1B2bIdpOauthAuthorizeStartResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bIdpV1B2bIdpOauthAuthorizeStartRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bIdpV1B2bIdpOauthAuthorizeStartResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bIdpV1B2bIdpOauthAuthorizeStartRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bIdpV1B2bIdpOauthAuthorizeStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bIdpV1B2bIdpOauthAuthorizeStartResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Initiates a request for authorization of a Connected App to access a Member&apos;s account.Call this endpoint using the query parameters from an OAuth Authorization request.This endpoint validates various fields (`scope`, `client_id`, `redirect_uri`, `prompt`, etc...) are correct and returnsrelevant information for rendering an OAuth Consent Screen.This endpoint returns:- A public representation of the Connected App requesting authorization- Whether _explicit_ consent must be granted before proceeding with the authorization- A list of scopes the Member has the ability to grant the Connected AppUse this response to prompt the Member for consent (if necessary) before calling the [Submit OAuth Authorization](https://stytch.com/docs/b2b/api/connected-apps-oauth-authorize) endpoint.Exactly one of the following must be provided to identify the Member granting authorization:- `organization_id` + `member_id`- `session_token`- `session_jwt`If a `session_token` or `session_jwt` is passed, the OAuth Authorization will be linked to the Member&apos;s session for tracking purposes.One of these fields must be used if the Connected App intends to complete the [Exchange Access Token](https://stytch.com/docs/b2b/api/connected-app-access-token-exchange) flow.
@@ -61,11 +61,11 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Idp.Oauth.Authorize.Start
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bIdpV1B2bIdpOauthAuthorizeStartRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bIdpV1B2bIdpOauthAuthorizeStartRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

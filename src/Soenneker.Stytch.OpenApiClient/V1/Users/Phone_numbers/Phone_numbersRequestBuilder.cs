@@ -17,14 +17,14 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Phone_numbers
     {
         /// <summary>Gets an item from the Soenneker.Stytch.OpenApiClient.v1.users.phone_numbers.item collection</summary>
         /// <param name="position">The `phone_id` to be deleted.</param>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Phone_numbers.Item.WithPhone_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Stytch.OpenApiClient.V1.Users.Phone_numbers.Item.WithPhone_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Phone_numbers.Item.WithPhoneItemRequestBuilder"/></returns>
+        public global::Soenneker.Stytch.OpenApiClient.V1.Users.Phone_numbers.Item.WithPhoneItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("phone_id", position);
-                return new global::Soenneker.Stytch.OpenApiClient.V1.Users.Phone_numbers.Item.WithPhone_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("phoneId", position);
+                return new global::Soenneker.Stytch.OpenApiClient.V1.Users.Phone_numbers.Item.WithPhoneItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

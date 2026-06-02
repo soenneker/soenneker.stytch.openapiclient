@@ -26,14 +26,14 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients
         }
         /// <summary>Gets an item from the Soenneker.Stytch.OpenApiClient.v1.m2m.clients.item collection</summary>
         /// <param name="position">The ID of the client.</param>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.WithClient_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.WithClient_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.WithClientItemRequestBuilder"/></returns>
+        public global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.WithClientItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("client_id", position);
-                return new global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.WithClient_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("clientId", position);
+                return new global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.WithClientItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -55,22 +55,22 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients
         /// <summary>
         /// Creates a new M2M Client. On initial client creation, you may pass in a custom `client_id` or `client_secret` to import an existing M2M client. If you do not pass in a custom `client_id` or `client_secret`, one will be generated automatically. The `client_id` must be unique among all clients in your project.**Important:** This is the only time you will be able to view the generated `client_secret` in the API response. Stytch stores a hash of the `client_secret` and cannot recover the value if lost. Be sure to persist the `client_secret` in a secure location. If the `client_secret` is lost, you will need to trigger a secret rotation flow to receive another one.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsCreateResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateResponse"/></returns>
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsCreateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsCreateResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsCreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsCreateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a new M2M Client. On initial client creation, you may pass in a custom `client_id` or `client_secret` to import an existing M2M client. If you do not pass in a custom `client_id` or `client_secret`, one will be generated automatically. The `client_id` must be unique among all clients in your project.**Important:** This is the only time you will be able to view the generated `client_secret` in the API response. Stytch stores a hash of the `client_secret` and cannot recover the value if lost. Be sure to persist the `client_secret` in a secure location. If the `client_secret` is lost, you will need to trigger a secret rotation flow to receive another one.
@@ -80,11 +80,11 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

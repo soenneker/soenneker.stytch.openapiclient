@@ -123,26 +123,26 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>An array containing a list of all TOTP instances for a given User in the Stytch API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1TOTP>? Totps { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Totp>? Totps { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1TOTP> Totps { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Totp> Totps { get; set; }
 #endif
         /// <summary>The `trusted_metadata` field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1User_trusted_metadata? TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserTrustedMetadataProperty? TrustedMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1User_trusted_metadata TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserTrustedMetadataProperty TrustedMetadata { get; set; }
 #endif
         /// <summary>The `untrusted_metadata` field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1User_untrusted_metadata? UntrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserUntrustedMetadataProperty? UntrustedMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1User_untrusted_metadata UntrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserUntrustedMetadataProperty UntrustedMetadata { get; set; }
 #endif
         /// <summary>The unique ID of the affected User.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -199,9 +199,9 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "providers", n => { Providers = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1OAuthProvider>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1OAuthProvider.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "roles", n => { Roles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "totps", n => { Totps = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1TOTP>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1TOTP.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1User_trusted_metadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1User_trusted_metadata.CreateFromDiscriminatorValue); } },
-                { "untrusted_metadata", n => { UntrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1User_untrusted_metadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1User_untrusted_metadata.CreateFromDiscriminatorValue); } },
+                { "totps", n => { Totps = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Totp>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Totp.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserTrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserTrustedMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "untrusted_metadata", n => { UntrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserUntrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserUntrustedMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
                 { "webauthn_registrations", n => { WebauthnRegistrations = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1WebAuthnRegistration>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1WebAuthnRegistration.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -227,9 +227,9 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1OAuthProvider>("providers", Providers);
             writer.WriteCollectionOfPrimitiveValues<string>("roles", Roles);
             writer.WriteStringValue("status", Status);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1TOTP>("totps", Totps);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1User_trusted_metadata>("trusted_metadata", TrustedMetadata);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1User_untrusted_metadata>("untrusted_metadata", UntrustedMetadata);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Totp>("totps", Totps);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserTrustedMetadataProperty>("trusted_metadata", TrustedMetadata);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserUntrustedMetadataProperty>("untrusted_metadata", UntrustedMetadata);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1WebAuthnRegistration>("webauthn_registrations", WebauthnRegistrations);
             writer.WriteAdditionalData(AdditionalData);

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Google
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\b2b\organizations\{organization_id}\members\{member_id}\oauth_providers\google
+    /// Builds and executes requests for operations under \v1\b2b\organizations\{organizationId}\members\{memberId}\oauth_providers\google
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GoogleRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GoogleRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organization_id}/members/{member_id}/oauth_providers/google{?include_refresh_token*}", pathParameters)
+        public GoogleRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organizationId}/members/{memberId}/oauth_providers/google{?include_refresh_token*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,26 +30,26 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public GoogleRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organization_id}/members/{member_id}/oauth_providers/google{?include_refresh_token*}", rawUrl)
+        public GoogleRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organizationId}/members/{memberId}/oauth_providers/google{?include_refresh_token*}", rawUrl)
         {
         }
         /// <summary>
         /// Retrieve the saved Google access token and ID token for a member. After a successful OAuth login, Stytch will save the issued access token and ID token from the identity provider. If a refresh token has been issued, Stytch will refresh the access token automatically.Google One Tap does not return access tokens. If the member has only authenticated through Google One Tap and not through a regular Google OAuth flow, this endpoint will not return any tokens.__Note:__ Google does not issue a refresh token on every login, and refresh tokens may expire if unused.To force a refresh token to be issued, pass the `?provider_prompt=consent` query param into the[Start Google OAuth flow](https://stytch.com/docs/b2b/api/oauth-google-start) endpoint.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOauthProvidersGoogleResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOauthProvidersGoogleResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Google.GoogleRequestBuilder.GoogleRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Google.GoogleRequestBuilder.GoogleRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOauthProvidersGoogleResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Google.GoogleRequestBuilder.GoogleRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Google.GoogleRequestBuilder.GoogleRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOauthProvidersGoogleResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOauthProvidersGoogleResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the saved Google access token and ID token for a member. After a successful OAuth login, Stytch will save the issued access token and ID token from the identity provider. If a refresh token has been issued, Stytch will refresh the access token automatically.Google One Tap does not return access tokens. If the member has only authenticated through Google One Tap and not through a regular Google OAuth flow, this endpoint will not return any tokens.__Note:__ Google does not issue a refresh token on every login, and refresh tokens may expire if unused.To force a refresh token to be issued, pass the `?provider_prompt=consent` query param into the[Start Google OAuth flow](https://stytch.com/docs/b2b/api/oauth-google-start) endpoint.

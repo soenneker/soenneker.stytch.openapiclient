@@ -49,10 +49,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The siwe_params property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SIWEParamsResponse? SiweParams { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParamsResponse? SiweParams { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SIWEParamsResponse SiweParams { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParamsResponse SiweParams { get; set; }
 #endif
         /// <summary>The HTTP status code of the response. Stytch follows standard HTTP response status code patterns, e.g. 2XX values equate to success, 3XX values are redirects, 4XX are client errors, and 5XX are server errors.</summary>
         public int? StatusCode { get; set; }
@@ -109,7 +109,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "session", n => { Session = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1Session>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1Session.CreateFromDiscriminatorValue); } },
                 { "session_jwt", n => { SessionJwt = n.GetStringValue(); } },
                 { "session_token", n => { SessionToken = n.GetStringValue(); } },
-                { "siwe_params", n => { SiweParams = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SIWEParamsResponse>(global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SIWEParamsResponse.CreateFromDiscriminatorValue); } },
+                { "siwe_params", n => { SiweParams = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParamsResponse>(global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParamsResponse.CreateFromDiscriminatorValue); } },
                 { "status_code", n => { StatusCode = n.GetIntValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1User>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1User.CreateFromDiscriminatorValue); } },
                 { "user_device", n => { UserDevice = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceInfo>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceInfo.CreateFromDiscriminatorValue); } },
@@ -127,7 +127,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1Session>("session", Session);
             writer.WriteStringValue("session_jwt", SessionJwt);
             writer.WriteStringValue("session_token", SessionToken);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SIWEParamsResponse>("siwe_params", SiweParams);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParamsResponse>("siwe_params", SiweParams);
             writer.WriteIntValue("status_code", StatusCode);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1User>("user", User);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceInfo>("user_device", UserDevice);

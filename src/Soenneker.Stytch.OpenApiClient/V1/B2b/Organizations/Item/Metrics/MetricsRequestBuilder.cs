@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Metrics
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\b2b\organizations\{organization_id}\metrics
+    /// Builds and executes requests for operations under \v1\b2b\organizations\{organizationId}\metrics
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MetricsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Metrics
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MetricsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organization_id}/metrics", pathParameters)
+        public MetricsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organizationId}/metrics", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Metrics
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MetricsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organization_id}/metrics", rawUrl)
+        public MetricsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organizationId}/metrics", rawUrl)
         {
         }
         /// <summary>

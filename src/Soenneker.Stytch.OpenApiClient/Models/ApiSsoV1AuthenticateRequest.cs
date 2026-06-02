@@ -36,10 +36,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in  `session_duration_minutes`. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To  delete a key, supply a null value. Custom claims made with reserved claims (`iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) will be ignored.  Total custom claims size cannot exceed four kilobytes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequest_session_custom_claims? SessionCustomClaims { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequestSessionCustomClaimsProperty? SessionCustomClaims { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequest_session_custom_claims SessionCustomClaims { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequestSessionCustomClaimsProperty SessionCustomClaims { get; set; }
 #endif
         /// <summary>Set the session lifetime to be this many minutes from now. This will start a new session if one doesn&apos;t already exist,  returning both an opaque `session_token` and `session_jwt` for this session. Remember that the `session_jwt` will have a fixed lifetime of  five minutes regardless of the underlying session duration, and will need to be refreshed over time.  This value must be a minimum of 5 and a maximum of 527040 minutes (366 days).  If a `session_token` or `session_jwt` is provided then a successful authentication will continue to extend the session this many minutes.  If the `session_duration_minutes` parameter is not specified, a Stytch session will be created with a 60 minute duration. If you don&apos;t want  to use the Stytch session product, you can ignore the session fields in the response.</summary>
         public int? SessionDurationMinutes { get; set; }
@@ -103,7 +103,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "intermediate_session_token", n => { IntermediateSessionToken = n.GetStringValue(); } },
                 { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequestLocale>(); } },
                 { "pkce_code_verifier", n => { PkceCodeVerifier = n.GetStringValue(); } },
-                { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequest_session_custom_claims>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequest_session_custom_claims.CreateFromDiscriminatorValue); } },
+                { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequestSessionCustomClaimsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequestSessionCustomClaimsProperty.CreateFromDiscriminatorValue); } },
                 { "session_duration_minutes", n => { SessionDurationMinutes = n.GetIntValue(); } },
                 { "session_jwt", n => { SessionJwt = n.GetStringValue(); } },
                 { "session_token", n => { SessionToken = n.GetStringValue(); } },
@@ -121,7 +121,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("intermediate_session_token", IntermediateSessionToken);
             writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequestLocale>("locale", Locale);
             writer.WriteStringValue("pkce_code_verifier", PkceCodeVerifier);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequest_session_custom_claims>("session_custom_claims", SessionCustomClaims);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequestSessionCustomClaimsProperty>("session_custom_claims", SessionCustomClaims);
             writer.WriteIntValue("session_duration_minutes", SessionDurationMinutes);
             writer.WriteStringValue("session_jwt", SessionJwt);
             writer.WriteStringValue("session_token", SessionToken);

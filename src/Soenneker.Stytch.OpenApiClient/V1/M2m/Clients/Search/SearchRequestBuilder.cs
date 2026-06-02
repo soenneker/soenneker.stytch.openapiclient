@@ -36,22 +36,22 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Search
         /// <summary>
         /// &quot;Search for M2M Clients within your Stytch Project. Submit an empty `query` in the request to return all M2M Clients.The following search filters are supported today:- `client_id`: Pass in a list of client IDs to get many clients in a single request- `client_name`: Search for clients by exact match on client name- `scopes`: Search for clients assigned a specific scope&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsSearchResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSearchResponse"/></returns>
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsSearchResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSearchResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsSearchResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSearchResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsSearchResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsSearchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSearchResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSearchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Search for M2M Clients within your Stytch Project. Submit an empty `query` in the request to return all M2M Clients.The following search filters are supported today:- `client_id`: Pass in a list of client IDs to get many clients in a single request- `client_name`: Search for clients by exact match on client name- `scopes`: Search for clients assigned a specific scope&quot;
@@ -61,11 +61,11 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Search
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2mV1M2mClientsSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

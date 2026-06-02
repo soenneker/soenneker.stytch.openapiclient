@@ -17,10 +17,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>An array of operand objects that contains all of the filters and values to apply to your search query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQuery_operands>? Operands { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty>? Operands { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQuery_operands> Operands { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty> Operands { get; set; }
 #endif
         /// <summary>The operator property</summary>
         public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperator? Operator { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "operands", n => { Operands = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQuery_operands>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQuery_operands.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "operands", n => { Operands = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperator>(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQuery_operands>("operands", Operands);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty>("operands", Operands);
             writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperator>("operator", Operator);
             writer.WriteAdditionalData(AdditionalData);
         }

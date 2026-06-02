@@ -17,14 +17,14 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials
     {
         /// <summary>Gets an item from the Soenneker.Stytch.OpenApiClient.v1.webauthn.credentials.item collection</summary>
         /// <param name="position">The `user_id` of an active user the Passkey or WebAuthn registration should be tied to.</param>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.WithUser_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.WithUser_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.WithUserItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("user_id", position);
-                return new global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.WithUser_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

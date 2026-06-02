@@ -36,22 +36,22 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Migrate
         /// <summary>
         /// **Warning:** This endpoint marks the Member&apos;s email address as verified. Do **not** use this endpoint unless the user has already verified their email address in your application. Adds an existing password to a Member&apos;s email that doesn&apos;t have a password yet.We support migrating members from passwords stored with bcrypt, scrypt, argon2, MD-5, SHA-1, SHA-512, and PBKDF2. This endpoint has a rate limit of 100 requests per second.The Member&apos;s email will be marked as verified when you use this endpoint.If you are using **cross-organization passwords**, i.e. allowing an end user to share the same password across all of their Organizations, call this method separately for each `organization_id` associated with the given `email_address` to ensure the password is set across all of their Organizations.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1MigrateResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1MigrateResponse"/></returns>
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1MigrateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1MigrateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1MigrateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1MigrateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1MigrateResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1MigrateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1MigrateResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1MigrateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1MigrateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1MigrateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1MigrateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1MigrateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// **Warning:** This endpoint marks the Member&apos;s email address as verified. Do **not** use this endpoint unless the user has already verified their email address in your application. Adds an existing password to a Member&apos;s email that doesn&apos;t have a password yet.We support migrating members from passwords stored with bcrypt, scrypt, argon2, MD-5, SHA-1, SHA-512, and PBKDF2. This endpoint has a rate limit of 100 requests per second.The Member&apos;s email will be marked as verified when you use this endpoint.If you are using **cross-organization passwords**, i.e. allowing an end user to share the same password across all of their Organizations, call this method separately for each `organization_id` associated with the given `email_address` to ensure the password is set across all of their Organizations.
@@ -61,11 +61,11 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Migrate
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1MigrateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1MigrateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bPasswordV1MigrateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1MigrateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

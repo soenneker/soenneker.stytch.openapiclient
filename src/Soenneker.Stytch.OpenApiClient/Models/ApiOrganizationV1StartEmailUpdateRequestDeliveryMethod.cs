@@ -10,11 +10,11 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     {
         [EnumMember(Value = "EMAIL_MAGIC_LINK")]
         #pragma warning disable CS1591
-        EMAIL_MAGIC_LINK,
+        EmailMagicLink,
         #pragma warning restore CS1591
         [EnumMember(Value = "EMAIL_OTP")]
         #pragma warning disable CS1591
-        EMAIL_OTP,
+        EmailOtp,
         #pragma warning restore CS1591
     }
 }

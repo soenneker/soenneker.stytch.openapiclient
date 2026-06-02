@@ -17,14 +17,14 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.Jwks
     {
         /// <summary>Gets an item from the Soenneker.Stytch.OpenApiClient.v1.b2b.sessions.jwks.item collection</summary>
         /// <param name="position">The `project_id` to get the JWKS for.</param>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.Jwks.Item.WithProject_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.Jwks.Item.WithProject_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.Jwks.Item.WithProjectItemRequestBuilder"/></returns>
+        public global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.Jwks.Item.WithProjectItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("project_id", position);
-                return new global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.Jwks.Item.WithProject_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("projectId", position);
+                return new global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.Jwks.Item.WithProjectItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Start_email_update
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\b2b\organizations\{organization_id}\members\{member_id}\start_email_update
+    /// Builds and executes requests for operations under \v1\b2b\organizations\{organizationId}\members\{memberId}\start_email_update
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Start_email_updateRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Start_email_updateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organization_id}/members/{member_id}/start_email_update", pathParameters)
+        public Start_email_updateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organizationId}/members/{memberId}/start_email_update", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Start_email_updateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organization_id}/members/{member_id}/start_email_update", rawUrl)
+        public Start_email_updateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organizationId}/members/{memberId}/start_email_update", rawUrl)
         {
         }
         /// <summary>

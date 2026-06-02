@@ -141,18 +141,18 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The scim_registration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SCIMRegistration? ScimRegistration { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ScimRegistration? ScimRegistration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SCIMRegistration ScimRegistration { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ScimRegistration ScimRegistration { get; set; }
 #endif
         /// <summary>An array of registered [SAML Connection](https://stytch.com/docs/b2b/api/saml-connection-object) or [OIDC Connection](https://stytch.com/docs/b2b/api/oidc-connection-object) objects the Member has authenticated with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SSORegistration>? SsoRegistrations { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SsoRegistration>? SsoRegistrations { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SSORegistration> SsoRegistrations { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SsoRegistration> SsoRegistrations { get; set; }
 #endif
         /// <summary>&quot;The status of the Member. The possible values are: `pending`, `invited`, `active`, or `deleted`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -173,18 +173,18 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>An arbitrary JSON object for storing application-specific data or identity-provider-specific data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member_trusted_metadata? TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberTrustedMetadataProperty? TrustedMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member_trusted_metadata TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberTrustedMetadataProperty TrustedMetadata { get; set; }
 #endif
         /// <summary>An arbitrary JSON object of application-specific data. These fields can be edited directly by the  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)  for complete field behavior details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member_untrusted_metadata? UntrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberUntrustedMetadataProperty? UntrustedMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member_untrusted_metadata UntrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberUntrustedMetadataProperty UntrustedMetadata { get; set; }
 #endif
         /// <summary>The timestamp of when the Member was last updated. Values conform to the RFC 3339 standard and are expressed in UTC, e.g. `2021-12-29T12:33:09Z`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -239,12 +239,12 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
                 { "retired_email_addresses", n => { RetiredEmailAddresses = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1RetiredEmail>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1RetiredEmail.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "roles", n => { Roles = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRole>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRole.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "scim_registration", n => { ScimRegistration = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SCIMRegistration>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SCIMRegistration.CreateFromDiscriminatorValue); } },
-                { "sso_registrations", n => { SsoRegistrations = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SSORegistration>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SSORegistration.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "scim_registration", n => { ScimRegistration = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ScimRegistration>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ScimRegistration.CreateFromDiscriminatorValue); } },
+                { "sso_registrations", n => { SsoRegistrations = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SsoRegistration>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SsoRegistration.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "totp_registration_id", n => { TotpRegistrationId = n.GetStringValue(); } },
-                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member_trusted_metadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member_trusted_metadata.CreateFromDiscriminatorValue); } },
-                { "untrusted_metadata", n => { UntrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member_untrusted_metadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member_untrusted_metadata.CreateFromDiscriminatorValue); } },
+                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberTrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberTrustedMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "untrusted_metadata", n => { UntrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberUntrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberUntrustedMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "updated_at", n => { UpdatedAt = n.GetStringValue(); } },
             };
         }
@@ -275,12 +275,12 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("organization_id", OrganizationId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1RetiredEmail>("retired_email_addresses", RetiredEmailAddresses);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRole>("roles", Roles);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SCIMRegistration>("scim_registration", ScimRegistration);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SSORegistration>("sso_registrations", SsoRegistrations);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ScimRegistration>("scim_registration", ScimRegistration);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SsoRegistration>("sso_registrations", SsoRegistrations);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("totp_registration_id", TotpRegistrationId);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member_trusted_metadata>("trusted_metadata", TrustedMetadata);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member_untrusted_metadata>("untrusted_metadata", UntrustedMetadata);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberTrustedMetadataProperty>("trusted_metadata", TrustedMetadata);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberUntrustedMetadataProperty>("untrusted_metadata", UntrustedMetadata);
             writer.WriteStringValue("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

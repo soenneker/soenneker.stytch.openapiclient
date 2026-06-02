@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Connected_apps
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\b2b\organizations\{organization_id}\members\{member_id}\connected_apps
+    /// Builds and executes requests for operations under \v1\b2b\organizations\{organizationId}\members\{memberId}\connected_apps
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Connected_appsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Stytch.OpenApiClient.v1.b2b.organizations.item.members.item.connected_apps.item collection</summary>
         /// <param name="position">The ID of the Connected App.</param>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Connected_apps.Item.WithConnected_app_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Connected_apps.Item.WithConnected_app_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Connected_apps.Item.WithConnectedAppItemRequestBuilder"/></returns>
+        public global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Connected_apps.Item.WithConnectedAppItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("connected_app_id", position);
-                return new global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Connected_apps.Item.WithConnected_app_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("connectedAppId", position);
+                return new global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Connected_apps.Item.WithConnectedAppItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Connected_appsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organization_id}/members/{member_id}/connected_apps", pathParameters)
+        public Connected_appsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organizationId}/members/{memberId}/connected_apps", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Connected_appsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organization_id}/members/{member_id}/connected_apps", rawUrl)
+        public Connected_appsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organizationId}/members/{memberId}/connected_apps", rawUrl)
         {
         }
         /// <summary>

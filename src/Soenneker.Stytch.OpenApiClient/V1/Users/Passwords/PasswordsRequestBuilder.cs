@@ -17,14 +17,14 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Passwords
     {
         /// <summary>Gets an item from the Soenneker.Stytch.OpenApiClient.v1.users.passwords.item collection</summary>
         /// <param name="position">The `password_id` to be deleted.</param>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Passwords.Item.WithPassword_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Stytch.OpenApiClient.V1.Users.Passwords.Item.WithPassword_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Passwords.Item.WithPasswordItemRequestBuilder"/></returns>
+        public global::Soenneker.Stytch.OpenApiClient.V1.Users.Passwords.Item.WithPasswordItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("password_id", position);
-                return new global::Soenneker.Stytch.OpenApiClient.V1.Users.Passwords.Item.WithPassword_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("passwordId", position);
+                return new global::Soenneker.Stytch.OpenApiClient.V1.Users.Passwords.Item.WithPasswordItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

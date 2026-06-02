@@ -36,10 +36,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>&quot;An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values. Required attributes: `email` and one of `full_name` or `first_name` and `last_name`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequest_attribute_mapping? AttributeMapping { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequestAttributeMappingProperty? AttributeMapping { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequest_attribute_mapping AttributeMapping { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequestAttributeMappingProperty AttributeMapping { get; set; }
 #endif
         /// <summary>A human-readable display name for the connection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,10 +80,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>All Members who log in with this SAML connection will implicitly receive the specified Roles. See the [RBAC guide](https://stytch.com/docs/b2b/guides/rbac/role-assignment) for more information about role assignment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnectionImplicitRoleAssignment>? SamlConnectionImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment>? SamlConnectionImplicitRoleAssignments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnectionImplicitRoleAssignment> SamlConnectionImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment> SamlConnectionImplicitRoleAssignments { get; set; }
 #endif
         /// <summary>A PKCS1 format RSA private key used to decrypt encrypted SAML assertions. Only PKCS1 format (starting with &quot;-----BEGIN RSA PRIVATE KEY-----&quot;) is supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -96,10 +96,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>Defines the names of the SAML groups that grant specific role assignments. For each group-Role pair, if a Member logs in with this SAML connection and belongs to the specified SAML group, they will be granted the associated Role. See the [RBAC guide](https://stytch.com/docs/b2b/guides/rbac/role-assignment) for more information about role assignment. Before adding any group implicit role assignments, you must add a &quot;groups&quot; key to your SAML connection&apos;s         `attribute_mapping`. Make sure that your IdP is configured to correctly send the group information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLGroupImplicitRoleAssignment>? SamlGroupImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment>? SamlGroupImplicitRoleAssignments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLGroupImplicitRoleAssignment> SamlGroupImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment> SamlGroupImplicitRoleAssignments { get; set; }
 #endif
         /// <summary>A PKCS1 format RSA private key used for signing SAML requests. Only PKCS1 format (starting with &quot;-----BEGIN RSA PRIVATE KEY-----&quot;) is supported. When provided, Stytch will generate a new x509 certificate from this key and return it in the signing_certificates array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -145,16 +145,16 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "allow_gateway_callback", n => { AllowGatewayCallback = n.GetBoolValue(); } },
                 { "alternative_acs_url", n => { AlternativeAcsUrl = n.GetStringValue(); } },
                 { "alternative_audience_uri", n => { AlternativeAudienceUri = n.GetStringValue(); } },
-                { "attribute_mapping", n => { AttributeMapping = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequest_attribute_mapping>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequest_attribute_mapping.CreateFromDiscriminatorValue); } },
+                { "attribute_mapping", n => { AttributeMapping = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequestAttributeMappingProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequestAttributeMappingProperty.CreateFromDiscriminatorValue); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "identity_provider", n => { IdentityProvider = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1UpdateConnectionRequestIdentityProvider>(); } },
                 { "idp_entity_id", n => { IdpEntityId = n.GetStringValue(); } },
                 { "idp_initiated_auth_disabled", n => { IdpInitiatedAuthDisabled = n.GetBoolValue(); } },
                 { "idp_sso_url", n => { IdpSsoUrl = n.GetStringValue(); } },
                 { "nameid_format", n => { NameidFormat = n.GetStringValue(); } },
-                { "saml_connection_implicit_role_assignments", n => { SamlConnectionImplicitRoleAssignments = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnectionImplicitRoleAssignment>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnectionImplicitRoleAssignment.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "saml_connection_implicit_role_assignments", n => { SamlConnectionImplicitRoleAssignments = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "saml_encryption_private_key", n => { SamlEncryptionPrivateKey = n.GetStringValue(); } },
-                { "saml_group_implicit_role_assignments", n => { SamlGroupImplicitRoleAssignments = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLGroupImplicitRoleAssignment>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLGroupImplicitRoleAssignment.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "saml_group_implicit_role_assignments", n => { SamlGroupImplicitRoleAssignments = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "signing_private_key", n => { SigningPrivateKey = n.GetStringValue(); } },
                 { "x509_certificate", n => { X509Certificate = n.GetStringValue(); } },
             };
@@ -169,16 +169,16 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteBoolValue("allow_gateway_callback", AllowGatewayCallback);
             writer.WriteStringValue("alternative_acs_url", AlternativeAcsUrl);
             writer.WriteStringValue("alternative_audience_uri", AlternativeAudienceUri);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequest_attribute_mapping>("attribute_mapping", AttributeMapping);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequestAttributeMappingProperty>("attribute_mapping", AttributeMapping);
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1UpdateConnectionRequestIdentityProvider>("identity_provider", IdentityProvider);
             writer.WriteStringValue("idp_entity_id", IdpEntityId);
             writer.WriteBoolValue("idp_initiated_auth_disabled", IdpInitiatedAuthDisabled);
             writer.WriteStringValue("idp_sso_url", IdpSsoUrl);
             writer.WriteStringValue("nameid_format", NameidFormat);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLConnectionImplicitRoleAssignment>("saml_connection_implicit_role_assignments", SamlConnectionImplicitRoleAssignments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment>("saml_connection_implicit_role_assignments", SamlConnectionImplicitRoleAssignments);
             writer.WriteStringValue("saml_encryption_private_key", SamlEncryptionPrivateKey);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SAMLGroupImplicitRoleAssignment>("saml_group_implicit_role_assignments", SamlGroupImplicitRoleAssignments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment>("saml_group_implicit_role_assignments", SamlGroupImplicitRoleAssignments);
             writer.WriteStringValue("signing_private_key", SigningPrivateKey);
             writer.WriteStringValue("x509_certificate", X509Certificate);
             writer.WriteAdditionalData(AdditionalData);

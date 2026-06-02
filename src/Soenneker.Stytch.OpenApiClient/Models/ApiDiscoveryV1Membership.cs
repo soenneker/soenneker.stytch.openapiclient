@@ -17,10 +17,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>An object containing additional metadata about the membership, if available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership_details? Details { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1MembershipDetailsProperty? Details { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership_details Details { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1MembershipDetailsProperty Details { get; set; }
 #endif
         /// <summary>The member property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership_details>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership_details.CreateFromDiscriminatorValue); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1MembershipDetailsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1MembershipDetailsProperty.CreateFromDiscriminatorValue); } },
                 { "member", n => { Member = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership_details>("details", Details);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1MembershipDetailsProperty>("details", Details);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member>("member", Member);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);

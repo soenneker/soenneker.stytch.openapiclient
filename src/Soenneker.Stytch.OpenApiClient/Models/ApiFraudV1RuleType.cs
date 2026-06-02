@@ -10,39 +10,39 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     {
         [EnumMember(Value = "VISITOR_ID")]
         #pragma warning disable CS1591
-        VISITOR_ID,
+        VisitorId,
         #pragma warning restore CS1591
         [EnumMember(Value = "BROWSER_ID")]
         #pragma warning disable CS1591
-        BROWSER_ID,
+        BrowserId,
         #pragma warning restore CS1591
         [EnumMember(Value = "VISITOR_FINGERPRINT")]
         #pragma warning disable CS1591
-        VISITOR_FINGERPRINT,
+        VisitorFingerprint,
         #pragma warning restore CS1591
         [EnumMember(Value = "BROWSER_FINGERPRINT")]
         #pragma warning disable CS1591
-        BROWSER_FINGERPRINT,
+        BrowserFingerprint,
         #pragma warning restore CS1591
         [EnumMember(Value = "HARDWARE_FINGERPRINT")]
         #pragma warning disable CS1591
-        HARDWARE_FINGERPRINT,
+        HardwareFingerprint,
         #pragma warning restore CS1591
         [EnumMember(Value = "NETWORK_FINGERPRINT")]
         #pragma warning disable CS1591
-        NETWORK_FINGERPRINT,
+        NetworkFingerprint,
         #pragma warning restore CS1591
         [EnumMember(Value = "CIDR_BLOCK")]
         #pragma warning disable CS1591
-        CIDR_BLOCK,
+        CidrBlock,
         #pragma warning restore CS1591
         [EnumMember(Value = "ASN")]
         #pragma warning disable CS1591
-        ASN,
+        Asn,
         #pragma warning restore CS1591
         [EnumMember(Value = "COUNTRY_CODE")]
         #pragma warning disable CS1591
-        COUNTRY_CODE,
+        CountryCode,
         #pragma warning restore CS1591
     }
 }

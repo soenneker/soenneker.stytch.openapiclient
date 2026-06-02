@@ -14,23 +14,23 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "md_5")]
         #pragma warning disable CS1591
-        Md_5,
+        Md5,
         #pragma warning restore CS1591
         [EnumMember(Value = "argon_2i")]
         #pragma warning disable CS1591
-        Argon_2i,
+        Argon2I,
         #pragma warning restore CS1591
         [EnumMember(Value = "argon_2id")]
         #pragma warning disable CS1591
-        Argon_2id,
+        Argon2Id,
         #pragma warning restore CS1591
         [EnumMember(Value = "sha_1")]
         #pragma warning disable CS1591
-        Sha_1,
+        Sha1,
         #pragma warning restore CS1591
         [EnumMember(Value = "sha_512")]
         #pragma warning disable CS1591
-        Sha_512,
+        Sha512,
         #pragma warning restore CS1591
         [EnumMember(Value = "scrypt")]
         #pragma warning disable CS1591
@@ -42,7 +42,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "pbkdf_2")]
         #pragma warning disable CS1591
-        Pbkdf_2,
+        Pbkdf2,
         #pragma warning restore CS1591
     }
 }

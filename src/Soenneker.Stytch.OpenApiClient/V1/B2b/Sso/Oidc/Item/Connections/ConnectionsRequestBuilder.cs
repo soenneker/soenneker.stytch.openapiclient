@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\b2b\sso\oidc\{organization_id}\connections
+    /// Builds and executes requests for operations under \v1\b2b\sso\oidc\{organizationId}\connections
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConnectionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Stytch.OpenApiClient.v1.b2b.sso.oidc.item.connections.item collection</summary>
         /// <param name="position">Globally unique UUID that identifies a specific SSO `connection_id` for a Member.</param>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item.WithConnection_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item.WithConnection_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item.WithConnectionItemRequestBuilder"/></returns>
+        public global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item.WithConnectionItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("connection_id", position);
-                return new global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item.WithConnection_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("connectionId", position);
+                return new global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item.WithConnectionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ConnectionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/sso/oidc/{organization_id}/connections", pathParameters)
+        public ConnectionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/sso/oidc/{organizationId}/connections", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ConnectionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/sso/oidc/{organization_id}/connections", rawUrl)
+        public ConnectionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/sso/oidc/{organizationId}/connections", rawUrl)
         {
         }
     }

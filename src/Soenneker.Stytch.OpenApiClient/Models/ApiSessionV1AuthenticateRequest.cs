@@ -26,10 +26,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in `session_duration_minutes`. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.  Custom claims made with reserved claims (&quot;iss&quot;, &quot;sub&quot;, &quot;aud&quot;, &quot;exp&quot;, &quot;nbf&quot;, &quot;iat&quot;, &quot;jti&quot;) will be ignored. Total custom claims size cannot exceed four kilobytes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateRequest_session_custom_claims? SessionCustomClaims { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateRequestSessionCustomClaimsProperty? SessionCustomClaims { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateRequest_session_custom_claims SessionCustomClaims { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateRequestSessionCustomClaimsProperty SessionCustomClaims { get; set; }
 #endif
         /// <summary>Set the session lifetime to be this many minutes from now; minimum of 5 and a maximum of 527040 minutes (366 days). Note that a successful authentication will continue to extend the session this many minutes.</summary>
         public int? SessionDurationMinutes { get; set; }
@@ -75,7 +75,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "authorization_check", n => { AuthorizationCheck = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthorizationCheck>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthorizationCheck.CreateFromDiscriminatorValue); } },
-                { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateRequest_session_custom_claims>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateRequest_session_custom_claims.CreateFromDiscriminatorValue); } },
+                { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateRequestSessionCustomClaimsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateRequestSessionCustomClaimsProperty.CreateFromDiscriminatorValue); } },
                 { "session_duration_minutes", n => { SessionDurationMinutes = n.GetIntValue(); } },
                 { "session_jwt", n => { SessionJwt = n.GetStringValue(); } },
                 { "session_token", n => { SessionToken = n.GetStringValue(); } },
@@ -89,7 +89,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthorizationCheck>("authorization_check", AuthorizationCheck);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateRequest_session_custom_claims>("session_custom_claims", SessionCustomClaims);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateRequestSessionCustomClaimsProperty>("session_custom_claims", SessionCustomClaims);
             writer.WriteIntValue("session_duration_minutes", SessionDurationMinutes);
             writer.WriteStringValue("session_jwt", SessionJwt);
             writer.WriteStringValue("session_token", SessionToken);

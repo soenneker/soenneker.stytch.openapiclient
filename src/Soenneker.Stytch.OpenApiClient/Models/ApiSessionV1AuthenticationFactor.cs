@@ -227,10 +227,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The oidc_sso_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OIDCSSOFactor? OidcSsoFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OidcssoFactor? OidcSsoFactor { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OIDCSSOFactor OidcSsoFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OidcssoFactor OidcSsoFactor { get; set; }
 #endif
         /// <summary>The phone_number_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -259,10 +259,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The saml_sso_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SAMLSSOFactor? SamlSsoFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SamlssoFactor? SamlSsoFactor { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SAMLSSOFactor SamlSsoFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SamlssoFactor SamlSsoFactor { get; set; }
 #endif
         /// <summary>The shopify_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -422,11 +422,11 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "linked_in_oauth_factor", n => { LinkedInOauthFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1LinkedInOAuthFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1LinkedInOAuthFactor.CreateFromDiscriminatorValue); } },
                 { "microsoft_oauth_factor", n => { MicrosoftOauthFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1MicrosoftOAuthFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1MicrosoftOAuthFactor.CreateFromDiscriminatorValue); } },
                 { "oauth_access_token_exchange_factor", n => { OauthAccessTokenExchangeFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OAuthAccessTokenExchangeFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OAuthAccessTokenExchangeFactor.CreateFromDiscriminatorValue); } },
-                { "oidc_sso_factor", n => { OidcSsoFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OIDCSSOFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OIDCSSOFactor.CreateFromDiscriminatorValue); } },
+                { "oidc_sso_factor", n => { OidcSsoFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OidcssoFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OidcssoFactor.CreateFromDiscriminatorValue); } },
                 { "phone_number_factor", n => { PhoneNumberFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1PhoneNumberFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1PhoneNumberFactor.CreateFromDiscriminatorValue); } },
                 { "recovery_code_factor", n => { RecoveryCodeFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1RecoveryCodeFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1RecoveryCodeFactor.CreateFromDiscriminatorValue); } },
                 { "salesforce_oauth_factor", n => { SalesforceOauthFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SalesforceOAuthFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SalesforceOAuthFactor.CreateFromDiscriminatorValue); } },
-                { "saml_sso_factor", n => { SamlSsoFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SAMLSSOFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SAMLSSOFactor.CreateFromDiscriminatorValue); } },
+                { "saml_sso_factor", n => { SamlSsoFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SamlssoFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SamlssoFactor.CreateFromDiscriminatorValue); } },
                 { "shopify_oauth_factor", n => { ShopifyOauthFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ShopifyOAuthFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ShopifyOAuthFactor.CreateFromDiscriminatorValue); } },
                 { "slack_oauth_exchange_factor", n => { SlackOauthExchangeFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthExchangeFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthExchangeFactor.CreateFromDiscriminatorValue); } },
                 { "slack_oauth_factor", n => { SlackOauthFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthFactor.CreateFromDiscriminatorValue); } },
@@ -477,11 +477,11 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1LinkedInOAuthFactor>("linked_in_oauth_factor", LinkedInOauthFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1MicrosoftOAuthFactor>("microsoft_oauth_factor", MicrosoftOauthFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OAuthAccessTokenExchangeFactor>("oauth_access_token_exchange_factor", OauthAccessTokenExchangeFactor);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OIDCSSOFactor>("oidc_sso_factor", OidcSsoFactor);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OidcssoFactor>("oidc_sso_factor", OidcSsoFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1PhoneNumberFactor>("phone_number_factor", PhoneNumberFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1RecoveryCodeFactor>("recovery_code_factor", RecoveryCodeFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SalesforceOAuthFactor>("salesforce_oauth_factor", SalesforceOauthFactor);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SAMLSSOFactor>("saml_sso_factor", SamlSsoFactor);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SamlssoFactor>("saml_sso_factor", SamlSsoFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ShopifyOAuthFactor>("shopify_oauth_factor", ShopifyOauthFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthExchangeFactor>("slack_oauth_exchange_factor", SlackOauthExchangeFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthFactor>("slack_oauth_factor", SlackOauthFactor);

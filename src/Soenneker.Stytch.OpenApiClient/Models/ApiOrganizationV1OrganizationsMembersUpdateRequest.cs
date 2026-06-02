@@ -72,20 +72,20 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>An arbitrary JSON object for storing application-specific data or identity-provider-specific data.          If a session header is passed into the request, this field may **not** be passed into the request. You cannot          update trusted metadata when acting as a Member.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequest_trusted_metadata? TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequestTrustedMetadataProperty? TrustedMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequest_trusted_metadata TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequestTrustedMetadataProperty TrustedMetadata { get; set; }
 #endif
         /// <summary>If `unlink_email` is `true` and an `email_address` is provided, the Member&apos;s previous email will be deleted instead of retired. Defaults to `false`.</summary>
         public bool? UnlinkEmail { get; set; }
         /// <summary>An arbitrary JSON object of application-specific data. These fields can be edited directly by the  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)  for complete field behavior details.If this field is provided and a session header is passed into the request, the Member Session must have permission to perform the `update.info.untrusted-metadata` action on the `stytch.member` Resource. Alternatively, if the Member Session matches the Member associated with the `member_id` passed in the request, the authorization check will also allow a Member Session that has permission to perform the `update.info.untrusted-metadata` action on the `stytch.self` Resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequest_untrusted_metadata? UntrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequestUntrustedMetadataProperty? UntrustedMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequest_untrusted_metadata UntrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequestUntrustedMetadataProperty UntrustedMetadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequest"/> and sets the default values.
@@ -121,9 +121,9 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "preserve_existing_sessions", n => { PreserveExistingSessions = n.GetBoolValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequest_trusted_metadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequest_trusted_metadata.CreateFromDiscriminatorValue); } },
+                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequestTrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequestTrustedMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "unlink_email", n => { UnlinkEmail = n.GetBoolValue(); } },
-                { "untrusted_metadata", n => { UntrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequest_untrusted_metadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequest_untrusted_metadata.CreateFromDiscriminatorValue); } },
+                { "untrusted_metadata", n => { UntrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequestUntrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequestUntrustedMetadataProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -142,9 +142,9 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("preserve_existing_sessions", PreserveExistingSessions);
             writer.WriteCollectionOfPrimitiveValues<string>("roles", Roles);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequest_trusted_metadata>("trusted_metadata", TrustedMetadata);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequestTrustedMetadataProperty>("trusted_metadata", TrustedMetadata);
             writer.WriteBoolValue("unlink_email", UnlinkEmail);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequest_untrusted_metadata>("untrusted_metadata", UntrustedMetadata);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUpdateRequestUntrustedMetadataProperty>("untrusted_metadata", UntrustedMetadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

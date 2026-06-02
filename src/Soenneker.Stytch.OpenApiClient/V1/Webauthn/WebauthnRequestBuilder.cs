@@ -35,14 +35,14 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Webauthn
         }
         /// <summary>Gets an item from the Soenneker.Stytch.OpenApiClient.v1.webauthn.item collection</summary>
         /// <param name="position">Globally unique UUID that identifies a Passkey or WebAuthn registration in the Stytch API. The `webauthn_registration_id` is used when you need to operate on a specific User&apos;s WebAuthn registration.</param>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Item.WithWebauthn_registration_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Item.WithWebauthn_registration_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Item.WithWebauthnRegistrationItemRequestBuilder"/></returns>
+        public global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Item.WithWebauthnRegistrationItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("webauthn_registration_id", position);
-                return new global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Item.WithWebauthn_registration_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("webauthnRegistrationId", position);
+                return new global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Item.WithWebauthnRegistrationItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

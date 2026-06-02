@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\m2m\clients\{client_id}\secrets
+    /// Builds and executes requests for operations under \v1\m2m\clients\{clientId}\secrets
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SecretsRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SecretsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/m2m/clients/{client_id}/secrets", pathParameters)
+        public SecretsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/m2m/clients/{clientId}/secrets", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SecretsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/m2m/clients/{client_id}/secrets", rawUrl)
+        public SecretsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/m2m/clients/{clientId}/secrets", rawUrl)
         {
         }
     }

@@ -10,23 +10,23 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     {
         [EnumMember(Value = "UNKNOWN")]
         #pragma warning disable CS1591
-        UNKNOWN,
+        Unknown,
         #pragma warning restore CS1591
         [EnumMember(Value = "USER_COUNT")]
         #pragma warning disable CS1591
-        USER_COUNT,
+        UserCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "ORGANIZATION_COUNT")]
         #pragma warning disable CS1591
-        ORGANIZATION_COUNT,
+        OrganizationCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "MEMBER_COUNT")]
         #pragma warning disable CS1591
-        MEMBER_COUNT,
+        MemberCount,
         #pragma warning restore CS1591
         [EnumMember(Value = "M2M_CLIENT_COUNT")]
         #pragma warning disable CS1591
-        M2M_CLIENT_COUNT,
+        M2MClientCount,
         #pragma warning restore CS1591
     }
 }

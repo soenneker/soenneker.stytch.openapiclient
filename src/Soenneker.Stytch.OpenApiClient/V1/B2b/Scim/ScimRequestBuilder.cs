@@ -17,14 +17,14 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim
     {
         /// <summary>Gets an item from the Soenneker.Stytch.OpenApiClient.v1.b2b.scim.item collection</summary>
         /// <param name="position">Globally unique UUID that identifies a specific Organization. The `organization_id` is critical to perform operations on an Organization, so be sure to preserve this value. You may also use the organization_slug or organization_external_id here as a convenience.</param>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.WithOrganization_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.WithOrganization_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.WithOrganizationItemRequestBuilder"/></returns>
+        public global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.WithOrganizationItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("organization_id", position);
-                return new global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.WithOrganization_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("organizationId", position);
+                return new global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.WithOrganizationItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

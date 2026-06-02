@@ -17,14 +17,14 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Webauthn_registrations
     {
         /// <summary>Gets an item from the Soenneker.Stytch.OpenApiClient.v1.users.webauthn_registrations.item collection</summary>
         /// <param name="position">The `webauthn_registration_id` to be deleted.</param>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Webauthn_registrations.Item.WithWebauthn_registration_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Stytch.OpenApiClient.V1.Users.Webauthn_registrations.Item.WithWebauthn_registration_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Webauthn_registrations.Item.WithWebauthnRegistrationItemRequestBuilder"/></returns>
+        public global::Soenneker.Stytch.OpenApiClient.V1.Users.Webauthn_registrations.Item.WithWebauthnRegistrationItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("webauthn_registration_id", position);
-                return new global::Soenneker.Stytch.OpenApiClient.V1.Users.Webauthn_registrations.Item.WithWebauthn_registration_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("webauthnRegistrationId", position);
+                return new global::Soenneker.Stytch.OpenApiClient.V1.Users.Webauthn_registrations.Item.WithWebauthnRegistrationItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

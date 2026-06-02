@@ -36,22 +36,22 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Oauth.Attach
         /// <summary>
         /// &quot;Generate an OAuth Attach Token to pre-associate an OAuth flow with an existing Stytch User. Pass the returned `oauth_attach_token` to the same provider&apos;s OAuth Start endpoint to treat this OAuth flow as a login for that user instead of a signup for a new user.Exactly one of `user_id`, `session_token`, or `session_jwt` must be provided to identify the target Stytch User.**Note**: This is an optional step in the OAuth flow. Stytch can often determine whether to associate a new OAuth login with an existing User based on verified information (such as an email address) from the identity provider. This endpoint is useful for cases where we can&apos;t, such as missing or unverified provider information.See our [OAuth email address behavior](https://stytch.com/docs/guides/oauth/email-behavior) resource for additional information.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOauthV1AttachResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachResponse"/></returns>
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOauthV1AttachResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiOauthV1AttachRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOauthV1AttachResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiOauthV1AttachRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOauthV1AttachResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOauthV1AttachResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Generate an OAuth Attach Token to pre-associate an OAuth flow with an existing Stytch User. Pass the returned `oauth_attach_token` to the same provider&apos;s OAuth Start endpoint to treat this OAuth flow as a login for that user instead of a signup for a new user.Exactly one of `user_id`, `session_token`, or `session_jwt` must be provided to identify the target Stytch User.**Note**: This is an optional step in the OAuth flow. Stytch can often determine whether to associate a new OAuth login with an existing User based on verified information (such as an email address) from the identity provider. This endpoint is useful for cases where we can&apos;t, such as missing or unverified provider information.See our [OAuth email address behavior](https://stytch.com/docs/guides/oauth/email-behavior) resource for additional information.&quot;
@@ -61,11 +61,11 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Oauth.Attach
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiOauthV1AttachRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiOauthV1AttachRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

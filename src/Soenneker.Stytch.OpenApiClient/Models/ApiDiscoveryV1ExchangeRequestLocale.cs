@@ -30,7 +30,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "de-DE")]
         #pragma warning disable CS1591
-        DeDE,
+        DeDe,
         #pragma warning restore CS1591
         [EnumMember(Value = "zh-Hans")]
         #pragma warning disable CS1591
@@ -38,7 +38,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "ca-ES")]
         #pragma warning disable CS1591
-        CaES,
+        CaEs,
         #pragma warning restore CS1591
     }
 }

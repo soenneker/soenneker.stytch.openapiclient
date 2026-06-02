@@ -41,10 +41,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>A map of allowed OAuth tenants. If this field is not passed in, the Organization will not allow JIT provisioning by OAuth Tenant. Allowed keys are &quot;slack&quot;, &quot;hubspot&quot;, and &quot;github&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization_allowed_oauth_tenants? AllowedOauthTenants { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationAllowedOAuthTenantsProperty? AllowedOauthTenants { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization_allowed_oauth_tenants AllowedOauthTenants { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationAllowedOAuthTenantsProperty AllowedOauthTenants { get; set; }
 #endif
         /// <summary>An array of third party Connected App IDs that are allowed for the Organization. Only used when the Organization&apos;s `third_party_connected_apps_allowed_type` is `RESTRICTED`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -193,18 +193,18 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The scim_active_connection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSCIMConnection? ScimActiveConnection { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveScimConnection? ScimActiveConnection { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSCIMConnection ScimActiveConnection { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveScimConnection ScimActiveConnection { get; set; }
 #endif
         /// <summary>An array of active [SAML Connection references](https://stytch.com/docs/b2b/api/saml-connection-object) or [OIDC Connection references](https://stytch.com/docs/b2b/api/oidc-connection-object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSSOConnection>? SsoActiveConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSsoConnection>? SsoActiveConnections { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSSOConnection> SsoActiveConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSsoConnection> SsoActiveConnections { get; set; }
 #endif
         /// <summary>The default connection used for SSO when there are multiple active connections.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -241,10 +241,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>An arbitrary JSON object for storing application-specific data or identity-provider-specific data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization_trusted_metadata? TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationTrustedMetadataProperty? TrustedMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization_trusted_metadata TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationTrustedMetadataProperty TrustedMetadata { get; set; }
 #endif
         /// <summary>The timestamp of when the Organization was last updated. Values conform to the RFC 3339 standard and are expressed in UTC, e.g. `2021-12-29T12:33:09Z`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -282,7 +282,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "allowed_auth_methods", n => { AllowedAuthMethods = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "allowed_first_party_connected_apps", n => { AllowedFirstPartyConnectedApps = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "allowed_mfa_methods", n => { AllowedMfaMethods = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "allowed_oauth_tenants", n => { AllowedOauthTenants = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization_allowed_oauth_tenants>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization_allowed_oauth_tenants.CreateFromDiscriminatorValue); } },
+                { "allowed_oauth_tenants", n => { AllowedOauthTenants = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationAllowedOAuthTenantsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationAllowedOAuthTenantsProperty.CreateFromDiscriminatorValue); } },
                 { "allowed_third_party_connected_apps", n => { AllowedThirdPartyConnectedApps = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "auth_methods", n => { AuthMethods = n.GetStringValue(); } },
                 { "claimed_email_domains", n => { ClaimedEmailDomains = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -301,13 +301,13 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "organization_name", n => { OrganizationName = n.GetStringValue(); } },
                 { "organization_slug", n => { OrganizationSlug = n.GetStringValue(); } },
                 { "rbac_email_implicit_role_assignments", n => { RbacEmailImplicitRoleAssignments = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1EmailImplicitRoleAssignment>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1EmailImplicitRoleAssignment.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "scim_active_connection", n => { ScimActiveConnection = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSCIMConnection>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSCIMConnection.CreateFromDiscriminatorValue); } },
-                { "sso_active_connections", n => { SsoActiveConnections = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSSOConnection>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSSOConnection.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "scim_active_connection", n => { ScimActiveConnection = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveScimConnection>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveScimConnection.CreateFromDiscriminatorValue); } },
+                { "sso_active_connections", n => { SsoActiveConnections = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSsoConnection>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSsoConnection.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "sso_default_connection_id", n => { SsoDefaultConnectionId = n.GetStringValue(); } },
                 { "sso_jit_provisioning", n => { SsoJitProvisioning = n.GetStringValue(); } },
                 { "sso_jit_provisioning_allowed_connections", n => { SsoJitProvisioningAllowedConnections = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "third_party_connected_apps_allowed_type", n => { ThirdPartyConnectedAppsAllowedType = n.GetStringValue(); } },
-                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization_trusted_metadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization_trusted_metadata.CreateFromDiscriminatorValue); } },
+                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationTrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationTrustedMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "updated_at", n => { UpdatedAt = n.GetStringValue(); } },
             };
         }
@@ -321,7 +321,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("allowed_auth_methods", AllowedAuthMethods);
             writer.WriteCollectionOfPrimitiveValues<string>("allowed_first_party_connected_apps", AllowedFirstPartyConnectedApps);
             writer.WriteCollectionOfPrimitiveValues<string>("allowed_mfa_methods", AllowedMfaMethods);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization_allowed_oauth_tenants>("allowed_oauth_tenants", AllowedOauthTenants);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationAllowedOAuthTenantsProperty>("allowed_oauth_tenants", AllowedOauthTenants);
             writer.WriteCollectionOfPrimitiveValues<string>("allowed_third_party_connected_apps", AllowedThirdPartyConnectedApps);
             writer.WriteStringValue("auth_methods", AuthMethods);
             writer.WriteCollectionOfPrimitiveValues<string>("claimed_email_domains", ClaimedEmailDomains);
@@ -340,13 +340,13 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("organization_name", OrganizationName);
             writer.WriteStringValue("organization_slug", OrganizationSlug);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1EmailImplicitRoleAssignment>("rbac_email_implicit_role_assignments", RbacEmailImplicitRoleAssignments);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSCIMConnection>("scim_active_connection", ScimActiveConnection);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSSOConnection>("sso_active_connections", SsoActiveConnections);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveScimConnection>("scim_active_connection", ScimActiveConnection);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSsoConnection>("sso_active_connections", SsoActiveConnections);
             writer.WriteStringValue("sso_default_connection_id", SsoDefaultConnectionId);
             writer.WriteStringValue("sso_jit_provisioning", SsoJitProvisioning);
             writer.WriteCollectionOfPrimitiveValues<string>("sso_jit_provisioning_allowed_connections", SsoJitProvisioningAllowedConnections);
             writer.WriteStringValue("third_party_connected_apps_allowed_type", ThirdPartyConnectedAppsAllowedType);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization_trusted_metadata>("trusted_metadata", TrustedMetadata);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationTrustedMetadataProperty>("trusted_metadata", TrustedMetadata);
             writer.WriteStringValue("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

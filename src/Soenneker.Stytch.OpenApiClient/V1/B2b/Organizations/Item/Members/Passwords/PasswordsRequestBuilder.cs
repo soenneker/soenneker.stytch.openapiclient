@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passwords
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\b2b\organizations\{organization_id}\members\passwords
+    /// Builds and executes requests for operations under \v1\b2b\organizations\{organizationId}\members\passwords
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PasswordsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Stytch.OpenApiClient.v1.b2b.organizations.item.members.passwords.item collection</summary>
         /// <param name="position">Globally unique UUID that identifies a Member&apos;s password.</param>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passwords.Item.WithMember_password_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passwords.Item.WithMember_password_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passwords.Item.WithMemberPasswordItemRequestBuilder"/></returns>
+        public global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passwords.Item.WithMemberPasswordItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("member_password_id", position);
-                return new global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passwords.Item.WithMember_password_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("memberPasswordId", position);
+                return new global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passwords.Item.WithMemberPasswordItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passw
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PasswordsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organization_id}/members/passwords", pathParameters)
+        public PasswordsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organizationId}/members/passwords", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passw
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PasswordsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organization_id}/members/passwords", rawUrl)
+        public PasswordsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/organizations/{organizationId}/members/passwords", rawUrl)
         {
         }
     }

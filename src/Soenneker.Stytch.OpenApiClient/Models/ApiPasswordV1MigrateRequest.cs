@@ -52,10 +52,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The md_5_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MD5Config? Md5Config { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config? Md5Config { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MD5Config Md5Config { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config Md5Config { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -68,10 +68,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The pbkdf_2_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PBKDF2Config? Pbkdf2Config { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config? Pbkdf2Config { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PBKDF2Config Pbkdf2Config { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config Pbkdf2Config { get; set; }
 #endif
         /// <summary>The phone number of the user. The phone number should be in E.164 format (i.e. +1XXXXXXXXXX).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -104,34 +104,34 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The sha_1_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1SHA1Config? Sha1Config { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config? Sha1Config { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1SHA1Config Sha1Config { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config Sha1Config { get; set; }
 #endif
         /// <summary>The sha_512_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1SHA512Config? Sha512Config { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha512Config? Sha512Config { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1SHA512Config Sha512Config { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha512Config Sha512Config { get; set; }
 #endif
         /// <summary>The `trusted_metadata` field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequest_trusted_metadata? TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestTrustedMetadataProperty? TrustedMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequest_trusted_metadata TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestTrustedMetadataProperty TrustedMetadata { get; set; }
 #endif
         /// <summary>The `untrusted_metadata` field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequest_untrusted_metadata? UntrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestUntrustedMetadataProperty? UntrustedMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequest_untrusted_metadata UntrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestUntrustedMetadataProperty UntrustedMetadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequest"/> and sets the default values.
@@ -163,18 +163,18 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
                 { "hash", n => { Hash = n.GetStringValue(); } },
                 { "hash_type", n => { HashType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestHashType>(); } },
-                { "md_5_config", n => { Md5Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MD5Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MD5Config.CreateFromDiscriminatorValue); } },
+                { "md_5_config", n => { Md5Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name.CreateFromDiscriminatorValue); } },
-                { "pbkdf_2_config", n => { Pbkdf2Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PBKDF2Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PBKDF2Config.CreateFromDiscriminatorValue); } },
+                { "pbkdf_2_config", n => { Pbkdf2Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config.CreateFromDiscriminatorValue); } },
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "scrypt_config", n => { ScryptConfig = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1ScryptConfig>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1ScryptConfig.CreateFromDiscriminatorValue); } },
                 { "set_email_verified", n => { SetEmailVerified = n.GetBoolValue(); } },
                 { "set_phone_number_verified", n => { SetPhoneNumberVerified = n.GetBoolValue(); } },
-                { "sha_1_config", n => { Sha1Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1SHA1Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1SHA1Config.CreateFromDiscriminatorValue); } },
-                { "sha_512_config", n => { Sha512Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1SHA512Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1SHA512Config.CreateFromDiscriminatorValue); } },
-                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequest_trusted_metadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequest_trusted_metadata.CreateFromDiscriminatorValue); } },
-                { "untrusted_metadata", n => { UntrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequest_untrusted_metadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequest_untrusted_metadata.CreateFromDiscriminatorValue); } },
+                { "sha_1_config", n => { Sha1Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config.CreateFromDiscriminatorValue); } },
+                { "sha_512_config", n => { Sha512Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha512Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha512Config.CreateFromDiscriminatorValue); } },
+                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestTrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestTrustedMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "untrusted_metadata", n => { UntrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestUntrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestUntrustedMetadataProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -189,18 +189,18 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("external_id", ExternalId);
             writer.WriteStringValue("hash", Hash);
             writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestHashType>("hash_type", HashType);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MD5Config>("md_5_config", Md5Config);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config>("md_5_config", Md5Config);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name>("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PBKDF2Config>("pbkdf_2_config", Pbkdf2Config);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config>("pbkdf_2_config", Pbkdf2Config);
             writer.WriteStringValue("phone_number", PhoneNumber);
             writer.WriteCollectionOfPrimitiveValues<string>("roles", Roles);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1ScryptConfig>("scrypt_config", ScryptConfig);
             writer.WriteBoolValue("set_email_verified", SetEmailVerified);
             writer.WriteBoolValue("set_phone_number_verified", SetPhoneNumberVerified);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1SHA1Config>("sha_1_config", Sha1Config);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1SHA512Config>("sha_512_config", Sha512Config);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequest_trusted_metadata>("trusted_metadata", TrustedMetadata);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequest_untrusted_metadata>("untrusted_metadata", UntrustedMetadata);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config>("sha_1_config", Sha1Config);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha512Config>("sha_512_config", Sha512Config);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestTrustedMetadataProperty>("trusted_metadata", TrustedMetadata);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestUntrustedMetadataProperty>("untrusted_metadata", UntrustedMetadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

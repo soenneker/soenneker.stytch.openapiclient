@@ -36,22 +36,22 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Otps.Sms.Authenticate
         /// <summary>
         /// SMS OTPs may not be used as a primary authentication mechanism. They can be used to complete an MFA requirement, or they can be used as a step-up factor to be added to an existing session.This endpoint verifies that the one-time passcode (OTP) is valid and hasn&apos;t expired or been previously used. OTP codes expire after two minutes.A given Member may only have a single active OTP code at any given time. If a Member requests another OTP code before the first one has expired, the first one will be invalidated.Exactly one of `intermediate_session_token`, `session_token`, or `session_jwt` must be provided in the request.If an intermediate session token is provided, this operation will consume it.Intermediate session tokens are generated upon successful calls to primary authenticate methods in the case where MFA is required,such as [email magic link authenticate](https://stytch.com/docs/b2b/api/authenticate-magic-link),or upon successful calls to discovery authenticate methods, such as [email magic link discovery authenticate](https://stytch.com/docs/b2b/api/authenticate-discovery-magic-link).If the Organization&apos;s MFA policy is `REQUIRED_FOR_ALL`, a successful OTP authentication will change the Member&apos;s `mfa_enrolled` status to `true` if it is not already `true`.If the Organization&apos;s MFA policy is `OPTIONAL`, the Member&apos;s MFA enrollment can be toggled by passing in a value for the `set_mfa_enrollment` field.The Member&apos;s MFA enrollment can also be toggled through the [Update Member](https://stytch.com/docs/b2b/api/update-member) endpoint.Provide the `session_duration_minutes` parameter to set the lifetime of the session. If the `session_duration_minutes` parameter is not specified, a Stytch session will be created with a duration of 60 minutes.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bOtpV1B2bOtpSmsAuthenticateResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpSmsAuthenticateResponse"/></returns>
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bOtpV1B2bOtpSmsAuthenticateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bOtpV1B2bOtpSmsAuthenticateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpSmsAuthenticateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpSmsAuthenticateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bOtpV1B2bOtpSmsAuthenticateResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bOtpV1B2bOtpSmsAuthenticateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpSmsAuthenticateResponse> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpSmsAuthenticateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bOtpV1B2bOtpSmsAuthenticateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bOtpV1B2bOtpSmsAuthenticateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpSmsAuthenticateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpSmsAuthenticateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// SMS OTPs may not be used as a primary authentication mechanism. They can be used to complete an MFA requirement, or they can be used as a step-up factor to be added to an existing session.This endpoint verifies that the one-time passcode (OTP) is valid and hasn&apos;t expired or been previously used. OTP codes expire after two minutes.A given Member may only have a single active OTP code at any given time. If a Member requests another OTP code before the first one has expired, the first one will be invalidated.Exactly one of `intermediate_session_token`, `session_token`, or `session_jwt` must be provided in the request.If an intermediate session token is provided, this operation will consume it.Intermediate session tokens are generated upon successful calls to primary authenticate methods in the case where MFA is required,such as [email magic link authenticate](https://stytch.com/docs/b2b/api/authenticate-magic-link),or upon successful calls to discovery authenticate methods, such as [email magic link discovery authenticate](https://stytch.com/docs/b2b/api/authenticate-discovery-magic-link).If the Organization&apos;s MFA policy is `REQUIRED_FOR_ALL`, a successful OTP authentication will change the Member&apos;s `mfa_enrolled` status to `true` if it is not already `true`.If the Organization&apos;s MFA policy is `OPTIONAL`, the Member&apos;s MFA enrollment can be toggled by passing in a value for the `set_mfa_enrollment` field.The Member&apos;s MFA enrollment can also be toggled through the [Update Member](https://stytch.com/docs/b2b/api/update-member) endpoint.Provide the `session_duration_minutes` parameter to set the lifetime of the session. If the `session_duration_minutes` parameter is not specified, a Stytch session will be created with a duration of 60 minutes.
@@ -61,11 +61,11 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Otps.Sms.Authenticate
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bOtpV1B2bOtpSmsAuthenticateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpSmsAuthenticateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bOtpV1B2bOtpSmsAuthenticateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpSmsAuthenticateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

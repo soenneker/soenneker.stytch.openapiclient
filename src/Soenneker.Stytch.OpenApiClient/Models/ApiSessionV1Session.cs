@@ -33,10 +33,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The custom claims map for a Session. Claims can be added to a session during a Sessions authenticate call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1Session_custom_claims? CustomClaims { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionCustomClaimsProperty? CustomClaims { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1Session_custom_claims CustomClaims { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionCustomClaimsProperty CustomClaims { get; set; }
 #endif
         /// <summary>The timestamp when the Session expires. Values conform to the RFC 3339 standard and are expressed in UTC, e.g. `2021-12-29T12:33:09Z`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -113,7 +113,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             {
                 { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes>(global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes.CreateFromDiscriminatorValue); } },
                 { "authentication_factors", n => { AuthenticationFactors = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticationFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticationFactor.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "custom_claims", n => { CustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1Session_custom_claims>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1Session_custom_claims.CreateFromDiscriminatorValue); } },
+                { "custom_claims", n => { CustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionCustomClaimsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionCustomClaimsProperty.CreateFromDiscriminatorValue); } },
                 { "expires_at", n => { ExpiresAt = n.GetStringValue(); } },
                 { "last_accessed_at", n => { LastAccessedAt = n.GetStringValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -131,7 +131,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes>("attributes", Attributes);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticationFactor>("authentication_factors", AuthenticationFactors);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1Session_custom_claims>("custom_claims", CustomClaims);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionCustomClaimsProperty>("custom_claims", CustomClaims);
             writer.WriteStringValue("expires_at", ExpiresAt);
             writer.WriteStringValue("last_accessed_at", LastAccessedAt);
             writer.WriteCollectionOfPrimitiveValues<string>("roles", Roles);

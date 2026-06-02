@@ -25,10 +25,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The organizations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponse_organizations? Organizations { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponseOrganizationsProperty? Organizations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponse_organizations Organizations { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponseOrganizationsProperty Organizations { get; set; }
 #endif
         /// <summary>Globally unique UUID that is returned with every API call. This value is important to log for debugging purposes; we may ask for this value to help identify a specific API call when helping you debug an issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,7 +74,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "members", n => { Members = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "organizations", n => { Organizations = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponse_organizations>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponse_organizations.CreateFromDiscriminatorValue); } },
+                { "organizations", n => { Organizations = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponseOrganizationsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponseOrganizationsProperty.CreateFromDiscriminatorValue); } },
                 { "request_id", n => { RequestId = n.GetStringValue(); } },
                 { "results_metadata", n => { ResultsMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ResultsMetadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ResultsMetadata.CreateFromDiscriminatorValue); } },
                 { "status_code", n => { StatusCode = n.GetIntValue(); } },
@@ -88,7 +88,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member>("members", Members);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponse_organizations>("organizations", Organizations);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponseOrganizationsProperty>("organizations", Organizations);
             writer.WriteStringValue("request_id", RequestId);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ResultsMetadata>("results_metadata", ResultsMetadata);
             writer.WriteIntValue("status_code", StatusCode);

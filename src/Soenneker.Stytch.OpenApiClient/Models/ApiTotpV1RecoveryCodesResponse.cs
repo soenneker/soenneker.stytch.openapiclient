@@ -27,10 +27,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>An array containing a list of all TOTP instances (along with their recovery codes) for a given User in the Stytch API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1TOTP>? Totps { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1Totp>? Totps { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1TOTP> Totps { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1Totp> Totps { get; set; }
 #endif
         /// <summary>The unique ID of the affected User.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,7 +67,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             {
                 { "request_id", n => { RequestId = n.GetStringValue(); } },
                 { "status_code", n => { StatusCode = n.GetIntValue(); } },
-                { "totps", n => { Totps = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1TOTP>(global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1TOTP.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "totps", n => { Totps = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1Totp>(global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1Totp.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -80,7 +80,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("request_id", RequestId);
             writer.WriteIntValue("status_code", StatusCode);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1TOTP>("totps", Totps);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1Totp>("totps", Totps);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

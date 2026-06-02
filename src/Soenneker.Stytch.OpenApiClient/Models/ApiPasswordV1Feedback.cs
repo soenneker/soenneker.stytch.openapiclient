@@ -17,10 +17,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The luds_requirements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1LUDSRequirements? LudsRequirements { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1LudsRequirements? LudsRequirements { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1LUDSRequirements LudsRequirements { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1LudsRequirements LudsRequirements { get; set; }
 #endif
         /// <summary>For `zxcvbn` validation, contains end user consumable suggestions on how to improve the strength of the password.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "luds_requirements", n => { LudsRequirements = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1LUDSRequirements>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1LUDSRequirements.CreateFromDiscriminatorValue); } },
+                { "luds_requirements", n => { LudsRequirements = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1LudsRequirements>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1LudsRequirements.CreateFromDiscriminatorValue); } },
                 { "suggestions", n => { Suggestions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "warning", n => { Warning = n.GetStringValue(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1LUDSRequirements>("luds_requirements", LudsRequirements);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1LudsRequirements>("luds_requirements", LudsRequirements);
             writer.WriteCollectionOfPrimitiveValues<string>("suggestions", Suggestions);
             writer.WriteStringValue("warning", Warning);
             writer.WriteAdditionalData(AdditionalData);

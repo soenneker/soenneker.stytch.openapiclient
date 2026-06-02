@@ -57,10 +57,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The raw device attributes, such as screen size, that were collected by the Device Fingerprinting product to generate the fingerprints and verdict. You must be specifically enabled for the raw signals feature to see this field. You can find documentation for the specific fields in the [guides](https://stytch.com/docs/fraud/guides/device-fingerprinting/reference/raw-signals).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudFingerprintLookupResponse_raw_signals? RawSignals { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudFingerprintLookupResponseRawSignalsProperty? RawSignals { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudFingerprintLookupResponse_raw_signals RawSignals { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudFingerprintLookupResponseRawSignalsProperty RawSignals { get; set; }
 #endif
         /// <summary>Globally unique UUID that is returned with every API call. This value is important to log for debugging purposes; we may ask for this value to help identify a specific API call when helping you debug an issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,7 +118,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "external_metadata", n => { ExternalMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Metadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Metadata.CreateFromDiscriminatorValue); } },
                 { "fingerprints", n => { Fingerprints = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Fingerprints>(global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Fingerprints.CreateFromDiscriminatorValue); } },
                 { "properties", n => { Properties = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Properties>(global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Properties.CreateFromDiscriminatorValue); } },
-                { "raw_signals", n => { RawSignals = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudFingerprintLookupResponse_raw_signals>(global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudFingerprintLookupResponse_raw_signals.CreateFromDiscriminatorValue); } },
+                { "raw_signals", n => { RawSignals = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudFingerprintLookupResponseRawSignalsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudFingerprintLookupResponseRawSignalsProperty.CreateFromDiscriminatorValue); } },
                 { "request_id", n => { RequestId = n.GetStringValue(); } },
                 { "status_code", n => { StatusCode = n.GetIntValue(); } },
                 { "telemetry_id", n => { TelemetryId = n.GetStringValue(); } },
@@ -137,7 +137,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Metadata>("external_metadata", ExternalMetadata);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Fingerprints>("fingerprints", Fingerprints);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Properties>("properties", Properties);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudFingerprintLookupResponse_raw_signals>("raw_signals", RawSignals);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudFingerprintLookupResponseRawSignalsProperty>("raw_signals", RawSignals);
             writer.WriteStringValue("request_id", RequestId);
             writer.WriteIntValue("status_code", StatusCode);
             writer.WriteStringValue("telemetry_id", TelemetryId);

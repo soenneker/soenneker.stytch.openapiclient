@@ -26,103 +26,103 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_google")]
         #pragma warning disable CS1591
-        Oauth_google,
+        OAuthGoogle,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_microsoft")]
         #pragma warning disable CS1591
-        Oauth_microsoft,
+        OAuthMicrosoft,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_apple")]
         #pragma warning disable CS1591
-        Oauth_apple,
+        OAuthApple,
         #pragma warning restore CS1591
         [EnumMember(Value = "webauthn_registration")]
         #pragma warning disable CS1591
-        Webauthn_registration,
+        WebauthnRegistration,
         #pragma warning restore CS1591
         [EnumMember(Value = "authenticator_app")]
         #pragma warning disable CS1591
-        Authenticator_app,
+        AuthenticatorApp,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_github")]
         #pragma warning disable CS1591
-        Oauth_github,
+        OAuthGithub,
         #pragma warning restore CS1591
         [EnumMember(Value = "recovery_code")]
         #pragma warning disable CS1591
-        Recovery_code,
+        RecoveryCode,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_facebook")]
         #pragma warning disable CS1591
-        Oauth_facebook,
+        OAuthFacebook,
         #pragma warning restore CS1591
         [EnumMember(Value = "crypto_wallet")]
         #pragma warning disable CS1591
-        Crypto_wallet,
+        CryptoWallet,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_amazon")]
         #pragma warning disable CS1591
-        Oauth_amazon,
+        OAuthAmazon,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_bitbucket")]
         #pragma warning disable CS1591
-        Oauth_bitbucket,
+        OAuthBitbucket,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_coinbase")]
         #pragma warning disable CS1591
-        Oauth_coinbase,
+        OAuthCoinbase,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_discord")]
         #pragma warning disable CS1591
-        Oauth_discord,
+        OAuthDiscord,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_figma")]
         #pragma warning disable CS1591
-        Oauth_figma,
+        OAuthFigma,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_gitlab")]
         #pragma warning disable CS1591
-        Oauth_gitlab,
+        OAuthGitlab,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_instagram")]
         #pragma warning disable CS1591
-        Oauth_instagram,
+        OAuthInstagram,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_linkedin")]
         #pragma warning disable CS1591
-        Oauth_linkedin,
+        OAuthLinkedin,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_shopify")]
         #pragma warning disable CS1591
-        Oauth_shopify,
+        OAuthShopify,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_slack")]
         #pragma warning disable CS1591
-        Oauth_slack,
+        OAuthSlack,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_snapchat")]
         #pragma warning disable CS1591
-        Oauth_snapchat,
+        OAuthSnapchat,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_spotify")]
         #pragma warning disable CS1591
-        Oauth_spotify,
+        OAuthSpotify,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_steam")]
         #pragma warning disable CS1591
-        Oauth_steam,
+        OAuthSteam,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_tiktok")]
         #pragma warning disable CS1591
-        Oauth_tiktok,
+        OAuthTiktok,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_twitch")]
         #pragma warning disable CS1591
-        Oauth_twitch,
+        OAuthTwitch,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_twitter")]
         #pragma warning disable CS1591
-        Oauth_twitter,
+        OAuthTwitter,
         #pragma warning restore CS1591
         [EnumMember(Value = "knowledge")]
         #pragma warning disable CS1591
@@ -134,43 +134,43 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "sso_saml")]
         #pragma warning disable CS1591
-        Sso_saml,
+        SsoSaml,
         #pragma warning restore CS1591
         [EnumMember(Value = "sso_oidc")]
         #pragma warning disable CS1591
-        Sso_oidc,
+        SsoOidc,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_salesforce")]
         #pragma warning disable CS1591
-        Oauth_salesforce,
+        OAuthSalesforce,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_yahoo")]
         #pragma warning disable CS1591
-        Oauth_yahoo,
+        OAuthYahoo,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_hubspot")]
         #pragma warning disable CS1591
-        Oauth_hubspot,
+        OAuthHubspot,
         #pragma warning restore CS1591
         [EnumMember(Value = "imported_auth0")]
         #pragma warning disable CS1591
-        Imported_auth0,
+        ImportedAuth0,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_exchange_slack")]
         #pragma warning disable CS1591
-        Oauth_exchange_slack,
+        OAuthExchangeSlack,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_exchange_hubspot")]
         #pragma warning disable CS1591
-        Oauth_exchange_hubspot,
+        OAuthExchangeHubspot,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_exchange_github")]
         #pragma warning disable CS1591
-        Oauth_exchange_github,
+        OAuthExchangeGithub,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_exchange_google")]
         #pragma warning disable CS1591
-        Oauth_exchange_google,
+        OAuthExchangeGoogle,
         #pragma warning restore CS1591
         [EnumMember(Value = "impersonation")]
         #pragma warning disable CS1591
@@ -178,11 +178,11 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth_access_token_exchange")]
         #pragma warning disable CS1591
-        Oauth_access_token_exchange,
+        OAuthAccessTokenExchange,
         #pragma warning restore CS1591
         [EnumMember(Value = "trusted_token_exchange")]
         #pragma warning disable CS1591
-        Trusted_token_exchange,
+        TrustedTokenExchange,
         #pragma warning restore CS1591
     }
 }

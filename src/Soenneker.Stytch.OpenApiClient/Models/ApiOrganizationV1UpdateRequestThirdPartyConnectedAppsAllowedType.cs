@@ -10,15 +10,15 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     {
         [EnumMember(Value = "ALL_ALLOWED")]
         #pragma warning disable CS1591
-        ALL_ALLOWED,
+        AllAllowed,
         #pragma warning restore CS1591
         [EnumMember(Value = "RESTRICTED")]
         #pragma warning disable CS1591
-        RESTRICTED,
+        Restricted,
         #pragma warning restore CS1591
         [EnumMember(Value = "NOT_ALLOWED")]
         #pragma warning disable CS1591
-        NOT_ALLOWED,
+        NotAllowed,
         #pragma warning restore CS1591
     }
 }

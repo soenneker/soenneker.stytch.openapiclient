@@ -42,10 +42,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>A map of allowed OAuth tenants. If this field is not passed in, the Organization will not allow JIT provisioning by OAuth Tenant. Allowed keys are &quot;slack&quot;, &quot;hubspot&quot;, and &quot;github&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_allowed_oauth_tenants? AllowedOauthTenants { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestAllowedOAuthTenantsProperty? AllowedOauthTenants { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_allowed_oauth_tenants AllowedOauthTenants { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestAllowedOAuthTenantsProperty AllowedOauthTenants { get; set; }
 #endif
         /// <summary>An array of third party Connected App IDs that are allowed for the Organization. Only used when the Organization&apos;s `third_party_connected_apps_allowed_type` is `RESTRICTED`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -164,10 +164,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in  `session_duration_minutes`. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To  delete a key, supply a null value. Custom claims made with reserved claims (`iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) will be ignored.  Total custom claims size cannot exceed four kilobytes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_session_custom_claims? SessionCustomClaims { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestSessionCustomClaimsProperty? SessionCustomClaims { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_session_custom_claims SessionCustomClaims { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestSessionCustomClaimsProperty SessionCustomClaims { get; set; }
 #endif
         /// <summary>Set the session lifetime to be this many minutes from now. This will start a new session if one doesn&apos;t already exist,  returning both an opaque `session_token` and `session_jwt` for this session. Remember that the `session_jwt` will have a fixed lifetime of  five minutes regardless of the underlying session duration, and will need to be refreshed over time.  This value must be a minimum of 5 and a maximum of 527040 minutes (366 days).  If a `session_token` or `session_jwt` is provided then a successful authentication will continue to extend the session this many minutes.  If the `session_duration_minutes` parameter is not specified, a Stytch session will be created with a 60 minute duration. If you don&apos;t want  to use the Stytch session product, you can ignore the session fields in the response.</summary>
         public int? SessionDurationMinutes { get; set; }
@@ -192,10 +192,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>An arbitrary JSON object for storing application-specific data or identity-provider-specific data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_trusted_metadata? TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestTrustedMetadataProperty? TrustedMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_trusted_metadata TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestTrustedMetadataProperty TrustedMetadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest"/> and sets the default values.
@@ -225,7 +225,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "allowed_auth_methods", n => { AllowedAuthMethods = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "allowed_first_party_connected_apps", n => { AllowedFirstPartyConnectedApps = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "allowed_mfa_methods", n => { AllowedMfaMethods = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "allowed_oauth_tenants", n => { AllowedOauthTenants = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_allowed_oauth_tenants>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_allowed_oauth_tenants.CreateFromDiscriminatorValue); } },
+                { "allowed_oauth_tenants", n => { AllowedOauthTenants = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestAllowedOAuthTenantsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestAllowedOAuthTenantsProperty.CreateFromDiscriminatorValue); } },
                 { "allowed_third_party_connected_apps", n => { AllowedThirdPartyConnectedApps = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "auth_methods", n => { AuthMethods = n.GetStringValue(); } },
                 { "email_allowed_domains", n => { EmailAllowedDomains = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -241,12 +241,12 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "organization_name", n => { OrganizationName = n.GetStringValue(); } },
                 { "organization_slug", n => { OrganizationSlug = n.GetStringValue(); } },
                 { "rbac_email_implicit_role_assignments", n => { RbacEmailImplicitRoleAssignments = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1EmailImplicitRoleAssignment>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1EmailImplicitRoleAssignment.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_session_custom_claims>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_session_custom_claims.CreateFromDiscriminatorValue); } },
+                { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestSessionCustomClaimsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestSessionCustomClaimsProperty.CreateFromDiscriminatorValue); } },
                 { "session_duration_minutes", n => { SessionDurationMinutes = n.GetIntValue(); } },
                 { "sso_jit_provisioning", n => { SsoJitProvisioning = n.GetStringValue(); } },
                 { "telemetry_id", n => { TelemetryId = n.GetStringValue(); } },
                 { "third_party_connected_apps_allowed_type", n => { ThirdPartyConnectedAppsAllowedType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1CreateRequestThirdPartyConnectedAppsAllowedType>(); } },
-                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_trusted_metadata>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_trusted_metadata.CreateFromDiscriminatorValue); } },
+                { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestTrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestTrustedMetadataProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -259,7 +259,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("allowed_auth_methods", AllowedAuthMethods);
             writer.WriteCollectionOfPrimitiveValues<string>("allowed_first_party_connected_apps", AllowedFirstPartyConnectedApps);
             writer.WriteCollectionOfPrimitiveValues<string>("allowed_mfa_methods", AllowedMfaMethods);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_allowed_oauth_tenants>("allowed_oauth_tenants", AllowedOauthTenants);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestAllowedOAuthTenantsProperty>("allowed_oauth_tenants", AllowedOauthTenants);
             writer.WriteCollectionOfPrimitiveValues<string>("allowed_third_party_connected_apps", AllowedThirdPartyConnectedApps);
             writer.WriteStringValue("auth_methods", AuthMethods);
             writer.WriteCollectionOfPrimitiveValues<string>("email_allowed_domains", EmailAllowedDomains);
@@ -275,12 +275,12 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("organization_name", OrganizationName);
             writer.WriteStringValue("organization_slug", OrganizationSlug);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1EmailImplicitRoleAssignment>("rbac_email_implicit_role_assignments", RbacEmailImplicitRoleAssignments);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_session_custom_claims>("session_custom_claims", SessionCustomClaims);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestSessionCustomClaimsProperty>("session_custom_claims", SessionCustomClaims);
             writer.WriteIntValue("session_duration_minutes", SessionDurationMinutes);
             writer.WriteStringValue("sso_jit_provisioning", SsoJitProvisioning);
             writer.WriteStringValue("telemetry_id", TelemetryId);
             writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1CreateRequestThirdPartyConnectedAppsAllowedType>("third_party_connected_apps_allowed_type", ThirdPartyConnectedAppsAllowedType);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequest_trusted_metadata>("trusted_metadata", TrustedMetadata);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestTrustedMetadataProperty>("trusted_metadata", TrustedMetadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

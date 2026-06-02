@@ -50,10 +50,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The siwe_params property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SIWEParams? SiweParams { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParams? SiweParams { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SIWEParams SiweParams { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParams SiweParams { get; set; }
 #endif
         /// <summary>The unique ID of a specific User. You may use an `external_id` here if one is set for the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -92,7 +92,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "crypto_wallet_type", n => { CryptoWalletType = n.GetStringValue(); } },
                 { "session_jwt", n => { SessionJwt = n.GetStringValue(); } },
                 { "session_token", n => { SessionToken = n.GetStringValue(); } },
-                { "siwe_params", n => { SiweParams = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SIWEParams>(global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SIWEParams.CreateFromDiscriminatorValue); } },
+                { "siwe_params", n => { SiweParams = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParams>(global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParams.CreateFromDiscriminatorValue); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -107,7 +107,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("crypto_wallet_type", CryptoWalletType);
             writer.WriteStringValue("session_jwt", SessionJwt);
             writer.WriteStringValue("session_token", SessionToken);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SIWEParams>("siwe_params", SiweParams);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParams>("siwe_params", SiweParams);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

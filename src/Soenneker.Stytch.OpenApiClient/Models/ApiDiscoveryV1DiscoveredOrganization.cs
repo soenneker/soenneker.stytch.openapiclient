@@ -27,10 +27,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The mfa_required property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bMfaV1MfaRequired? MfaRequired { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired? MfaRequired { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bMfaV1MfaRequired MfaRequired { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired MfaRequired { get; set; }
 #endif
         /// <summary>The organization property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -43,10 +43,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The primary_required property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bSessionV1PrimaryRequired? PrimaryRequired { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1PrimaryRequired? PrimaryRequired { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bSessionV1PrimaryRequired PrimaryRequired { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1PrimaryRequired PrimaryRequired { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization"/> and sets the default values.
@@ -75,9 +75,9 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             {
                 { "member_authenticated", n => { MemberAuthenticated = n.GetBoolValue(); } },
                 { "membership", n => { Membership = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership.CreateFromDiscriminatorValue); } },
-                { "mfa_required", n => { MfaRequired = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bMfaV1MfaRequired>(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bMfaV1MfaRequired.CreateFromDiscriminatorValue); } },
+                { "mfa_required", n => { MfaRequired = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired>(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired.CreateFromDiscriminatorValue); } },
                 { "organization", n => { Organization = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization.CreateFromDiscriminatorValue); } },
-                { "primary_required", n => { PrimaryRequired = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bSessionV1PrimaryRequired>(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bSessionV1PrimaryRequired.CreateFromDiscriminatorValue); } },
+                { "primary_required", n => { PrimaryRequired = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1PrimaryRequired>(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1PrimaryRequired.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -89,9 +89,9 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("member_authenticated", MemberAuthenticated);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership>("membership", Membership);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bMfaV1MfaRequired>("mfa_required", MfaRequired);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired>("mfa_required", MfaRequired);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization>("organization", Organization);
-            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2bSessionV1PrimaryRequired>("primary_required", PrimaryRequired);
+            writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1PrimaryRequired>("primary_required", PrimaryRequired);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

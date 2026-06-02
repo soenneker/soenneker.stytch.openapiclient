@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Stytch.OpenApiClient.V1.Users.Item.Exchange_primary_factor
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\users\{user_id}\exchange_primary_factor
+    /// Builds and executes requests for operations under \v1\users\{userId}\exchange_primary_factor
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Exchange_primary_factorRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Item.Exchange_primary_factor
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Exchange_primary_factorRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/users/{user_id}/exchange_primary_factor", pathParameters)
+        public Exchange_primary_factorRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/users/{userId}/exchange_primary_factor", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Item.Exchange_primary_factor
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Exchange_primary_factorRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/users/{user_id}/exchange_primary_factor", rawUrl)
+        public Exchange_primary_factorRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/users/{userId}/exchange_primary_factor", rawUrl)
         {
         }
         /// <summary>
