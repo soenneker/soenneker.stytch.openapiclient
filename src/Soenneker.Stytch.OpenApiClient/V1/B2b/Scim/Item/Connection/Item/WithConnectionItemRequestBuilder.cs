@@ -128,7 +128,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.WithConnectionItemRequestBuilder.WithConnectionItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v1/b2b/scim/{organizationId}/connection/{connectionId}{?cursor*,limit*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
