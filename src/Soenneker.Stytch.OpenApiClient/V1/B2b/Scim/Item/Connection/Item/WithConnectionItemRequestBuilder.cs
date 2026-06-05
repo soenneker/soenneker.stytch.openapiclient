@@ -28,7 +28,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithConnectionItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/scim/{organizationId}/connection/{connectionId}", pathParameters)
+        public WithConnectionItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/scim/{organizationId}/connection/{connectionId}{?cursor*,limit*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithConnectionItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/scim/{organizationId}/connection/{connectionId}", rawUrl)
+        public WithConnectionItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/b2b/scim/{organizationId}/connection/{connectionId}{?cursor*,limit*}", rawUrl)
         {
         }
         /// <summary>
@@ -128,7 +128,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.WithConnectionItemRequestBuilder.WithConnectionItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v1/b2b/scim/{organizationId}/connection/{connectionId}{?cursor*,limit*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
