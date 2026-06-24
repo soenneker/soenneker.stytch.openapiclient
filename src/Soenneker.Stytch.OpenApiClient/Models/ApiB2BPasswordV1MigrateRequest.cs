@@ -48,7 +48,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string Hash { get; set; }
 #endif
         /// <summary>The hash_type property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1MigrateRequestHashType? HashType { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsMigrateRequestHashType? HashType { get; set; }
         /// <summary>The md_5_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -170,7 +170,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
                 { "hash", n => { Hash = n.GetStringValue(); } },
-                { "hash_type", n => { HashType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1MigrateRequestHashType>(); } },
+                { "hash_type", n => { HashType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsMigrateRequestHashType>(); } },
                 { "md_5_config", n => { Md5Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config.CreateFromDiscriminatorValue); } },
                 { "mfa_phone_number", n => { MfaPhoneNumber = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -197,7 +197,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("email_address", EmailAddress);
             writer.WriteStringValue("external_id", ExternalId);
             writer.WriteStringValue("hash", Hash);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1MigrateRequestHashType>("hash_type", HashType);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsMigrateRequestHashType>("hash_type", HashType);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config>("md_5_config", Md5Config);
             writer.WriteStringValue("mfa_phone_number", MfaPhoneNumber);
             writer.WriteStringValue("name", Name);

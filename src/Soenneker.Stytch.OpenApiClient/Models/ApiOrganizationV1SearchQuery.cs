@@ -23,7 +23,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty> Operands { get; set; }
 #endif
         /// <summary>The operator property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperator? Operator { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsSearchQueryOperator? Operator { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQuery"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "operands", n => { Operands = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsSearchQueryOperator>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty>("operands", Operands);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsSearchQueryOperator>("operator", Operator);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

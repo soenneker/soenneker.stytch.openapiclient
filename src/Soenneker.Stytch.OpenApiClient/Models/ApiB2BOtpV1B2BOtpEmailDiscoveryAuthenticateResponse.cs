@@ -38,6 +38,14 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public string IntermediateSessionToken { get; set; }
 #endif
+        /// <summary>The intermediate_session_token_expires_at property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IntermediateSessionTokenExpiresAt { get; set; }
+#nullable restore
+#else
+        public string IntermediateSessionTokenExpiresAt { get; set; }
+#endif
         /// <summary>Globally unique UUID that is returned with every API call. This value is important to log for debugging purposes; we may ask for this value to help identify a specific API call when helping you debug an issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,6 +84,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "discovered_organizations", n => { DiscoveredOrganizations = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
                 { "intermediate_session_token", n => { IntermediateSessionToken = n.GetStringValue(); } },
+                { "intermediate_session_token_expires_at", n => { IntermediateSessionTokenExpiresAt = n.GetStringValue(); } },
                 { "request_id", n => { RequestId = n.GetStringValue(); } },
                 { "status_code", n => { StatusCode = n.GetIntValue(); } },
             };
@@ -90,6 +99,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization>("discovered_organizations", DiscoveredOrganizations);
             writer.WriteStringValue("email_address", EmailAddress);
             writer.WriteStringValue("intermediate_session_token", IntermediateSessionToken);
+            writer.WriteStringValue("intermediate_session_token_expires_at", IntermediateSessionTokenExpiresAt);
             writer.WriteStringValue("request_id", RequestId);
             writer.WriteIntValue("status_code", StatusCode);
             writer.WriteAdditionalData(AdditionalData);

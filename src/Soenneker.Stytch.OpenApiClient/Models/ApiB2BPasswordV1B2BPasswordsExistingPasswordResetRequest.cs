@@ -32,7 +32,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string ExistingPassword { get; set; }
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1ResetRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsExistingPasswordResetRequestLocale? Locale { get; set; }
         /// <summary>The Member&apos;s elected new password.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -110,7 +110,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             {
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
                 { "existing_password", n => { ExistingPassword = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1ResetRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsExistingPasswordResetRequestLocale>(); } },
                 { "new_password", n => { NewPassword = n.GetStringValue(); } },
                 { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
                 { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequestSessionCustomClaimsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequestSessionCustomClaimsProperty.CreateFromDiscriminatorValue); } },
@@ -129,7 +129,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email_address", EmailAddress);
             writer.WriteStringValue("existing_password", ExistingPassword);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1ResetRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsExistingPasswordResetRequestLocale>("locale", Locale);
             writer.WriteStringValue("new_password", NewPassword);
             writer.WriteStringValue("organization_id", OrganizationId);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequestSessionCustomClaimsProperty>("session_custom_claims", SessionCustomClaims);

@@ -92,6 +92,14 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #endif
         /// <summary>Valid for first party clients only. If `true`, an authorization token granted to this Client can be exchanged for a full Stytch session.</summary>
         public bool? FullAccessAllowed { get; set; }
+        /// <summary>The id_token_template_content property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IdTokenTemplateContent { get; set; }
+#nullable restore
+#else
+        public string IdTokenTemplateContent { get; set; }
+#endif
         /// <summary>The logo URL of the Connected App, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -169,6 +177,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "client_type", n => { ClientType = n.GetStringValue(); } },
                 { "creation_method", n => { CreationMethod = n.GetStringValue(); } },
                 { "full_access_allowed", n => { FullAccessAllowed = n.GetBoolValue(); } },
+                { "id_token_template_content", n => { IdTokenTemplateContent = n.GetStringValue(); } },
                 { "logo_url", n => { LogoUrl = n.GetStringValue(); } },
                 { "next_client_secret_last_four", n => { NextClientSecretLastFour = n.GetStringValue(); } },
                 { "post_logout_redirect_urls", n => { PostLogoutRedirectUrls = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -195,6 +204,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("client_type", ClientType);
             writer.WriteStringValue("creation_method", CreationMethod);
             writer.WriteBoolValue("full_access_allowed", FullAccessAllowed);
+            writer.WriteStringValue("id_token_template_content", IdTokenTemplateContent);
             writer.WriteStringValue("logo_url", LogoUrl);
             writer.WriteStringValue("next_client_secret_last_four", NextClientSecretLastFour);
             writer.WriteCollectionOfPrimitiveValues<string>("post_logout_redirect_urls", PostLogoutRedirectUrls);

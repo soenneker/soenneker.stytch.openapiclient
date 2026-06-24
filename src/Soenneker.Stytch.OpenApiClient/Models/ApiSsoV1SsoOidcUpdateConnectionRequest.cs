@@ -64,7 +64,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string DisplayName { get; set; }
 #endif
         /// <summary>The identity_provider property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1UpdateConnectionRequestIdentityProvider? IdentityProvider { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequestIdentityProvider? IdentityProvider { get; set; }
         /// <summary>A case-sensitive `https://` URL that uniquely identifies the IdP. This will be provided by the IdP.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -128,7 +128,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "custom_scopes", n => { CustomScopes = n.GetStringValue(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
-                { "identity_provider", n => { IdentityProvider = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1UpdateConnectionRequestIdentityProvider>(); } },
+                { "identity_provider", n => { IdentityProvider = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequestIdentityProvider>(); } },
                 { "issuer", n => { Issuer = n.GetStringValue(); } },
                 { "jwks_url", n => { JwksUrl = n.GetStringValue(); } },
                 { "token_url", n => { TokenUrl = n.GetStringValue(); } },
@@ -148,7 +148,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteStringValue("custom_scopes", CustomScopes);
             writer.WriteStringValue("display_name", DisplayName);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1UpdateConnectionRequestIdentityProvider>("identity_provider", IdentityProvider);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequestIdentityProvider>("identity_provider", IdentityProvider);
             writer.WriteStringValue("issuer", Issuer);
             writer.WriteStringValue("jwks_url", JwksUrl);
             writer.WriteStringValue("token_url", TokenUrl);

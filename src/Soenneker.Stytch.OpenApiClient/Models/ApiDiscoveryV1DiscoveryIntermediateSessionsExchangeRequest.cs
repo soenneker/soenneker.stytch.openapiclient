@@ -24,7 +24,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string IntermediateSessionToken { get; set; }
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1ExchangeRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryIntermediateSessionsExchangeRequestLocale? Locale { get; set; }
         /// <summary>Globally unique UUID that identifies a specific Organization. The `organization_id` is critical to perform operations on an Organization, so be sure to preserve this value. You may also use the organization_slug or organization_external_id here as a convenience.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +77,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "intermediate_session_token", n => { IntermediateSessionToken = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1ExchangeRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryIntermediateSessionsExchangeRequestLocale>(); } },
                 { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
                 { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryIntermediateSessionsExchangeRequestSessionCustomClaimsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryIntermediateSessionsExchangeRequestSessionCustomClaimsProperty.CreateFromDiscriminatorValue); } },
                 { "session_duration_minutes", n => { SessionDurationMinutes = n.GetIntValue(); } },
@@ -92,7 +92,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("intermediate_session_token", IntermediateSessionToken);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1ExchangeRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryIntermediateSessionsExchangeRequestLocale>("locale", Locale);
             writer.WriteStringValue("organization_id", OrganizationId);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryIntermediateSessionsExchangeRequestSessionCustomClaimsProperty>("session_custom_claims", SessionCustomClaims);
             writer.WriteIntValue("session_duration_minutes", SessionDurationMinutes);

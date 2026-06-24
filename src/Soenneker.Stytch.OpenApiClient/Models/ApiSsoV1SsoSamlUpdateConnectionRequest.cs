@@ -50,7 +50,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string DisplayName { get; set; }
 #endif
         /// <summary>The identity_provider property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1UpdateConnectionRequestIdentityProvider? IdentityProvider { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequestIdentityProvider? IdentityProvider { get; set; }
         /// <summary>A globally unique name for the IdP. This will be provided by the IdP.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -147,7 +147,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "alternative_audience_uri", n => { AlternativeAudienceUri = n.GetStringValue(); } },
                 { "attribute_mapping", n => { AttributeMapping = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequestAttributeMappingProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequestAttributeMappingProperty.CreateFromDiscriminatorValue); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
-                { "identity_provider", n => { IdentityProvider = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1UpdateConnectionRequestIdentityProvider>(); } },
+                { "identity_provider", n => { IdentityProvider = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequestIdentityProvider>(); } },
                 { "idp_entity_id", n => { IdpEntityId = n.GetStringValue(); } },
                 { "idp_initiated_auth_disabled", n => { IdpInitiatedAuthDisabled = n.GetBoolValue(); } },
                 { "idp_sso_url", n => { IdpSsoUrl = n.GetStringValue(); } },
@@ -171,7 +171,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("alternative_audience_uri", AlternativeAudienceUri);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequestAttributeMappingProperty>("attribute_mapping", AttributeMapping);
             writer.WriteStringValue("display_name", DisplayName);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1UpdateConnectionRequestIdentityProvider>("identity_provider", IdentityProvider);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequestIdentityProvider>("identity_provider", IdentityProvider);
             writer.WriteStringValue("idp_entity_id", IdpEntityId);
             writer.WriteBoolValue("idp_initiated_auth_disabled", IdpInitiatedAuthDisabled);
             writer.WriteStringValue("idp_sso_url", IdpSsoUrl);

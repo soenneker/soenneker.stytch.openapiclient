@@ -50,7 +50,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string InviteTemplateId { get; set; }
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1InviteRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailInviteRequestLocale? Locale { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,7 +105,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "invite_expiration_minutes", n => { InviteExpirationMinutes = n.GetIntValue(); } },
                 { "invite_magic_link_url", n => { InviteMagicLinkUrl = n.GetStringValue(); } },
                 { "invite_template_id", n => { InviteTemplateId = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1InviteRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailInviteRequestLocale>(); } },
                 { "name", n => { Name = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name.CreateFromDiscriminatorValue); } },
                 { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailInviteRequestTrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailInviteRequestTrustedMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "untrusted_metadata", n => { UntrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailInviteRequestUntrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailInviteRequestUntrustedMetadataProperty.CreateFromDiscriminatorValue); } },
@@ -123,7 +123,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteIntValue("invite_expiration_minutes", InviteExpirationMinutes);
             writer.WriteStringValue("invite_magic_link_url", InviteMagicLinkUrl);
             writer.WriteStringValue("invite_template_id", InviteTemplateId);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1InviteRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailInviteRequestLocale>("locale", Locale);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name>("name", Name);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailInviteRequestTrustedMetadataProperty>("trusted_metadata", TrustedMetadata);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailInviteRequestUntrustedMetadataProperty>("untrusted_metadata", UntrustedMetadata);

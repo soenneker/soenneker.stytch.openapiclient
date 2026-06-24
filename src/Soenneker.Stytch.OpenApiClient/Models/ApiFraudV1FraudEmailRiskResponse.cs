@@ -13,7 +13,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The action property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1RiskResponseAction? Action { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudEmailRiskResponseAction? Action { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The address_information property</summary>
@@ -69,7 +69,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1RiskResponseAction>(); } },
+                { "action", n => { Action = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudEmailRiskResponseAction>(); } },
                 { "address_information", n => { AddressInformation = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1AddressInformation>(global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1AddressInformation.CreateFromDiscriminatorValue); } },
                 { "domain_information", n => { DomainInformation = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1DomainInformation>(global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1DomainInformation.CreateFromDiscriminatorValue); } },
                 { "request_id", n => { RequestId = n.GetStringValue(); } },
@@ -84,7 +84,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1RiskResponseAction>("action", Action);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudEmailRiskResponseAction>("action", Action);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1AddressInformation>("address_information", AddressInformation);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1DomainInformation>("domain_information", DomainInformation);
             writer.WriteStringValue("request_id", RequestId);

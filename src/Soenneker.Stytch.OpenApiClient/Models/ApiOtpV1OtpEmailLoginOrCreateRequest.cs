@@ -36,7 +36,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>Set the expiration for the one-time passcode, in minutes. The minimum expiration is 1 minute and the maximum is 10 minutes. The default expiration is 2 minutes.</summary>
         public int? ExpirationMinutes { get; set; }
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1LoginOrCreateRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpEmailLoginOrCreateRequestLocale? Locale { get; set; }
         /// <summary>Use a custom template for login emails. By default, it will use your default email template. Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type “Magic links - Login”.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +82,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "create_user_as_pending", n => { CreateUserAsPending = n.GetBoolValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "expiration_minutes", n => { ExpirationMinutes = n.GetIntValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1LoginOrCreateRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpEmailLoginOrCreateRequestLocale>(); } },
                 { "login_template_id", n => { LoginTemplateId = n.GetStringValue(); } },
                 { "signup_template_id", n => { SignupTemplateId = n.GetStringValue(); } },
             };
@@ -98,7 +98,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteBoolValue("create_user_as_pending", CreateUserAsPending);
             writer.WriteStringValue("email", Email);
             writer.WriteIntValue("expiration_minutes", ExpirationMinutes);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1LoginOrCreateRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpEmailLoginOrCreateRequestLocale>("locale", Locale);
             writer.WriteStringValue("login_template_id", LoginTemplateId);
             writer.WriteStringValue("signup_template_id", SignupTemplateId);
             writer.WriteAdditionalData(AdditionalData);

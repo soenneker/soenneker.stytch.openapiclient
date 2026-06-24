@@ -40,7 +40,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string Email { get; set; }
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1SendRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailSendRequestLocale? Locale { get; set; }
         /// <summary>Set the expiration for the login email magic link, in minutes. By default, it expires in 1 hour. The minimum expiration is 5 minutes and the maximum is 7 days (10080 mins).</summary>
         public int? LoginExpirationMinutes { get; set; }
         /// <summary>The URL the end user clicks from the login Email Magic Link. This should be a URL that your app receives and parses and subsequently send an API request to authenticate the Magic Link and log in the User. If this value is not passed, the default login redirect URL that you set in your Dashboard is used. If you have not set a default login redirect URL, an error is returned.</summary>
@@ -129,7 +129,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes>(global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes.CreateFromDiscriminatorValue); } },
                 { "code_challenge", n => { CodeChallenge = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1SendRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailSendRequestLocale>(); } },
                 { "login_expiration_minutes", n => { LoginExpirationMinutes = n.GetIntValue(); } },
                 { "login_magic_link_url", n => { LoginMagicLinkUrl = n.GetStringValue(); } },
                 { "login_template_id", n => { LoginTemplateId = n.GetStringValue(); } },
@@ -151,7 +151,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes>("attributes", Attributes);
             writer.WriteStringValue("code_challenge", CodeChallenge);
             writer.WriteStringValue("email", Email);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1SendRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailSendRequestLocale>("locale", Locale);
             writer.WriteIntValue("login_expiration_minutes", LoginExpirationMinutes);
             writer.WriteStringValue("login_magic_link_url", LoginMagicLinkUrl);
             writer.WriteStringValue("login_template_id", LoginTemplateId);

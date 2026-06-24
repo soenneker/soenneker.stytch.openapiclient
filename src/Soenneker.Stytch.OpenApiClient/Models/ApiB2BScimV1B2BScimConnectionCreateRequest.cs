@@ -24,7 +24,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string DisplayName { get; set; }
 #endif
         /// <summary>The identity_provider property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1CreateRequestIdentityProvider? IdentityProvider { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimConnectionCreateRequestIdentityProvider? IdentityProvider { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionCreateRequest"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
-                { "identity_provider", n => { IdentityProvider = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1CreateRequestIdentityProvider>(); } },
+                { "identity_provider", n => { IdentityProvider = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimConnectionCreateRequestIdentityProvider>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("display_name", DisplayName);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1CreateRequestIdentityProvider>("identity_provider", IdentityProvider);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimConnectionCreateRequestIdentityProvider>("identity_provider", IdentityProvider);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

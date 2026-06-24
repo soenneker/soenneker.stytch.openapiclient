@@ -16,7 +16,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1ResetRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsSessionResetRequestLocale? Locale { get; set; }
         /// <summary>Globally unique UUID that identifies a specific Organization. The `organization_id` is critical to perform operations on an Organization, so be sure to preserve this value. You may also use the organization_slug or organization_external_id here as a convenience.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,7 +92,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1ResetRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsSessionResetRequestLocale>(); } },
                 { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
                 { "password", n => { Password = n.GetStringValue(); } },
                 { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsSessionResetRequestSessionCustomClaimsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsSessionResetRequestSessionCustomClaimsProperty.CreateFromDiscriminatorValue); } },
@@ -109,7 +109,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1ResetRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsSessionResetRequestLocale>("locale", Locale);
             writer.WriteStringValue("organization_id", OrganizationId);
             writer.WriteStringValue("password", Password);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsSessionResetRequestSessionCustomClaimsProperty>("session_custom_claims", SessionCustomClaims);

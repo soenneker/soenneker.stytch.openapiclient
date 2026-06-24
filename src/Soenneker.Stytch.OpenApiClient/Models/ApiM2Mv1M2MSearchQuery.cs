@@ -23,7 +23,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MSearchQueryOperandsItemProperty> Operands { get; set; }
 #endif
         /// <summary>The operator property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MSearchQueryOperator? Operator { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2Mm2MSearchQueryOperator? Operator { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MSearchQuery"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "operands", n => { Operands = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MSearchQueryOperandsItemProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MSearchQueryOperandsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MSearchQueryOperator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2Mm2MSearchQueryOperator>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MSearchQueryOperandsItemProperty>("operands", Operands);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MSearchQueryOperator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2Mm2MSearchQueryOperator>("operator", Operator);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

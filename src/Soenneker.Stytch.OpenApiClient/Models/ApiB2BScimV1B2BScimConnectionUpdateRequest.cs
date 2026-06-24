@@ -24,7 +24,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string DisplayName { get; set; }
 #endif
         /// <summary>The identity_provider property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1UpdateRequestIdentityProvider? IdentityProvider { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimConnectionUpdateRequestIdentityProvider? IdentityProvider { get; set; }
         /// <summary>An array of SCIM group implicit role assignments. Each object in the array must contain a `group_id` and a `role_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,7 +59,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
-                { "identity_provider", n => { IdentityProvider = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1UpdateRequestIdentityProvider>(); } },
+                { "identity_provider", n => { IdentityProvider = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimConnectionUpdateRequestIdentityProvider>(); } },
                 { "scim_group_implicit_role_assignments", n => { ScimGroupImplicitRoleAssignments = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimGroupImplicitRoleAssignments>(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimGroupImplicitRoleAssignments.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("display_name", DisplayName);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1UpdateRequestIdentityProvider>("identity_provider", IdentityProvider);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimConnectionUpdateRequestIdentityProvider>("identity_provider", IdentityProvider);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimGroupImplicitRoleAssignments>("scim_group_implicit_role_assignments", ScimGroupImplicitRoleAssignments);
             writer.WriteAdditionalData(AdditionalData);
         }

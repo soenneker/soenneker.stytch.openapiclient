@@ -32,7 +32,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string IntermediateSessionToken { get; set; }
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1AuthenticateRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsAuthenticateRequestLocale? Locale { get; set; }
         /// <summary>Globally unique UUID that identifies a specific Organization. The `organization_id` is critical to perform operations on an Organization, so be sure to preserve this value. You may also use the organization_slug or organization_external_id here as a convenience.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -110,7 +110,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             {
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
                 { "intermediate_session_token", n => { IntermediateSessionToken = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1AuthenticateRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsAuthenticateRequestLocale>(); } },
                 { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
                 { "password", n => { Password = n.GetStringValue(); } },
                 { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1AuthenticateRequestSessionCustomClaimsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1AuthenticateRequestSessionCustomClaimsProperty.CreateFromDiscriminatorValue); } },
@@ -129,7 +129,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email_address", EmailAddress);
             writer.WriteStringValue("intermediate_session_token", IntermediateSessionToken);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1AuthenticateRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsAuthenticateRequestLocale>("locale", Locale);
             writer.WriteStringValue("organization_id", OrganizationId);
             writer.WriteStringValue("password", Password);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1AuthenticateRequestSessionCustomClaimsProperty>("session_custom_claims", SessionCustomClaims);

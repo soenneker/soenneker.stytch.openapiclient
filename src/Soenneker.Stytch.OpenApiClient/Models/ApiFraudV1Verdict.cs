@@ -13,7 +13,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The action property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictAction? Action { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictAction? Action { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The operating system and architecture that took the fingerprint.</summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictAction>(); } },
+                { "action", n => { Action = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictAction>(); } },
                 { "detected_device_type", n => { DetectedDeviceType = n.GetStringValue(); } },
                 { "is_authentic_device", n => { IsAuthenticDevice = n.GetBoolValue(); } },
                 { "reasons", n => { Reasons = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -93,7 +93,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictAction>("action", Action);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictAction>("action", Action);
             writer.WriteStringValue("detected_device_type", DetectedDeviceType);
             writer.WriteBoolValue("is_authentic_device", IsAuthenticDevice);
             writer.WriteCollectionOfPrimitiveValues<string>("reasons", Reasons);

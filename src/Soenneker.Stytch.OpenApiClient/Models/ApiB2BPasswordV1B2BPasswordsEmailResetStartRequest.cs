@@ -32,7 +32,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string EmailAddress { get; set; }
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1ResetStartRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsEmailResetStartRequestLocale? Locale { get; set; }
         /// <summary>The URL that Members are redirected to upon clicking the &quot;Log in without password&quot; button in password reset emails.      After Members are redirected to the login redirect URL, your application should retrieve the `token` value from the URL parameters and call the [Magic Link Authenticate endpoint](https://stytch.com/docs/api/authenticate-magic-link) to log the Member in without requiring a password reset. If this value is not provided, your project&apos;s default login redirect URL will be used. If you have not set a default login redirect URL, an error will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,7 +102,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             {
                 { "code_challenge", n => { CodeChallenge = n.GetStringValue(); } },
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1ResetStartRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsEmailResetStartRequestLocale>(); } },
                 { "login_redirect_url", n => { LoginRedirectUrl = n.GetStringValue(); } },
                 { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
                 { "reset_password_expiration_minutes", n => { ResetPasswordExpirationMinutes = n.GetIntValue(); } },
@@ -120,7 +120,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("code_challenge", CodeChallenge);
             writer.WriteStringValue("email_address", EmailAddress);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1ResetStartRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsEmailResetStartRequestLocale>("locale", Locale);
             writer.WriteStringValue("login_redirect_url", LoginRedirectUrl);
             writer.WriteStringValue("organization_id", OrganizationId);
             writer.WriteIntValue("reset_password_expiration_minutes", ResetPasswordExpirationMinutes);

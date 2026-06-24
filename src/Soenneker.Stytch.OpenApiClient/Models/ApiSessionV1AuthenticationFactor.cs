@@ -79,7 +79,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor CryptoWalletFactor { get; set; }
 #endif
         /// <summary>The delivery_method property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticationFactorDeliveryMethod? DeliveryMethod { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionsAuthenticationFactorDeliveryMethod? DeliveryMethod { get; set; }
         /// <summary>The discord_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -345,7 +345,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitterOAuthFactor TwitterOauthFactor { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticationFactorType? Type { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionsAuthenticationFactorType? Type { get; set; }
         /// <summary>The timestamp when the factor was last updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -403,7 +403,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "coinbase_oauth_factor", n => { CoinbaseOauthFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CoinbaseOAuthFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CoinbaseOAuthFactor.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "crypto_wallet_factor", n => { CryptoWalletFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor.CreateFromDiscriminatorValue); } },
-                { "delivery_method", n => { DeliveryMethod = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticationFactorDeliveryMethod>(); } },
+                { "delivery_method", n => { DeliveryMethod = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionsAuthenticationFactorDeliveryMethod>(); } },
                 { "discord_oauth_factor", n => { DiscordOauthFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1DiscordOAuthFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1DiscordOAuthFactor.CreateFromDiscriminatorValue); } },
                 { "email_factor", n => { EmailFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmailFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmailFactor.CreateFromDiscriminatorValue); } },
                 { "embeddable_magic_link_factor", n => { EmbeddableMagicLinkFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmbeddableMagicLinkFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmbeddableMagicLinkFactor.CreateFromDiscriminatorValue); } },
@@ -437,7 +437,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "trusted_auth_token_factor", n => { TrustedAuthTokenFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TrustedAuthTokenFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TrustedAuthTokenFactor.CreateFromDiscriminatorValue); } },
                 { "twitch_oauth_factor", n => { TwitchOauthFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitchOAuthFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitchOAuthFactor.CreateFromDiscriminatorValue); } },
                 { "twitter_oauth_factor", n => { TwitterOauthFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitterOAuthFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitterOAuthFactor.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticationFactorType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionsAuthenticationFactorType>(); } },
                 { "updated_at", n => { UpdatedAt = n.GetStringValue(); } },
                 { "webauthn_factor", n => { WebauthnFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1WebAuthnFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1WebAuthnFactor.CreateFromDiscriminatorValue); } },
                 { "yahoo_oauth_factor", n => { YahooOauthFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1YahooOAuthFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1YahooOAuthFactor.CreateFromDiscriminatorValue); } },
@@ -458,7 +458,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CoinbaseOAuthFactor>("coinbase_oauth_factor", CoinbaseOauthFactor);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor>("crypto_wallet_factor", CryptoWalletFactor);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticationFactorDeliveryMethod>("delivery_method", DeliveryMethod);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionsAuthenticationFactorDeliveryMethod>("delivery_method", DeliveryMethod);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1DiscordOAuthFactor>("discord_oauth_factor", DiscordOauthFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmailFactor>("email_factor", EmailFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmbeddableMagicLinkFactor>("embeddable_magic_link_factor", EmbeddableMagicLinkFactor);
@@ -492,7 +492,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TrustedAuthTokenFactor>("trusted_auth_token_factor", TrustedAuthTokenFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitchOAuthFactor>("twitch_oauth_factor", TwitchOauthFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitterOAuthFactor>("twitter_oauth_factor", TwitterOauthFactor);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticationFactorType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionsAuthenticationFactorType>("type", Type);
             writer.WriteStringValue("updated_at", UpdatedAt);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1WebAuthnFactor>("webauthn_factor", WebauthnFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1YahooOAuthFactor>("yahoo_oauth_factor", YahooOauthFactor);

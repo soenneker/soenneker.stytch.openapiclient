@@ -23,7 +23,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchUsersQueryOperandsItemProperty> Operands { get; set; }
 #endif
         /// <summary>The operator property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchUsersQueryOperator? Operator { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UsersSearchUsersQueryOperator? Operator { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchUsersQuery"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "operands", n => { Operands = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchUsersQueryOperandsItemProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchUsersQueryOperandsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchUsersQueryOperator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UsersSearchUsersQueryOperator>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchUsersQueryOperandsItemProperty>("operands", Operands);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchUsersQueryOperator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UsersSearchUsersQueryOperator>("operator", Operator);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

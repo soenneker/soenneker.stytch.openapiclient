@@ -22,6 +22,14 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public string IntermediateSessionToken { get; set; }
 #endif
+        /// <summary>The intermediate_session_token_expires_at property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IntermediateSessionTokenExpiresAt { get; set; }
+#nullable restore
+#else
+        public string IntermediateSessionTokenExpiresAt { get; set; }
+#endif
         /// <summary>The member property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -150,6 +158,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "intermediate_session_token", n => { IntermediateSessionToken = n.GetStringValue(); } },
+                { "intermediate_session_token_expires_at", n => { IntermediateSessionTokenExpiresAt = n.GetStringValue(); } },
                 { "member", n => { Member = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member.CreateFromDiscriminatorValue); } },
                 { "member_authenticated", n => { MemberAuthenticated = n.GetBoolValue(); } },
                 { "member_device", n => { MemberDevice = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceInfo>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceInfo.CreateFromDiscriminatorValue); } },
@@ -175,6 +184,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("intermediate_session_token", IntermediateSessionToken);
+            writer.WriteStringValue("intermediate_session_token_expires_at", IntermediateSessionTokenExpiresAt);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member>("member", Member);
             writer.WriteBoolValue("member_authenticated", MemberAuthenticated);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceInfo>("member_device", MemberDevice);

@@ -8,7 +8,7 @@
       "url": "https://stytch.com/docs",
       "email": "support@stytch.com"
     },
-    "version": "2.0.0"
+    "version": "2.1.0"
   },
   "servers": [
     {
@@ -7347,7 +7347,8 @@
           "access_token_template_content",
           "post_logout_redirect_urls",
           "bypass_consent_for_offline_access",
-          "creation_method"
+          "creation_method",
+          "id_token_template_content"
         ],
         "type": "object",
         "properties": {
@@ -7400,6 +7401,9 @@
             "description": "Valid for first party clients only. If true, the client does not need to request explicit user consent for the \u0060offline_access\u0060 scope."
           },
           "creation_method": {
+            "type": "string"
+          },
+          "id_token_template_content": {
             "type": "string"
           },
           "client_secret_last_four": {
@@ -7460,7 +7464,8 @@
           "access_token_expiry_minutes",
           "access_token_template_content",
           "post_logout_redirect_urls",
-          "bypass_consent_for_offline_access"
+          "bypass_consent_for_offline_access",
+          "id_token_template_content"
         ],
         "type": "object",
         "properties": {
@@ -7512,6 +7517,9 @@
             "type": "boolean",
             "description": "Valid for first party clients only. If true, the client does not need to request explicit user consent for the \u0060offline_access\u0060 scope."
           },
+          "id_token_template_content": {
+            "type": "string"
+          },
           "client_secret_last_four": {
             "type": "string",
             "description": "The last four characters of the client secret."
@@ -7550,7 +7558,8 @@
           "access_token_expiry_minutes",
           "access_token_template_content",
           "post_logout_redirect_urls",
-          "bypass_consent_for_offline_access"
+          "bypass_consent_for_offline_access",
+          "id_token_template_content"
         ],
         "type": "object",
         "properties": {
@@ -7609,6 +7618,9 @@
             "type": "boolean",
             "description": "Valid for first party clients only. If true, the client does not need to request explicit user consent for the \u0060offline_access\u0060 scope."
           },
+          "id_token_template_content": {
+            "type": "string"
+          },
           "next_client_secret_last_four": {
             "type": "string",
             "description": "The last four characters of the \u0060next_client_secret\u0060. Null if no \u0060next_client_secret\u0060 exists."
@@ -7649,7 +7661,7 @@
         "type": "object",
         "properties": {
           "client_type": {
-            "$ref": "#/components/schemas/ApiConnectedappsV1CreateRequestClientType"
+            "$ref": "#/components/schemas/ApiConnectedappsV1ConnectedAppsClientsCreateRequestClientType"
           },
           "client_name": {
             "type": "string",
@@ -7697,6 +7709,9 @@
           "bypass_consent_for_offline_access": {
             "type": "boolean",
             "description": "Valid for first party clients only. If true, the client does not need to request explicit user consent for the \u0060offline_access\u0060 scope."
+          },
+          "id_token_template_content": {
+            "type": "string"
           }
         },
         "description": "Request type"
@@ -7864,6 +7879,9 @@
           "bypass_consent_for_offline_access": {
             "type": "boolean",
             "description": "Valid for first party clients only. If true, the client does not need to request explicit user consent for the \u0060offline_access\u0060 scope."
+          },
+          "id_token_template_content": {
+            "type": "string"
           }
         },
         "description": "Request type"
@@ -7890,7 +7908,7 @@
           }
         }
       },
-      "ApiConnectedappsV1CreateRequestClientType": {
+      "ApiConnectedappsV1ConnectedAppsClientsCreateRequestClientType": {
         "enum": [
           "first_party",
           "first_party_public",
@@ -7900,7 +7918,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiConnectedappsV1CreateRequestClientType",
+          "name": "ApiConnectedappsV1ConnectedAppsClientsCreateRequestClientType",
           "modelAsString": false,
           "values": [
             {
@@ -8626,7 +8644,7 @@
             "description": "A human-readable display name for the connection."
           },
           "identity_provider": {
-            "$ref": "#/components/schemas/ApiB2BScimV1CreateRequestIdentityProvider"
+            "$ref": "#/components/schemas/ApiB2BScimV1ScimConnectionCreateRequestIdentityProvider"
           }
         },
         "description": "Request type"
@@ -8823,7 +8841,7 @@
             "description": "A human-readable display name for the connection."
           },
           "identity_provider": {
-            "$ref": "#/components/schemas/ApiB2BScimV1UpdateRequestIdentityProvider"
+            "$ref": "#/components/schemas/ApiB2BScimV1ScimConnectionUpdateRequestIdentityProvider"
           },
           "scim_group_implicit_role_assignments": {
             "type": "array",
@@ -8856,7 +8874,7 @@
           }
         }
       },
-      "ApiB2BScimV1CreateRequestIdentityProvider": {
+      "ApiB2BScimV1ScimConnectionCreateRequestIdentityProvider": {
         "enum": [
           "generic",
           "okta",
@@ -8870,7 +8888,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BScimV1CreateRequestIdentityProvider",
+          "name": "ApiB2BScimV1ScimConnectionCreateRequestIdentityProvider",
           "modelAsString": false,
           "values": [
             {
@@ -8908,7 +8926,7 @@
           ]
         }
       },
-      "ApiB2BScimV1UpdateRequestIdentityProvider": {
+      "ApiB2BScimV1ScimConnectionUpdateRequestIdentityProvider": {
         "enum": [
           "generic",
           "okta",
@@ -8922,7 +8940,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BScimV1UpdateRequestIdentityProvider",
+          "name": "ApiB2BScimV1ScimConnectionUpdateRequestIdentityProvider",
           "modelAsString": false,
           "values": [
             {
@@ -9737,7 +9755,7 @@
         "type": "object",
         "properties": {
           "operator": {
-            "$ref": "#/components/schemas/ApiOrganizationV1SearchQueryOperator"
+            "$ref": "#/components/schemas/ApiOrganizationV1OrganizationsSearchQueryOperator"
           },
           "operands": {
             "type": "array",
@@ -9911,7 +9929,7 @@
             "description": "A list of email domains that are claimed by the Organization."
           },
           "first_party_connected_apps_allowed_type": {
-            "$ref": "#/components/schemas/ApiOrganizationV1CreateRequestFirstPartyConnectedAppsAllowedType"
+            "$ref": "#/components/schemas/ApiOrganizationV1OrganizationsCreateRequestFirstPartyConnectedAppsAllowedType"
           },
           "allowed_first_party_connected_apps": {
             "type": "array",
@@ -9921,7 +9939,7 @@
             "description": "An array of first party Connected App IDs that are allowed for the Organization. Only used when the Organization\u0027s \u0060first_party_connected_apps_allowed_type\u0060 is \u0060RESTRICTED\u0060."
           },
           "third_party_connected_apps_allowed_type": {
-            "$ref": "#/components/schemas/ApiOrganizationV1CreateRequestThirdPartyConnectedAppsAllowedType"
+            "$ref": "#/components/schemas/ApiOrganizationV1OrganizationsCreateRequestThirdPartyConnectedAppsAllowedType"
           },
           "allowed_third_party_connected_apps": {
             "type": "array",
@@ -10245,7 +10263,7 @@
             "description": "A list of email domains that are claimed by the Organization."
           },
           "first_party_connected_apps_allowed_type": {
-            "$ref": "#/components/schemas/ApiOrganizationV1UpdateRequestFirstPartyConnectedAppsAllowedType"
+            "$ref": "#/components/schemas/ApiOrganizationV1OrganizationsUpdateRequestFirstPartyConnectedAppsAllowedType"
           },
           "allowed_first_party_connected_apps": {
             "type": "array",
@@ -10255,7 +10273,7 @@
             "description": "An array of first party Connected App IDs that are allowed for the Organization. Only used when the Organization\u0027s \u0060first_party_connected_apps_allowed_type\u0060 is \u0060RESTRICTED\u0060."
           },
           "third_party_connected_apps_allowed_type": {
-            "$ref": "#/components/schemas/ApiOrganizationV1UpdateRequestThirdPartyConnectedAppsAllowedType"
+            "$ref": "#/components/schemas/ApiOrganizationV1OrganizationsUpdateRequestThirdPartyConnectedAppsAllowedType"
           },
           "allowed_third_party_connected_apps": {
             "type": "array",
@@ -10289,7 +10307,7 @@
           }
         }
       },
-      "ApiOrganizationV1CreateRequestFirstPartyConnectedAppsAllowedType": {
+      "ApiOrganizationV1OrganizationsCreateRequestFirstPartyConnectedAppsAllowedType": {
         "enum": [
           "ALL_ALLOWED",
           "RESTRICTED",
@@ -10298,7 +10316,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiOrganizationV1CreateRequestFirstPartyConnectedAppsAllowedType",
+          "name": "ApiOrganizationV1OrganizationsCreateRequestFirstPartyConnectedAppsAllowedType",
           "modelAsString": false,
           "values": [
             {
@@ -10316,7 +10334,7 @@
           ]
         }
       },
-      "ApiOrganizationV1CreateRequestThirdPartyConnectedAppsAllowedType": {
+      "ApiOrganizationV1OrganizationsCreateRequestThirdPartyConnectedAppsAllowedType": {
         "enum": [
           "ALL_ALLOWED",
           "RESTRICTED",
@@ -10325,7 +10343,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiOrganizationV1CreateRequestThirdPartyConnectedAppsAllowedType",
+          "name": "ApiOrganizationV1OrganizationsCreateRequestThirdPartyConnectedAppsAllowedType",
           "modelAsString": false,
           "values": [
             {
@@ -10343,7 +10361,7 @@
           ]
         }
       },
-      "ApiOrganizationV1SearchQueryOperator": {
+      "ApiOrganizationV1OrganizationsSearchQueryOperator": {
         "enum": [
           "OR",
           "AND"
@@ -10351,7 +10369,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiOrganizationV1SearchQueryOperator",
+          "name": "ApiOrganizationV1OrganizationsSearchQueryOperator",
           "modelAsString": false,
           "values": [
             {
@@ -10365,7 +10383,7 @@
           ]
         }
       },
-      "ApiOrganizationV1UpdateRequestFirstPartyConnectedAppsAllowedType": {
+      "ApiOrganizationV1OrganizationsUpdateRequestFirstPartyConnectedAppsAllowedType": {
         "enum": [
           "ALL_ALLOWED",
           "RESTRICTED",
@@ -10374,7 +10392,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiOrganizationV1UpdateRequestFirstPartyConnectedAppsAllowedType",
+          "name": "ApiOrganizationV1OrganizationsUpdateRequestFirstPartyConnectedAppsAllowedType",
           "modelAsString": false,
           "values": [
             {
@@ -10392,7 +10410,7 @@
           ]
         }
       },
-      "ApiOrganizationV1UpdateRequestThirdPartyConnectedAppsAllowedType": {
+      "ApiOrganizationV1OrganizationsUpdateRequestThirdPartyConnectedAppsAllowedType": {
         "enum": [
           "ALL_ALLOWED",
           "RESTRICTED",
@@ -10401,7 +10419,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiOrganizationV1UpdateRequestThirdPartyConnectedAppsAllowedType",
+          "name": "ApiOrganizationV1OrganizationsUpdateRequestThirdPartyConnectedAppsAllowedType",
           "modelAsString": false,
           "values": [
             {
@@ -10877,14 +10895,14 @@
             "description": "The URL that the Member clicks from the login Email Magic Link. This URL should be an endpoint in the backend server that\n  verifies the request by querying Stytch\u0027s authenticate endpoint and finishes the login. If this value is not passed, the default login\n  redirect URL that you set in your Dashboard is used. If you have not set a default login redirect URL, an error is returned."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiOrganizationV1StartEmailUpdateRequestLocale"
+            "$ref": "#/components/schemas/ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestLocale"
           },
           "login_template_id": {
             "type": "string",
             "description": "Use a custom template for login emails. By default, it will use your default email template. Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type \u201CMagic Links - Login\u201D."
           },
           "delivery_method": {
-            "$ref": "#/components/schemas/ApiOrganizationV1StartEmailUpdateRequestDeliveryMethod"
+            "$ref": "#/components/schemas/ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestDeliveryMethod"
           }
         },
         "description": "Request type"
@@ -11056,7 +11074,7 @@
           }
         }
       },
-      "ApiOrganizationV1StartEmailUpdateRequestDeliveryMethod": {
+      "ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestDeliveryMethod": {
         "enum": [
           "EMAIL_MAGIC_LINK",
           "EMAIL_OTP"
@@ -11064,7 +11082,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiOrganizationV1StartEmailUpdateRequestDeliveryMethod",
+          "name": "ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestDeliveryMethod",
           "modelAsString": false,
           "values": [
             {
@@ -11078,7 +11096,7 @@
           ]
         }
       },
-      "ApiOrganizationV1StartEmailUpdateRequestLocale": {
+      "ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -11088,7 +11106,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiOrganizationV1StartEmailUpdateRequestLocale",
+          "name": "ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -11833,7 +11851,7 @@
         "type": "object",
         "properties": {
           "operator": {
-            "$ref": "#/components/schemas/ApiUserV1SearchUsersQueryOperator"
+            "$ref": "#/components/schemas/ApiUserV1UsersSearchUsersQueryOperator"
           },
           "operands": {
             "type": "array",
@@ -12739,7 +12757,7 @@
           }
         }
       },
-      "ApiUserV1SearchUsersQueryOperator": {
+      "ApiUserV1UsersSearchUsersQueryOperator": {
         "enum": [
           "OR",
           "AND"
@@ -12747,7 +12765,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiUserV1SearchUsersQueryOperator",
+          "name": "ApiUserV1UsersSearchUsersQueryOperator",
           "modelAsString": false,
           "values": [
             {
@@ -12805,10 +12823,10 @@
         "type": "object",
         "properties": {
           "type": {
-            "$ref": "#/components/schemas/ApiSessionV1AuthenticationFactorType"
+            "$ref": "#/components/schemas/ApiSessionV1SessionsAuthenticationFactorType"
           },
           "delivery_method": {
-            "$ref": "#/components/schemas/ApiSessionV1AuthenticationFactorDeliveryMethod"
+            "$ref": "#/components/schemas/ApiSessionV1SessionsAuthenticationFactorDeliveryMethod"
           },
           "last_authenticated_at": {
             "type": "string",
@@ -14128,7 +14146,7 @@
           }
         }
       },
-      "ApiSessionV1AuthenticationFactorDeliveryMethod": {
+      "ApiSessionV1SessionsAuthenticationFactorDeliveryMethod": {
         "enum": [
           "email",
           "sms",
@@ -14178,7 +14196,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiSessionV1AuthenticationFactorDeliveryMethod",
+          "name": "ApiSessionV1SessionsAuthenticationFactorDeliveryMethod",
           "modelAsString": false,
           "values": [
             {
@@ -14360,7 +14378,7 @@
           ]
         }
       },
-      "ApiSessionV1AuthenticationFactorType": {
+      "ApiSessionV1SessionsAuthenticationFactorType": {
         "enum": [
           "magic_link",
           "otp",
@@ -14380,7 +14398,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiSessionV1AuthenticationFactorType",
+          "name": "ApiSessionV1SessionsAuthenticationFactorType",
           "modelAsString": false,
           "values": [
             {
@@ -14816,7 +14834,7 @@
             "$ref": "#/components/schemas/ApiB2BSessionV1ExchangeRequestSessionCustomClaimsProperty"
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BSessionV1ExchangeRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BSessionV1SessionsExchangeRequestLocale"
           },
           "telemetry_id": {
             "type": "string",
@@ -14885,6 +14903,9 @@
           },
           "member_device": {
             "$ref": "#/components/schemas/ApiDeviceHistoryV1DeviceInfo"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
@@ -15071,7 +15092,7 @@
           }
         }
       },
-      "ApiB2BSessionV1ExchangeRequestLocale": {
+      "ApiB2BSessionV1SessionsExchangeRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -15080,12 +15101,20 @@
           "it",
           "de-DE",
           "zh-Hans",
-          "ca-ES"
+          "ca-ES",
+          "ja",
+          "ru",
+          "nl",
+          "pl",
+          "tr",
+          "fa",
+          "vi",
+          "cs"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BSessionV1ExchangeRequestLocale",
+          "name": "ApiB2BSessionV1SessionsExchangeRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -15119,6 +15148,38 @@
             {
               "value": "ca-ES",
               "name": "CaEs"
+            },
+            {
+              "value": "ja",
+              "name": "Ja"
+            },
+            {
+              "value": "ru",
+              "name": "Ru"
+            },
+            {
+              "value": "nl",
+              "name": "Nl"
+            },
+            {
+              "value": "pl",
+              "name": "Pl"
+            },
+            {
+              "value": "tr",
+              "name": "Tr"
+            },
+            {
+              "value": "fa",
+              "name": "Fa"
+            },
+            {
+              "value": "vi",
+              "name": "Vi"
+            },
+            {
+              "value": "cs",
+              "name": "Cs"
             }
           ]
         }
@@ -15195,6 +15256,9 @@
           },
           "mfa_required": {
             "$ref": "#/components/schemas/ApiB2BMfaV1MfaRequired"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
@@ -16417,7 +16481,7 @@
             "$ref": "#/components/schemas/ApiDiscoveryV1DiscoveryIntermediateSessionsExchangeRequestSessionCustomClaimsProperty"
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiDiscoveryV1ExchangeRequestLocale"
+            "$ref": "#/components/schemas/ApiDiscoveryV1DiscoveryIntermediateSessionsExchangeRequestLocale"
           },
           "telemetry_id": {
             "type": "string",
@@ -16486,10 +16550,13 @@
           },
           "member_device": {
             "$ref": "#/components/schemas/ApiDeviceHistoryV1DeviceInfo"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
-      "ApiDiscoveryV1ExchangeRequestLocale": {
+      "ApiDiscoveryV1DiscoveryIntermediateSessionsExchangeRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -16498,12 +16565,20 @@
           "it",
           "de-DE",
           "zh-Hans",
-          "ca-ES"
+          "ca-ES",
+          "ja",
+          "ru",
+          "nl",
+          "pl",
+          "tr",
+          "fa",
+          "vi",
+          "cs"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiDiscoveryV1ExchangeRequestLocale",
+          "name": "ApiDiscoveryV1DiscoveryIntermediateSessionsExchangeRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -16537,6 +16612,38 @@
             {
               "value": "ca-ES",
               "name": "CaEs"
+            },
+            {
+              "value": "ja",
+              "name": "Ja"
+            },
+            {
+              "value": "ru",
+              "name": "Ru"
+            },
+            {
+              "value": "nl",
+              "name": "Nl"
+            },
+            {
+              "value": "pl",
+              "name": "Pl"
+            },
+            {
+              "value": "tr",
+              "name": "Tr"
+            },
+            {
+              "value": "fa",
+              "name": "Fa"
+            },
+            {
+              "value": "vi",
+              "name": "Vi"
+            },
+            {
+              "value": "cs",
+              "name": "Cs"
             }
           ]
         }
@@ -16691,7 +16798,7 @@
             "$ref": "#/components/schemas/ApiDiscoveryV1DiscoveryOrganizationsCreateRequestAllowedOAuthTenantsProperty"
           },
           "first_party_connected_apps_allowed_type": {
-            "$ref": "#/components/schemas/ApiDiscoveryV1CreateRequestFirstPartyConnectedAppsAllowedType"
+            "$ref": "#/components/schemas/ApiDiscoveryV1DiscoveryOrganizationsCreateRequestFirstPartyConnectedAppsAllowedType"
           },
           "allowed_first_party_connected_apps": {
             "type": "array",
@@ -16701,7 +16808,7 @@
             "description": "An array of first party Connected App IDs that are allowed for the Organization. Only used when the Organization\u0027s \u0060first_party_connected_apps_allowed_type\u0060 is \u0060RESTRICTED\u0060."
           },
           "third_party_connected_apps_allowed_type": {
-            "$ref": "#/components/schemas/ApiDiscoveryV1CreateRequestThirdPartyConnectedAppsAllowedType"
+            "$ref": "#/components/schemas/ApiDiscoveryV1DiscoveryOrganizationsCreateRequestThirdPartyConnectedAppsAllowedType"
           },
           "allowed_third_party_connected_apps": {
             "type": "array",
@@ -16777,10 +16884,13 @@
           },
           "member_device": {
             "$ref": "#/components/schemas/ApiDeviceHistoryV1DeviceInfo"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
-      "ApiDiscoveryV1CreateRequestFirstPartyConnectedAppsAllowedType": {
+      "ApiDiscoveryV1DiscoveryOrganizationsCreateRequestFirstPartyConnectedAppsAllowedType": {
         "enum": [
           "ALL_ALLOWED",
           "RESTRICTED",
@@ -16789,7 +16899,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiDiscoveryV1CreateRequestFirstPartyConnectedAppsAllowedType",
+          "name": "ApiDiscoveryV1DiscoveryOrganizationsCreateRequestFirstPartyConnectedAppsAllowedType",
           "modelAsString": false,
           "values": [
             {
@@ -16807,7 +16917,7 @@
           ]
         }
       },
-      "ApiDiscoveryV1CreateRequestThirdPartyConnectedAppsAllowedType": {
+      "ApiDiscoveryV1DiscoveryOrganizationsCreateRequestThirdPartyConnectedAppsAllowedType": {
         "enum": [
           "ALL_ALLOWED",
           "RESTRICTED",
@@ -16816,7 +16926,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiDiscoveryV1CreateRequestThirdPartyConnectedAppsAllowedType",
+          "name": "ApiDiscoveryV1DiscoveryOrganizationsCreateRequestThirdPartyConnectedAppsAllowedType",
           "modelAsString": false,
           "values": [
             {
@@ -17116,7 +17226,7 @@
         "type": "object",
         "properties": {
           "action": {
-            "$ref": "#/components/schemas/ApiFraudV1VerdictAction"
+            "$ref": "#/components/schemas/ApiFraudV1FraudVerdictAction"
           },
           "reasons": {
             "type": "array",
@@ -17161,10 +17271,10 @@
             "description": "The verdict reason."
           },
           "default_action": {
-            "$ref": "#/components/schemas/ApiFraudV1VerdictReasonActionAction"
+            "$ref": "#/components/schemas/ApiFraudV1FraudVerdictReasonActionAction"
           },
           "override_action": {
-            "$ref": "#/components/schemas/ApiFraudV1VerdictReasonActionAction"
+            "$ref": "#/components/schemas/ApiFraudV1FraudVerdictReasonActionAction"
           },
           "override_created_at": {
             "type": "string",
@@ -17188,7 +17298,7 @@
             "description": "The verdict reason that was overridden."
           },
           "override_action": {
-            "$ref": "#/components/schemas/ApiFraudV1VerdictReasonOverrideAction"
+            "$ref": "#/components/schemas/ApiFraudV1FraudVerdictReasonOverrideAction"
           }
         }
       },
@@ -17281,7 +17391,7 @@
           ]
         }
       },
-      "ApiFraudV1VerdictAction": {
+      "ApiFraudV1FraudVerdictAction": {
         "enum": [
           "ALLOW",
           "CHALLENGE",
@@ -17290,7 +17400,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiFraudV1VerdictAction",
+          "name": "ApiFraudV1FraudVerdictAction",
           "modelAsString": false,
           "values": [
             {
@@ -17308,7 +17418,7 @@
           ]
         }
       },
-      "ApiFraudV1VerdictReasonActionAction": {
+      "ApiFraudV1FraudVerdictReasonActionAction": {
         "enum": [
           "ALLOW",
           "CHALLENGE",
@@ -17317,7 +17427,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiFraudV1VerdictReasonActionAction",
+          "name": "ApiFraudV1FraudVerdictReasonActionAction",
           "modelAsString": false,
           "values": [
             {
@@ -17335,7 +17445,7 @@
           ]
         }
       },
-      "ApiFraudV1VerdictReasonOverrideAction": {
+      "ApiFraudV1FraudVerdictReasonOverrideAction": {
         "enum": [
           "ALLOW",
           "CHALLENGE",
@@ -17344,7 +17454,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiFraudV1VerdictReasonOverrideAction",
+          "name": "ApiFraudV1FraudVerdictReasonOverrideAction",
           "modelAsString": false,
           "values": [
             {
@@ -17642,7 +17752,7 @@
             "description": "The verdict reason that you wish to override. For a list of possible reasons to override, see [Warning Flags (Verdict Reasons)](https://stytch.com/docs/docs/fraud/guides/device-fingerprinting/reference/warning-flags-verdict-reasons). You may not override the \u0060RULE_MATCH\u0060 reason."
           },
           "override_action": {
-            "$ref": "#/components/schemas/ApiFraudV1OverrideRequestAction"
+            "$ref": "#/components/schemas/ApiFraudV1FraudVerdictReasonsOverrideRequestAction"
           },
           "override_description": {
             "type": "string",
@@ -17673,7 +17783,7 @@
           }
         }
       },
-      "ApiFraudV1OverrideRequestAction": {
+      "ApiFraudV1FraudVerdictReasonsOverrideRequestAction": {
         "enum": [
           "ALLOW",
           "CHALLENGE",
@@ -17683,7 +17793,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiFraudV1OverrideRequestAction",
+          "name": "ApiFraudV1FraudVerdictReasonsOverrideRequestAction",
           "modelAsString": false,
           "values": [
             {
@@ -17740,7 +17850,7 @@
             "$ref": "#/components/schemas/ApiFraudV1DomainInformation"
           },
           "action": {
-            "$ref": "#/components/schemas/ApiFraudV1RiskResponseAction"
+            "$ref": "#/components/schemas/ApiFraudV1FraudEmailRiskResponseAction"
           },
           "risk_score": {
             "type": "integer",
@@ -17754,7 +17864,7 @@
           }
         }
       },
-      "ApiFraudV1RiskResponseAction": {
+      "ApiFraudV1FraudEmailRiskResponseAction": {
         "enum": [
           "ALLOW",
           "CHALLENGE",
@@ -17763,7 +17873,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiFraudV1RiskResponseAction",
+          "name": "ApiFraudV1FraudEmailRiskResponseAction",
           "modelAsString": false,
           "values": [
             {
@@ -18201,7 +18311,7 @@
         "type": "object",
         "properties": {
           "operator": {
-            "$ref": "#/components/schemas/ApiM2Mv1M2MSearchQueryOperator"
+            "$ref": "#/components/schemas/ApiM2Mv1M2Mm2MSearchQueryOperator"
           },
           "operands": {
             "type": "array",
@@ -18229,7 +18339,7 @@
           }
         }
       },
-      "ApiM2Mv1M2MSearchQueryOperator": {
+      "ApiM2Mv1M2Mm2MSearchQueryOperator": {
         "enum": [
           "OR",
           "AND"
@@ -18237,7 +18347,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiM2Mv1M2MSearchQueryOperator",
+          "name": "ApiM2Mv1M2Mm2MSearchQueryOperator",
           "modelAsString": false,
           "values": [
             {
@@ -18418,7 +18528,7 @@
             "description": "A human-readable description for the client."
           },
           "status": {
-            "$ref": "#/components/schemas/ApiM2Mv1UpdateRequestStatus"
+            "$ref": "#/components/schemas/ApiM2Mv1M2MClientsUpdateRequestStatus"
           },
           "scopes": {
             "type": "array",
@@ -18455,7 +18565,7 @@
           }
         }
       },
-      "ApiM2Mv1UpdateRequestStatus": {
+      "ApiM2Mv1M2MClientsUpdateRequestStatus": {
         "enum": [
           "active",
           "inactive"
@@ -18463,7 +18573,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiM2Mv1UpdateRequestStatus",
+          "name": "ApiM2Mv1M2MClientsUpdateRequestStatus",
           "modelAsString": false,
           "values": [
             {
@@ -18747,7 +18857,7 @@
             "format": "int32"
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiMagicV1InviteRequestLocale"
+            "$ref": "#/components/schemas/ApiMagicV1MagicLinksEmailInviteRequestLocale"
           },
           "trusted_metadata": {
             "$ref": "#/components/schemas/ApiMagicV1MagicLinksEmailInviteRequestTrustedMetadataProperty"
@@ -18834,7 +18944,7 @@
             "description": "A base64url encoded SHA256 hash of a one time secret used to validate that the request starts and ends on the same device."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiMagicV1LoginOrCreateRequestLocale"
+            "$ref": "#/components/schemas/ApiMagicV1MagicLinksEmailLoginOrCreateRequestLocale"
           }
         },
         "description": "Request type"
@@ -18955,7 +19065,7 @@
             "description": "The \u0060session_jwt\u0060 of the user to associate the email with."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiMagicV1SendRequestLocale"
+            "$ref": "#/components/schemas/ApiMagicV1MagicLinksEmailSendRequestLocale"
           },
           "signup_template_id": {
             "type": "string",
@@ -18992,7 +19102,7 @@
           }
         }
       },
-      "ApiMagicV1InviteRequestLocale": {
+      "ApiMagicV1MagicLinksEmailInviteRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -19002,7 +19112,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiMagicV1InviteRequestLocale",
+          "name": "ApiMagicV1MagicLinksEmailInviteRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -19024,7 +19134,7 @@
           ]
         }
       },
-      "ApiMagicV1LoginOrCreateRequestLocale": {
+      "ApiMagicV1MagicLinksEmailLoginOrCreateRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -19034,7 +19144,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiMagicV1LoginOrCreateRequestLocale",
+          "name": "ApiMagicV1MagicLinksEmailLoginOrCreateRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -19056,7 +19166,7 @@
           ]
         }
       },
-      "ApiMagicV1SendRequestLocale": {
+      "ApiMagicV1MagicLinksEmailSendRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -19066,7 +19176,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiMagicV1SendRequestLocale",
+          "name": "ApiMagicV1MagicLinksEmailSendRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -19119,7 +19229,7 @@
             "$ref": "#/components/schemas/ApiB2BMagicV1AuthenticateRequestSessionCustomClaimsProperty"
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BMagicV1AuthenticateRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BMagicV1MagicLinksAuthenticateRequestLocale"
           },
           "intermediate_session_token": {
             "type": "string",
@@ -19207,10 +19317,13 @@
           },
           "member_device": {
             "$ref": "#/components/schemas/ApiDeviceHistoryV1DeviceInfo"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
-      "ApiB2BMagicV1AuthenticateRequestLocale": {
+      "ApiB2BMagicV1MagicLinksAuthenticateRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -19220,7 +19333,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BMagicV1AuthenticateRequestLocale",
+          "name": "ApiB2BMagicV1MagicLinksAuthenticateRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -19280,7 +19393,7 @@
             "description": "Use a custom template for invite emails. By default, it will use your default email template. Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type \u201CMagic Links - Invite\u201D."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BMagicV1InviteRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BMagicV1MagicLinksEmailInviteRequestLocale"
           },
           "roles": {
             "type": "array",
@@ -19365,7 +19478,7 @@
             "description": "Use a custom template for signup emails. By default, it will use your default email template. The template must be from Stytch\u0027s\nbuilt-in customizations or a custom HTML email for \u201CMagic Links - Signup\u201D."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BMagicV1LoginOrSignupRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BMagicV1MagicLinksEmailLoginOrSignupRequestLocale"
           },
           "login_expiration_minutes": {
             "minimum": 0,
@@ -19418,7 +19531,7 @@
           }
         }
       },
-      "ApiB2BMagicV1InviteRequestLocale": {
+      "ApiB2BMagicV1MagicLinksEmailInviteRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -19428,7 +19541,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BMagicV1InviteRequestLocale",
+          "name": "ApiB2BMagicV1MagicLinksEmailInviteRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -19450,7 +19563,7 @@
           ]
         }
       },
-      "ApiB2BMagicV1LoginOrSignupRequestLocale": {
+      "ApiB2BMagicV1MagicLinksEmailLoginOrSignupRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -19460,7 +19573,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BMagicV1LoginOrSignupRequestLocale",
+          "name": "ApiB2BMagicV1MagicLinksEmailLoginOrSignupRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -19505,7 +19618,7 @@
             "description": "Use a custom template for discovery emails. By default, it will use your default email template. Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type \u201CMagic Links - Login\u201D."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BMagicV1SendRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BMagicV1MagicLinksEmailDiscoverySendRequestLocale"
           },
           "discovery_expiration_minutes": {
             "minimum": 0,
@@ -19534,7 +19647,7 @@
           }
         }
       },
-      "ApiB2BMagicV1SendRequestLocale": {
+      "ApiB2BMagicV1MagicLinksEmailDiscoverySendRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -19544,7 +19657,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BMagicV1SendRequestLocale",
+          "name": "ApiB2BMagicV1MagicLinksEmailDiscoverySendRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -19616,6 +19729,9 @@
             "type": "integer",
             "description": "The HTTP status code of the response. Stytch follows standard HTTP response status code patterns, e.g. 2XX values equate to success, 3XX values are redirects, 4XX are client errors, and 5XX are server errors.",
             "format": "int32"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
@@ -19680,7 +19796,7 @@
             "description": "A base64url encoded one time secret used to validate that the request starts and ends on the same device."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BoAuthV1AuthenticateRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BoAuthV1OAuthAuthenticateRequestLocale"
           },
           "intermediate_session_token": {
             "type": "string",
@@ -19776,10 +19892,13 @@
           },
           "member_device": {
             "$ref": "#/components/schemas/ApiDeviceHistoryV1DeviceInfo"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
-      "ApiB2BoAuthV1AuthenticateRequestLocale": {
+      "ApiB2BoAuthV1OAuthAuthenticateRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -19788,12 +19907,20 @@
           "it",
           "de-DE",
           "zh-Hans",
-          "ca-ES"
+          "ca-ES",
+          "ja",
+          "ru",
+          "nl",
+          "pl",
+          "tr",
+          "fa",
+          "vi",
+          "cs"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BoAuthV1AuthenticateRequestLocale",
+          "name": "ApiB2BoAuthV1OAuthAuthenticateRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -19827,6 +19954,38 @@
             {
               "value": "ca-ES",
               "name": "CaEs"
+            },
+            {
+              "value": "ja",
+              "name": "Ja"
+            },
+            {
+              "value": "ru",
+              "name": "Ru"
+            },
+            {
+              "value": "nl",
+              "name": "Nl"
+            },
+            {
+              "value": "pl",
+              "name": "Pl"
+            },
+            {
+              "value": "tr",
+              "name": "Tr"
+            },
+            {
+              "value": "fa",
+              "name": "Fa"
+            },
+            {
+              "value": "vi",
+              "name": "Vi"
+            },
+            {
+              "value": "cs",
+              "name": "Cs"
             }
           ]
         }
@@ -19917,6 +20076,9 @@
             "type": "integer",
             "description": "The HTTP status code of the response. Stytch follows standard HTTP response status code patterns, e.g. 2XX values equate to success, 3XX values are redirects, 4XX are client errors, and 5XX are server errors.",
             "format": "int32"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
@@ -20041,7 +20203,7 @@
             "description": "The phone number to send the OTP to. If the Member already has a phone number, this argument is not needed."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BOtpV1SendRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BOtpV1OtpSmsSendRequestLocale"
           },
           "intermediate_session_token": {
             "type": "string",
@@ -20089,17 +20251,29 @@
           }
         }
       },
-      "ApiB2BOtpV1SendRequestLocale": {
+      "ApiB2BOtpV1OtpSmsSendRequestLocale": {
         "enum": [
           "en",
           "es",
           "pt-br",
-          "fr"
+          "fr",
+          "it",
+          "de-DE",
+          "zh-Hans",
+          "ca-ES",
+          "ja",
+          "ru",
+          "nl",
+          "pl",
+          "tr",
+          "fa",
+          "vi",
+          "cs"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BOtpV1SendRequestLocale",
+          "name": "ApiB2BOtpV1OtpSmsSendRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -20117,6 +20291,54 @@
             {
               "value": "fr",
               "name": "Fr"
+            },
+            {
+              "value": "it",
+              "name": "It"
+            },
+            {
+              "value": "de-DE",
+              "name": "DeDe"
+            },
+            {
+              "value": "zh-Hans",
+              "name": "ZhHans"
+            },
+            {
+              "value": "ca-ES",
+              "name": "CaEs"
+            },
+            {
+              "value": "ja",
+              "name": "Ja"
+            },
+            {
+              "value": "ru",
+              "name": "Ru"
+            },
+            {
+              "value": "nl",
+              "name": "Nl"
+            },
+            {
+              "value": "pl",
+              "name": "Pl"
+            },
+            {
+              "value": "tr",
+              "name": "Tr"
+            },
+            {
+              "value": "fa",
+              "name": "Fa"
+            },
+            {
+              "value": "vi",
+              "name": "Vi"
+            },
+            {
+              "value": "cs",
+              "name": "Cs"
             }
           ]
         }
@@ -20162,7 +20384,7 @@
             "$ref": "#/components/schemas/ApiB2BOtpV1B2BOtpEmailAuthenticateRequestSessionCustomClaimsProperty"
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BOtpV1AuthenticateRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BOtpV1OtpEmailAuthenticateRequestLocale"
           },
           "telemetry_id": {
             "type": "string",
@@ -20241,6 +20463,9 @@
           },
           "member_device": {
             "$ref": "#/components/schemas/ApiDeviceHistoryV1DeviceInfo"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
@@ -20268,7 +20493,7 @@
             "description": "Use a custom template for signup emails. By default, it will use your default email template. Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type \u201COTP - Signup\u201D."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BOtpV1LoginOrSignupRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BOtpV1OtpEmailLoginOrSignupRequestLocale"
           },
           "login_expiration_minutes": {
             "minimum": 0,
@@ -20321,7 +20546,7 @@
           }
         }
       },
-      "ApiB2BOtpV1AuthenticateRequestLocale": {
+      "ApiB2BOtpV1OtpEmailAuthenticateRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -20331,7 +20556,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BOtpV1AuthenticateRequestLocale",
+          "name": "ApiB2BOtpV1OtpEmailAuthenticateRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -20353,7 +20578,7 @@
           ]
         }
       },
-      "ApiB2BOtpV1LoginOrSignupRequestLocale": {
+      "ApiB2BOtpV1OtpEmailLoginOrSignupRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -20363,7 +20588,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BOtpV1LoginOrSignupRequestLocale",
+          "name": "ApiB2BOtpV1OtpEmailLoginOrSignupRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -20436,6 +20661,9 @@
             "type": "integer",
             "description": "The HTTP status code of the response. Stytch follows standard HTTP response status code patterns, e.g. 2XX values equate to success, 3XX values are redirects, 4XX are client errors, and 5XX are server errors.",
             "format": "int32"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
@@ -20454,7 +20682,7 @@
             "description": "Use a custom template for login emails. By default, it will use your default email template. Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type \u201COTP - Login\u201D."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BOtpV1SendRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BOtpV1OtpEmailDiscoverySendRequestLocale"
           },
           "discovery_expiration_minutes": {
             "minimum": 0,
@@ -20481,6 +20709,38 @@
             "description": "The HTTP status code of the response. Stytch follows standard HTTP response status code patterns, e.g. 2XX values equate to success, 3XX values are redirects, 4XX are client errors, and 5XX are server errors.",
             "format": "int32"
           }
+        }
+      },
+      "ApiB2BOtpV1OtpEmailDiscoverySendRequestLocale": {
+        "enum": [
+          "en",
+          "es",
+          "pt-br",
+          "fr"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ApiB2BOtpV1OtpEmailDiscoverySendRequestLocale",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "en",
+              "name": "En"
+            },
+            {
+              "value": "es",
+              "name": "Es"
+            },
+            {
+              "value": "pt-br",
+              "name": "PtBr"
+            },
+            {
+              "value": "fr",
+              "name": "Fr"
+            }
+          ]
         }
       },
       "ApiPasswordV1Argon2Config": {
@@ -20882,7 +21142,7 @@
             "description": "The password hash. For a Scrypt or PBKDF2 hash, the hash needs to be a base64 encoded string."
           },
           "hash_type": {
-            "$ref": "#/components/schemas/ApiPasswordV1MigrateRequestHashType"
+            "$ref": "#/components/schemas/ApiPasswordV1PasswordsMigrateRequestHashType"
           },
           "md_5_config": {
             "$ref": "#/components/schemas/ApiPasswordV1Md5Config"
@@ -21038,7 +21298,7 @@
           }
         }
       },
-      "ApiPasswordV1MigrateRequestHashType": {
+      "ApiPasswordV1PasswordsMigrateRequestHashType": {
         "enum": [
           "bcrypt",
           "md_5",
@@ -21053,7 +21313,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiPasswordV1MigrateRequestHashType",
+          "name": "ApiPasswordV1PasswordsMigrateRequestHashType",
           "modelAsString": false,
           "values": [
             {
@@ -21217,7 +21477,7 @@
             "description": "The URL that Users are redirected to upon clicking the \u0022Log in without password\u0022 button in password reset emails.\n\n      After Users are redirected to the login redirect URL, your application should retrieve the \u0060token\u0060 value from the URL parameters and call the [Magic Link Authenticate endpoint](https://stytch.com/docs/api/authenticate-magic-link) to log the User in without requiring a password reset. If this value is not provided, your project\u0027s default login redirect URL will be used. If you have not set a default login redirect URL, an error will be returned."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiPasswordV1ResetStartRequestLocale"
+            "$ref": "#/components/schemas/ApiPasswordV1PasswordsEmailResetStartRequestLocale"
           },
           "reset_password_template_id": {
             "type": "string",
@@ -21254,7 +21514,7 @@
           }
         }
       },
-      "ApiPasswordV1ResetStartRequestLocale": {
+      "ApiPasswordV1PasswordsEmailResetStartRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -21264,7 +21524,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiPasswordV1ResetStartRequestLocale",
+          "name": "ApiPasswordV1PasswordsEmailResetStartRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -21544,7 +21804,7 @@
             "$ref": "#/components/schemas/ApiB2BPasswordV1AuthenticateRequestSessionCustomClaimsProperty"
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BPasswordV1AuthenticateRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BPasswordV1PasswordsAuthenticateRequestLocale"
           },
           "intermediate_session_token": {
             "type": "string",
@@ -21622,6 +21882,9 @@
           },
           "member_device": {
             "$ref": "#/components/schemas/ApiDeviceHistoryV1DeviceInfo"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
@@ -21643,7 +21906,7 @@
             "description": "The password hash. For a Scrypt or PBKDF2 hash, the hash needs to be a base64 encoded string."
           },
           "hash_type": {
-            "$ref": "#/components/schemas/ApiB2BPasswordV1MigrateRequestHashType"
+            "$ref": "#/components/schemas/ApiB2BPasswordV1PasswordsMigrateRequestHashType"
           },
           "organization_id": {
             "type": "string",
@@ -21806,7 +22069,7 @@
           }
         }
       },
-      "ApiB2BPasswordV1AuthenticateRequestLocale": {
+      "ApiB2BPasswordV1PasswordsAuthenticateRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -21816,7 +22079,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BPasswordV1AuthenticateRequestLocale",
+          "name": "ApiB2BPasswordV1PasswordsAuthenticateRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -21838,7 +22101,7 @@
           ]
         }
       },
-      "ApiB2BPasswordV1MigrateRequestHashType": {
+      "ApiB2BPasswordV1PasswordsMigrateRequestHashType": {
         "enum": [
           "bcrypt",
           "md_5",
@@ -21853,7 +22116,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BPasswordV1MigrateRequestHashType",
+          "name": "ApiB2BPasswordV1PasswordsMigrateRequestHashType",
           "modelAsString": false,
           "values": [
             {
@@ -21980,7 +22243,7 @@
             "$ref": "#/components/schemas/ApiB2BPasswordV1B2BPasswordsEmailResetRequestSessionCustomClaimsProperty"
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BPasswordV1ResetRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BPasswordV1PasswordsEmailResetRequestLocale"
           },
           "intermediate_session_token": {
             "type": "string",
@@ -22063,6 +22326,9 @@
           },
           "member_device": {
             "$ref": "#/components/schemas/ApiDeviceHistoryV1DeviceInfo"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
@@ -22099,7 +22365,7 @@
             "description": "The URL that Members are redirected to upon clicking the \u0022Log in without password\u0022 button in password reset emails.\n\n      After Members are redirected to the login redirect URL, your application should retrieve the \u0060token\u0060 value from the URL parameters and call the [Magic Link Authenticate endpoint](https://stytch.com/docs/api/authenticate-magic-link) to log the Member in without requiring a password reset. If this value is not provided, your project\u0027s default login redirect URL will be used. If you have not set a default login redirect URL, an error will be returned."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BPasswordV1ResetStartRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BPasswordV1PasswordsEmailResetStartRequestLocale"
           },
           "reset_password_template_id": {
             "type": "string",
@@ -22144,7 +22410,7 @@
           }
         }
       },
-      "ApiB2BPasswordV1ResetRequestLocale": {
+      "ApiB2BPasswordV1PasswordsEmailResetRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -22154,7 +22420,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BPasswordV1ResetRequestLocale",
+          "name": "ApiB2BPasswordV1PasswordsEmailResetRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -22176,7 +22442,7 @@
           ]
         }
       },
-      "ApiB2BPasswordV1ResetStartRequestLocale": {
+      "ApiB2BPasswordV1PasswordsEmailResetStartRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -22186,7 +22452,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiB2BPasswordV1ResetStartRequestLocale",
+          "name": "ApiB2BPasswordV1PasswordsEmailResetStartRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -22240,7 +22506,7 @@
             "$ref": "#/components/schemas/ApiB2BPasswordV1B2BPasswordsSessionResetRequestSessionCustomClaimsProperty"
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BPasswordV1ResetRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BPasswordV1PasswordsSessionResetRequestLocale"
           },
           "telemetry_id": {
             "type": "string",
@@ -22306,7 +22572,42 @@
           },
           "member_device": {
             "$ref": "#/components/schemas/ApiDeviceHistoryV1DeviceInfo"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
+        }
+      },
+      "ApiB2BPasswordV1PasswordsSessionResetRequestLocale": {
+        "enum": [
+          "en",
+          "es",
+          "pt-br",
+          "fr"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ApiB2BPasswordV1PasswordsSessionResetRequestLocale",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "en",
+              "name": "En"
+            },
+            {
+              "value": "es",
+              "name": "Es"
+            },
+            {
+              "value": "pt-br",
+              "name": "PtBr"
+            },
+            {
+              "value": "fr",
+              "name": "Fr"
+            }
+          ]
         }
       },
       "ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequest": {
@@ -22351,7 +22652,7 @@
             "$ref": "#/components/schemas/ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequestSessionCustomClaimsProperty"
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiB2BPasswordV1ResetRequestLocale"
+            "$ref": "#/components/schemas/ApiB2BPasswordV1PasswordsExistingPasswordResetRequestLocale"
           },
           "telemetry_id": {
             "type": "string",
@@ -22420,7 +22721,42 @@
           },
           "member_device": {
             "$ref": "#/components/schemas/ApiDeviceHistoryV1DeviceInfo"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
+        }
+      },
+      "ApiB2BPasswordV1PasswordsExistingPasswordResetRequestLocale": {
+        "enum": [
+          "en",
+          "es",
+          "pt-br",
+          "fr"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ApiB2BPasswordV1PasswordsExistingPasswordResetRequestLocale",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "en",
+              "name": "En"
+            },
+            {
+              "value": "es",
+              "name": "Es"
+            },
+            {
+              "value": "pt-br",
+              "name": "PtBr"
+            },
+            {
+              "value": "fr",
+              "name": "Fr"
+            }
+          ]
         }
       },
       "ApiB2BPasswordV1B2BPasswordsDiscoveryAuthenticateRequest": {
@@ -22474,6 +22810,9 @@
             "type": "integer",
             "description": "The HTTP status code of the response. Stytch follows standard HTTP response status code patterns, e.g. 2XX values equate to success, 3XX values are redirects, 4XX are client errors, and 5XX are server errors.",
             "format": "int32"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
@@ -22531,6 +22870,9 @@
             "type": "integer",
             "description": "The HTTP status code of the response. Stytch follows standard HTTP response status code patterns, e.g. 2XX values equate to success, 3XX values are redirects, 4XX are client errors, and 5XX are server errors.",
             "format": "int32"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
@@ -22899,7 +23241,7 @@
             "description": "Flag for whether or not to save a user as pending vs active in Stytch. Defaults to false.\n        If true, users will be saved with status pending in Stytch\u0027s backend until authenticated.\n        If false, users will be created as active. An example usage of\n        a true flag would be to require users to verify their phone by entering the OTP code before creating\n        an account for them."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiOtpV1LoginOrCreateRequestLocale"
+            "$ref": "#/components/schemas/ApiOtpV1OtpSmsLoginOrCreateRequestLocale"
           }
         },
         "description": "Request type"
@@ -22956,7 +23298,7 @@
             "$ref": "#/components/schemas/ApiAttributeV1Attributes"
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiOtpV1SendRequestLocale"
+            "$ref": "#/components/schemas/ApiOtpV1OtpSmsSendRequestLocale"
           },
           "user_id": {
             "type": "string",
@@ -23001,17 +23343,29 @@
           }
         }
       },
-      "ApiOtpV1LoginOrCreateRequestLocale": {
+      "ApiOtpV1OtpSmsLoginOrCreateRequestLocale": {
         "enum": [
           "en",
           "es",
           "pt-br",
-          "fr"
+          "fr",
+          "it",
+          "de-DE",
+          "zh-Hans",
+          "ca-ES",
+          "ja",
+          "ru",
+          "nl",
+          "pl",
+          "tr",
+          "fa",
+          "vi",
+          "cs"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiOtpV1LoginOrCreateRequestLocale",
+          "name": "ApiOtpV1OtpSmsLoginOrCreateRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -23029,21 +23383,81 @@
             {
               "value": "fr",
               "name": "Fr"
+            },
+            {
+              "value": "it",
+              "name": "It"
+            },
+            {
+              "value": "de-DE",
+              "name": "DeDe"
+            },
+            {
+              "value": "zh-Hans",
+              "name": "ZhHans"
+            },
+            {
+              "value": "ca-ES",
+              "name": "CaEs"
+            },
+            {
+              "value": "ja",
+              "name": "Ja"
+            },
+            {
+              "value": "ru",
+              "name": "Ru"
+            },
+            {
+              "value": "nl",
+              "name": "Nl"
+            },
+            {
+              "value": "pl",
+              "name": "Pl"
+            },
+            {
+              "value": "tr",
+              "name": "Tr"
+            },
+            {
+              "value": "fa",
+              "name": "Fa"
+            },
+            {
+              "value": "vi",
+              "name": "Vi"
+            },
+            {
+              "value": "cs",
+              "name": "Cs"
             }
           ]
         }
       },
-      "ApiOtpV1SendRequestLocale": {
+      "ApiOtpV1OtpSmsSendRequestLocale": {
         "enum": [
           "en",
           "es",
           "pt-br",
-          "fr"
+          "fr",
+          "it",
+          "de-DE",
+          "zh-Hans",
+          "ca-ES",
+          "ja",
+          "ru",
+          "nl",
+          "pl",
+          "tr",
+          "fa",
+          "vi",
+          "cs"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiOtpV1SendRequestLocale",
+          "name": "ApiOtpV1OtpSmsSendRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -23061,6 +23475,54 @@
             {
               "value": "fr",
               "name": "Fr"
+            },
+            {
+              "value": "it",
+              "name": "It"
+            },
+            {
+              "value": "de-DE",
+              "name": "DeDe"
+            },
+            {
+              "value": "zh-Hans",
+              "name": "ZhHans"
+            },
+            {
+              "value": "ca-ES",
+              "name": "CaEs"
+            },
+            {
+              "value": "ja",
+              "name": "Ja"
+            },
+            {
+              "value": "ru",
+              "name": "Ru"
+            },
+            {
+              "value": "nl",
+              "name": "Nl"
+            },
+            {
+              "value": "pl",
+              "name": "Pl"
+            },
+            {
+              "value": "tr",
+              "name": "Tr"
+            },
+            {
+              "value": "fa",
+              "name": "Fa"
+            },
+            {
+              "value": "vi",
+              "name": "Vi"
+            },
+            {
+              "value": "cs",
+              "name": "Cs"
             }
           ]
         }
@@ -23088,7 +23550,7 @@
             "description": "Flag for whether or not to save a user as pending vs active in Stytch. Defaults to false.\n        If true, users will be saved with status pending in Stytch\u0027s backend until authenticated.\n        If false, users will be created as active. An example usage of\n        a true flag would be to require users to verify their phone by entering the OTP code before creating\n        an account for them."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiOtpV1LoginOrCreateRequestLocale"
+            "$ref": "#/components/schemas/ApiOtpV1OtpWhatsappLoginOrCreateRequestLocale"
           }
         },
         "description": "Request type"
@@ -23145,7 +23607,7 @@
             "$ref": "#/components/schemas/ApiAttributeV1Attributes"
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiOtpV1SendRequestLocale"
+            "$ref": "#/components/schemas/ApiOtpV1OtpWhatsappSendRequestLocale"
           },
           "user_id": {
             "type": "string",
@@ -23190,6 +23652,190 @@
           }
         }
       },
+      "ApiOtpV1OtpWhatsappLoginOrCreateRequestLocale": {
+        "enum": [
+          "en",
+          "es",
+          "pt-br",
+          "fr",
+          "it",
+          "de-DE",
+          "zh-Hans",
+          "ca-ES",
+          "ja",
+          "ru",
+          "nl",
+          "pl",
+          "tr",
+          "fa",
+          "vi",
+          "cs"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ApiOtpV1OtpWhatsappLoginOrCreateRequestLocale",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "en",
+              "name": "En"
+            },
+            {
+              "value": "es",
+              "name": "Es"
+            },
+            {
+              "value": "pt-br",
+              "name": "PtBr"
+            },
+            {
+              "value": "fr",
+              "name": "Fr"
+            },
+            {
+              "value": "it",
+              "name": "It"
+            },
+            {
+              "value": "de-DE",
+              "name": "DeDe"
+            },
+            {
+              "value": "zh-Hans",
+              "name": "ZhHans"
+            },
+            {
+              "value": "ca-ES",
+              "name": "CaEs"
+            },
+            {
+              "value": "ja",
+              "name": "Ja"
+            },
+            {
+              "value": "ru",
+              "name": "Ru"
+            },
+            {
+              "value": "nl",
+              "name": "Nl"
+            },
+            {
+              "value": "pl",
+              "name": "Pl"
+            },
+            {
+              "value": "tr",
+              "name": "Tr"
+            },
+            {
+              "value": "fa",
+              "name": "Fa"
+            },
+            {
+              "value": "vi",
+              "name": "Vi"
+            },
+            {
+              "value": "cs",
+              "name": "Cs"
+            }
+          ]
+        }
+      },
+      "ApiOtpV1OtpWhatsappSendRequestLocale": {
+        "enum": [
+          "en",
+          "es",
+          "pt-br",
+          "fr",
+          "it",
+          "de-DE",
+          "zh-Hans",
+          "ca-ES",
+          "ja",
+          "ru",
+          "nl",
+          "pl",
+          "tr",
+          "fa",
+          "vi",
+          "cs"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ApiOtpV1OtpWhatsappSendRequestLocale",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "en",
+              "name": "En"
+            },
+            {
+              "value": "es",
+              "name": "Es"
+            },
+            {
+              "value": "pt-br",
+              "name": "PtBr"
+            },
+            {
+              "value": "fr",
+              "name": "Fr"
+            },
+            {
+              "value": "it",
+              "name": "It"
+            },
+            {
+              "value": "de-DE",
+              "name": "DeDe"
+            },
+            {
+              "value": "zh-Hans",
+              "name": "ZhHans"
+            },
+            {
+              "value": "ca-ES",
+              "name": "CaEs"
+            },
+            {
+              "value": "ja",
+              "name": "Ja"
+            },
+            {
+              "value": "ru",
+              "name": "Ru"
+            },
+            {
+              "value": "nl",
+              "name": "Nl"
+            },
+            {
+              "value": "pl",
+              "name": "Pl"
+            },
+            {
+              "value": "tr",
+              "name": "Tr"
+            },
+            {
+              "value": "fa",
+              "name": "Fa"
+            },
+            {
+              "value": "vi",
+              "name": "Vi"
+            },
+            {
+              "value": "cs",
+              "name": "Cs"
+            }
+          ]
+        }
+      },
       "ApiOtpV1OtpEmailLoginOrCreateRequest": {
         "required": [
           "email"
@@ -23213,7 +23859,7 @@
             "description": "Flag for whether or not to save a user as pending vs active in Stytch. Defaults to false.\n        If true, users will be saved with status pending in Stytch\u0027s backend until authenticated.\n        If false, users will be created as active. An example usage of\n        a true flag would be to require users to verify their phone by entering the OTP code before creating\n        an account for them."
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiOtpV1LoginOrCreateRequestLocale"
+            "$ref": "#/components/schemas/ApiOtpV1OtpEmailLoginOrCreateRequestLocale"
           },
           "login_template_id": {
             "type": "string",
@@ -23278,7 +23924,7 @@
             "$ref": "#/components/schemas/ApiAttributeV1Attributes"
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiOtpV1SendRequestLocale"
+            "$ref": "#/components/schemas/ApiOtpV1OtpEmailSendRequestLocale"
           },
           "user_id": {
             "type": "string",
@@ -23331,6 +23977,70 @@
           }
         }
       },
+      "ApiOtpV1OtpEmailLoginOrCreateRequestLocale": {
+        "enum": [
+          "en",
+          "es",
+          "pt-br",
+          "fr"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ApiOtpV1OtpEmailLoginOrCreateRequestLocale",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "en",
+              "name": "En"
+            },
+            {
+              "value": "es",
+              "name": "Es"
+            },
+            {
+              "value": "pt-br",
+              "name": "PtBr"
+            },
+            {
+              "value": "fr",
+              "name": "Fr"
+            }
+          ]
+        }
+      },
+      "ApiOtpV1OtpEmailSendRequestLocale": {
+        "enum": [
+          "en",
+          "es",
+          "pt-br",
+          "fr"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ApiOtpV1OtpEmailSendRequestLocale",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "en",
+              "name": "En"
+            },
+            {
+              "value": "es",
+              "name": "Es"
+            },
+            {
+              "value": "pt-br",
+              "name": "PtBr"
+            },
+            {
+              "value": "fr",
+              "name": "Fr"
+            }
+          ]
+        }
+      },
       "ApiProjectV1ProjectMetric": {
         "required": [
           "metric_type",
@@ -23339,7 +24049,7 @@
         "type": "object",
         "properties": {
           "metric_type": {
-            "$ref": "#/components/schemas/ApiProjectV1ProjectMetricMetricType"
+            "$ref": "#/components/schemas/ApiProjectV1ProjectProjectMetricMetricType"
           },
           "count": {
             "minimum": 0,
@@ -23378,7 +24088,7 @@
           }
         }
       },
-      "ApiProjectV1ProjectMetricMetricType": {
+      "ApiProjectV1ProjectProjectMetricMetricType": {
         "enum": [
           "UNKNOWN",
           "USER_COUNT",
@@ -23389,7 +24099,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiProjectV1ProjectMetricMetricType",
+          "name": "ApiProjectV1ProjectProjectMetricMetricType",
           "modelAsString": false,
           "values": [
             {
@@ -23803,7 +24513,7 @@
             "$ref": "#/components/schemas/ApiSsoV1AuthenticateRequestSessionCustomClaimsProperty"
           },
           "locale": {
-            "$ref": "#/components/schemas/ApiSsoV1AuthenticateRequestLocale"
+            "$ref": "#/components/schemas/ApiSsoV1SsoAuthenticateRequestLocale"
           },
           "intermediate_session_token": {
             "type": "string",
@@ -23886,6 +24596,9 @@
           },
           "member_device": {
             "$ref": "#/components/schemas/ApiDeviceHistoryV1DeviceInfo"
+          },
+          "intermediate_session_token_expires_at": {
+            "type": "string"
           }
         }
       },
@@ -23958,7 +24671,7 @@
           }
         }
       },
-      "ApiSsoV1AuthenticateRequestLocale": {
+      "ApiSsoV1SsoAuthenticateRequestLocale": {
         "enum": [
           "en",
           "es",
@@ -23967,12 +24680,20 @@
           "it",
           "de-DE",
           "zh-Hans",
-          "ca-ES"
+          "ca-ES",
+          "ja",
+          "ru",
+          "nl",
+          "pl",
+          "tr",
+          "fa",
+          "vi",
+          "cs"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiSsoV1AuthenticateRequestLocale",
+          "name": "ApiSsoV1SsoAuthenticateRequestLocale",
           "modelAsString": false,
           "values": [
             {
@@ -24006,6 +24727,38 @@
             {
               "value": "ca-ES",
               "name": "CaEs"
+            },
+            {
+              "value": "ja",
+              "name": "Ja"
+            },
+            {
+              "value": "ru",
+              "name": "Ru"
+            },
+            {
+              "value": "nl",
+              "name": "Nl"
+            },
+            {
+              "value": "pl",
+              "name": "Pl"
+            },
+            {
+              "value": "tr",
+              "name": "Tr"
+            },
+            {
+              "value": "fa",
+              "name": "Fa"
+            },
+            {
+              "value": "vi",
+              "name": "Vi"
+            },
+            {
+              "value": "cs",
+              "name": "Cs"
             }
           ]
         }
@@ -24018,7 +24771,7 @@
             "description": "A human-readable display name for the connection."
           },
           "identity_provider": {
-            "$ref": "#/components/schemas/ApiSsoV1CreateConnectionRequestIdentityProvider"
+            "$ref": "#/components/schemas/ApiSsoV1SsoOidcCreateConnectionRequestIdentityProvider"
           }
         },
         "description": "Request type"
@@ -24080,7 +24833,7 @@
             "description": "The location of the IdP\u0027s JSON Web Key Set, used to verify credentials issued by the IdP. This will be provided by the IdP."
           },
           "identity_provider": {
-            "$ref": "#/components/schemas/ApiSsoV1UpdateConnectionRequestIdentityProvider"
+            "$ref": "#/components/schemas/ApiSsoV1SsoOidcUpdateConnectionRequestIdentityProvider"
           },
           "custom_scopes": {
             "type": "string",
@@ -24117,7 +24870,7 @@
           }
         }
       },
-      "ApiSsoV1CreateConnectionRequestIdentityProvider": {
+      "ApiSsoV1SsoOidcCreateConnectionRequestIdentityProvider": {
         "enum": [
           "classlink",
           "cyberark",
@@ -24138,7 +24891,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiSsoV1CreateConnectionRequestIdentityProvider",
+          "name": "ApiSsoV1SsoOidcCreateConnectionRequestIdentityProvider",
           "modelAsString": false,
           "values": [
             {
@@ -24204,7 +24957,7 @@
           ]
         }
       },
-      "ApiSsoV1UpdateConnectionRequestIdentityProvider": {
+      "ApiSsoV1SsoOidcUpdateConnectionRequestIdentityProvider": {
         "enum": [
           "classlink",
           "cyberark",
@@ -24225,7 +24978,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "ApiSsoV1UpdateConnectionRequestIdentityProvider",
+          "name": "ApiSsoV1SsoOidcUpdateConnectionRequestIdentityProvider",
           "modelAsString": false,
           "values": [
             {
@@ -24299,7 +25052,7 @@
             "description": "A human-readable display name for the connection."
           },
           "identity_provider": {
-            "$ref": "#/components/schemas/ApiSsoV1CreateConnectionRequestIdentityProvider"
+            "$ref": "#/components/schemas/ApiSsoV1SsoSamlCreateConnectionRequestIdentityProvider"
           }
         },
         "description": "Request type"
@@ -24446,7 +25199,7 @@
             "description": "An alternative URL to use for the Audience Restriction. This value can be used when you wish to migrate an existing SAML integration to Stytch with zero downtime. Read our [SSO migration guide](https://stytch.com/docs/b2b/guides/migrations/additional-migration-considerations) for more info."
           },
           "identity_provider": {
-            "$ref": "#/components/schemas/ApiSsoV1UpdateConnectionRequestIdentityProvider"
+            "$ref": "#/components/schemas/ApiSsoV1SsoSamlUpdateConnectionRequestIdentityProvider"
           },
           "signing_private_key": {
             "type": "string",
@@ -24493,6 +25246,180 @@
           "connection": {
             "$ref": "#/components/schemas/ApiSsoV1SamlConnection"
           }
+        }
+      },
+      "ApiSsoV1SsoSamlCreateConnectionRequestIdentityProvider": {
+        "enum": [
+          "classlink",
+          "cyberark",
+          "duo",
+          "generic",
+          "google-workspace",
+          "jumpcloud",
+          "keycloak",
+          "miniorange",
+          "microsoft-entra",
+          "okta",
+          "onelogin",
+          "pingfederate",
+          "rippling",
+          "salesforce",
+          "shibboleth"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ApiSsoV1SsoSamlCreateConnectionRequestIdentityProvider",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "classlink",
+              "name": "Classlink"
+            },
+            {
+              "value": "cyberark",
+              "name": "Cyberark"
+            },
+            {
+              "value": "duo",
+              "name": "Duo"
+            },
+            {
+              "value": "generic",
+              "name": "Generic"
+            },
+            {
+              "value": "google-workspace",
+              "name": "GoogleWorkspace"
+            },
+            {
+              "value": "jumpcloud",
+              "name": "Jumpcloud"
+            },
+            {
+              "value": "keycloak",
+              "name": "Keycloak"
+            },
+            {
+              "value": "miniorange",
+              "name": "Miniorange"
+            },
+            {
+              "value": "microsoft-entra",
+              "name": "MicrosoftEntra"
+            },
+            {
+              "value": "okta",
+              "name": "Okta"
+            },
+            {
+              "value": "onelogin",
+              "name": "Onelogin"
+            },
+            {
+              "value": "pingfederate",
+              "name": "Pingfederate"
+            },
+            {
+              "value": "rippling",
+              "name": "Rippling"
+            },
+            {
+              "value": "salesforce",
+              "name": "Salesforce"
+            },
+            {
+              "value": "shibboleth",
+              "name": "Shibboleth"
+            }
+          ]
+        }
+      },
+      "ApiSsoV1SsoSamlUpdateConnectionRequestIdentityProvider": {
+        "enum": [
+          "classlink",
+          "cyberark",
+          "duo",
+          "generic",
+          "google-workspace",
+          "jumpcloud",
+          "keycloak",
+          "miniorange",
+          "microsoft-entra",
+          "okta",
+          "onelogin",
+          "pingfederate",
+          "rippling",
+          "salesforce",
+          "shibboleth"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ApiSsoV1SsoSamlUpdateConnectionRequestIdentityProvider",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "classlink",
+              "name": "Classlink"
+            },
+            {
+              "value": "cyberark",
+              "name": "Cyberark"
+            },
+            {
+              "value": "duo",
+              "name": "Duo"
+            },
+            {
+              "value": "generic",
+              "name": "Generic"
+            },
+            {
+              "value": "google-workspace",
+              "name": "GoogleWorkspace"
+            },
+            {
+              "value": "jumpcloud",
+              "name": "Jumpcloud"
+            },
+            {
+              "value": "keycloak",
+              "name": "Keycloak"
+            },
+            {
+              "value": "miniorange",
+              "name": "Miniorange"
+            },
+            {
+              "value": "microsoft-entra",
+              "name": "MicrosoftEntra"
+            },
+            {
+              "value": "okta",
+              "name": "Okta"
+            },
+            {
+              "value": "onelogin",
+              "name": "Onelogin"
+            },
+            {
+              "value": "pingfederate",
+              "name": "Pingfederate"
+            },
+            {
+              "value": "rippling",
+              "name": "Rippling"
+            },
+            {
+              "value": "salesforce",
+              "name": "Salesforce"
+            },
+            {
+              "value": "shibboleth",
+              "name": "Shibboleth"
+            }
+          ]
         }
       },
       "ApiSsoV1SsoExternalCreateConnectionRequest": {

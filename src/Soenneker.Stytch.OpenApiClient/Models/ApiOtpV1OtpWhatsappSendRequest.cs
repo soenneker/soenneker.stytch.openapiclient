@@ -26,7 +26,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>Set the expiration for the one-time passcode, in minutes. The minimum expiration is 1 minute and the maximum is 10 minutes. The default expiration is 2 minutes.</summary>
         public int? ExpirationMinutes { get; set; }
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1SendRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpWhatsappSendRequestLocale? Locale { get; set; }
         /// <summary>The phone number to use for one-time passcodes. The phone number should be in E.164 format (i.e. +1XXXXXXXXXX). You may use +10000000000 to test this endpoint, see [Testing](https://stytch.com/docs/home#resources_testing) for more detail.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -86,7 +86,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             {
                 { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes>(global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes.CreateFromDiscriminatorValue); } },
                 { "expiration_minutes", n => { ExpirationMinutes = n.GetIntValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1SendRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpWhatsappSendRequestLocale>(); } },
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
                 { "session_jwt", n => { SessionJwt = n.GetStringValue(); } },
                 { "session_token", n => { SessionToken = n.GetStringValue(); } },
@@ -102,7 +102,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes>("attributes", Attributes);
             writer.WriteIntValue("expiration_minutes", ExpirationMinutes);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1SendRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpWhatsappSendRequestLocale>("locale", Locale);
             writer.WriteStringValue("phone_number", PhoneNumber);
             writer.WriteStringValue("session_jwt", SessionJwt);
             writer.WriteStringValue("session_token", SessionToken);

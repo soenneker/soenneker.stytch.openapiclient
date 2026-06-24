@@ -46,6 +46,14 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public string IntermediateSessionToken { get; set; }
 #endif
+        /// <summary>The intermediate_session_token_expires_at property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IntermediateSessionTokenExpiresAt { get; set; }
+#nullable restore
+#else
+        public string IntermediateSessionTokenExpiresAt { get; set; }
+#endif
         /// <summary>The tenant ID returned by the OAuth provider. This is typically used to identify an organization or group within the provider&apos;s domain. For example, in HubSpot this is a Hub ID, in Slack this is the Workspace ID, and in GitHub this is an organization ID. This field will only be populated if exactly one tenant ID is returned from a successful OAuth authentication and developers should prefer `provider_tenant_ids` over this since it accounts for the possibility of an OAuth provider yielding multiple tenant IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -109,6 +117,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
                 { "full_name", n => { FullName = n.GetStringValue(); } },
                 { "intermediate_session_token", n => { IntermediateSessionToken = n.GetStringValue(); } },
+                { "intermediate_session_token_expires_at", n => { IntermediateSessionTokenExpiresAt = n.GetStringValue(); } },
                 { "provider_tenant_id", n => { ProviderTenantId = n.GetStringValue(); } },
                 { "provider_tenant_ids", n => { ProviderTenantIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "provider_type", n => { ProviderType = n.GetStringValue(); } },
@@ -127,6 +136,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("email_address", EmailAddress);
             writer.WriteStringValue("full_name", FullName);
             writer.WriteStringValue("intermediate_session_token", IntermediateSessionToken);
+            writer.WriteStringValue("intermediate_session_token_expires_at", IntermediateSessionTokenExpiresAt);
             writer.WriteStringValue("provider_tenant_id", ProviderTenantId);
             writer.WriteCollectionOfPrimitiveValues<string>("provider_tenant_ids", ProviderTenantIds);
             writer.WriteStringValue("provider_type", ProviderType);

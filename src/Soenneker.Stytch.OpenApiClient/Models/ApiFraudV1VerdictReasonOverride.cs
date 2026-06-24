@@ -15,7 +15,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The override_action property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonOverrideAction? OverrideAction { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonOverrideAction? OverrideAction { get; set; }
         /// <summary>The verdict reason that was overridden.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "override_action", n => { OverrideAction = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonOverrideAction>(); } },
+                { "override_action", n => { OverrideAction = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonOverrideAction>(); } },
                 { "verdict_reason", n => { VerdictReason = n.GetStringValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonOverrideAction>("override_action", OverrideAction);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonOverrideAction>("override_action", OverrideAction);
             writer.WriteStringValue("verdict_reason", VerdictReason);
             writer.WriteAdditionalData(AdditionalData);
         }

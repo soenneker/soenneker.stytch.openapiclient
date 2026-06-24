@@ -50,7 +50,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string InviteTemplateId { get; set; }
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1InviteRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailInviteRequestLocale? Locale { get; set; }
         /// <summary>The name of the Member.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,7 +121,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "invite_redirect_url", n => { InviteRedirectUrl = n.GetStringValue(); } },
                 { "invite_template_id", n => { InviteTemplateId = n.GetStringValue(); } },
                 { "invited_by_member_id", n => { InvitedByMemberId = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1InviteRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailInviteRequestLocale>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -141,7 +141,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteIntValue("invite_expiration_minutes", InviteExpirationMinutes);
             writer.WriteStringValue("invite_redirect_url", InviteRedirectUrl);
             writer.WriteStringValue("invite_template_id", InviteTemplateId);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1InviteRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailInviteRequestLocale>("locale", Locale);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("organization_id", OrganizationId);
             writer.WriteCollectionOfPrimitiveValues<string>("roles", Roles);

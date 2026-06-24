@@ -40,7 +40,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public List<string> Scopes { get; set; }
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1UpdateRequestStatus? Status { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsUpdateRequestStatus? Status { get; set; }
         /// <summary>The `trusted_metadata` field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +77,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "client_description", n => { ClientDescription = n.GetStringValue(); } },
                 { "client_name", n => { ClientName = n.GetStringValue(); } },
                 { "scopes", n => { Scopes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1UpdateRequestStatus>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsUpdateRequestStatus>(); } },
                 { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsUpdateRequestTrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsUpdateRequestTrustedMetadataProperty.CreateFromDiscriminatorValue); } },
             };
         }
@@ -91,7 +91,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("client_description", ClientDescription);
             writer.WriteStringValue("client_name", ClientName);
             writer.WriteCollectionOfPrimitiveValues<string>("scopes", Scopes);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1UpdateRequestStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsUpdateRequestStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsUpdateRequestTrustedMetadataProperty>("trusted_metadata", TrustedMetadata);
             writer.WriteAdditionalData(AdditionalData);
         }

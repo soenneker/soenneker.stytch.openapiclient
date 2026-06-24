@@ -34,7 +34,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string EmailAddress { get; set; }
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1SendRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailDiscoverySendRequestLocale? Locale { get; set; }
         /// <summary>Use a custom template for discovery emails. By default, it will use your default email template. Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type “Magic Links - Login”.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,7 +79,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "discovery_expiration_minutes", n => { DiscoveryExpirationMinutes = n.GetIntValue(); } },
                 { "discovery_redirect_url", n => { DiscoveryRedirectUrl = n.GetStringValue(); } },
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1SendRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailDiscoverySendRequestLocale>(); } },
                 { "login_template_id", n => { LoginTemplateId = n.GetStringValue(); } },
                 { "pkce_code_challenge", n => { PkceCodeChallenge = n.GetStringValue(); } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteIntValue("discovery_expiration_minutes", DiscoveryExpirationMinutes);
             writer.WriteStringValue("discovery_redirect_url", DiscoveryRedirectUrl);
             writer.WriteStringValue("email_address", EmailAddress);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1SendRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailDiscoverySendRequestLocale>("locale", Locale);
             writer.WriteStringValue("login_template_id", LoginTemplateId);
             writer.WriteStringValue("pkce_code_challenge", PkceCodeChallenge);
             writer.WriteAdditionalData(AdditionalData);

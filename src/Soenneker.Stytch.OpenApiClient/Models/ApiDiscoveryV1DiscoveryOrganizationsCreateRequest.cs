@@ -88,7 +88,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string EmailJitProvisioning { get; set; }
 #endif
         /// <summary>The first_party_connected_apps_allowed_type property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1CreateRequestFirstPartyConnectedAppsAllowedType? FirstPartyConnectedAppsAllowedType { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestFirstPartyConnectedAppsAllowedType? FirstPartyConnectedAppsAllowedType { get; set; }
         /// <summary>The Intermediate Session Token. This token does not necessarily belong to a specific instance of a Member, but represents a bag of factors that may be converted to a member session. The token can be used with the [OTP SMS Authenticate endpoint](https://stytch.com/docs/b2b/api/authenticate-otp-sms), [TOTP Authenticate endpoint](https://stytch.com/docs/b2b/api/authenticate-totp), or [Recovery Codes Recover endpoint](https://stytch.com/docs/b2b/api/recovery-codes-recover) to complete an MFA flow and log in to the Organization. The token has a default expiry of 10 minutes. It can also be used with the [Exchange Intermediate Session endpoint](https://stytch.com/docs/b2b/api/exchange-intermediate-session) to join a specific Organization that allows the factors represented by the intermediate session token; or the [Create Organization via Discovery endpoint](https://stytch.com/docs/b2b/api/create-organization-via-discovery) to create a new Organization and Member. Intermediate Session Tokens have a default expiry of 10 minutes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -188,7 +188,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string TelemetryId { get; set; }
 #endif
         /// <summary>The third_party_connected_apps_allowed_type property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1CreateRequestThirdPartyConnectedAppsAllowedType? ThirdPartyConnectedAppsAllowedType { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestThirdPartyConnectedAppsAllowedType? ThirdPartyConnectedAppsAllowedType { get; set; }
         /// <summary>An arbitrary JSON object for storing application-specific data or identity-provider-specific data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -231,7 +231,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "email_allowed_domains", n => { EmailAllowedDomains = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "email_invites", n => { EmailInvites = n.GetStringValue(); } },
                 { "email_jit_provisioning", n => { EmailJitProvisioning = n.GetStringValue(); } },
-                { "first_party_connected_apps_allowed_type", n => { FirstPartyConnectedAppsAllowedType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1CreateRequestFirstPartyConnectedAppsAllowedType>(); } },
+                { "first_party_connected_apps_allowed_type", n => { FirstPartyConnectedAppsAllowedType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestFirstPartyConnectedAppsAllowedType>(); } },
                 { "intermediate_session_token", n => { IntermediateSessionToken = n.GetStringValue(); } },
                 { "mfa_methods", n => { MfaMethods = n.GetStringValue(); } },
                 { "mfa_policy", n => { MfaPolicy = n.GetStringValue(); } },
@@ -245,7 +245,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "session_duration_minutes", n => { SessionDurationMinutes = n.GetIntValue(); } },
                 { "sso_jit_provisioning", n => { SsoJitProvisioning = n.GetStringValue(); } },
                 { "telemetry_id", n => { TelemetryId = n.GetStringValue(); } },
-                { "third_party_connected_apps_allowed_type", n => { ThirdPartyConnectedAppsAllowedType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1CreateRequestThirdPartyConnectedAppsAllowedType>(); } },
+                { "third_party_connected_apps_allowed_type", n => { ThirdPartyConnectedAppsAllowedType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestThirdPartyConnectedAppsAllowedType>(); } },
                 { "trusted_metadata", n => { TrustedMetadata = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestTrustedMetadataProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestTrustedMetadataProperty.CreateFromDiscriminatorValue); } },
             };
         }
@@ -265,7 +265,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("email_allowed_domains", EmailAllowedDomains);
             writer.WriteStringValue("email_invites", EmailInvites);
             writer.WriteStringValue("email_jit_provisioning", EmailJitProvisioning);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1CreateRequestFirstPartyConnectedAppsAllowedType>("first_party_connected_apps_allowed_type", FirstPartyConnectedAppsAllowedType);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestFirstPartyConnectedAppsAllowedType>("first_party_connected_apps_allowed_type", FirstPartyConnectedAppsAllowedType);
             writer.WriteStringValue("intermediate_session_token", IntermediateSessionToken);
             writer.WriteStringValue("mfa_methods", MfaMethods);
             writer.WriteStringValue("mfa_policy", MfaPolicy);
@@ -279,7 +279,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteIntValue("session_duration_minutes", SessionDurationMinutes);
             writer.WriteStringValue("sso_jit_provisioning", SsoJitProvisioning);
             writer.WriteStringValue("telemetry_id", TelemetryId);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1CreateRequestThirdPartyConnectedAppsAllowedType>("third_party_connected_apps_allowed_type", ThirdPartyConnectedAppsAllowedType);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestThirdPartyConnectedAppsAllowedType>("third_party_connected_apps_allowed_type", ThirdPartyConnectedAppsAllowedType);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryOrganizationsCreateRequestTrustedMetadataProperty>("trusted_metadata", TrustedMetadata);
             writer.WriteAdditionalData(AdditionalData);
         }

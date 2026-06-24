@@ -24,7 +24,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string IntermediateSessionToken { get; set; }
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1AuthenticateRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksAuthenticateRequestLocale? Locale { get; set; }
         /// <summary>The Email Magic Link token to authenticate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -101,7 +101,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "intermediate_session_token", n => { IntermediateSessionToken = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1AuthenticateRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksAuthenticateRequestLocale>(); } },
                 { "magic_links_token", n => { MagicLinksToken = n.GetStringValue(); } },
                 { "pkce_code_verifier", n => { PkceCodeVerifier = n.GetStringValue(); } },
                 { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1AuthenticateRequestSessionCustomClaimsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1AuthenticateRequestSessionCustomClaimsProperty.CreateFromDiscriminatorValue); } },
@@ -119,7 +119,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("intermediate_session_token", IntermediateSessionToken);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1AuthenticateRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksAuthenticateRequestLocale>("locale", Locale);
             writer.WriteStringValue("magic_links_token", MagicLinksToken);
             writer.WriteStringValue("pkce_code_verifier", PkceCodeVerifier);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1AuthenticateRequestSessionCustomClaimsProperty>("session_custom_claims", SessionCustomClaims);

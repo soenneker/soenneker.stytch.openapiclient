@@ -15,9 +15,9 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The default_action property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonActionAction? DefaultAction { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction? DefaultAction { get; set; }
         /// <summary>The override_action property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonActionAction? OverrideAction { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction? OverrideAction { get; set; }
         /// <summary>The time when the override was created, if one exists. Values conform to the RFC 3339 standard and are expressed in UTC, e.g. `2021-12-29T12:33:09Z`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,8 +67,8 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "default_action", n => { DefaultAction = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonActionAction>(); } },
-                { "override_action", n => { OverrideAction = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonActionAction>(); } },
+                { "default_action", n => { DefaultAction = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction>(); } },
+                { "override_action", n => { OverrideAction = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction>(); } },
                 { "override_created_at", n => { OverrideCreatedAt = n.GetStringValue(); } },
                 { "override_description", n => { OverrideDescription = n.GetStringValue(); } },
                 { "verdict_reason", n => { VerdictReason = n.GetStringValue(); } },
@@ -81,8 +81,8 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonActionAction>("default_action", DefaultAction);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonActionAction>("override_action", OverrideAction);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction>("default_action", DefaultAction);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction>("override_action", OverrideAction);
             writer.WriteStringValue("override_created_at", OverrideCreatedAt);
             writer.WriteStringValue("override_description", OverrideDescription);
             writer.WriteStringValue("verdict_reason", VerdictReason);

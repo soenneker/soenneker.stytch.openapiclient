@@ -24,7 +24,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string EmailAddress { get; set; }
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1LoginOrSignupRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailLoginOrSignupRequestLocale? Locale { get; set; }
         /// <summary>The expiration time, in minutes, for a login Email Magic Link. If not authenticated within this time frame, the email will need to be resent. Defaults to 60 (1 hour) with a minimum of 5 and a maximum of 10080 (1 week).</summary>
         public int? LoginExpirationMinutes { get; set; }
         /// <summary>The URL that the Member clicks from the login Email Magic Link. This URL should be an endpoint in the backend server that  verifies the request by querying Stytch&apos;s authenticate endpoint and finishes the login. If this value is not passed, the default login  redirect URL that you set in your Dashboard is used. If you have not set a default login redirect URL, an error is returned.</summary>
@@ -103,7 +103,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1LoginOrSignupRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailLoginOrSignupRequestLocale>(); } },
                 { "login_expiration_minutes", n => { LoginExpirationMinutes = n.GetIntValue(); } },
                 { "login_redirect_url", n => { LoginRedirectUrl = n.GetStringValue(); } },
                 { "login_template_id", n => { LoginTemplateId = n.GetStringValue(); } },
@@ -122,7 +122,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email_address", EmailAddress);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1LoginOrSignupRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailLoginOrSignupRequestLocale>("locale", Locale);
             writer.WriteIntValue("login_expiration_minutes", LoginExpirationMinutes);
             writer.WriteStringValue("login_redirect_url", LoginRedirectUrl);
             writer.WriteStringValue("login_template_id", LoginTemplateId);

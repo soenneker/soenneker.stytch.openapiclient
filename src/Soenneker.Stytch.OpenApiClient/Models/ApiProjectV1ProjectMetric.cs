@@ -17,7 +17,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The count property</summary>
         public int? Count { get; set; }
         /// <summary>The metric_type property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiProjectV1ProjectMetricMetricType? MetricType { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiProjectV1ProjectProjectMetricMetricType? MetricType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiProjectV1ProjectMetric"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetIntValue(); } },
-                { "metric_type", n => { MetricType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiProjectV1ProjectMetricMetricType>(); } },
+                { "metric_type", n => { MetricType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiProjectV1ProjectProjectMetricMetricType>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("count", Count);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiProjectV1ProjectMetricMetricType>("metric_type", MetricType);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiProjectV1ProjectProjectMetricMetricType>("metric_type", MetricType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

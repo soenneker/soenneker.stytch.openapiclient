@@ -32,7 +32,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string IntermediateSessionToken { get; set; }
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1ResetRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsEmailResetRequestLocale? Locale { get; set; }
         /// <summary>The password to authenticate, reset, or set for the first time. Any UTF8 character is allowed, e.g. spaces, emojis, non-English characters, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -110,7 +110,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             {
                 { "code_verifier", n => { CodeVerifier = n.GetStringValue(); } },
                 { "intermediate_session_token", n => { IntermediateSessionToken = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1ResetRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsEmailResetRequestLocale>(); } },
                 { "password", n => { Password = n.GetStringValue(); } },
                 { "password_reset_token", n => { PasswordResetToken = n.GetStringValue(); } },
                 { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailResetRequestSessionCustomClaimsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailResetRequestSessionCustomClaimsProperty.CreateFromDiscriminatorValue); } },
@@ -129,7 +129,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("code_verifier", CodeVerifier);
             writer.WriteStringValue("intermediate_session_token", IntermediateSessionToken);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1ResetRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsEmailResetRequestLocale>("locale", Locale);
             writer.WriteStringValue("password", Password);
             writer.WriteStringValue("password_reset_token", PasswordResetToken);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailResetRequestSessionCustomClaimsProperty>("session_custom_claims", SessionCustomClaims);

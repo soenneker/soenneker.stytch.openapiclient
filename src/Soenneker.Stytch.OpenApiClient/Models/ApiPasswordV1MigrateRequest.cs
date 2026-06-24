@@ -48,7 +48,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string Hash { get; set; }
 #endif
         /// <summary>The hash_type property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestHashType? HashType { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsMigrateRequestHashType? HashType { get; set; }
         /// <summary>The md_5_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -162,7 +162,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
                 { "hash", n => { Hash = n.GetStringValue(); } },
-                { "hash_type", n => { HashType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestHashType>(); } },
+                { "hash_type", n => { HashType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsMigrateRequestHashType>(); } },
                 { "md_5_config", n => { Md5Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name.CreateFromDiscriminatorValue); } },
                 { "pbkdf_2_config", n => { Pbkdf2Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config.CreateFromDiscriminatorValue); } },
@@ -188,7 +188,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("external_id", ExternalId);
             writer.WriteStringValue("hash", Hash);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestHashType>("hash_type", HashType);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsMigrateRequestHashType>("hash_type", HashType);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config>("md_5_config", Md5Config);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name>("name", Name);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config>("pbkdf_2_config", Pbkdf2Config);

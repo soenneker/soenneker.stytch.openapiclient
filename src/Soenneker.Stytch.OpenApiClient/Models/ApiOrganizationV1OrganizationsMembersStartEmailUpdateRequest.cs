@@ -16,7 +16,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The delivery_method property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1StartEmailUpdateRequestDeliveryMethod? DeliveryMethod { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestDeliveryMethod? DeliveryMethod { get; set; }
         /// <summary>The new email address for the Member.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -26,7 +26,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string EmailAddress { get; set; }
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1StartEmailUpdateRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestLocale? Locale { get; set; }
         /// <summary>The URL that the Member clicks from the login Email Magic Link. This URL should be an endpoint in the backend server that  verifies the request by querying Stytch&apos;s authenticate endpoint and finishes the login. If this value is not passed, the default login  redirect URL that you set in your Dashboard is used. If you have not set a default login redirect URL, an error is returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,9 +68,9 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "delivery_method", n => { DeliveryMethod = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1StartEmailUpdateRequestDeliveryMethod>(); } },
+                { "delivery_method", n => { DeliveryMethod = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestDeliveryMethod>(); } },
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1StartEmailUpdateRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestLocale>(); } },
                 { "login_redirect_url", n => { LoginRedirectUrl = n.GetStringValue(); } },
                 { "login_template_id", n => { LoginTemplateId = n.GetStringValue(); } },
             };
@@ -82,9 +82,9 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1StartEmailUpdateRequestDeliveryMethod>("delivery_method", DeliveryMethod);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestDeliveryMethod>("delivery_method", DeliveryMethod);
             writer.WriteStringValue("email_address", EmailAddress);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1StartEmailUpdateRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestLocale>("locale", Locale);
             writer.WriteStringValue("login_redirect_url", LoginRedirectUrl);
             writer.WriteStringValue("login_template_id", LoginTemplateId);
             writer.WriteAdditionalData(AdditionalData);

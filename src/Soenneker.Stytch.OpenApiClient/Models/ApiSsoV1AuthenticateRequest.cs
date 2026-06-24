@@ -24,7 +24,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public string IntermediateSessionToken { get; set; }
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoAuthenticateRequestLocale? Locale { get; set; }
         /// <summary>A base64url encoded one time secret used to validate that the request starts and ends on the same device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -101,7 +101,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "intermediate_session_token", n => { IntermediateSessionToken = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequestLocale>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoAuthenticateRequestLocale>(); } },
                 { "pkce_code_verifier", n => { PkceCodeVerifier = n.GetStringValue(); } },
                 { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequestSessionCustomClaimsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequestSessionCustomClaimsProperty.CreateFromDiscriminatorValue); } },
                 { "session_duration_minutes", n => { SessionDurationMinutes = n.GetIntValue(); } },
@@ -119,7 +119,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("intermediate_session_token", IntermediateSessionToken);
-            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequestLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoAuthenticateRequestLocale>("locale", Locale);
             writer.WriteStringValue("pkce_code_verifier", PkceCodeVerifier);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1AuthenticateRequestSessionCustomClaimsProperty>("session_custom_claims", SessionCustomClaims);
             writer.WriteIntValue("session_duration_minutes", SessionDurationMinutes);
