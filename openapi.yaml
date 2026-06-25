@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: Stytch API
   description: The Stytch API provides endpoints for authentication and user management.
-  version: 2.1.0
+  version: 2.1.1
   contact:
     name: Stytch Support
     url: https://stytch.com/docs
@@ -33713,14 +33713,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         login_template_id:
           type: string
           description: "Use a custom template for login emails. By default, it will\
@@ -37269,12 +37262,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            and Brazilian Portuguese (`"pt-br"`); if no value is provided, the copy
-            defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
+            If no value is provided, the copy defaults to English.
 
             '
         telemetry_id:
@@ -38974,12 +38962,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            and Brazilian Portuguese (`"pt-br"`); if no value is provided, the copy
-            defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
+            If no value is provided, the copy defaults to English.
 
             '
         telemetry_id:
@@ -41116,14 +41099,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         trusted_metadata:
           type: object
           additionalProperties: true
@@ -41238,14 +41214,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
       description: Request type
       required:
       - email
@@ -41373,14 +41342,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         signup_template_id:
           type: string
           description: "Use a custom template for sign-up emails. By default, it will\
@@ -41500,12 +41462,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            and Brazilian Portuguese (`"pt-br"`); if no value is provided, the copy
-            defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
+            If no value is provided, the copy defaults to English.
 
             '
         intermediate_session_token:
@@ -41675,14 +41632,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         roles:
           type: array
           items:
@@ -41782,14 +41732,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         login_expiration_minutes:
           type: integer
           format: int32
@@ -41891,14 +41834,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         discovery_expiration_minutes:
           type: integer
           format: int32
@@ -42088,12 +42024,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            and Brazilian Portuguese (`"pt-br"`); if no value is provided, the copy
-            defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
+            If no value is provided, the copy defaults to English.
 
             '
         intermediate_session_token:
@@ -42515,14 +42446,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         intermediate_session_token:
           type: string
           description: The Intermediate Session Token. This token does not necessarily
@@ -42668,14 +42592,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         telemetry_id:
           type: string
           description: If the `telemetry_id` is passed, as part of this request, Stytch
@@ -42807,14 +42724,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         login_expiration_minutes:
           type: integer
           format: int32
@@ -42972,14 +42882,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         discovery_expiration_minutes:
           type: integer
           format: int32
@@ -43766,14 +43669,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         reset_password_template_id:
           type: string
           description: "Use a custom template for password reset emails. By default,\
@@ -44129,12 +44025,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            and Brazilian Portuguese (`"pt-br"`); if no value is provided, the copy
-            defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
+            If no value is provided, the copy defaults to English.
 
             '
         intermediate_session_token:
@@ -44578,12 +44469,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            and Brazilian Portuguese (`"pt-br"`); if no value is provided, the copy
-            defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
+            If no value is provided, the copy defaults to English.
 
             '
         intermediate_session_token:
@@ -44739,14 +44625,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         reset_password_template_id:
           type: string
           description: "Use a custom template for reset password emails. By default,\
@@ -44864,14 +44743,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         telemetry_id:
           type: string
           description: If the `telemetry_id` is passed, as part of this request, Stytch
@@ -45026,12 +44898,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            and Brazilian Portuguese (`"pt-br"`); if no value is provided, the copy
-            defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
+            If no value is provided, the copy defaults to English.
 
             '
         telemetry_id:
@@ -45314,14 +45181,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         verify_email_template_id:
           type: string
           description: "Use a custom template for verification emails sent during\
@@ -45719,14 +45579,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
       description: Request type
       required:
       - phone_number
@@ -45787,14 +45640,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         user_id:
           type: string
           description: The unique ID of a specific User. You may use an `external_id`
@@ -45906,14 +45752,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
       description: Request type
       required:
       - phone_number
@@ -45974,14 +45813,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         user_id:
           type: string
           description: The unique ID of a specific User. You may use an `external_id`
@@ -46092,14 +45924,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         login_template_id:
           type: string
           description: "Use a custom template for login emails. By default, it will\
@@ -46173,14 +45998,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            French (`"fr"`) and Brazilian Portuguese (`"pt-br"`); if no value is provided,
-            the copy defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
-
-            '
+            If no value is provided, the copy defaults to English.'
         user_id:
           type: string
           description: The unique ID of a specific User. You may use an `external_id`
@@ -46707,12 +46525,7 @@ components:
             e.g. `"en"`.
 
 
-            Currently supported languages are English (`"en"`), Spanish (`"es"`),
-            and Brazilian Portuguese (`"pt-br"`); if no value is provided, the copy
-            defaults to English.
-
-
-            Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link")!
+            If no value is provided, the copy defaults to English.
 
             '
         intermediate_session_token:

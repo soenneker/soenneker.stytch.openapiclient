@@ -31,7 +31,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public string EmailAddress { get; set; }
 #endif
-        /// <summary>Used to determine which language to use when sending the user this delivery method. Parameter is an [IETF BCP 47 language tag](https://www.w3.org/International/articles/language-tags/), e.g. `&quot;en&quot;`.Currently supported languages are English (`&quot;en&quot;`), Spanish (`&quot;es&quot;`), French (`&quot;fr&quot;`) and Brazilian Portuguese (`&quot;pt-br&quot;`); if no value is provided, the copy defaults to English.Request support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link&quot;)!</summary>
+        /// <summary>Used to determine which language to use when sending the user this delivery method. Parameter is an [IETF BCP 47 language tag](https://www.w3.org/International/articles/language-tags/), e.g. `&quot;en&quot;`.If no value is provided, the copy defaults to English.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Locale { get; set; }

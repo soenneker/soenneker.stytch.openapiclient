@@ -8,7 +8,7 @@
       "url": "https://stytch.com/docs",
       "email": "support@stytch.com"
     },
-    "version": "2.1.0"
+    "version": "2.1.1"
   },
   "servers": [
     {
@@ -22908,7 +22908,7 @@
           },
           "locale": {
             "type": "string",
-            "description": "Used to determine which language to use when sending the user this delivery method. Parameter is an [IETF BCP 47 language tag](https://www.w3.org/International/articles/language-tags/), e.g. \u0060\u0022en\u0022\u0060.\n\nCurrently supported languages are English (\u0060\u0022en\u0022\u0060), Spanish (\u0060\u0022es\u0022\u0060), French (\u0060\u0022fr\u0022\u0060) and Brazilian Portuguese (\u0060\u0022pt-br\u0022\u0060); if no value is provided, the copy defaults to English.\n\nRequest support for additional languages [here](https://docs.google.com/forms/d/e/1FAIpQLScZSpAu_m2AmLXRT3F3kap-s_mcV6UTBitYn6CdyWP0-o7YjQ/viewform?usp=sf_link\u0022)!\n"
+            "description": "Used to determine which language to use when sending the user this delivery method. Parameter is an [IETF BCP 47 language tag](https://www.w3.org/International/articles/language-tags/), e.g. \u0060\u0022en\u0022\u0060.\n\nIf no value is provided, the copy defaults to English."
           },
           "verify_email_template_id": {
             "type": "string",
