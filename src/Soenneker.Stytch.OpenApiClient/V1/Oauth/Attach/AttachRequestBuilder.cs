@@ -34,12 +34,15 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Oauth.Attach
         {
         }
         /// <summary>
-        /// &quot;Generate an OAuth Attach Token to pre-associate an OAuth flow with an existing Stytch User. Pass the returned `oauth_attach_token` to the same provider&apos;s OAuth Start endpoint to treat this OAuth flow as a login for that user instead of a signup for a new user.Exactly one of `user_id`, `session_token`, or `session_jwt` must be provided to identify the target Stytch User.**Note**: This is an optional step in the OAuth flow. Stytch can often determine whether to associate a new OAuth login with an existing User based on verified information (such as an email address) from the identity provider. This endpoint is useful for cases where we can&apos;t, such as missing or unverified provider information.See our [OAuth email address behavior](https://stytch.com/docs/guides/oauth/email-behavior) resource for additional information.&quot;
+        /// Generate an OAuth Attach Token to pre-associate an OAuth flow with an existing Stytch User. Pass the returned `oauth_attach_token` to the same provider&apos;s OAuth Start endpoint to treat this OAuth flow as a login for that user instead of a signup for a new user.Exactly one of `user_id`, `session_token`, or `session_jwt` must be provided to identify the target Stytch User.**Note**: This is an optional step in the OAuth flow. Stytch can often determine whether to associate a new OAuth login with an existing User based on verified information (such as an email address) from the identity provider. This endpoint is useful for cases where we can&apos;t, such as missing or unverified provider information.See our [OAuth email address behavior](https://stytch.com/docs/guides/oauth/email-behavior) resource for additional information.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachResponse"/></returns>
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Oauth.Attach.ApiOAuthV1AttachResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Oauth.Attach.ApiOAuthV1AttachResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Oauth.Attach.ApiOAuthV1AttachResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,10 +54,16 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Oauth.Attach
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Oauth.Attach.ApiOAuthV1AttachResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Oauth.Attach.ApiOAuthV1AttachResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Oauth.Attach.ApiOAuthV1AttachResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOAuthV1AttachResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Generate an OAuth Attach Token to pre-associate an OAuth flow with an existing Stytch User. Pass the returned `oauth_attach_token` to the same provider&apos;s OAuth Start endpoint to treat this OAuth flow as a login for that user instead of a signup for a new user.Exactly one of `user_id`, `session_token`, or `session_jwt` must be provided to identify the target Stytch User.**Note**: This is an optional step in the OAuth flow. Stytch can often determine whether to associate a new OAuth login with an existing User based on verified information (such as an email address) from the identity provider. This endpoint is useful for cases where we can&apos;t, such as missing or unverified provider information.See our [OAuth email address behavior](https://stytch.com/docs/guides/oauth/email-behavior) resource for additional information.&quot;
+        /// Generate an OAuth Attach Token to pre-associate an OAuth flow with an existing Stytch User. Pass the returned `oauth_attach_token` to the same provider&apos;s OAuth Start endpoint to treat this OAuth flow as a login for that user instead of a signup for a new user.Exactly one of `user_id`, `session_token`, or `session_jwt` must be provided to identify the target Stytch User.**Note**: This is an optional step in the OAuth flow. Stytch can often determine whether to associate a new OAuth login with an existing User based on verified information (such as an email address) from the identity provider. This endpoint is useful for cases where we can&apos;t, such as missing or unverified provider information.See our [OAuth email address behavior](https://stytch.com/docs/guides/oauth/email-behavior) resource for additional information.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request type</param>

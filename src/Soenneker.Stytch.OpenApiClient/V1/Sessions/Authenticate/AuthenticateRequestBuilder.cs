@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Sessions.Authenticate
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Sessions.Authenticate.ApiSessionV1AuthenticateResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Sessions.Authenticate.ApiSessionV1AuthenticateResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Sessions.Authenticate.ApiSessionV1AuthenticateResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Sessions.Authenticate
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Sessions.Authenticate.ApiSessionV1AuthenticateResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Sessions.Authenticate.ApiSessionV1AuthenticateResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Sessions.Authenticate.ApiSessionV1AuthenticateResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Authenticate a session token or session JWT and retrieve associated session data. If `session_duration_minutes` is included, update the lifetime of the session to be that many minutes from now. All timestamps are formatted according to the RFC 3339 standard and are expressed in UTC, e.g. `2021-12-29T12:33:09Z`. This endpoint requires exactly one `session_jwt` or `session_token` as part of the request. If both are included, you will receive a `too_many_session_arguments` error.You may provide a JWT that needs to be refreshed and is expired according to its `exp` claim. A new JWT will be returned if both the signature and the underlying Session are still valid. See our [How to use Stytch Session JWTs](https://stytch.com/docs/guides/sessions/using-jwts) guide for more information.

@@ -45,6 +45,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Item
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GetConnectionsResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Item.ApiSsoV1GetConnectionsResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Item.ApiSsoV1GetConnectionsResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Item.ApiSsoV1GetConnectionsResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GetConnectionsResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -55,7 +58,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GetConnectionsResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GetConnectionsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Item.ApiSsoV1GetConnectionsResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Item.ApiSsoV1GetConnectionsResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Item.ApiSsoV1GetConnectionsResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GetConnectionsResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GetConnectionsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get all SSO Connections owned by the organization.

@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Crypto_wallets.Authenticate.Start
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Crypto_wallets.Authenticate.Start.ApiCryptoWalletV1AuthenticateStartResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Crypto_wallets.Authenticate.Start.ApiCryptoWalletV1AuthenticateStartResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Crypto_wallets.Authenticate.Start.ApiCryptoWalletV1AuthenticateStartResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1AuthenticateStartResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1AuthenticateStartRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Crypto_wallets.Authenticate.Start
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1AuthenticateStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1AuthenticateStartResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Crypto_wallets.Authenticate.Start.ApiCryptoWalletV1AuthenticateStartResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Crypto_wallets.Authenticate.Start.ApiCryptoWalletV1AuthenticateStartResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Crypto_wallets.Authenticate.Start.ApiCryptoWalletV1AuthenticateStartResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1AuthenticateStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1AuthenticateStartResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Initiate the authentication of a crypto wallet. After calling this endpoint, the user will need to sign a message containing the returned `challenge` field.For Ethereum crypto wallets, you can optionally use the Sign In With Ethereum (SIWE) protocol for the message by passing in the `siwe_params`. The only required fields are `domain` and `uri`.If the crypto wallet detects that the domain in the message does not match the website&apos;s domain, it will display a warning to the user.If not using the SIWE protocol, the message will simply consist of the project name and a random string.

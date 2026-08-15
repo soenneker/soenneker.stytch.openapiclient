@@ -39,6 +39,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passw
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDeletePasswordResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passwords.Item.ApiOrganizationV1OrganizationsMembersDeletePasswordResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passwords.Item.ApiOrganizationV1OrganizationsMembersDeletePasswordResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passwords.Item.ApiOrganizationV1OrganizationsMembersDeletePasswordResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDeletePasswordResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -49,7 +52,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passw
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDeletePasswordResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDeletePasswordResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passwords.Item.ApiOrganizationV1OrganizationsMembersDeletePasswordResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passwords.Item.ApiOrganizationV1OrganizationsMembersDeletePasswordResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Passwords.Item.ApiOrganizationV1OrganizationsMembersDeletePasswordResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDeletePasswordResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDeletePasswordResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a Member&apos;s password. This endpoint only works for Organization-scoped passwords. For cross-org password Projects, use [Require Password Reset By Email](https://stytch.com/docs/b2b/api/passwords-require-reset-by-email) instead.

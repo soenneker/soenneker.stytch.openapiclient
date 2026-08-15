@@ -76,6 +76,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Passwords
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Passwords.ApiPasswordV1CreateResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Passwords.ApiPasswordV1CreateResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Passwords.ApiPasswordV1CreateResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1CreateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1CreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -87,7 +90,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Passwords
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1CreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1CreateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Passwords.ApiPasswordV1CreateResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Passwords.ApiPasswordV1CreateResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Passwords.ApiPasswordV1CreateResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1CreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1CreateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new user with a password. If `session_duration_minutes` is specified, a new session will be started as well.If a user with this email already exists in your Stytch project, this endpoint will return a `duplicate_email` error. To add a password to an existing passwordless user, you&apos;ll need to either call the [Migrate password endpoint](https://stytch.com/docs/api/password-migrate) or prompt the user to complete one of our password reset flows.This endpoint will return an error if the password provided does not meet our strength requirements, which you can check beforehand via the [Password strength check endpoint](https://stytch.com/docs/api/password-strength-check).When creating new Passwords users, it&apos;s good practice to enforce an email verification flow. We&apos;d recommend checking out our [Email verification guide](https://stytch.com/docs/guides/passwords/email-verification/overview) for more information.

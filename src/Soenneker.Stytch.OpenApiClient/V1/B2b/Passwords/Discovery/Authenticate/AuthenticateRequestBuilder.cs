@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Discovery.Authenticate
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Discovery.Authenticate.ApiB2BPasswordV1B2BPasswordsDiscoveryAuthenticateResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Discovery.Authenticate.ApiB2BPasswordV1B2BPasswordsDiscoveryAuthenticateResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Discovery.Authenticate.ApiB2BPasswordV1B2BPasswordsDiscoveryAuthenticateResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsDiscoveryAuthenticateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsDiscoveryAuthenticateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Discovery.Authenticate
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsDiscoveryAuthenticateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsDiscoveryAuthenticateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Discovery.Authenticate.ApiB2BPasswordV1B2BPasswordsDiscoveryAuthenticateResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Discovery.Authenticate.ApiB2BPasswordV1B2BPasswordsDiscoveryAuthenticateResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Discovery.Authenticate.ApiB2BPasswordV1B2BPasswordsDiscoveryAuthenticateResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsDiscoveryAuthenticateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsDiscoveryAuthenticateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Authenticate an email/password combination in the discovery flow. This authenticate flow is only valid for cross-org passwords use cases, and is not tied to a specific organization.If you have breach detection during authentication enabled in your [password strength policy](https://stytch.com/docs/b2b/guides/passwords/strength-policy) and the member&apos;s credentials have appeared in the HaveIBeenPwned dataset, this endpoint will return a `member_reset_password` error even if the member enters a correct password. We force a password reset in this case to ensure that the member is the legitimate owner of the email address and not a malicious actor abusing the compromised credentials.If successful, this endpoint will create a new intermediate session and return a list of discovered organizations that can be session exchanged into.

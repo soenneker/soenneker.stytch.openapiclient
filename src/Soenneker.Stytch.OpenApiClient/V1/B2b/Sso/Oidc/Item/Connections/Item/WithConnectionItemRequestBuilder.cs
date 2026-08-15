@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item.ApiSsoV1SsoOidcUpdateConnectionResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item.ApiSsoV1SsoOidcUpdateConnectionResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item.ApiSsoV1SsoOidcUpdateConnectionResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionResponse?> PutAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item.ApiSsoV1SsoOidcUpdateConnectionResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item.ApiSsoV1SsoOidcUpdateConnectionResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.Connections.Item.ApiSsoV1SsoOidcUpdateConnectionResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcUpdateConnectionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates an existing OIDC connection.When the value of `issuer` changes, Stytch will attempt to retrieve the [OpenID Provider Metadata](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata) document found at `$/.well-known/openid-configuration`.If the metadata document can be retrieved successfully, Stytch will use it to infer the values of `authorization_url`, `token_url`, `jwks_url`, and `userinfo_url`.The `client_id` and `client_secret` values cannot be inferred from the metadata document, and *must* be passed in explicitly.If the metadata document cannot be retrieved, Stytch will still update the connection using values from the request body.If the metadata document can be retrieved, and values are passed in the request body, the explicit values passed in from the request body will take precedence over the values inferred from the metadata document. Note that a newly created connection will not become active until all of the following fields are provided:* `issuer`* `client_id`* `client_secret`* `authorization_url`* `token_url`* `userinfo_url`* `jwks_url`

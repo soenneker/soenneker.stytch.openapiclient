@@ -54,7 +54,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public string DisplayName { get; set; }
 #endif
-        /// <summary>&quot;Name of the IdP. Enum with possible values: `okta`, `microsoft-entra`, `cyberark`, `jumpcloud`, `onelogin`, `pingfederate`, `rippling` or `generic`. Specifying a known provider allows Stytch to handle any provider-specific logic, such as automatically appending `?aadOptscim062020` to the returned BaseURL for `microsoft-entra` SCIM Connections to [enable the SCIM 2.0 compliant flag](https://learn.microsoft.com/en-us/entra/identity/app-provisioning/application-provisioning-config-problem-scim-compatibility#scim-20-compliance-issues-and-status).&quot;</summary>
+        /// <summary>Name of the IdP. Enum with possible values: `okta`, `microsoft-entra`, `cyberark`, `jumpcloud`, `onelogin`, `pingfederate`, `rippling` or `generic`. Specifying a known provider allows Stytch to handle any provider-specific logic, such as automatically appending `?aadOptscim062020` to the returned BaseURL for `microsoft-entra` SCIM Connections to [enable the SCIM 2.0 compliant flag](https://learn.microsoft.com/en-us/entra/identity/app-provisioning/application-provisioning-config-problem-scim-compatibility#scim-20-compliance-issues-and-status).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdentityProvider { get; set; }

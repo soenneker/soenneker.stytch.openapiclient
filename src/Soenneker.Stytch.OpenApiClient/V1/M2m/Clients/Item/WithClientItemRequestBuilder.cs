@@ -45,6 +45,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsDeleteResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsDeleteResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsDeleteResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsDeleteResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -55,7 +58,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsDeleteResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsDeleteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsDeleteResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsDeleteResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsDeleteResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsDeleteResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets information about an existing M2M Client.
@@ -63,6 +72,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsGetResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsGetResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsGetResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -73,7 +85,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsGetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsGetResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsGetResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsGetResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsGetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates an existing M2M Client. You can use this endpoint to activate or deactivate an M2M Client by changing its `status`. A deactivated M2M Client will not be allowed to perform future token exchange flows until it is reactivated.**Important:** Deactivating an M2M Client will not invalidate any existing JWTs issued to the client, only prevent it from receiving new ones.To protect more-sensitive routes, pass a lower `max_token_age` value when[authenticating the token](https://stytch.com/docs/b2b/api/authenticate-m2m-token)[authenticating the token](https://stytch.com/docs/api/authenticate-m2m-token).
@@ -82,6 +100,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsUpdateResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsUpdateResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsUpdateResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsUpdateResponse?> PutAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -93,7 +114,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsUpdateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsUpdateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsUpdateResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsUpdateResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.ApiM2Mv1M2MClientsUpdateResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsUpdateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsUpdateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deletes the M2M Client.**Important:** Deleting an M2M Client will not invalidate any existing JWTs issued to the client, only prevent it from receiving new ones.To protect more-sensitive routes, pass a lower `max_token_age` value when[authenticating the token](https://stytch.com/docs/b2b/api/authenticate-m2m-token)[authenticating the token](https://stytch.com/docs/api/authenticate-m2m-token).

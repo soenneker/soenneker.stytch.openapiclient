@@ -34,12 +34,15 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Search
         {
         }
         /// <summary>
-        /// &quot;**Warning**: This endpoint is not recommended for use in login flows. Scaling issues may occur, as search performance may vary from ~150 milliseconds to 9 seconds depending on query complexity and rate limits are set to 150 requests/minute.Search for Users within your Stytch Project.Use the `query` object to filter by different fields. See the `query.operands.filter_value` documentation below for a list of available filters.### Export all User dataSubmit an empty `query` in your Search Users request to return all of your Stytch Project&apos;s Users.[This Github repository](https://github.com/stytchauth/stytch-node-export-users) contains a utility that leverages the Search Users endpoint to export all of your User data to a CSV or JSON file.&quot;
+        /// **Warning**: This endpoint is not recommended for use in login flows. Scaling issues may occur, as search performance may vary from ~150 milliseconds to 9 seconds depending on query complexity and rate limits are set to 150 requests/minute.Search for Users within your Stytch Project.Use the `query` object to filter by different fields. See the `query.operands.filter_value` documentation below for a list of available filters.### Export all User dataSubmit an empty `query` in your Search Users request to return all of your Stytch Project&apos;s Users.[This Github repository](https://github.com/stytchauth/stytch-node-export-users) contains a utility that leverages the Search Users endpoint to export all of your User data to a CSV or JSON file.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchResponse"/></returns>
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Search.ApiUserV1SearchResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Search.ApiUserV1SearchResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Search.ApiUserV1SearchResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,10 +54,16 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Search
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Users.Search.ApiUserV1SearchResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Users.Search.ApiUserV1SearchResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Users.Search.ApiUserV1SearchResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1SearchResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;**Warning**: This endpoint is not recommended for use in login flows. Scaling issues may occur, as search performance may vary from ~150 milliseconds to 9 seconds depending on query complexity and rate limits are set to 150 requests/minute.Search for Users within your Stytch Project.Use the `query` object to filter by different fields. See the `query.operands.filter_value` documentation below for a list of available filters.### Export all User dataSubmit an empty `query` in your Search Users request to return all of your Stytch Project&apos;s Users.[This Github repository](https://github.com/stytchauth/stytch-node-export-users) contains a utility that leverages the Search Users endpoint to export all of your User data to a CSV or JSON file.&quot;
+        /// **Warning**: This endpoint is not recommended for use in login flows. Scaling issues may occur, as search performance may vary from ~150 milliseconds to 9 seconds depending on query complexity and rate limits are set to 150 requests/minute.Search for Users within your Stytch Project.Use the `query` object to filter by different fields. See the `query.operands.filter_value` documentation below for a list of available filters.### Export all User dataSubmit an empty `query` in your Search Users request to return all of your Stytch Project&apos;s Users.[This Github repository](https://github.com/stytchauth/stytch-node-export-users) contains a utility that leverages the Search Users endpoint to export all of your User data to a CSV or JSON file.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request type</param>

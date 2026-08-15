@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Otps.Email.Send
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Otps.Email.Send.ApiOtpV1OtpEmailSendResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Otps.Email.Send.ApiOtpV1OtpEmailSendResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Otps.Email.Send.ApiOtpV1OtpEmailSendResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpEmailSendResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpEmailSendRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Otps.Email.Send
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpEmailSendResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpEmailSendResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Otps.Email.Send.ApiOtpV1OtpEmailSendResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Otps.Email.Send.ApiOtpV1OtpEmailSendResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Otps.Email.Send.ApiOtpV1OtpEmailSendResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpEmailSendResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpEmailSendResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Send a One-Time Passcode (OTP) to a User using their email. If you&apos;d like to create a user and send them a passcode with one request, use our [log in or create endpoint](https://stytch.com/docs/api/log-in-or-create-user-by-email-otp).### Add an email to an existing userThis endpoint also allows you to add a new email address to an existing Stytch User. Including a `user_id`, `session_token`, or `session_jwt` in your Send one-time passcode by email request will add the new, unverified email address to the existing Stytch User. If the user successfully authenticates within 5 minutes, the new email address will be marked as verified and remain permanently on the existing Stytch User. Otherwise, it will be removed from the User object, and any subsequent login requests using that email address will create a new User.### Next stepsCollect the OTP which was delivered to the user. Call [Authenticate OTP](https://stytch.com/docs/api/authenticate-otp) using the OTP `code` along with the `email_id` found in the response as the `method_id`.

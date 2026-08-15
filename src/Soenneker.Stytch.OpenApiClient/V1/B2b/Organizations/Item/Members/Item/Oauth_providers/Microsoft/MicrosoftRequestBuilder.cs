@@ -39,6 +39,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersMicrosoftResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Microsoft.ApiOrganizationV1OrganizationsMembersOAuthProvidersMicrosoftResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Microsoft.ApiOrganizationV1OrganizationsMembersOAuthProvidersMicrosoftResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Microsoft.ApiOrganizationV1OrganizationsMembersOAuthProvidersMicrosoftResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersMicrosoftResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Microsoft.MicrosoftRequestBuilder.MicrosoftRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -49,7 +52,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersMicrosoftResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersMicrosoftResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Microsoft.ApiOrganizationV1OrganizationsMembersOAuthProvidersMicrosoftResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Microsoft.ApiOrganizationV1OrganizationsMembersOAuthProvidersMicrosoftResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Microsoft.ApiOrganizationV1OrganizationsMembersOAuthProvidersMicrosoftResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersMicrosoftResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersMicrosoftResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the saved Microsoft access token and ID token for a member. After a successful OAuth login, Stytch will save theissued access token and ID token from the identity provider. If a refresh token has been issued, Stytch will refresh theaccess token automatically.

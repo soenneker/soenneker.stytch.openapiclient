@@ -34,12 +34,15 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Search
         {
         }
         /// <summary>
-        /// &quot;**Warning**: This endpoint is not recommended for use in login flows. Scaling issues may occur, as search performance may vary from ~150 milliseconds to 9 seconds depending on query complexity and rate limits are set to 100 requests/minute.Search for Members within specified Organizations. An array with at least one `organization_id` is required. Submitting an empty `query` returns all non-deleted Members within the specified Organizations.All fuzzy search filters require a minimum of three characters.&quot;
+        /// **Warning**: This endpoint is not recommended for use in login flows. Scaling issues may occur, as search performance may vary from ~150 milliseconds to 9 seconds depending on query complexity and rate limits are set to 100 requests/minute.Search for Members within specified Organizations. An array with at least one `organization_id` is required. Submitting an empty `query` returns all non-deleted Members within the specified Organizations.All fuzzy search filters require a minimum of three characters.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponse"/></returns>
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Search.ApiOrganizationV1OrganizationsMembersSearchResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Search.ApiOrganizationV1OrganizationsMembersSearchResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Search.ApiOrganizationV1OrganizationsMembersSearchResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,10 +54,16 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Search
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Search.ApiOrganizationV1OrganizationsMembersSearchResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Search.ApiOrganizationV1OrganizationsMembersSearchResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Search.ApiOrganizationV1OrganizationsMembersSearchResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersSearchResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;**Warning**: This endpoint is not recommended for use in login flows. Scaling issues may occur, as search performance may vary from ~150 milliseconds to 9 seconds depending on query complexity and rate limits are set to 100 requests/minute.Search for Members within specified Organizations. An array with at least one `organization_id` is required. Submitting an empty `query` returns all non-deleted Members within the specified Organizations.All fuzzy search filters require a minimum of three characters.&quot;
+        /// **Warning**: This endpoint is not recommended for use in login flows. Scaling issues may occur, as search performance may vary from ~150 milliseconds to 9 seconds depending on query complexity and rate limits are set to 100 requests/minute.Search for Members within specified Organizations. An array with at least one `organization_id` is required. Submitting an empty `query` returns all non-deleted Members within the specified Organizations.All fuzzy search filters require a minimum of three characters.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request type</param>

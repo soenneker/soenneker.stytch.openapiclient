@@ -45,6 +45,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -55,7 +58,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve details of a specific Connected App by `client_id`.
@@ -63,6 +72,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsGetResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsGetResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsGetResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -73,7 +85,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsGetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsGetResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsGetResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsGetResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsGetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates mutable fields of a Connected App. Cannot update Client Type, Client ID, or Secrets.
@@ -82,6 +100,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsUpdateResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsUpdateResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsUpdateResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsUpdateResponse?> PutAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -93,7 +114,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsUpdateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsUpdateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsUpdateResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsUpdateResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item.ApiConnectedappsV1ConnectedAppsClientsUpdateResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsUpdateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsUpdateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deletes a Connected App.

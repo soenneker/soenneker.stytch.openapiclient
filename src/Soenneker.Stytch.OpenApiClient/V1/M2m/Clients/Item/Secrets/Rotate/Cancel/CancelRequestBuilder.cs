@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Canc
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Cancel.ApiM2Mv1M2MClientsSecretsRotateCancelResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Cancel.ApiM2Mv1M2MClientsSecretsRotateCancelResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Cancel.ApiM2Mv1M2MClientsSecretsRotateCancelResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateCancelResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateCancelRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Canc
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateCancelResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateCancelResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Cancel.ApiM2Mv1M2MClientsSecretsRotateCancelResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Cancel.ApiM2Mv1M2MClientsSecretsRotateCancelResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Cancel.ApiM2Mv1M2MClientsSecretsRotateCancelResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateCancelResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateCancelResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Cancel the rotation of an M2M client secret started with the [Start Secret Rotation Endpoint](https://stytch.com/docs/b2b/api/m2m-rotate-secret-start) [Start Secret Rotation Endpoint](https://stytch.com/docs/api/m2m-rotate-secret-start).After this endpoint is called, the client&apos;s `next_client_secret` is discarded and only the original `client_secret` will be valid.

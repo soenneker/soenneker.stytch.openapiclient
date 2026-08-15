@@ -39,6 +39,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -49,7 +52,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The organization RBAC policy feature is currently in private beta and must be enabled for your Workspace. Please contact Stytch support at support@stytch.com to request access.Set the RBAC Policy for a specific Organization within your Stytch Project. An Organization RBAC Policy allows you to define roles that are specific to that organization, providing fine-grained control over permissions at the organization level.This endpoint allows you to create, update, or replace the organization-scoped roles for a given organization. Organization policies supplement the project-level RBAC policy with additional roles that are only applicable within the context of that specific organization.The organization policy consists of roles, where each role defines:- A unique `role_id` to identify the role- A human-readable `description` of the role&apos;s purpose- A set of `permissions` that specify which actions can be performed on which resourcesWhen you set an organization policy, it will replace any existing organization-specific roles for that organization. The project-level RBAC policy remains unchanged.Organization-specific roles are useful for scenarios where different organizations within your project require different permission structures, such as:- Multi-tenant applications with varying access levels per tenant- Organizations with custom approval workflows- Different organizational hierarchies requiring unique role definitionsCheck out the [RBAC overview](https://stytch.com/docs/b2b/guides/rbac/overview) to learn more about Stytch&apos;s RBAC permissioning model and organization-scoped policies.
@@ -58,6 +67,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyResponse?> PutAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -69,7 +81,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// The organization RBAC policy feature is currently in private beta and must be enabled for your Workspace. Please contact Stytch support at support@stytch.com to request access.Get the active RBAC Policy for a specific Organization within your Stytch Project. An Organization RBAC Policy contains the roles that have been defined specifically for that organization, allowing for organization-specific permissioning models.This endpoint returns the organization-scoped roles that supplement the project-level RBAC policy. Organization policies allow you to define custom roles that are specific to individual organizations within your project.When using the backend SDKs, the RBAC Policy will be cached to allow for local evaluations, eliminating the need for an extra request to Stytch. The policy will be refreshed if an authorization check is requested and the RBAC policy was last updated more than 5 minutes ago.Organization-specific roles can be created and managed through this API endpoint, providing fine-grained control over permissions at the organization level.Check out the [RBAC overview](https://stytch.com/docs/b2b/guides/rbac/overview) to learn more about Stytch&apos;s RBAC permissioning model and organization-scoped policies.

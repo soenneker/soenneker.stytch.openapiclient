@@ -39,6 +39,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Google.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Google.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Google.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Google.GoogleRequestBuilder.GoogleRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -49,7 +52,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Google.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Google.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Google.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersOAuthProvidersGoogleResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the saved Google access token and ID token for a member. After a successful OAuth login, Stytch will save the issued access token and ID token from the identity provider. If a refresh token has been issued, Stytch will refresh the access token automatically.Google One Tap does not return access tokens. If the member has only authenticated through Google One Tap and not through a regular Google OAuth flow, this endpoint will not return any tokens.__Note:__ Google does not issue a refresh token on every login, and refresh tokens may expire if unused.To force a refresh token to be issued, pass the `?provider_prompt=consent` query param into the[Start Google OAuth flow](https://stytch.com/docs/b2b/api/oauth-google-start) endpoint.

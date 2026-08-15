@@ -39,6 +39,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Sessions.Jwks.Item
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GetJwksResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Sessions.Jwks.Item.ApiSessionV1GetJwksResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Sessions.Jwks.Item.ApiSessionV1GetJwksResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Sessions.Jwks.Item.ApiSessionV1GetJwksResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GetJwksResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -49,7 +52,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Sessions.Jwks.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GetJwksResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GetJwksResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Sessions.Jwks.Item.ApiSessionV1GetJwksResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Sessions.Jwks.Item.ApiSessionV1GetJwksResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Sessions.Jwks.Item.ApiSessionV1GetJwksResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GetJwksResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GetJwksResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the JSON Web Key Set (JWKS) for a project.Within the JWKS, the JSON Web Keys are rotated every ~6 months. Upon rotation, new JWTs will be signed using the new key, and both keys will be returned by this endpoint for a period of 1 month.JWTs have a set lifetime of 5 minutes, so there will be a 5 minute period where some JWTs will be signed by the old keys, and some JWTs will be signed by the new keys. The correct key to use for validation is determined by matching the `kid` value of the JWT and key.If you&apos;re using one of our [backend SDKs](https://stytch.com/docs/b2b/sdks), the JSON Web Key (JWK) rotation will be handled for you.If you&apos;re using your own JWT validation library, many have built-in support for JWK rotation, and you&apos;ll just need to supply this API endpoint. If not, your application should decide which JWK to use for validation by inspecting the `kid` value.See our [How to use Stytch Session JWTs](https://stytch.com/docs/guides/sessions/using-jwts) guide for more information.

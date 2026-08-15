@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Rules.Set
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Rules.Set.ApiFraudV1FraudRulesSetResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Rules.Set.ApiFraudV1FraudRulesSetResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Rules.Set.ApiFraudV1FraudRulesSetResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesSetResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesSetRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Rules.Set
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesSetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesSetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Rules.Set.ApiFraudV1FraudRulesSetResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Rules.Set.ApiFraudV1FraudRulesSetResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Rules.Set.ApiFraudV1FraudRulesSetResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesSetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesSetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Set a rule for a particular `visitor_id`, `browser_id`, `visitor_fingerprint`, `browser_fingerprint`, `hardware_fingerprint`, `network_fingerprint`, `cidr_block`, `asn`, or `country_code`. This is helpful in cases where you want to allow or block a specific user or fingerprint. You should be careful when setting rules for `browser_fingerprint`, `hardware_fingerprint`, or `network_fingerprint` as they can be shared across multiple users, and you could affect more users than intended.You may not set an `ALLOW` rule for a `country_code`.Rules are applied in the order specified above. For example, if an end user has an `ALLOW` rule set for their `visitor_id` but a `BLOCK` rule set for their `hardware_fingerprint`, they will receive an `ALLOW` verdict because the `visitor_id` rule takes precedence.If there are conflicts between multiple `cidr_block` rules (for example, if the `ip_address` of the end user overlaps with multiple CIDR blocks that have rules set), the conflicts are resolved as follows:- The smallest block size takes precedence. For example, if an `ip_address` overlaps with a `cidr_block` rule of `ALLOW` for a block with a prefix of `/32` and a `cidr_block` rule of `BLOCK` with a prefix of `/24`, the rule match verdict will be `ALLOW`.- Among equivalent size blocks, `BLOCK` takes precedence over `CHALLENGE`, which takes precedence over `ALLOW`. For example, if an `ip_address` overlaps with two `cidr_block` rules with blocks of the same size that return `CHALLENGE` and `ALLOW`, the rule match verdict will be `CHALLENGE`.

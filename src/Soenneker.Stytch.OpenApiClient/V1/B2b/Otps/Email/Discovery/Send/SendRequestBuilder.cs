@@ -34,12 +34,15 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Otps.Email.Discovery.Send
         {
         }
         /// <summary>
-        /// &quot;Send a discovery OTP to an email address. The OTP is valid for 10 minutes. Only the most recently sent OTP is valid: when an OTP is sent, all OTPs previously sent to the same email address are invalidated, even if unused or unexpired.&quot;
+        /// Send a discovery OTP to an email address. The OTP is valid for 10 minutes. Only the most recently sent OTP is valid: when an OTP is sent, all OTPs previously sent to the same email address are invalidated, even if unused or unexpired.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse"/></returns>
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Otps.Email.Discovery.Send.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Otps.Email.Discovery.Send.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Otps.Email.Discovery.Send.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoverySendRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,10 +54,16 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Otps.Email.Discovery.Send
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Otps.Email.Discovery.Send.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Otps.Email.Discovery.Send.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Otps.Email.Discovery.Send.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Send a discovery OTP to an email address. The OTP is valid for 10 minutes. Only the most recently sent OTP is valid: when an OTP is sent, all OTPs previously sent to the same email address are invalidated, even if unused or unexpired.&quot;
+        /// Send a discovery OTP to an email address. The OTP is valid for 10 minutes. Only the most recently sent OTP is valid: when an OTP is sent, all OTPs previously sent to the same email address are invalidated, even if unused or unexpired.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request type</param>

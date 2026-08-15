@@ -33,7 +33,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public string AlternativeAudienceUri { get; set; }
 #endif
-        /// <summary>&quot;An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values. Required attributes: `email` and one of `full_name` or `first_name` and `last_name`.&quot;</summary>
+        /// <summary>An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values. Required attributes: `email` and one of `full_name` or `first_name` and `last_name`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlUpdateConnectionRequestAttributeMappingProperty? AttributeMapping { get; set; }

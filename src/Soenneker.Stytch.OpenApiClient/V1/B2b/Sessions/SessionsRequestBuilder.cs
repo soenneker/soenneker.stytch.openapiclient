@@ -81,6 +81,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1GetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.ApiB2BSessionV1GetResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.ApiB2BSessionV1GetResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.ApiB2BSessionV1GetResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1GetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -91,7 +94,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1GetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1GetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.ApiB2BSessionV1GetResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.ApiB2BSessionV1GetResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sessions.ApiB2BSessionV1GetResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1GetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1GetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves all active Sessions for a Member.

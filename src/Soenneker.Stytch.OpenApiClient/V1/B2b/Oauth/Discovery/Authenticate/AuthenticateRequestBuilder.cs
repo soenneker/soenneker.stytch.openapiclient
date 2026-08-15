@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Oauth.Discovery.Authenticate
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Oauth.Discovery.Authenticate.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Oauth.Discovery.Authenticate.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Oauth.Discovery.Authenticate.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Oauth.Discovery.Authenticate
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Oauth.Discovery.Authenticate.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Oauth.Discovery.Authenticate.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Oauth.Discovery.Authenticate.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Authenticates the Discovery OAuth token and exchanges it for an IntermediateSession Token. Intermediate Session Tokens can be used for various Discovery login flows and are valid for 10 minutes.

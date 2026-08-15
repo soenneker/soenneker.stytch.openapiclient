@@ -59,6 +59,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.ApiM2Mv1M2MClientsCreateResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.ApiM2Mv1M2MClientsCreateResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.ApiM2Mv1M2MClientsCreateResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -70,7 +73,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.ApiM2Mv1M2MClientsCreateResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.ApiM2Mv1M2MClientsCreateResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.ApiM2Mv1M2MClientsCreateResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsCreateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a new M2M Client. On initial client creation, you may pass in a custom `client_id` or `client_secret` to import an existing M2M client. If you do not pass in a custom `client_id` or `client_secret`, one will be generated automatically. The `client_id` must be unique among all clients in your project.**Important:** This is the only time you will be able to view the generated `client_secret` in the API response. Stytch stores a hash of the `client_secret` and cannot recover the value if lost. Be sure to persist the `client_secret` in a secure location. If the `client_secret` is lost, you will need to trigger a secret rotation flow to receive another one.

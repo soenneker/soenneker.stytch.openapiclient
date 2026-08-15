@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Idp.Oauth.Authorize.Start
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Idp.Oauth.Authorize.Start.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Idp.Oauth.Authorize.Start.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Idp.Oauth.Authorize.Start.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Idp.Oauth.Authorize.Start
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Idp.Oauth.Authorize.Start.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Idp.Oauth.Authorize.Start.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Idp.Oauth.Authorize.Start.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BIdpV1B2BIdpOAuthAuthorizeStartResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Initiates a request for authorization of a Connected App to access a Member&apos;s account.Call this endpoint using the query parameters from an OAuth Authorization request.This endpoint validates various fields (`scope`, `client_id`, `redirect_uri`, `prompt`, etc...) are correct and returnsrelevant information for rendering an OAuth Consent Screen.This endpoint returns:- A public representation of the Connected App requesting authorization- Whether _explicit_ consent must be granted before proceeding with the authorization- A list of scopes the Member has the ability to grant the Connected AppUse this response to prompt the Member for consent (if necessary) before calling the [Submit OAuth Authorization](https://stytch.com/docs/b2b/api/connected-apps-oauth-authorize) endpoint.Exactly one of the following must be provided to identify the Member granting authorization:- `organization_id` + `member_id`- `session_token`- `session_jwt`If a `session_token` or `session_jwt` is passed, the OAuth Authorization will be linked to the Member&apos;s session for tracking purposes.One of these fields must be used if the Connected App intends to complete the [Exchange Access Token](https://stytch.com/docs/b2b/api/connected-app-access-token-exchange) flow.

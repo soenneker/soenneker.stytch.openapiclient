@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Idp.Oauth.Authorize.Start
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Idp.Oauth.Authorize.Start.ApiIdpV1IdpOAuthAuthorizeStartResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Idp.Oauth.Authorize.Start.ApiIdpV1IdpOAuthAuthorizeStartResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Idp.Oauth.Authorize.Start.ApiIdpV1IdpOAuthAuthorizeStartResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiIdpV1IdpOAuthAuthorizeStartResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiIdpV1IdpOAuthAuthorizeStartRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Idp.Oauth.Authorize.Start
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiIdpV1IdpOAuthAuthorizeStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiIdpV1IdpOAuthAuthorizeStartResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Idp.Oauth.Authorize.Start.ApiIdpV1IdpOAuthAuthorizeStartResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Idp.Oauth.Authorize.Start.ApiIdpV1IdpOAuthAuthorizeStartResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Idp.Oauth.Authorize.Start.ApiIdpV1IdpOAuthAuthorizeStartResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiIdpV1IdpOAuthAuthorizeStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiIdpV1IdpOAuthAuthorizeStartResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Initiates a request for authorization of a Connected App to access a User&apos;s account.Call this endpoint using the query parameters from an OAuth Authorization request. This endpoint validates various fields (`scope`, `client_id`, `redirect_uri`, `prompt`, etc...) are correct and returnsrelevant information for rendering an OAuth Consent Screen.This endpoint returns:- A public representation of the Connected App requesting authorization- Whether _explicit_ user consent must be granted before proceeding with the authorization- A list of scopes the user has the ability to grant the Connected AppUse this response to prompt the user for consent (if necessary) before calling the [Submit OAuth Authorization](https://stytch.com/docs/api/connected-apps-oauth-authorize) endpoint.Exactly one of the following must be provided to identify the user granting authorization:- `user_id`- `session_token`- `session_jwt`If a `session_token` or `session_jwt` is passed, the OAuth Authorization will be linked to the user&apos;s session for tracking purposes.One of these fields must be used if the Connected App intends to complete the [Exchange Access Token](https://stytch.com/docs/api/connected-app-access-token-exchange) flow.

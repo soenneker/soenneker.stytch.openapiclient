@@ -45,6 +45,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionDeleteResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionDeleteResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionDeleteResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionDeleteResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -55,7 +58,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionDeleteResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionDeleteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionDeleteResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionDeleteResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionDeleteResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionDeleteResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets a paginated list of all SCIM Groups associated with a given Connection.
@@ -63,6 +72,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGetGroupsResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionGetGroupsResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionGetGroupsResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionGetGroupsResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGetGroupsResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.WithConnectionItemRequestBuilder.WithConnectionItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -73,7 +85,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGetGroupsResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGetGroupsResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionGetGroupsResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionGetGroupsResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionGetGroupsResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGetGroupsResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGetGroupsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update a SCIM Connection.
@@ -82,6 +100,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionUpdateResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionUpdateResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionUpdateResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdateResponse?> PutAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -93,7 +114,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionUpdateResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionUpdateResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.ApiB2BScimV1B2BScimConnectionUpdateResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deletes a SCIM Connection.

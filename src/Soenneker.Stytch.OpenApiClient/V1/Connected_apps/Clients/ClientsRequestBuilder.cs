@@ -59,6 +59,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.ApiConnectedappsV1ConnectedAppsClientsCreateResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.ApiConnectedappsV1ConnectedAppsClientsCreateResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.ApiConnectedappsV1ConnectedAppsClientsCreateResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsCreateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -70,7 +73,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsCreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsCreateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.ApiConnectedappsV1ConnectedAppsClientsCreateResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.ApiConnectedappsV1ConnectedAppsClientsCreateResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.ApiConnectedappsV1ConnectedAppsClientsCreateResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsCreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsCreateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a new Connected App. If the Connected App `client_type` is `first_party` or `third_party` a `client_secret` is returned.**Important:** This is the only time you will be able to view the generated `client_secret` in the API response. Stytch stores a hash of the `client_secret` and cannot recover the value if lost. Be sure to persist the `client_secret` in a secure location. If the `client_secret` is lost, you will need to trigger a secret rotation flow to receive another one.

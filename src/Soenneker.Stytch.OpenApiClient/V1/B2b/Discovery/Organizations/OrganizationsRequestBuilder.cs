@@ -46,6 +46,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Discovery.Organizations
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Discovery.Organizations.ApiDiscoveryV1DiscoveryListResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Discovery.Organizations.ApiDiscoveryV1DiscoveryListResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Discovery.Organizations.ApiDiscoveryV1DiscoveryListResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryListResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryListRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -57,7 +60,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Discovery.Organizations
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryListResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryListResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Discovery.Organizations.ApiDiscoveryV1DiscoveryListResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Discovery.Organizations.ApiDiscoveryV1DiscoveryListResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Discovery.Organizations.ApiDiscoveryV1DiscoveryListResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryListResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveryListResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// List all possible organization relationships connected to a [Member Session](https://stytch.com/docs/b2b/api/session-object) or Intermediate Session.When a Member Session is passed in, relationships with a type of `active_member`, `pending_member`, or `invited_member`will be returned, and any membership can be assumed by calling the [Exchange Session](https://stytch.com/docs/b2b/api/exchange-session) endpoint.When an Intermediate Session is passed in, all relationship types - `active_member`, `pending_member`, `invited_member`, `eligible_to_join_by_email_domain`, and `eligible_to_join_by_oauth_tenant` - will be returned, and any membership can be assumed by calling the [Exchange Intermediate Session](https://stytch.com/docs/b2b/api/exchange-intermediate-session) endpoint. This endpoint requires either an `intermediate_session_token`, `session_jwt` or `session_token` be included in the request.It will return an error if multiple are present.This operation does not consume the Intermediate Session or Session Token passed in.

@@ -46,6 +46,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.ApiPasswordV1PasswordsEmailResetResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.ApiPasswordV1PasswordsEmailResetResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.ApiPasswordV1PasswordsEmailResetResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -57,7 +60,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.ApiPasswordV1PasswordsEmailResetResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.ApiPasswordV1PasswordsEmailResetResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.ApiPasswordV1PasswordsEmailResetResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Reset the user&apos;s password and authenticate them. This endpoint checks that the magic link `token` is valid, hasn&apos;t expired, or already been used – and can optionally require additional security settings, such as the IP address and user agent matching the initial reset request.The provided password needs to meet our password strength requirements, which can be checked in advance with the password strength endpoint. If the token and password are accepted, the password is securely stored for future authentication and the user is authenticated.Note that a successful password reset by email will revoke all active sessions for the `user_id`.

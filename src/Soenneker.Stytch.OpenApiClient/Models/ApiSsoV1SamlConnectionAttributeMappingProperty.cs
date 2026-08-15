@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stytch.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values. Required attributes: `email` and one of `full_name` or `first_name` and `last_name`.&quot;
+    /// An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values. Required attributes: `email` and one of `full_name` or `first_name` and `last_name`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiSsoV1SamlConnectionAttributeMappingProperty : IAdditionalDataHolder, IParsable

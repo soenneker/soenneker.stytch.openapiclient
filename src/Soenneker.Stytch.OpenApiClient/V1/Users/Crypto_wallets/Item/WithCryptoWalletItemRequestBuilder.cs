@@ -39,6 +39,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Crypto_wallets.Item
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteCryptoWalletResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Crypto_wallets.Item.ApiUserV1DeleteCryptoWalletResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Crypto_wallets.Item.ApiUserV1DeleteCryptoWalletResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Crypto_wallets.Item.ApiUserV1DeleteCryptoWalletResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteCryptoWalletResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -49,7 +52,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Crypto_wallets.Item
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteCryptoWalletResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteCryptoWalletResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Users.Crypto_wallets.Item.ApiUserV1DeleteCryptoWalletResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Users.Crypto_wallets.Item.ApiUserV1DeleteCryptoWalletResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Users.Crypto_wallets.Item.ApiUserV1DeleteCryptoWalletResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteCryptoWalletResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteCryptoWalletResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a crypto wallet from a User.

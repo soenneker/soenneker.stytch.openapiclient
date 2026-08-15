@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Email.Invite
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Email.Invite.ApiB2BMagicV1B2BMagicLinksEmailInviteResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Email.Invite.ApiB2BMagicV1B2BMagicLinksEmailInviteResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Email.Invite.ApiB2BMagicV1B2BMagicLinksEmailInviteResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Email.Invite
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Email.Invite.ApiB2BMagicV1B2BMagicLinksEmailInviteResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Email.Invite.ApiB2BMagicV1B2BMagicLinksEmailInviteResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Email.Invite.ApiB2BMagicV1B2BMagicLinksEmailInviteResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Send an invite email to a new Member to join an Organization. The Member will be created with an `invited` status until they successfully authenticate. Sending invites to `pending` Members will update their status to `invited`. Sending invites to already `active` Members will return an error.The magic link invite will be valid for 1 week.## Revoke an inviteTo revoke an existing invite, use the [Delete Member](https://stytch.com/docs/b2b/api/delete-member) endpoint. This will both delete the invited Member from the target Organization and revoke all existing invite emails.

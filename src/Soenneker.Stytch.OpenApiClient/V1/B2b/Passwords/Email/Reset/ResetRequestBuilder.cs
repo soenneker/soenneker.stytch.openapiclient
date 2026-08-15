@@ -46,6 +46,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Email.Reset
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Email.Reset.ApiB2BPasswordV1B2BPasswordsEmailResetResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Email.Reset.ApiB2BPasswordV1B2BPasswordsEmailResetResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Email.Reset.ApiB2BPasswordV1B2BPasswordsEmailResetResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailResetResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailResetRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -57,7 +60,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Email.Reset
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailResetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailResetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Email.Reset.ApiB2BPasswordV1B2BPasswordsEmailResetResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Email.Reset.ApiB2BPasswordV1B2BPasswordsEmailResetResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Email.Reset.ApiB2BPasswordV1B2BPasswordsEmailResetResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailResetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsEmailResetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Reset the Member&apos;s password and authenticate them. This endpoint checks that the password reset token is valid, hasn’t expired, or already been used.The provided password needs to meet our password strength requirements, which can be checked in advance with the password strength endpoint. If the token and password are accepted, the password is securely stored for future authentication and the user is authenticated.If the Member is required to complete MFA to log in to the Organization, the returned value of `member_authenticated` will be `false`, and an `intermediate_session_token` will be returned.The `intermediate_session_token` can be passed into the [OTP SMS Authenticate endpoint](https://stytch.com/docs/b2b/api/authenticate-otp-sms) to complete the MFA step and acquire a full member session.The `session_duration_minutes` and `session_custom_claims` parameters will be ignored.If a valid `session_token` or `session_jwt` is passed in, the Member will not be required to complete an MFA step.Note that a successful password reset by email will revoke all active sessions for the `member_id`.

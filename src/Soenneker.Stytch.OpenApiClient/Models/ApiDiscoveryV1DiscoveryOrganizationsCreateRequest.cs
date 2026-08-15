@@ -15,7 +15,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;An array of allowed authentication methods. This list is enforced when `auth_methods` is set to `RESTRICTED`.  The list&apos;s accepted values are: `sso`, `magic_link`, `email_otp`, `password`, `google_oauth`, `microsoft_oauth`, `slack_oauth`, `github_oauth`, and `hubspot_oauth`.  &quot;</summary>
+        /// <summary>An array of allowed authentication methods. This list is enforced when `auth_methods` is set to `RESTRICTED`.  The list&apos;s accepted values are: `sso`, `magic_link`, `email_otp`, `password`, `google_oauth`, `microsoft_oauth`, `slack_oauth`, `github_oauth`, and `hubspot_oauth`.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AllowedAuthMethods { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public List<string> AllowedFirstPartyConnectedApps { get; set; }
 #endif
-        /// <summary>&quot;An array of allowed MFA authentication methods. This list is enforced when `mfa_methods` is set to `RESTRICTED`.  The list&apos;s accepted values are: `sms_otp` and `totp`.  &quot;</summary>
+        /// <summary>An array of allowed MFA authentication methods. This list is enforced when `mfa_methods` is set to `RESTRICTED`.  The list&apos;s accepted values are: `sms_otp` and `totp`.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AllowedMfaMethods { get; set; }
@@ -145,7 +145,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public string OrganizationName { get; set; }
 #endif
-        /// <summary>&quot;The unique URL slug of the Organization. A minimum of two characters is required. The slug only accepts alphanumeric characters and the following reserved characters: `-` `.` `_` `~`. If the slug is not specified, a default slug will be created based on the email used to initiate the discovery flow. If the email domain is a common email provider such as gmail.com, or if the email is a .edu email, the organization slug will be generated based on the name portion of the email. Otherwise, the organization slug will be generated based on the email domain.&quot;</summary>
+        /// <summary>The unique URL slug of the Organization. A minimum of two characters is required. The slug only accepts alphanumeric characters and the following reserved characters: `-` `.` `_` `~`. If the slug is not specified, a default slug will be created based on the email used to initiate the discovery flow. If the email domain is a common email provider such as gmail.com, or if the email is a .edu email, the organization slug will be generated based on the name portion of the email. Otherwise, the organization slug will be generated based on the email domain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OrganizationSlug { get; set; }

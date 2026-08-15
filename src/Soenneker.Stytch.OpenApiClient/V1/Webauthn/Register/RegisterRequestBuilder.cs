@@ -46,6 +46,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Webauthn.Register
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Register.ApiWebauthnV1RegisterResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Register.ApiWebauthnV1RegisterResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Register.ApiWebauthnV1RegisterResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -57,7 +60,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Webauthn.Register
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Register.ApiWebauthnV1RegisterResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Register.ApiWebauthnV1RegisterResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Register.ApiWebauthnV1RegisterResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Complete the creation of a WebAuthn registration by passing the response from the [navigator.credentials.create()](https://www.w3.org/TR/webauthn-2/#sctn-createCredential) request to this endpoint as the `public_key_credential` parameter. See our [WebAuthn setup guide](https://stytch.com/docs/guides/webauthn/api) for additional usage instructions and example code.

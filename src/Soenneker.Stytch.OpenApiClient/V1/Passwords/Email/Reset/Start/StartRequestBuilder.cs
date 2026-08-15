@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.Start
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.Start.ApiPasswordV1PasswordsEmailResetStartResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.Start.ApiPasswordV1PasswordsEmailResetStartResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.Start.ApiPasswordV1PasswordsEmailResetStartResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.Start
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.Start.ApiPasswordV1PasswordsEmailResetStartResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.Start.ApiPasswordV1PasswordsEmailResetStartResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Passwords.Email.Reset.Start.ApiPasswordV1PasswordsEmailResetStartResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Initiates a password reset for the email address provided. This will trigger an email to be sent to the address, containing a magic link that will allow them to set a new password and authenticate.

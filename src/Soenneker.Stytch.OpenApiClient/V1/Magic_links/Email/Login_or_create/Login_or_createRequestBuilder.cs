@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Magic_links.Email.Login_or_create
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Magic_links.Email.Login_or_create.ApiMagicV1MagicLinksEmailLoginOrCreateResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Magic_links.Email.Login_or_create.ApiMagicV1MagicLinksEmailLoginOrCreateResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Magic_links.Email.Login_or_create.ApiMagicV1MagicLinksEmailLoginOrCreateResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailLoginOrCreateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailLoginOrCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Magic_links.Email.Login_or_create
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailLoginOrCreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailLoginOrCreateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Magic_links.Email.Login_or_create.ApiMagicV1MagicLinksEmailLoginOrCreateResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Magic_links.Email.Login_or_create.ApiMagicV1MagicLinksEmailLoginOrCreateResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Magic_links.Email.Login_or_create.ApiMagicV1MagicLinksEmailLoginOrCreateResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailLoginOrCreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailLoginOrCreateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Send either a login or signup Magic Link to the User based on if the email is associated with a User already. A new or pending User will receive a signup Magic Link. An active User will receive a login Magic Link. For more information on how to control the status your Users are created in see the `create_user_as_pending` flag.### Next stepsThe User is emailed a Magic Link which redirects them to the provided [redirect URL](https://stytch.com/docs/guides/magic-links/email-magic-links/redirect-routing). Collect the `token` from the URL query parameters and call [Authenticate Magic Link](https://stytch.com/docs/api/authenticate-magic-link) to complete authentication.

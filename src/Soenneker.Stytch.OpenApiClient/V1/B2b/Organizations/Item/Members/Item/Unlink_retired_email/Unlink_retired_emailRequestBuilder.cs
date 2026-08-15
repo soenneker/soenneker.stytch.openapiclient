@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Unlink_retired_email.ApiOrganizationV1OrganizationsMembersUnlinkRetiredEmailResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Unlink_retired_email.ApiOrganizationV1OrganizationsMembersUnlinkRetiredEmailResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Unlink_retired_email.ApiOrganizationV1OrganizationsMembersUnlinkRetiredEmailResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUnlinkRetiredEmailResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUnlinkRetiredEmailRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUnlinkRetiredEmailResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUnlinkRetiredEmailResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Unlink_retired_email.ApiOrganizationV1OrganizationsMembersUnlinkRetiredEmailResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Unlink_retired_email.ApiOrganizationV1OrganizationsMembersUnlinkRetiredEmailResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Unlink_retired_email.ApiOrganizationV1OrganizationsMembersUnlinkRetiredEmailResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUnlinkRetiredEmailResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersUnlinkRetiredEmailResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Unlinks a retired email address from a Member specified by their `organization_id` and `member_id`. The email addressto be retired can be identified in the request body by either its `email_id`, its `email_address`, or both. If usingboth identifiers they must refer to the same email.A previously active email address can be marked as retired in one of two ways:- It&apos;s replaced with a new primary email address during an explicit Member update.- A new email address is surfaced by an OAuth, SAML or OIDC provider. In this case the new email address becomes the  Member&apos;s primary email address and the old primary email address is retired.A retired email address cannot be used by other Members in the same Organization. However, unlinking retired emailaddresses allows them to be subsequently re-used by other Organization Members. Retired email addresses can be viewedon the [Member object](https://stytch.com/docs/b2b/api/member-object).

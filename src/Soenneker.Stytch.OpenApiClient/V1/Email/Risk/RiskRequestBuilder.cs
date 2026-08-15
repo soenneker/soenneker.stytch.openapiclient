@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Email.Risk
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Email.Risk.ApiFraudV1FraudEmailRiskResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Email.Risk.ApiFraudV1FraudEmailRiskResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Email.Risk.ApiFraudV1FraudEmailRiskResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudEmailRiskResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudEmailRiskRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Email.Risk
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudEmailRiskResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudEmailRiskResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Email.Risk.ApiFraudV1FraudEmailRiskResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Email.Risk.ApiFraudV1FraudEmailRiskResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Email.Risk.ApiFraudV1FraudEmailRiskResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudEmailRiskResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudEmailRiskResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get risk information for a specific email address.The response will contain a recommended action (`ALLOW`, `BLOCK`, or `CHALLENGE`) and a more granular `risk_score`.You can also check the `address_information` and `domain_information` fields for more information about the email address and email domain.This feature is in beta. Reach out to us [here](mailto:fraud-team@stytch.com?subject=Email_Intelligence_Early_Access) if you&apos;d like to request early access.

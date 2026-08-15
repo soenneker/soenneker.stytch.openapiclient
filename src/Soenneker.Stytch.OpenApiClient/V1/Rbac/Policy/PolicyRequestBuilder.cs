@@ -39,6 +39,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Rbac.Policy
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiConsumerRbacV1PolicyResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Rbac.Policy.ApiConsumerRbacV1PolicyResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Rbac.Policy.ApiConsumerRbacV1PolicyResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Rbac.Policy.ApiConsumerRbacV1PolicyResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiConsumerRbacV1PolicyResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -49,7 +52,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Rbac.Policy
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiConsumerRbacV1PolicyResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiConsumerRbacV1PolicyResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Rbac.Policy.ApiConsumerRbacV1PolicyResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Rbac.Policy.ApiConsumerRbacV1PolicyResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Rbac.Policy.ApiConsumerRbacV1PolicyResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiConsumerRbacV1PolicyResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiConsumerRbacV1PolicyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the active RBAC Policy for your current Stytch Project. An RBAC Policy is the canonical document that stores all defined Resources and Roles within your RBAC permissioning model.When using the backend SDKs, the RBAC Policy will be cached to allow for local evaluations, eliminating the need for an extra request to Stytch.The policy will be refreshed if an authorization check is requested and the RBAC policy was last updated more than 5 minutes ago.Resources and Roles can be created and managed within the [RBAC page](https://stytch.com/dashboard/rbac) in the Dashboard.Additionally, [Role assignment](https://stytch.com/docs/guides/rbac/role-assignment) can be programmatically managed through certain Stytch API endpoints.Check out the [RBAC overview](https://stytch.com/docs/guides/rbac/overview) to learn more about Stytch&apos;s RBAC permissioning model.

@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Star
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Start.ApiM2Mv1M2MClientsSecretsRotateStartResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Start.ApiM2Mv1M2MClientsSecretsRotateStartResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Start.ApiM2Mv1M2MClientsSecretsRotateStartResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateStartResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateStartRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Star
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateStartResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Start.ApiM2Mv1M2MClientsSecretsRotateStartResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Start.ApiM2Mv1M2MClientsSecretsRotateStartResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Start.ApiM2Mv1M2MClientsSecretsRotateStartResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateStartResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Initiate the rotation of an M2M client secret. After this endpoint is called, both the client&apos;s `client_secret` and `next_client_secret` will be valid. To complete the secret rotation flow, update all usages of `client_secret` to `next_client_secret` and call the [Rotate Secret Endpoint](https://stytch.com/docs/b2b/api/m2m-rotate-secret)[Rotate Secret Endpoint](https://stytch.com/docs/api/m2m-rotate-secret) to complete the flow.Secret rotation can be cancelled using the [Rotate Cancel Endpoint](https://stytch.com/docs/b2b/api/m2m-rotate-secret-cancel)[Rotate Cancel Endpoint](https://stytch.com/docs/api/m2m-rotate-secret-cancel).**Important:** This is the only time you will be able to view the generated `next_client_secret` in the API response. Stytch stores a hash of the `next_client_secret` and cannot recover the value if lost. Be sure to persist the `next_client_secret` in a secure location. If the `next_client_secret` is lost, you will need to trigger a secret rotation flow to receive another one.

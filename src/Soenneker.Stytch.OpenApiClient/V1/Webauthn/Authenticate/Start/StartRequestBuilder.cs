@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Webauthn.Authenticate.Start
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Authenticate.Start.ApiWebauthnV1AuthenticateStartResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Authenticate.Start.ApiWebauthnV1AuthenticateStartResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Authenticate.Start.ApiWebauthnV1AuthenticateStartResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1AuthenticateStartResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1AuthenticateStartRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Webauthn.Authenticate.Start
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1AuthenticateStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1AuthenticateStartResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Authenticate.Start.ApiWebauthnV1AuthenticateStartResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Authenticate.Start.ApiWebauthnV1AuthenticateStartResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Authenticate.Start.ApiWebauthnV1AuthenticateStartResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1AuthenticateStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1AuthenticateStartResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Initiate the authentication of a Passkey or WebAuthn registration. To optimize for Passkeys, set the `return_passkey_credential_options` field to `true`.After calling this endpoint, the browser will need to call [navigator.credentials.get()](https://www.w3.org/TR/webauthn-2/#sctn-getAssertion) with the data from `public_key_credential_request_options` passed to the [navigator.credentials.get()](https://www.w3.org/TR/webauthn-2/#sctn-getAssertion) request via the public key argument.When using built-in browser methods like `navigator.credentials.get()`, set the `use_base64_url_encoding` option to `true`.See our [WebAuthn setup guide](https://stytch.com/docs/guides/webauthn/api) for additional usage instructions and example code.

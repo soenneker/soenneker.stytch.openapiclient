@@ -52,6 +52,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Magic_links
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Magic_links.ApiMagicV1CreateResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Magic_links.ApiMagicV1CreateResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Magic_links.ApiMagicV1CreateResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1CreateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1CreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -63,7 +66,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Magic_links
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1CreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1CreateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Magic_links.ApiMagicV1CreateResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Magic_links.ApiMagicV1CreateResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Magic_links.ApiMagicV1CreateResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1CreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1CreateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create an Embeddable Magic Link token for a User.### Important usage notesCarefully review the following notes before using Embeddable Magic Links:* Embeddable Magic Link tokens are **sensitive values**. You should handle and store them securely.* Authenticating an Embeddable Magic Link token will not mark any of a user&apos;s delivery factors (email address or phone number) as verified, since we cannot confirm how the token was sent to the user.* Embeddable Magic Links are only available in our Consumer API, and not our B2B API.When sending Embeddable Magic Links via email:* Deliverability is paramount. Carefully test your email copy to ensure it reaches your users&apos; inboxes. Small changes can result in your emails being sent to spam.* In some cases, email security bots may follow links within incoming emails before your users open them. This consumes the Embeddable Magic Link token, preventing the user from logging in when they later click the link. Our Email Magic Links product automatically prevents this (details [here](https://stytch.com/docs/consumer-auth/authentication/magic-links/redirect-routing)). However, when sending your own emails containing Embeddable Magic Links, you&apos;ll be responsible for detecting and stopping bot traffic using tools like CAPTCHA or [Device Fingerprinting](https://stytch.com/docs/fraud-risk/device-fingerprinting/overview).We also recommend checking out our [Trusted Auth Tokens](https://stytch.com/docs/consumer-auth/authentication/trusted-auth-tokens/overview) product, which is available in both our Consumer and B2B APIs and can be a better fit for some use cases.

@@ -154,7 +154,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SsoRegistration> SsoRegistrations { get; set; }
 #endif
-        /// <summary>&quot;The status of the Member. The possible values are: `pending`, `invited`, `active`, or `deleted`.&quot;</summary>
+        /// <summary>The status of the Member. The possible values are: `pending`, `invited`, `active`, or `deleted`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get; set; }

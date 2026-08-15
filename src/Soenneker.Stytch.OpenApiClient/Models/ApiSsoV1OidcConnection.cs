@@ -54,7 +54,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public string ConnectionId { get; set; }
 #endif
-        /// <summary>&quot;A space-separated list of custom scopes that will be requested on every SSOStart call. If set, this value will replace the default set of OIDC scopes requested: `openid email profile`. Additional scopes can be requested using the `custom_scopes` query parameter on individual SSOStart calls.&quot;</summary>
+        /// <summary>A space-separated list of custom scopes that will be requested on every SSOStart call. If set, this value will replace the default set of OIDC scopes requested: `openid email profile`. Additional scopes can be requested using the `custom_scopes` query parameter on individual SSOStart calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CustomScopes { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public string DisplayName { get; set; }
 #endif
-        /// <summary>&quot;Name of the IdP. Enum with possible values: `classlink`, `cyberark`, `duo`, `google-workspace`, `jumpcloud`, `keycloak`, `miniorange`, `microsoft-entra`, `okta`, `onelogin`, `pingfederate`, `rippling`, `salesforce`, `shibboleth`, or `generic`.Specifying a known provider allows Stytch to handle any provider-specific logic.&quot;</summary>
+        /// <summary>Name of the IdP. Enum with possible values: `classlink`, `cyberark`, `duo`, `google-workspace`, `jumpcloud`, `keycloak`, `miniorange`, `microsoft-entra`, `okta`, `onelogin`, `pingfederate`, `rippling`, `salesforce`, `shibboleth`, or `generic`.Specifying a known provider allows Stytch to handle any provider-specific logic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdentityProvider { get; set; }

@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Otps.Sms.Send
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Otps.Sms.Send.ApiOtpV1OtpSmsSendResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Otps.Sms.Send.ApiOtpV1OtpSmsSendResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Otps.Sms.Send.ApiOtpV1OtpSmsSendResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpSmsSendResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpSmsSendRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Otps.Sms.Send
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpSmsSendResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpSmsSendResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Otps.Sms.Send.ApiOtpV1OtpSmsSendResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Otps.Sms.Send.ApiOtpV1OtpSmsSendResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Otps.Sms.Send.ApiOtpV1OtpSmsSendResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpSmsSendResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpSmsSendResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Send a one-time passcode (OTP) to a user&apos;s phone number. If you&apos;d like to create a user and send them a passcode with one request, use our [log in or create](https://stytch.com/docs/api/log-in-or-create-user-by-sms) endpoint.Note that sending another OTP code before the first has expired will invalidate the first code.### Cost to send SMS OTPBefore configuring SMS or WhatsApp OTPs, please review how Stytch [bills the costs of international OTPs](https://stytch.com/pricing) and understand how to protect your app against [toll fraud](https://stytch.com/docs/guides/passcodes/toll-fraud/overview).__Note:__ SMS to phone numbers outside of the US and Canada is disabled by default for customers who did not use SMS prior to October 2023. If you&apos;re interested in sending international SMS, please add those countries to your Project&apos;s allowlist via the [Dashboard](https://stytch.com/dashboard/country-code-allowlists) or [Programmatic Workspace Actions](https://stytch.com/docs/workspace-management/pwa/set-allowed-country-codes), and [add credit card details](https://stytch.com/dashboard/settings/billing) to your account.Even when international SMS is enabled, we do not support sending SMS to countries on our [Unsupported countries list](https://stytch.com/docs/guides/passcodes/unsupported-countries).### Add a phone number to an existing userThis endpoint also allows you to add a new phone number to an existing Stytch User. Including a `user_id`, `session_token`, or `session_jwt` in your Send one-time passcode by SMS request will add the new, unverified phone number to the existing Stytch User. If the user successfully authenticates within 5 minutes, the new phone number will be marked as verified and remain permanently on the existing Stytch User. Otherwise, it will be removed from the User object, and any subsequent login requests using that phone number will create a new User.### Next stepsCollect the OTP which was delivered to the user. Call [Authenticate OTP](https://stytch.com/docs/api/authenticate-otp) using the OTP `code` along with the `phone_id` found in the response as the `method_id`.

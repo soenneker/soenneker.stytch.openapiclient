@@ -15,7 +15,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;An array of allowed authentication methods. This list is enforced when `auth_methods` is set to `RESTRICTED`.  The list&apos;s accepted values are: `sso`, `magic_link`, `email_otp`, `password`, `google_oauth`, `microsoft_oauth`, `slack_oauth`, `github_oauth`, and `hubspot_oauth`.  If this field is provided and a session header is passed into the request, the Member Session must have permission to perform the `update.settings.allowed-auth-methods` action on the `stytch.organization` Resource.&quot;</summary>
+        /// <summary>An array of allowed authentication methods. This list is enforced when `auth_methods` is set to `RESTRICTED`.  The list&apos;s accepted values are: `sso`, `magic_link`, `email_otp`, `password`, `google_oauth`, `microsoft_oauth`, `slack_oauth`, `github_oauth`, and `hubspot_oauth`.  If this field is provided and a session header is passed into the request, the Member Session must have permission to perform the `update.settings.allowed-auth-methods` action on the `stytch.organization` Resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AllowedAuthMethods { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public List<string> AllowedFirstPartyConnectedApps { get; set; }
 #endif
-        /// <summary>&quot;An array of allowed MFA authentication methods. This list is enforced when `mfa_methods` is set to `RESTRICTED`.  The list&apos;s accepted values are: `sms_otp` and `totp`.  If this field is provided and a session header is passed into the request, the Member Session must have permission to perform the `update.settings.allowed-mfa-methods` action on the `stytch.organization` Resource.&quot;</summary>
+        /// <summary>An array of allowed MFA authentication methods. This list is enforced when `mfa_methods` is set to `RESTRICTED`.  The list&apos;s accepted values are: `sms_otp` and `totp`.  If this field is provided and a session header is passed into the request, the Member Session must have permission to perform the `update.settings.allowed-mfa-methods` action on the `stytch.organization` Resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AllowedMfaMethods { get; set; }
@@ -145,7 +145,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public string OrganizationName { get; set; }
 #endif
-        /// <summary>&quot;The unique URL slug of the Organization. The slug only accepts alphanumeric characters and the following reserved characters: `-` `.` `_` `~`. Must be between 2 and 128 characters in length. Wherever an organization_id is expected in a path or request parameter, you may also use the organization_slug as a convenience.If this field is provided and a session header is passed into the request, the Member Session must have permission to perform the `update.info.slug` action on the `stytch.organization` Resource.&quot;</summary>
+        /// <summary>The unique URL slug of the Organization. The slug only accepts alphanumeric characters and the following reserved characters: `-` `.` `_` `~`. Must be between 2 and 128 characters in length. Wherever an organization_id is expected in a path or request parameter, you may also use the organization_slug as a convenience.If this field is provided and a session header is passed into the request, the Member Session must have permission to perform the `update.info.slug` action on the `stytch.organization` Resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OrganizationSlug { get; set; }

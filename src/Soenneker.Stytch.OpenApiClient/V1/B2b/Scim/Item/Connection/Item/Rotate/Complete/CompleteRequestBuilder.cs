@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.Rotate
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.Rotate.Complete.ApiB2BScimV1B2BScimConnectionRotateCompleteResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.Rotate.Complete.ApiB2BScimV1B2BScimConnectionRotateCompleteResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.Rotate.Complete.ApiB2BScimV1B2BScimConnectionRotateCompleteResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionRotateCompleteResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionRotateCompleteRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.Rotate
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionRotateCompleteResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionRotateCompleteResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.Rotate.Complete.ApiB2BScimV1B2BScimConnectionRotateCompleteResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.Rotate.Complete.ApiB2BScimV1B2BScimConnectionRotateCompleteResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item.Rotate.Complete.ApiB2BScimV1B2BScimConnectionRotateCompleteResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionRotateCompleteResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionRotateCompleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Completes a SCIM token rotation. This will complete the current token rotation process and update the active token to be the new token supplied in the [start SCIM token rotation](https://stytch.com/docs/b2b/api/scim-rotate-token-start) response.

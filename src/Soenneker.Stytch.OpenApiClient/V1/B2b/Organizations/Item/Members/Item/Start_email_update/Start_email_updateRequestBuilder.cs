@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Start_email_update.ApiOrganizationV1OrganizationsMembersStartEmailUpdateResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Start_email_update.ApiOrganizationV1OrganizationsMembersStartEmailUpdateResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Start_email_update.ApiOrganizationV1OrganizationsMembersStartEmailUpdateResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Start_email_update.ApiOrganizationV1OrganizationsMembersStartEmailUpdateResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Start_email_update.ApiOrganizationV1OrganizationsMembersStartEmailUpdateResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Start_email_update.ApiOrganizationV1OrganizationsMembersStartEmailUpdateResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Starts a self-serve email update for a Member specified by their `organization_id` and `member_id`.To perform a self-serve update, members must be active and have an active, verified email address.The new email address must meet the following requirements:- Must not be in use by another member (retired emails count as used until they are [unlinked](https://stytch.com/docs/b2b/api/unlink-retired-member-email))- Must not be updating for another member (i.e. two members cannot attempt to update to the same email at once)The member will receive an Email Magic Link (or Email OTP Code, if `EMAIL_OTP` is specified as the delivery method) that expires in 5 minutes. If they do not verify their new email address in that timeframe, the emailwill be freed up for other members to use.If using Email Magic Links, the magic link will redirect to your `login_redirect_url` (or the configured default if one isn&apos;t provided), and you should invoke the [Authenticate Magic Link](https://stytch.com/docs/b2b/api/authenticate-magic-link) endpoint as normal to complete the flow.If using Email OTP Codes, you should invoke the [Authenticate Email OTP Code](https://stytch.com/docs/b2b/api/authenticate-email-otp) endpoint as normal to complete the flow. Make sure to pass the new email address to the endpoint.

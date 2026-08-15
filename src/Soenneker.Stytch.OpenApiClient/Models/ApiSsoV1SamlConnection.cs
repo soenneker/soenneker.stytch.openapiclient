@@ -40,7 +40,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public string AlternativeAudienceUri { get; set; }
 #endif
-        /// <summary>&quot;An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values. Required attributes: `email` and one of `full_name` or `first_name` and `last_name`.&quot;</summary>
+        /// <summary>An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values. Required attributes: `email` and one of `full_name` or `first_name` and `last_name`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionAttributeMappingProperty? AttributeMapping { get; set; }
@@ -80,7 +80,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1EncryptionPrivateKey> EncryptionPrivateKeys { get; set; }
 #endif
-        /// <summary>&quot;Name of the IdP. Enum with possible values: `classlink`, `cyberark`, `duo`, `google-workspace`, `jumpcloud`, `keycloak`, `miniorange`, `microsoft-entra`, `okta`, `onelogin`, `pingfederate`, `rippling`, `salesforce`, `shibboleth`, or `generic`.Specifying a known provider allows Stytch to handle any provider-specific logic.&quot;</summary>
+        /// <summary>Name of the IdP. Enum with possible values: `classlink`, `cyberark`, `duo`, `google-workspace`, `jumpcloud`, `keycloak`, `miniorange`, `microsoft-entra`, `okta`, `onelogin`, `pingfederate`, `rippling`, `salesforce`, `shibboleth`, or `generic`.Specifying a known provider allows Stytch to handle any provider-specific logic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdentityProvider { get; set; }

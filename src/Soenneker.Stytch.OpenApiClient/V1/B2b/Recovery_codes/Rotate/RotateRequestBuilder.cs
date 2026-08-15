@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Recovery_codes.Rotate
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Recovery_codes.Rotate.ApiB2BRecoveryCodesV1RotateResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Recovery_codes.Rotate.ApiB2BRecoveryCodesV1RotateResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Recovery_codes.Rotate.ApiB2BRecoveryCodesV1RotateResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRecoveryCodesV1RotateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRecoveryCodesV1RotateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Recovery_codes.Rotate
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRecoveryCodesV1RotateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRecoveryCodesV1RotateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Recovery_codes.Rotate.ApiB2BRecoveryCodesV1RotateResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Recovery_codes.Rotate.ApiB2BRecoveryCodesV1RotateResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Recovery_codes.Rotate.ApiB2BRecoveryCodesV1RotateResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRecoveryCodesV1RotateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRecoveryCodesV1RotateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Rotate a Member&apos;s recovery codes. This invalidates all existing recovery codes and generates a new set of recovery codes.

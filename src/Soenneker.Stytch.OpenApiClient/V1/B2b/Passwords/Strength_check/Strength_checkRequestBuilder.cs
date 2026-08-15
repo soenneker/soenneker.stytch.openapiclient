@@ -40,6 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Strength_check
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Strength_check.ApiB2BPasswordV1StrengthCheckResponse401Error">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Strength_check.ApiB2BPasswordV1StrengthCheckResponse429Error">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Strength_check.ApiB2BPasswordV1StrengthCheckResponse500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1StrengthCheckResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1StrengthCheckRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,13 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Strength_check
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1StrengthCheckResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1StrengthCheckResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Strength_check.ApiB2BPasswordV1StrengthCheckResponse401Error.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Strength_check.ApiB2BPasswordV1StrengthCheckResponse429Error.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Passwords.Strength_check.ApiB2BPasswordV1StrengthCheckResponse500Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1StrengthCheckResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1StrengthCheckResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// This API allows you to check whether the user’s provided password is valid, and to provide feedback to the user on how to increase the strength of their password.This endpoint adapts to your Project&apos;s password strength configuration.If you&apos;re using [zxcvbn](https://stytch.com/docs/guides/passwords/strength-policy), the default, your passwords are considered valid if the strength score is &gt;= 3.If you&apos;re using [LUDS](https://stytch.com/docs/guides/passwords/strength-policy), your passwords are considered valid if they meet the requirements that you&apos;ve set with Stytch.You may update your password strength configuration on the [Passwords Policy page](https://stytch.com/dashboard/password-strength-config) in the Stytch Dashboard.## Password feedbackThe `zxcvbn_feedback` and `luds_feedback` objects contains relevant fields for you to relay feedback to users that failed to create a strong enough password.If you&apos;re using [zxcvbn](https://stytch.com/docs/guides/passwords/strength-policy), the feedback object will contain warning and suggestions for any password that does not meet the [zxcvbn](https://stytch.com/docs/guides/passwords/strength-policy) strength requirements. You can return these strings directly to the user to help them craft a strong password.If you&apos;re using [LUDS](https://stytch.com/docs/guides/passwords/strength-policy), the feedback object will contain a collection of fields that the user failed or passed. You&apos;ll want to prompt the user to create a password that meets all requirements that they failed.
