@@ -94,8 +94,10 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Oidc_providersRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("include_refresh_token")]
             public bool? IncludeRefreshToken { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

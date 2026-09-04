@@ -94,8 +94,10 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Dangerousl
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithMemberItemRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("include_deleted")]
             public bool? IncludeDeleted { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }
