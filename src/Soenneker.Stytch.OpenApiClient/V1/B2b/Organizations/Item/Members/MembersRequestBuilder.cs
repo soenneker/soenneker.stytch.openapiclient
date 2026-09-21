@@ -65,9 +65,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.ApiOrganizationV1OrganizationsMembersCreateResponse401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.ApiOrganizationV1OrganizationsMembersCreateResponse429Error">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.ApiOrganizationV1OrganizationsMembersCreateResponse500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreate401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreate429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreate500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -81,9 +81,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.ApiOrganizationV1OrganizationsMembersCreateResponse401Error.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.ApiOrganizationV1OrganizationsMembersCreateResponse429Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.ApiOrganizationV1OrganizationsMembersCreateResponse500Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreate401Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreate429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreate500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersCreateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

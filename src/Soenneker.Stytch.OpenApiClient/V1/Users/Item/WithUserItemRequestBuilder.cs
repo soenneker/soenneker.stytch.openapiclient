@@ -57,9 +57,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Item
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1DeleteResponse401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1DeleteResponse429Error">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1DeleteResponse500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Delete401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Delete429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Delete500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -72,9 +72,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1DeleteResponse401Error.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1DeleteResponse429Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1DeleteResponse500Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Delete401Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Delete429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Delete500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -84,9 +84,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Item
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1GetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1GetResponse401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1GetResponse429Error">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1GetResponse500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Get401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Get429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Get500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1GetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -99,9 +99,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1GetResponse401Error.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1GetResponse429Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1GetResponse500Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Get401Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Get429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Get500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1GetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1GetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -112,9 +112,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Item
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1UpdateResponse401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1UpdateResponse429Error">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1UpdateResponse500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Update401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Update429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Update500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UpdateResponse?> PutAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UpdateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -128,9 +128,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Item
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1UpdateResponse401Error.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1UpdateResponse429Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Users.Item.ApiUserV1UpdateResponse500Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Update401Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Update429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Update500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UpdateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UpdateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

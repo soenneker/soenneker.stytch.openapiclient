@@ -39,9 +39,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Dangerousl
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Dangerously_get.Item.ApiOrganizationV1OrganizationsMembersGetResponse401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Dangerously_get.Item.ApiOrganizationV1OrganizationsMembersGetResponse429Error">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Dangerously_get.Item.ApiOrganizationV1OrganizationsMembersGetResponse500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDangerouslyGet401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDangerouslyGet429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDangerouslyGet500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Dangerously_get.Item.WithMemberItemRequestBuilder.WithMemberItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -54,9 +54,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Dangerousl
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Dangerously_get.Item.ApiOrganizationV1OrganizationsMembersGetResponse401Error.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Dangerously_get.Item.ApiOrganizationV1OrganizationsMembersGetResponse429Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Members.Dangerously_get.Item.ApiOrganizationV1OrganizationsMembersGetResponse500Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDangerouslyGet401Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDangerouslyGet429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDangerouslyGet500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersGetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

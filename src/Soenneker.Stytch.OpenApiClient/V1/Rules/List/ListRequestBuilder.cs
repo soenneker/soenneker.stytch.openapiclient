@@ -40,9 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Rules.List
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Rules.List.ApiFraudV1FraudRulesListResponse401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Rules.List.ApiFraudV1FraudRulesListResponse429Error">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Rules.List.ApiFraudV1FraudRulesListResponse500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesList401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesList429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesList500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesListResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesListRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -56,9 +56,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Rules.List
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Rules.List.ApiFraudV1FraudRulesListResponse401Error.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Rules.List.ApiFraudV1FraudRulesListResponse429Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Rules.List.ApiFraudV1FraudRulesListResponse500Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesList401Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesList429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesList500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesListResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudRulesListResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -46,9 +46,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.ApiSsoV1SsoOidcCreateConnectionResponse401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.ApiSsoV1SsoOidcCreateConnectionResponse429Error">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.ApiSsoV1SsoOidcCreateConnectionResponse500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcCreateConnection401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcCreateConnection429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcCreateConnection500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcCreateConnectionResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcCreateConnectionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -62,9 +62,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.ApiSsoV1SsoOidcCreateConnectionResponse401Error.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.ApiSsoV1SsoOidcCreateConnectionResponse429Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Oidc.Item.ApiSsoV1SsoOidcCreateConnectionResponse500Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcCreateConnection401Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcCreateConnection429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcCreateConnection500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcCreateConnectionResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoOidcCreateConnectionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

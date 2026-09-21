@@ -40,9 +40,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Discovery.Authentica
         /// <param name="body">Request type</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Discovery.Authenticate.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateResponse401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Discovery.Authenticate.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateResponse429Error">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Discovery.Authenticate.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateResponse500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticate401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticate429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticate500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateResponse?> PostAsync(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -56,9 +56,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Discovery.Authentica
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Discovery.Authenticate.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateResponse401Error.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Discovery.Authenticate.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateResponse429Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Stytch.OpenApiClient.V1.B2b.Magic_links.Discovery.Authenticate.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateResponse500Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticate401Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticate429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticate500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

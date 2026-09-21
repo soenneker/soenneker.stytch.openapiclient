@@ -39,9 +39,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.Item
         /// <returns>A <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentialsResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.Item.ApiWebauthnV1ListCredentialsResponse401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.Item.ApiWebauthnV1ListCredentialsResponse429Error">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.Item.ApiWebauthnV1ListCredentialsResponse500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentials401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentials429Response">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentials500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentialsResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -54,9 +54,9 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "401", global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.Item.ApiWebauthnV1ListCredentialsResponse401Error.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.Item.ApiWebauthnV1ListCredentialsResponse429Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.Item.ApiWebauthnV1ListCredentialsResponse500Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentials401Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentials429Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentials500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentialsResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentialsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
