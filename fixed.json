@@ -27894,7 +27894,6 @@
           "third_party_public"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiConnectedappsV1ConnectedAppsClientsCreateRequestClientType",
           "modelAsString": false,
@@ -28864,7 +28863,6 @@
           "rippling"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BScimV1ScimConnectionCreateRequestIdentityProvider",
           "modelAsString": false,
@@ -28916,7 +28914,6 @@
           "rippling"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BScimV1ScimConnectionUpdateRequestIdentityProvider",
           "modelAsString": false,
@@ -30292,7 +30289,6 @@
           "NOT_ALLOWED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiOrganizationV1OrganizationsCreateRequestFirstPartyConnectedAppsAllowedType",
           "modelAsString": false,
@@ -30319,7 +30315,6 @@
           "NOT_ALLOWED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiOrganizationV1OrganizationsCreateRequestThirdPartyConnectedAppsAllowedType",
           "modelAsString": false,
@@ -30345,7 +30340,6 @@
           "AND"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiOrganizationV1OrganizationsSearchQueryOperator",
           "modelAsString": false,
@@ -30368,7 +30362,6 @@
           "NOT_ALLOWED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiOrganizationV1OrganizationsUpdateRequestFirstPartyConnectedAppsAllowedType",
           "modelAsString": false,
@@ -30395,7 +30388,6 @@
           "NOT_ALLOWED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiOrganizationV1OrganizationsUpdateRequestThirdPartyConnectedAppsAllowedType",
           "modelAsString": false,
@@ -31058,7 +31050,6 @@
           "EMAIL_OTP"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestDeliveryMethod",
           "modelAsString": false,
@@ -31082,7 +31073,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestLocale",
           "modelAsString": false,
@@ -32741,7 +32731,6 @@
           "AND"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiUserV1UsersSearchUsersQueryOperator",
           "modelAsString": false,
@@ -34172,7 +34161,6 @@
           "trusted_token_exchange"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiSessionV1SessionsAuthenticationFactorDeliveryMethod",
           "modelAsString": false,
@@ -34374,7 +34362,6 @@
           "trusted_auth_token"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiSessionV1SessionsAuthenticationFactorType",
           "modelAsString": false,
@@ -35090,7 +35077,6 @@
           "cs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BSessionV1SessionsExchangeRequestLocale",
           "modelAsString": false,
@@ -36554,7 +36540,6 @@
           "cs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiDiscoveryV1DiscoveryIntermediateSessionsExchangeRequestLocale",
           "modelAsString": false,
@@ -36875,7 +36860,6 @@
           "NOT_ALLOWED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiDiscoveryV1DiscoveryOrganizationsCreateRequestFirstPartyConnectedAppsAllowedType",
           "modelAsString": false,
@@ -36902,7 +36886,6 @@
           "NOT_ALLOWED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiDiscoveryV1DiscoveryOrganizationsCreateRequestThirdPartyConnectedAppsAllowedType",
           "modelAsString": false,
@@ -37288,7 +37271,6 @@
           "NONE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiFraudV1RuleAction",
           "modelAsString": false,
@@ -37325,7 +37307,6 @@
           "COUNTRY_CODE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiFraudV1RuleType",
           "modelAsString": false,
@@ -37376,7 +37357,6 @@
           "BLOCK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiFraudV1FraudVerdictAction",
           "modelAsString": false,
@@ -37403,7 +37383,6 @@
           "BLOCK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiFraudV1FraudVerdictReasonActionAction",
           "modelAsString": false,
@@ -37430,7 +37409,6 @@
           "BLOCK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiFraudV1FraudVerdictReasonOverrideAction",
           "modelAsString": false,
@@ -37769,7 +37747,6 @@
           "NONE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiFraudV1FraudVerdictReasonsOverrideRequestAction",
           "modelAsString": false,
@@ -37849,7 +37826,6 @@
           "BLOCK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiFraudV1FraudEmailRiskResponseAction",
           "modelAsString": false,
@@ -38323,7 +38299,6 @@
           "AND"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiM2Mv1M2Mm2MSearchQueryOperator",
           "modelAsString": false,
@@ -38549,7 +38524,6 @@
           "inactive"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiM2Mv1M2MClientsUpdateRequestStatus",
           "modelAsString": false,
@@ -39088,7 +39062,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiMagicV1MagicLinksEmailInviteRequestLocale",
           "modelAsString": false,
@@ -39120,7 +39093,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiMagicV1MagicLinksEmailLoginOrCreateRequestLocale",
           "modelAsString": false,
@@ -39152,7 +39124,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiMagicV1MagicLinksEmailSendRequestLocale",
           "modelAsString": false,
@@ -39309,7 +39280,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BMagicV1MagicLinksAuthenticateRequestLocale",
           "modelAsString": false,
@@ -39517,7 +39487,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BMagicV1MagicLinksEmailInviteRequestLocale",
           "modelAsString": false,
@@ -39549,7 +39518,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BMagicV1MagicLinksEmailLoginOrSignupRequestLocale",
           "modelAsString": false,
@@ -39633,7 +39601,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BMagicV1MagicLinksEmailDiscoverySendRequestLocale",
           "modelAsString": false,
@@ -39896,7 +39863,6 @@
           "cs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BoAuthV1OAuthAuthenticateRequestLocale",
           "modelAsString": false,
@@ -40249,7 +40215,6 @@
           "cs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BOtpV1OtpSmsSendRequestLocale",
           "modelAsString": false,
@@ -40532,7 +40497,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BOtpV1OtpEmailAuthenticateRequestLocale",
           "modelAsString": false,
@@ -40564,7 +40528,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BOtpV1OtpEmailLoginOrSignupRequestLocale",
           "modelAsString": false,
@@ -40697,7 +40660,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BOtpV1OtpEmailDiscoverySendRequestLocale",
           "modelAsString": false,
@@ -41289,7 +41251,6 @@
           "pbkdf_2"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiPasswordV1PasswordsMigrateRequestHashType",
           "modelAsString": false,
@@ -41500,7 +41461,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiPasswordV1PasswordsEmailResetStartRequestLocale",
           "modelAsString": false,
@@ -42055,7 +42015,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BPasswordV1PasswordsAuthenticateRequestLocale",
           "modelAsString": false,
@@ -42092,7 +42051,6 @@
           "pbkdf_2"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BPasswordV1PasswordsMigrateRequestHashType",
           "modelAsString": false,
@@ -42396,7 +42354,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BPasswordV1PasswordsEmailResetRequestLocale",
           "modelAsString": false,
@@ -42428,7 +42385,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BPasswordV1PasswordsEmailResetStartRequestLocale",
           "modelAsString": false,
@@ -42564,7 +42520,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BPasswordV1PasswordsSessionResetRequestLocale",
           "modelAsString": false,
@@ -42713,7 +42668,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiB2BPasswordV1PasswordsExistingPasswordResetRequestLocale",
           "modelAsString": false,
@@ -43341,7 +43295,6 @@
           "cs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiOtpV1OtpSmsLoginOrCreateRequestLocale",
           "modelAsString": false,
@@ -43433,7 +43386,6 @@
           "cs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiOtpV1OtpSmsSendRequestLocale",
           "modelAsString": false,
@@ -43650,7 +43602,6 @@
           "cs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiOtpV1OtpWhatsappLoginOrCreateRequestLocale",
           "modelAsString": false,
@@ -43742,7 +43693,6 @@
           "cs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiOtpV1OtpWhatsappSendRequestLocale",
           "modelAsString": false,
@@ -43963,7 +43913,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiOtpV1OtpEmailLoginOrCreateRequestLocale",
           "modelAsString": false,
@@ -43995,7 +43944,6 @@
           "fr"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiOtpV1OtpEmailSendRequestLocale",
           "modelAsString": false,
@@ -44075,7 +44023,6 @@
           "M2M_CLIENT_COUNT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiProjectV1ProjectProjectMetricMetricType",
           "modelAsString": false,
@@ -44669,7 +44616,6 @@
           "cs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiSsoV1SsoAuthenticateRequestLocale",
           "modelAsString": false,
@@ -44867,7 +44813,6 @@
           "shibboleth"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiSsoV1SsoOidcCreateConnectionRequestIdentityProvider",
           "modelAsString": false,
@@ -44954,7 +44899,6 @@
           "shibboleth"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiSsoV1SsoOidcUpdateConnectionRequestIdentityProvider",
           "modelAsString": false,
@@ -45245,7 +45189,6 @@
           "shibboleth"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiSsoV1SsoSamlCreateConnectionRequestIdentityProvider",
           "modelAsString": false,
@@ -45332,7 +45275,6 @@
           "shibboleth"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApiSsoV1SsoSamlUpdateConnectionRequestIdentityProvider",
           "modelAsString": false,
