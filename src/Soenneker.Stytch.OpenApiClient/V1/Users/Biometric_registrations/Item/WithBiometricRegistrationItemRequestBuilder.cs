@@ -57,6 +57,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Biometric_registrations.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteBiometricRegistration401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteBiometricRegistration429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteBiometricRegistration500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteBiometricRegistrationResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteBiometricRegistrationResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

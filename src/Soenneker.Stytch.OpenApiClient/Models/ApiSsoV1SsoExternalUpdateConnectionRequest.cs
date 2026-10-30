@@ -12,32 +12,48 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiSsoV1SsoExternalUpdateConnectionRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("display_name") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("external_connection_implicit_role_assignments") is { } nullNodeExternalConnectionImplicitRoleAssignments && nullNodeExternalConnectionImplicitRoleAssignments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalConnectionImplicitRoleAssignments = null;
+            if (parseNode.GetChildNode("external_group_implicit_role_assignments") is { } nullNodeExternalGroupImplicitRoleAssignments && nullNodeExternalGroupImplicitRoleAssignments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalGroupImplicitRoleAssignments = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A human-readable display name for the connection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>All Members who log in with this External connection will implicitly receive the specified Roles. See the [RBAC guide](https://stytch.com/docs/b2b/guides/rbac/role-assignment) for more information about role assignment. Implicit role assignments are not supported for External connections if the underlying SSO connection is an OIDC connection. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1ConnectionImplicitRoleAssignment>? ExternalConnectionImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1ConnectionImplicitRoleAssignment>? ExternalConnectionImplicitRoleAssignments { get => _explicitNullValueExternalConnectionImplicitRoleAssignments; set { _explicitNullValueExternalConnectionImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_connection_implicit_role_assignments"); else _explicitNullProperties?.Remove("external_connection_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1ConnectionImplicitRoleAssignment>? _explicitNullValueExternalConnectionImplicitRoleAssignments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1ConnectionImplicitRoleAssignment> ExternalConnectionImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1ConnectionImplicitRoleAssignment> ExternalConnectionImplicitRoleAssignments { get => _explicitNullValueExternalConnectionImplicitRoleAssignments; set { _explicitNullValueExternalConnectionImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_connection_implicit_role_assignments"); else _explicitNullProperties?.Remove("external_connection_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1ConnectionImplicitRoleAssignment> _explicitNullValueExternalConnectionImplicitRoleAssignments = default!;
 #endif
         /// <summary>Defines the names of the groups that grant specific role assignments. For each group-Role pair, if a Member logs in with this external connection and belongs to the specified group, they will be granted the associated Role. See the [RBAC guide](https://stytch.com/docs/b2b/guides/rbac/role-assignment) for more information about role assignment. Before adding any group implicit role assignments to an external connection, you must add a &quot;groups&quot; key to the underlying SAML connection&apos;s         `attribute_mapping`. Make sure that the SAML connection IdP is configured to correctly send the group information. Implicit role assignments are not supported         for External connections if the underlying SSO connection is an OIDC connection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GroupImplicitRoleAssignment>? ExternalGroupImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GroupImplicitRoleAssignment>? ExternalGroupImplicitRoleAssignments { get => _explicitNullValueExternalGroupImplicitRoleAssignments; set { _explicitNullValueExternalGroupImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_group_implicit_role_assignments"); else _explicitNullProperties?.Remove("external_group_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GroupImplicitRoleAssignment>? _explicitNullValueExternalGroupImplicitRoleAssignments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GroupImplicitRoleAssignment> ExternalGroupImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GroupImplicitRoleAssignment> ExternalGroupImplicitRoleAssignments { get => _explicitNullValueExternalGroupImplicitRoleAssignments; set { _explicitNullValueExternalGroupImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_group_implicit_role_assignments"); else _explicitNullProperties?.Remove("external_group_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GroupImplicitRoleAssignment> _explicitNullValueExternalGroupImplicitRoleAssignments = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoExternalUpdateConnectionRequest"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoExternalUpdateConnectionRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoExternalUpdateConnectionRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoExternalUpdateConnectionRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1ConnectionImplicitRoleAssignment>("external_connection_implicit_role_assignments", ExternalConnectionImplicitRoleAssignments);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GroupImplicitRoleAssignment>("external_group_implicit_role_assignments", ExternalGroupImplicitRoleAssignments);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,76 +12,111 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
+            if (parseNode.GetChildNode("existing_password") is { } nullNodeExistingPassword && nullNodeExistingPassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingPassword = null;
+            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("new_password") is { } nullNodeNewPassword && nullNodeNewPassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewPassword = null;
+            if (parseNode.GetChildNode("organization_id") is { } nullNodeOrganizationId && nullNodeOrganizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationId = null;
+            if (parseNode.GetChildNode("session_custom_claims") is { } nullNodeSessionCustomClaims && nullNodeSessionCustomClaims.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionCustomClaims = null;
+            if (parseNode.GetChildNode("session_duration_minutes") is { } nullNodeSessionDurationMinutes && nullNodeSessionDurationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionDurationMinutes = null;
+            if (parseNode.GetChildNode("session_jwt") is { } nullNodeSessionJwt && nullNodeSessionJwt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionJwt = null;
+            if (parseNode.GetChildNode("session_token") is { } nullNodeSessionToken && nullNodeSessionToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionToken = null;
+            if (parseNode.GetChildNode("telemetry_id") is { } nullNodeTelemetryId && nullNodeTelemetryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TelemetryId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The email address of the Member.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailAddress { get; set; }
+        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        private string? _explicitNullValueEmailAddress = default!;
 #nullable restore
 #else
-        public string EmailAddress { get; set; }
+        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        private string _explicitNullValueEmailAddress = default!;
 #endif
         /// <summary>The Member&apos;s current password that they supplied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExistingPassword { get; set; }
+        public string? ExistingPassword { get => _explicitNullValueExistingPassword; set { _explicitNullValueExistingPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_password"); else _explicitNullProperties?.Remove("existing_password"); } }
+        private string? _explicitNullValueExistingPassword = default!;
 #nullable restore
 #else
-        public string ExistingPassword { get; set; }
+        public string ExistingPassword { get => _explicitNullValueExistingPassword; set { _explicitNullValueExistingPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existing_password"); else _explicitNullProperties?.Remove("existing_password"); } }
+        private string _explicitNullValueExistingPassword = default!;
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsExistingPasswordResetRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsExistingPasswordResetRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1PasswordsExistingPasswordResetRequestLocale? _explicitNullValueLocale = default!;
         /// <summary>The Member&apos;s elected new password.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewPassword { get; set; }
+        public string? NewPassword { get => _explicitNullValueNewPassword; set { _explicitNullValueNewPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_password"); else _explicitNullProperties?.Remove("new_password"); } }
+        private string? _explicitNullValueNewPassword = default!;
 #nullable restore
 #else
-        public string NewPassword { get; set; }
+        public string NewPassword { get => _explicitNullValueNewPassword; set { _explicitNullValueNewPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_password"); else _explicitNullProperties?.Remove("new_password"); } }
+        private string _explicitNullValueNewPassword = default!;
 #endif
         /// <summary>Globally unique UUID that identifies a specific Organization. The `organization_id` is critical to perform operations on an Organization, so be sure to preserve this value. You may also use the organization_slug or organization_external_id here as a convenience.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrganizationId { get; set; }
+        public string? OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
+        private string? _explicitNullValueOrganizationId = default!;
 #nullable restore
 #else
-        public string OrganizationId { get; set; }
+        public string OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
+        private string _explicitNullValueOrganizationId = default!;
 #endif
         /// <summary>Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in  `session_duration_minutes`. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To  delete a key, supply a null value. Custom claims made with reserved claims (`iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) will be ignored.  Total custom claims size cannot exceed four kilobytes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequestSessionCustomClaimsProperty? SessionCustomClaims { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequestSessionCustomClaimsProperty? SessionCustomClaims { get => _explicitNullValueSessionCustomClaims; set { _explicitNullValueSessionCustomClaims = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_custom_claims"); else _explicitNullProperties?.Remove("session_custom_claims"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequestSessionCustomClaimsProperty? _explicitNullValueSessionCustomClaims = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequestSessionCustomClaimsProperty SessionCustomClaims { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequestSessionCustomClaimsProperty SessionCustomClaims { get => _explicitNullValueSessionCustomClaims; set { _explicitNullValueSessionCustomClaims = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_custom_claims"); else _explicitNullProperties?.Remove("session_custom_claims"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequestSessionCustomClaimsProperty _explicitNullValueSessionCustomClaims = default!;
 #endif
         /// <summary>Set the session lifetime to be this many minutes from now. This will start a new session if one doesn&apos;t already exist,  returning both an opaque `session_token` and `session_jwt` for this session. Remember that the `session_jwt` will have a fixed lifetime of  five minutes regardless of the underlying session duration, and will need to be refreshed over time.  This value must be a minimum of 5 and a maximum of 527040 minutes (366 days).  If a `session_token` or `session_jwt` is provided then a successful authentication will continue to extend the session this many minutes.  If the `session_duration_minutes` parameter is not specified, a Stytch session will be created with a 60 minute duration. If you don&apos;t want  to use the Stytch session product, you can ignore the session fields in the response.</summary>
-        public int? SessionDurationMinutes { get; set; }
+        public int? SessionDurationMinutes { get => _explicitNullValueSessionDurationMinutes; set { _explicitNullValueSessionDurationMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_duration_minutes"); else _explicitNullProperties?.Remove("session_duration_minutes"); } }
+        private int? _explicitNullValueSessionDurationMinutes = default!;
         /// <summary>The JSON Web Token (JWT) for a given Stytch Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionJwt { get; set; }
+        public string? SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
+        private string? _explicitNullValueSessionJwt = default!;
 #nullable restore
 #else
-        public string SessionJwt { get; set; }
+        public string SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
+        private string _explicitNullValueSessionJwt = default!;
 #endif
         /// <summary>A secret token for a given Stytch Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionToken { get; set; }
+        public string? SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
+        private string? _explicitNullValueSessionToken = default!;
 #nullable restore
 #else
-        public string SessionToken { get; set; }
+        public string SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
+        private string _explicitNullValueSessionToken = default!;
 #endif
         /// <summary>If the `telemetry_id` is passed, as part of this request, Stytch will call the [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup) and store the associated fingerprints and IPGEO information for the Member. Your workspace must be enabled for Device Fingerprinting to use this feature.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TelemetryId { get; set; }
+        public string? TelemetryId { get => _explicitNullValueTelemetryId; set { _explicitNullValueTelemetryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("telemetry_id"); else _explicitNullProperties?.Remove("telemetry_id"); } }
+        private string? _explicitNullValueTelemetryId = default!;
 #nullable restore
 #else
-        public string TelemetryId { get; set; }
+        public string TelemetryId { get => _explicitNullValueTelemetryId; set { _explicitNullValueTelemetryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("telemetry_id"); else _explicitNullProperties?.Remove("telemetry_id"); } }
+        private string _explicitNullValueTelemetryId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequest"/> and sets the default values.
@@ -98,7 +133,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -137,6 +172,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("session_jwt", SessionJwt);
             writer.WriteStringValue("session_token", SessionToken);
             writer.WriteStringValue("telemetry_id", TelemetryId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

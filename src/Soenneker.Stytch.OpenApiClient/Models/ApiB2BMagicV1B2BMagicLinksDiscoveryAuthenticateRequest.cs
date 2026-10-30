@@ -12,24 +12,37 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("discovery_magic_links_token") is { } nullNodeDiscoveryMagicLinksToken && nullNodeDiscoveryMagicLinksToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscoveryMagicLinksToken = null;
+            if (parseNode.GetChildNode("pkce_code_verifier") is { } nullNodePkceCodeVerifier && nullNodePkceCodeVerifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PkceCodeVerifier = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Discovery Email Magic Link token to authenticate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiscoveryMagicLinksToken { get; set; }
+        public string? DiscoveryMagicLinksToken { get => _explicitNullValueDiscoveryMagicLinksToken; set { _explicitNullValueDiscoveryMagicLinksToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_magic_links_token"); else _explicitNullProperties?.Remove("discovery_magic_links_token"); } }
+        private string? _explicitNullValueDiscoveryMagicLinksToken = default!;
 #nullable restore
 #else
-        public string DiscoveryMagicLinksToken { get; set; }
+        public string DiscoveryMagicLinksToken { get => _explicitNullValueDiscoveryMagicLinksToken; set { _explicitNullValueDiscoveryMagicLinksToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_magic_links_token"); else _explicitNullProperties?.Remove("discovery_magic_links_token"); } }
+        private string _explicitNullValueDiscoveryMagicLinksToken = default!;
 #endif
         /// <summary>A base64url encoded one time secret used to validate that the request starts and ends on the same device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PkceCodeVerifier { get; set; }
+        public string? PkceCodeVerifier { get => _explicitNullValuePkceCodeVerifier; set { _explicitNullValuePkceCodeVerifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_verifier"); else _explicitNullProperties?.Remove("pkce_code_verifier"); } }
+        private string? _explicitNullValuePkceCodeVerifier = default!;
 #nullable restore
 #else
-        public string PkceCodeVerifier { get; set; }
+        public string PkceCodeVerifier { get => _explicitNullValuePkceCodeVerifier; set { _explicitNullValuePkceCodeVerifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_verifier"); else _explicitNullProperties?.Remove("pkce_code_verifier"); } }
+        private string _explicitNullValuePkceCodeVerifier = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateRequest"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksDiscoveryAuthenticateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("discovery_magic_links_token", DiscoveryMagicLinksToken);
             writer.WriteStringValue("pkce_code_verifier", PkceCodeVerifier);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

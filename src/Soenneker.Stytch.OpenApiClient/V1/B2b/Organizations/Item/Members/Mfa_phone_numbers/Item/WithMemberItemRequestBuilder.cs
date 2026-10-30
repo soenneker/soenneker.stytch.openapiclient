@@ -57,6 +57,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Mfa_p
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDeleteMfaPhoneNumber401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDeleteMfaPhoneNumber429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDeleteMfaPhoneNumber500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDeleteMfaPhoneNumberResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersDeleteMfaPhoneNumberResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

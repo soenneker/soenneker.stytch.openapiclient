@@ -59,6 +59,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Passwords.Existing_password.Reset
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsExistingPasswordReset401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsExistingPasswordReset429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsExistingPasswordReset500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsExistingPasswordResetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsExistingPasswordResetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

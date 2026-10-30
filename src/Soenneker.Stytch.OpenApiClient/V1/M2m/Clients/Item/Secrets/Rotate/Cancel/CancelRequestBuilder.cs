@@ -59,6 +59,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.M2m.Clients.Item.Secrets.Rotate.Canc
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateCancel401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateCancel429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateCancel500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateCancelResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSecretsRotateCancelResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

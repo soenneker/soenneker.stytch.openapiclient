@@ -63,6 +63,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsDelete401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsDelete429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsDelete500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -90,6 +92,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsGet401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsGet429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsGet500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsGetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -119,6 +123,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Connected_apps.Clients.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsUpdate401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsUpdate429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsUpdate500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsUpdateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsUpdateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

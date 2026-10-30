@@ -12,26 +12,41 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiB2BScimV1B2BScimConnectionUpdateRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("display_name") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("identity_provider") is { } nullNodeIdentityProvider && nullNodeIdentityProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentityProvider = null;
+            if (parseNode.GetChildNode("scim_group_implicit_role_assignments") is { } nullNodeScimGroupImplicitRoleAssignments && nullNodeScimGroupImplicitRoleAssignments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScimGroupImplicitRoleAssignments = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A human-readable display name for the connection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>The identity_provider property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimConnectionUpdateRequestIdentityProvider? IdentityProvider { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimConnectionUpdateRequestIdentityProvider? IdentityProvider { get => _explicitNullValueIdentityProvider; set { _explicitNullValueIdentityProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_provider"); else _explicitNullProperties?.Remove("identity_provider"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimConnectionUpdateRequestIdentityProvider? _explicitNullValueIdentityProvider = default!;
         /// <summary>An array of SCIM group implicit role assignments. Each object in the array must contain a `group_id` and a `role_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimGroupImplicitRoleAssignments>? ScimGroupImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimGroupImplicitRoleAssignments>? ScimGroupImplicitRoleAssignments { get => _explicitNullValueScimGroupImplicitRoleAssignments; set { _explicitNullValueScimGroupImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scim_group_implicit_role_assignments"); else _explicitNullProperties?.Remove("scim_group_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimGroupImplicitRoleAssignments>? _explicitNullValueScimGroupImplicitRoleAssignments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimGroupImplicitRoleAssignments> ScimGroupImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimGroupImplicitRoleAssignments> ScimGroupImplicitRoleAssignments { get => _explicitNullValueScimGroupImplicitRoleAssignments; set { _explicitNullValueScimGroupImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scim_group_implicit_role_assignments"); else _explicitNullProperties?.Remove("scim_group_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimGroupImplicitRoleAssignments> _explicitNullValueScimGroupImplicitRoleAssignments = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdateRequest"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimConnectionUpdateRequestIdentityProvider>("identity_provider", IdentityProvider);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1ScimGroupImplicitRoleAssignments>("scim_group_implicit_role_assignments", ScimGroupImplicitRoleAssignments);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

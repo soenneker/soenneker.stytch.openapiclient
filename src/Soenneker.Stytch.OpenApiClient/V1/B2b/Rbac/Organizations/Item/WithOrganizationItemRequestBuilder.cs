@@ -57,6 +57,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicy401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicy429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicy500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -86,6 +88,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Rbac.Organizations.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicy401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicy429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicy500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRbacV1B2BRbacOrganizationsSetOrgPolicyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -12,68 +12,100 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiWebauthnV1RegisterStartRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("authenticator_type") is { } nullNodeAuthenticatorType && nullNodeAuthenticatorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticatorType = null;
+            if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
+            if (parseNode.GetChildNode("override_display_name") is { } nullNodeOverrideDisplayName && nullNodeOverrideDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideDisplayName = null;
+            if (parseNode.GetChildNode("override_id") is { } nullNodeOverrideId && nullNodeOverrideId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideId = null;
+            if (parseNode.GetChildNode("override_name") is { } nullNodeOverrideName && nullNodeOverrideName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideName = null;
+            if (parseNode.GetChildNode("return_passkey_credential_options") is { } nullNodeReturnPasskeyCredentialOptions && nullNodeReturnPasskeyCredentialOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReturnPasskeyCredentialOptions = null;
+            if (parseNode.GetChildNode("use_base64_url_encoding") is { } nullNodeUseBase64UrlEncoding && nullNodeUseBase64UrlEncoding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseBase64UrlEncoding = null;
+            if (parseNode.GetChildNode("user_agent") is { } nullNodeUserAgent && nullNodeUserAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAgent = null;
+            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The requested authenticator type of the Passkey or WebAuthn device. The two valid values are platform and cross-platform. If no value passed, we assume both values are allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthenticatorType { get; set; }
+        public string? AuthenticatorType { get => _explicitNullValueAuthenticatorType; set { _explicitNullValueAuthenticatorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticator_type"); else _explicitNullProperties?.Remove("authenticator_type"); } }
+        private string? _explicitNullValueAuthenticatorType = default!;
 #nullable restore
 #else
-        public string AuthenticatorType { get; set; }
+        public string AuthenticatorType { get => _explicitNullValueAuthenticatorType; set { _explicitNullValueAuthenticatorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticator_type"); else _explicitNullProperties?.Remove("authenticator_type"); } }
+        private string _explicitNullValueAuthenticatorType = default!;
 #endif
         /// <summary>The domain for Passkeys or WebAuthn. Defaults to `window.location.hostname`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Domain { get; set; }
+        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        private string? _explicitNullValueDomain = default!;
 #nullable restore
 #else
-        public string Domain { get; set; }
+        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        private string _explicitNullValueDomain = default!;
 #endif
         /// <summary>The override_display_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverrideDisplayName { get; set; }
+        public string? OverrideDisplayName { get => _explicitNullValueOverrideDisplayName; set { _explicitNullValueOverrideDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_display_name"); else _explicitNullProperties?.Remove("override_display_name"); } }
+        private string? _explicitNullValueOverrideDisplayName = default!;
 #nullable restore
 #else
-        public string OverrideDisplayName { get; set; }
+        public string OverrideDisplayName { get => _explicitNullValueOverrideDisplayName; set { _explicitNullValueOverrideDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_display_name"); else _explicitNullProperties?.Remove("override_display_name"); } }
+        private string _explicitNullValueOverrideDisplayName = default!;
 #endif
         /// <summary>The override_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverrideId { get; set; }
+        public string? OverrideId { get => _explicitNullValueOverrideId; set { _explicitNullValueOverrideId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_id"); else _explicitNullProperties?.Remove("override_id"); } }
+        private string? _explicitNullValueOverrideId = default!;
 #nullable restore
 #else
-        public string OverrideId { get; set; }
+        public string OverrideId { get => _explicitNullValueOverrideId; set { _explicitNullValueOverrideId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_id"); else _explicitNullProperties?.Remove("override_id"); } }
+        private string _explicitNullValueOverrideId = default!;
 #endif
         /// <summary>The override_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverrideName { get; set; }
+        public string? OverrideName { get => _explicitNullValueOverrideName; set { _explicitNullValueOverrideName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_name"); else _explicitNullProperties?.Remove("override_name"); } }
+        private string? _explicitNullValueOverrideName = default!;
 #nullable restore
 #else
-        public string OverrideName { get; set; }
+        public string OverrideName { get => _explicitNullValueOverrideName; set { _explicitNullValueOverrideName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_name"); else _explicitNullProperties?.Remove("override_name"); } }
+        private string _explicitNullValueOverrideName = default!;
 #endif
         /// <summary>If true, the `public_key_credential_creation_options` returned will be optimized for Passkeys with `residentKey` set to `&quot;required&quot;` and `userVerification` set to `&quot;preferred&quot;`.      </summary>
-        public bool? ReturnPasskeyCredentialOptions { get; set; }
+        public bool? ReturnPasskeyCredentialOptions { get => _explicitNullValueReturnPasskeyCredentialOptions; set { _explicitNullValueReturnPasskeyCredentialOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("return_passkey_credential_options"); else _explicitNullProperties?.Remove("return_passkey_credential_options"); } }
+        private bool? _explicitNullValueReturnPasskeyCredentialOptions = default!;
         /// <summary>If true, values in the `public_key_credential_creation_options` will be base64 URL encoded. Set this option to true when using built-in browser methods like `navigator.credentials.create` and `navigator.credentials.get`.</summary>
-        public bool? UseBase64UrlEncoding { get; set; }
+        public bool? UseBase64UrlEncoding { get => _explicitNullValueUseBase64UrlEncoding; set { _explicitNullValueUseBase64UrlEncoding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_base64_url_encoding"); else _explicitNullProperties?.Remove("use_base64_url_encoding"); } }
+        private bool? _explicitNullValueUseBase64UrlEncoding = default!;
         /// <summary>The user agent of the client.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserAgent { get; set; }
+        public string? UserAgent { get => _explicitNullValueUserAgent; set { _explicitNullValueUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_agent"); else _explicitNullProperties?.Remove("user_agent"); } }
+        private string? _explicitNullValueUserAgent = default!;
 #nullable restore
 #else
-        public string UserAgent { get; set; }
+        public string UserAgent { get => _explicitNullValueUserAgent; set { _explicitNullValueUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_agent"); else _explicitNullProperties?.Remove("user_agent"); } }
+        private string _explicitNullValueUserAgent = default!;
 #endif
         /// <summary>The `user_id` of an active user the Passkey or WebAuthn registration should be tied to. You may use an `external_id` here if one is set for the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterStartRequest"/> and sets the default values.
@@ -90,7 +122,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterStartRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterStartRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterStartRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -127,6 +159,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteBoolValue("use_base64_url_encoding", UseBase64UrlEncoding);
             writer.WriteStringValue("user_agent", UserAgent);
             writer.WriteStringValue("user_id", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

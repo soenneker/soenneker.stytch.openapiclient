@@ -12,32 +12,48 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiB2BPasswordV1B2BPasswordsDiscoveryEmailResetRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("password") is { } nullNodePassword && nullNodePassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Password = null;
+            if (parseNode.GetChildNode("password_reset_token") is { } nullNodePasswordResetToken && nullNodePasswordResetToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PasswordResetToken = null;
+            if (parseNode.GetChildNode("pkce_code_verifier") is { } nullNodePkceCodeVerifier && nullNodePkceCodeVerifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PkceCodeVerifier = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The password to authenticate, reset, or set for the first time. Any UTF8 character is allowed, e.g. spaces, emojis, non-English characters, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Password { get; set; }
+        public string? Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        private string? _explicitNullValuePassword = default!;
 #nullable restore
 #else
-        public string Password { get; set; }
+        public string Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        private string _explicitNullValuePassword = default!;
 #endif
         /// <summary>The password reset token to authenticate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PasswordResetToken { get; set; }
+        public string? PasswordResetToken { get => _explicitNullValuePasswordResetToken; set { _explicitNullValuePasswordResetToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password_reset_token"); else _explicitNullProperties?.Remove("password_reset_token"); } }
+        private string? _explicitNullValuePasswordResetToken = default!;
 #nullable restore
 #else
-        public string PasswordResetToken { get; set; }
+        public string PasswordResetToken { get => _explicitNullValuePasswordResetToken; set { _explicitNullValuePasswordResetToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password_reset_token"); else _explicitNullProperties?.Remove("password_reset_token"); } }
+        private string _explicitNullValuePasswordResetToken = default!;
 #endif
         /// <summary>The pkce_code_verifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PkceCodeVerifier { get; set; }
+        public string? PkceCodeVerifier { get => _explicitNullValuePkceCodeVerifier; set { _explicitNullValuePkceCodeVerifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_verifier"); else _explicitNullProperties?.Remove("pkce_code_verifier"); } }
+        private string? _explicitNullValuePkceCodeVerifier = default!;
 #nullable restore
 #else
-        public string PkceCodeVerifier { get; set; }
+        public string PkceCodeVerifier { get => _explicitNullValuePkceCodeVerifier; set { _explicitNullValuePkceCodeVerifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_verifier"); else _explicitNullProperties?.Remove("pkce_code_verifier"); } }
+        private string _explicitNullValuePkceCodeVerifier = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsDiscoveryEmailResetRequest"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsDiscoveryEmailResetRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsDiscoveryEmailResetRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1B2BPasswordsDiscoveryEmailResetRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("password", Password);
             writer.WriteStringValue("password_reset_token", PasswordResetToken);
             writer.WriteStringValue("pkce_code_verifier", PkceCodeVerifier);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

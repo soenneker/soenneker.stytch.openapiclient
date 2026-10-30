@@ -57,6 +57,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Webauthn_registrations.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteWebAuthnRegistration401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteWebAuthnRegistration429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteWebAuthnRegistration500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteWebAuthnRegistrationResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeleteWebAuthnRegistrationResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

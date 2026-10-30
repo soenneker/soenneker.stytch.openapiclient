@@ -11,13 +11,24 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiFraudV1DomainInformation : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("has_mx_or_a_record") is { } nullNodeHasMxOrARecord && nullNodeHasMxOrARecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasMxOrARecord = null;
+            if (parseNode.GetChildNode("is_disposable_domain") is { } nullNodeIsDisposableDomain && nullNodeIsDisposableDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDisposableDomain = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the email has appropriate DNS records to deliver a message.</summary>
-        public bool? HasMxOrARecord { get; set; }
+        public bool? HasMxOrARecord { get => _explicitNullValueHasMxOrARecord; set { _explicitNullValueHasMxOrARecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_mx_or_a_record"); else _explicitNullProperties?.Remove("has_mx_or_a_record"); } }
+        private bool? _explicitNullValueHasMxOrARecord = default!;
         /// <summary>Whether the email domain is known to be disposable.</summary>
-        public bool? IsDisposableDomain { get; set; }
+        public bool? IsDisposableDomain { get => _explicitNullValueIsDisposableDomain; set { _explicitNullValueIsDisposableDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_disposable_domain"); else _explicitNullProperties?.Remove("is_disposable_domain"); } }
+        private bool? _explicitNullValueIsDisposableDomain = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1DomainInformation"/> and sets the default values.
         /// </summary>
@@ -33,7 +44,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1DomainInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1DomainInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1DomainInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +67,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("has_mx_or_a_record", HasMxOrARecord);
             writer.WriteBoolValue("is_disposable_domain", IsDisposableDomain);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

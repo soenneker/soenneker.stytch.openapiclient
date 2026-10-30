@@ -12,60 +12,89 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiPasswordV1PasswordsEmailResetStartRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("code_challenge") is { } nullNodeCodeChallenge && nullNodeCodeChallenge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeChallenge = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("login_redirect_url") is { } nullNodeLoginRedirectUrl && nullNodeLoginRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginRedirectUrl = null;
+            if (parseNode.GetChildNode("reset_password_expiration_minutes") is { } nullNodeResetPasswordExpirationMinutes && nullNodeResetPasswordExpirationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetPasswordExpirationMinutes = null;
+            if (parseNode.GetChildNode("reset_password_redirect_url") is { } nullNodeResetPasswordRedirectUrl && nullNodeResetPasswordRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetPasswordRedirectUrl = null;
+            if (parseNode.GetChildNode("reset_password_template_id") is { } nullNodeResetPasswordTemplateId && nullNodeResetPasswordTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetPasswordTemplateId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes? Attributes { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes Attributes { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes _explicitNullValueAttributes = default!;
 #endif
         /// <summary>A base64url encoded SHA256 hash of a one time secret used to validate that the request starts and ends on the same device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CodeChallenge { get; set; }
+        public string? CodeChallenge { get => _explicitNullValueCodeChallenge; set { _explicitNullValueCodeChallenge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_challenge"); else _explicitNullProperties?.Remove("code_challenge"); } }
+        private string? _explicitNullValueCodeChallenge = default!;
 #nullable restore
 #else
-        public string CodeChallenge { get; set; }
+        public string CodeChallenge { get => _explicitNullValueCodeChallenge; set { _explicitNullValueCodeChallenge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_challenge"); else _explicitNullProperties?.Remove("code_challenge"); } }
+        private string _explicitNullValueCodeChallenge = default!;
 #endif
         /// <summary>The email of the User that requested the password reset.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartRequestLocale? _explicitNullValueLocale = default!;
         /// <summary>The URL that Users are redirected to upon clicking the &quot;Log in without password&quot; button in password reset emails.      After Users are redirected to the login redirect URL, your application should retrieve the `token` value from the URL parameters and call the [Magic Link Authenticate endpoint](https://stytch.com/docs/api/authenticate-magic-link) to log the User in without requiring a password reset. If this value is not provided, your project&apos;s default login redirect URL will be used. If you have not set a default login redirect URL, an error will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LoginRedirectUrl { get; set; }
+        public string? LoginRedirectUrl { get => _explicitNullValueLoginRedirectUrl; set { _explicitNullValueLoginRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_redirect_url"); else _explicitNullProperties?.Remove("login_redirect_url"); } }
+        private string? _explicitNullValueLoginRedirectUrl = default!;
 #nullable restore
 #else
-        public string LoginRedirectUrl { get; set; }
+        public string LoginRedirectUrl { get => _explicitNullValueLoginRedirectUrl; set { _explicitNullValueLoginRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_redirect_url"); else _explicitNullProperties?.Remove("login_redirect_url"); } }
+        private string _explicitNullValueLoginRedirectUrl = default!;
 #endif
         /// <summary>Set the expiration for the password reset, in minutes. By default, it expires in 30 minutes.  The minimum expiration is 5 minutes and the maximum is 7 days (10080 mins).</summary>
-        public int? ResetPasswordExpirationMinutes { get; set; }
+        public int? ResetPasswordExpirationMinutes { get => _explicitNullValueResetPasswordExpirationMinutes; set { _explicitNullValueResetPasswordExpirationMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_expiration_minutes"); else _explicitNullProperties?.Remove("reset_password_expiration_minutes"); } }
+        private int? _explicitNullValueResetPasswordExpirationMinutes = default!;
         /// <summary>The URL that the User is redirected to from the reset password magic link. This URL should display your application&apos;s reset password page.  Before rendering the reset page, extract the `token` from the query parameters. On the reset page, collect the new password and complete the flow by calling the corresponding Password Reset by Email endpoint.  If this parameter is not specified, the default Reset Password redirect URL configured in the Dashboard will be used. If you have not set a default Reset Password redirect URL, an error is returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResetPasswordRedirectUrl { get; set; }
+        public string? ResetPasswordRedirectUrl { get => _explicitNullValueResetPasswordRedirectUrl; set { _explicitNullValueResetPasswordRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_redirect_url"); else _explicitNullProperties?.Remove("reset_password_redirect_url"); } }
+        private string? _explicitNullValueResetPasswordRedirectUrl = default!;
 #nullable restore
 #else
-        public string ResetPasswordRedirectUrl { get; set; }
+        public string ResetPasswordRedirectUrl { get => _explicitNullValueResetPasswordRedirectUrl; set { _explicitNullValueResetPasswordRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_redirect_url"); else _explicitNullProperties?.Remove("reset_password_redirect_url"); } }
+        private string _explicitNullValueResetPasswordRedirectUrl = default!;
 #endif
         /// <summary>Use a custom template for password reset emails. By default, it will use your default email template.  Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type “Passwords - Password reset”.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResetPasswordTemplateId { get; set; }
+        public string? ResetPasswordTemplateId { get => _explicitNullValueResetPasswordTemplateId; set { _explicitNullValueResetPasswordTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_template_id"); else _explicitNullProperties?.Remove("reset_password_template_id"); } }
+        private string? _explicitNullValueResetPasswordTemplateId = default!;
 #nullable restore
 #else
-        public string ResetPasswordTemplateId { get; set; }
+        public string ResetPasswordTemplateId { get => _explicitNullValueResetPasswordTemplateId; set { _explicitNullValueResetPasswordTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_template_id"); else _explicitNullProperties?.Remove("reset_password_template_id"); } }
+        private string _explicitNullValueResetPasswordTemplateId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartRequest"/> and sets the default values.
@@ -82,7 +111,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -117,6 +146,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteIntValue("reset_password_expiration_minutes", ResetPasswordExpirationMinutes);
             writer.WriteStringValue("reset_password_redirect_url", ResetPasswordRedirectUrl);
             writer.WriteStringValue("reset_password_template_id", ResetPasswordTemplateId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

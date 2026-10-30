@@ -12,50 +12,74 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("discovery_oauth_token") is { } nullNodeDiscoveryOauthToken && nullNodeDiscoveryOauthToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscoveryOauthToken = null;
+            if (parseNode.GetChildNode("pkce_code_verifier") is { } nullNodePkceCodeVerifier && nullNodePkceCodeVerifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PkceCodeVerifier = null;
+            if (parseNode.GetChildNode("session_custom_claims") is { } nullNodeSessionCustomClaims && nullNodeSessionCustomClaims.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionCustomClaims = null;
+            if (parseNode.GetChildNode("session_duration_minutes") is { } nullNodeSessionDurationMinutes && nullNodeSessionDurationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionDurationMinutes = null;
+            if (parseNode.GetChildNode("session_jwt") is { } nullNodeSessionJwt && nullNodeSessionJwt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionJwt = null;
+            if (parseNode.GetChildNode("session_token") is { } nullNodeSessionToken && nullNodeSessionToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionToken = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Discovery OAuth token to authenticate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiscoveryOauthToken { get; set; }
+        public string? DiscoveryOauthToken { get => _explicitNullValueDiscoveryOauthToken; set { _explicitNullValueDiscoveryOauthToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_oauth_token"); else _explicitNullProperties?.Remove("discovery_oauth_token"); } }
+        private string? _explicitNullValueDiscoveryOauthToken = default!;
 #nullable restore
 #else
-        public string DiscoveryOauthToken { get; set; }
+        public string DiscoveryOauthToken { get => _explicitNullValueDiscoveryOauthToken; set { _explicitNullValueDiscoveryOauthToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_oauth_token"); else _explicitNullProperties?.Remove("discovery_oauth_token"); } }
+        private string _explicitNullValueDiscoveryOauthToken = default!;
 #endif
         /// <summary>A base64url encoded one time secret used to validate that the request starts and ends on the same device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PkceCodeVerifier { get; set; }
+        public string? PkceCodeVerifier { get => _explicitNullValuePkceCodeVerifier; set { _explicitNullValuePkceCodeVerifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_verifier"); else _explicitNullProperties?.Remove("pkce_code_verifier"); } }
+        private string? _explicitNullValuePkceCodeVerifier = default!;
 #nullable restore
 #else
-        public string PkceCodeVerifier { get; set; }
+        public string PkceCodeVerifier { get => _explicitNullValuePkceCodeVerifier; set { _explicitNullValuePkceCodeVerifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_verifier"); else _explicitNullProperties?.Remove("pkce_code_verifier"); } }
+        private string _explicitNullValuePkceCodeVerifier = default!;
 #endif
         /// <summary>The session_custom_claims property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequestSessionCustomClaimsProperty? SessionCustomClaims { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequestSessionCustomClaimsProperty? SessionCustomClaims { get => _explicitNullValueSessionCustomClaims; set { _explicitNullValueSessionCustomClaims = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_custom_claims"); else _explicitNullProperties?.Remove("session_custom_claims"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequestSessionCustomClaimsProperty? _explicitNullValueSessionCustomClaims = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequestSessionCustomClaimsProperty SessionCustomClaims { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequestSessionCustomClaimsProperty SessionCustomClaims { get => _explicitNullValueSessionCustomClaims; set { _explicitNullValueSessionCustomClaims = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_custom_claims"); else _explicitNullProperties?.Remove("session_custom_claims"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequestSessionCustomClaimsProperty _explicitNullValueSessionCustomClaims = default!;
 #endif
         /// <summary>The session_duration_minutes property</summary>
-        public int? SessionDurationMinutes { get; set; }
+        public int? SessionDurationMinutes { get => _explicitNullValueSessionDurationMinutes; set { _explicitNullValueSessionDurationMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_duration_minutes"); else _explicitNullProperties?.Remove("session_duration_minutes"); } }
+        private int? _explicitNullValueSessionDurationMinutes = default!;
         /// <summary>The session_jwt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionJwt { get; set; }
+        public string? SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
+        private string? _explicitNullValueSessionJwt = default!;
 #nullable restore
 #else
-        public string SessionJwt { get; set; }
+        public string SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
+        private string _explicitNullValueSessionJwt = default!;
 #endif
         /// <summary>The session_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionToken { get; set; }
+        public string? SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
+        private string? _explicitNullValueSessionToken = default!;
 #nullable restore
 #else
-        public string SessionToken { get; set; }
+        public string SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
+        private string _explicitNullValueSessionToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequest"/> and sets the default values.
@@ -72,7 +96,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,6 +127,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteIntValue("session_duration_minutes", SessionDurationMinutes);
             writer.WriteStringValue("session_jwt", SessionJwt);
             writer.WriteStringValue("session_token", SessionToken);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

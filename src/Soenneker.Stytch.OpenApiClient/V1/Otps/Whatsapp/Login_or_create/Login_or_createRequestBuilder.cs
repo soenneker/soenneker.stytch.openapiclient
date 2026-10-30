@@ -59,6 +59,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Otps.Whatsapp.Login_or_create
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpWhatsappLoginOrCreate401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpWhatsappLoginOrCreate429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpWhatsappLoginOrCreate500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpWhatsappLoginOrCreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiOtpV1OtpWhatsappLoginOrCreateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

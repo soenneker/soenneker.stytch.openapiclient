@@ -57,6 +57,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Passwords.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeletePassword401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeletePassword429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeletePassword500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeletePasswordResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeletePasswordResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

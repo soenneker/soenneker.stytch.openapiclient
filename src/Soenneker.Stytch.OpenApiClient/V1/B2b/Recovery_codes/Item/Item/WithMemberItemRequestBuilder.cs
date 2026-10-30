@@ -57,6 +57,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Recovery_codes.Item.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRecoveryCodesV1Get401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRecoveryCodesV1Get429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRecoveryCodesV1Get500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRecoveryCodesV1GetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BRecoveryCodesV1GetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

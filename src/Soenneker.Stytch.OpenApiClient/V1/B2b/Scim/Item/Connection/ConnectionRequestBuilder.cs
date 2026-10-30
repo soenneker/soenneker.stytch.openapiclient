@@ -70,6 +70,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGet401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGet429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGet500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGetResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -99,6 +101,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionCreate401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionCreate429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionCreate500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionCreateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionCreateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

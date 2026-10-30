@@ -63,6 +63,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionDelete401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionDelete429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionDelete500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionDeleteResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -90,6 +92,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGetGroups401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGetGroups429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGetGroups500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGetGroupsResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionGetGroupsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -119,6 +123,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Scim.Item.Connection.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdate401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdate429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdate500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdateResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1B2BScimConnectionUpdateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

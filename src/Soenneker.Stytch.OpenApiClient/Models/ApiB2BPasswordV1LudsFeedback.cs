@@ -11,21 +11,40 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiB2BPasswordV1LudsFeedback : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("has_digit") is { } nullNodeHasDigit && nullNodeHasDigit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasDigit = null;
+            if (parseNode.GetChildNode("has_lower_case") is { } nullNodeHasLowerCase && nullNodeHasLowerCase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasLowerCase = null;
+            if (parseNode.GetChildNode("has_symbol") is { } nullNodeHasSymbol && nullNodeHasSymbol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasSymbol = null;
+            if (parseNode.GetChildNode("has_upper_case") is { } nullNodeHasUpperCase && nullNodeHasUpperCase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasUpperCase = null;
+            if (parseNode.GetChildNode("missing_characters") is { } nullNodeMissingCharacters && nullNodeMissingCharacters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingCharacters = null;
+            if (parseNode.GetChildNode("missing_complexity") is { } nullNodeMissingComplexity && nullNodeMissingComplexity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingComplexity = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>For LUDS validation, whether the password contains at least one digit.</summary>
-        public bool? HasDigit { get; set; }
+        public bool? HasDigit { get => _explicitNullValueHasDigit; set { _explicitNullValueHasDigit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_digit"); else _explicitNullProperties?.Remove("has_digit"); } }
+        private bool? _explicitNullValueHasDigit = default!;
         /// <summary>For LUDS validation, whether the password contains at least one lowercase letter.</summary>
-        public bool? HasLowerCase { get; set; }
+        public bool? HasLowerCase { get => _explicitNullValueHasLowerCase; set { _explicitNullValueHasLowerCase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_lower_case"); else _explicitNullProperties?.Remove("has_lower_case"); } }
+        private bool? _explicitNullValueHasLowerCase = default!;
         /// <summary>For LUDS validation, whether the password contains at least one symbol. Any UTF8 character outside of a-z or A-Z may count as a valid symbol.</summary>
-        public bool? HasSymbol { get; set; }
+        public bool? HasSymbol { get => _explicitNullValueHasSymbol; set { _explicitNullValueHasSymbol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_symbol"); else _explicitNullProperties?.Remove("has_symbol"); } }
+        private bool? _explicitNullValueHasSymbol = default!;
         /// <summary>For LUDS validation, whether the password contains at least one uppercase letter.</summary>
-        public bool? HasUpperCase { get; set; }
+        public bool? HasUpperCase { get => _explicitNullValueHasUpperCase; set { _explicitNullValueHasUpperCase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_upper_case"); else _explicitNullProperties?.Remove("has_upper_case"); } }
+        private bool? _explicitNullValueHasUpperCase = default!;
         /// <summary>For LUDS validation, this is the required length of the password that you&apos;ve set minus the length of the password being checked.      The user will need to add this many characters to the password to make it valid.</summary>
-        public int? MissingCharacters { get; set; }
+        public int? MissingCharacters { get => _explicitNullValueMissingCharacters; set { _explicitNullValueMissingCharacters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missing_characters"); else _explicitNullProperties?.Remove("missing_characters"); } }
+        private int? _explicitNullValueMissingCharacters = default!;
         /// <summary>For LUDS validation, the number of complexity requirements that are missing from the password.      Check the complexity fields to see which requirements are missing.</summary>
-        public int? MissingComplexity { get; set; }
+        public int? MissingComplexity { get => _explicitNullValueMissingComplexity; set { _explicitNullValueMissingComplexity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missing_complexity"); else _explicitNullProperties?.Remove("missing_complexity"); } }
+        private int? _explicitNullValueMissingComplexity = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1LudsFeedback"/> and sets the default values.
         /// </summary>
@@ -41,7 +60,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1LudsFeedback CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1LudsFeedback();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BPasswordV1LudsFeedback(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +91,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteBoolValue("has_upper_case", HasUpperCase);
             writer.WriteIntValue("missing_characters", MissingCharacters);
             writer.WriteIntValue("missing_complexity", MissingComplexity);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

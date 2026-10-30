@@ -11,56 +11,81 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiFraudV1Fingerprints : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("browser_fingerprint") is { } nullNodeBrowserFingerprint && nullNodeBrowserFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserFingerprint = null;
+            if (parseNode.GetChildNode("browser_id") is { } nullNodeBrowserId && nullNodeBrowserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserId = null;
+            if (parseNode.GetChildNode("hardware_fingerprint") is { } nullNodeHardwareFingerprint && nullNodeHardwareFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HardwareFingerprint = null;
+            if (parseNode.GetChildNode("network_fingerprint") is { } nullNodeNetworkFingerprint && nullNodeNetworkFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkFingerprint = null;
+            if (parseNode.GetChildNode("visitor_fingerprint") is { } nullNodeVisitorFingerprint && nullNodeVisitorFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisitorFingerprint = null;
+            if (parseNode.GetChildNode("visitor_id") is { } nullNodeVisitorId && nullNodeVisitorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisitorId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Combination of signals to identify a browser and its specific version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrowserFingerprint { get; set; }
+        public string? BrowserFingerprint { get => _explicitNullValueBrowserFingerprint; set { _explicitNullValueBrowserFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_fingerprint"); else _explicitNullProperties?.Remove("browser_fingerprint"); } }
+        private string? _explicitNullValueBrowserFingerprint = default!;
 #nullable restore
 #else
-        public string BrowserFingerprint { get; set; }
+        public string BrowserFingerprint { get => _explicitNullValueBrowserFingerprint; set { _explicitNullValueBrowserFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_fingerprint"); else _explicitNullProperties?.Remove("browser_fingerprint"); } }
+        private string _explicitNullValueBrowserFingerprint = default!;
 #endif
         /// <summary>Combination of VisitorID and NetworkFingerprint to create a clear identifier of a browser.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrowserId { get; set; }
+        public string? BrowserId { get => _explicitNullValueBrowserId; set { _explicitNullValueBrowserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_id"); else _explicitNullProperties?.Remove("browser_id"); } }
+        private string? _explicitNullValueBrowserId = default!;
 #nullable restore
 #else
-        public string BrowserId { get; set; }
+        public string BrowserId { get => _explicitNullValueBrowserId; set { _explicitNullValueBrowserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_id"); else _explicitNullProperties?.Remove("browser_id"); } }
+        private string _explicitNullValueBrowserId = default!;
 #endif
         /// <summary>Combinations of signals to identify an operating system and architecture.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HardwareFingerprint { get; set; }
+        public string? HardwareFingerprint { get => _explicitNullValueHardwareFingerprint; set { _explicitNullValueHardwareFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardware_fingerprint"); else _explicitNullProperties?.Remove("hardware_fingerprint"); } }
+        private string? _explicitNullValueHardwareFingerprint = default!;
 #nullable restore
 #else
-        public string HardwareFingerprint { get; set; }
+        public string HardwareFingerprint { get => _explicitNullValueHardwareFingerprint; set { _explicitNullValueHardwareFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardware_fingerprint"); else _explicitNullProperties?.Remove("hardware_fingerprint"); } }
+        private string _explicitNullValueHardwareFingerprint = default!;
 #endif
         /// <summary>Combination of signals associated with a specific network commonly known as TLS fingerprinting. </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NetworkFingerprint { get; set; }
+        public string? NetworkFingerprint { get => _explicitNullValueNetworkFingerprint; set { _explicitNullValueNetworkFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_fingerprint"); else _explicitNullProperties?.Remove("network_fingerprint"); } }
+        private string? _explicitNullValueNetworkFingerprint = default!;
 #nullable restore
 #else
-        public string NetworkFingerprint { get; set; }
+        public string NetworkFingerprint { get => _explicitNullValueNetworkFingerprint; set { _explicitNullValueNetworkFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_fingerprint"); else _explicitNullProperties?.Remove("network_fingerprint"); } }
+        private string _explicitNullValueNetworkFingerprint = default!;
 #endif
         /// <summary>Cookie-less way of identifying a unique user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VisitorFingerprint { get; set; }
+        public string? VisitorFingerprint { get => _explicitNullValueVisitorFingerprint; set { _explicitNullValueVisitorFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_fingerprint"); else _explicitNullProperties?.Remove("visitor_fingerprint"); } }
+        private string? _explicitNullValueVisitorFingerprint = default!;
 #nullable restore
 #else
-        public string VisitorFingerprint { get; set; }
+        public string VisitorFingerprint { get => _explicitNullValueVisitorFingerprint; set { _explicitNullValueVisitorFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_fingerprint"); else _explicitNullProperties?.Remove("visitor_fingerprint"); } }
+        private string _explicitNullValueVisitorFingerprint = default!;
 #endif
         /// <summary>The cookie stored on the user&apos;s device that uniquely identifies them.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VisitorId { get; set; }
+        public string? VisitorId { get => _explicitNullValueVisitorId; set { _explicitNullValueVisitorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_id"); else _explicitNullProperties?.Remove("visitor_id"); } }
+        private string? _explicitNullValueVisitorId = default!;
 #nullable restore
 #else
-        public string VisitorId { get; set; }
+        public string VisitorId { get => _explicitNullValueVisitorId; set { _explicitNullValueVisitorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_id"); else _explicitNullProperties?.Remove("visitor_id"); } }
+        private string _explicitNullValueVisitorId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Fingerprints"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Fingerprints CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Fingerprints();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Fingerprints(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("network_fingerprint", NetworkFingerprint);
             writer.WriteStringValue("visitor_fingerprint", VisitorFingerprint);
             writer.WriteStringValue("visitor_id", VisitorId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

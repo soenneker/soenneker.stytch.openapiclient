@@ -59,6 +59,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Idp.Oauth.Authorize.Start
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiIdpV1IdpOAuthAuthorizeStart401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiIdpV1IdpOAuthAuthorizeStart429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiIdpV1IdpOAuthAuthorizeStart500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiIdpV1IdpOAuthAuthorizeStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiIdpV1IdpOAuthAuthorizeStartResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

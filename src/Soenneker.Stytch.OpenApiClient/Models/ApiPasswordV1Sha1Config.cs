@@ -11,24 +11,37 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiPasswordV1Sha1Config : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("append_salt") is { } nullNodeAppendSalt && nullNodeAppendSalt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppendSalt = null;
+            if (parseNode.GetChildNode("prepend_salt") is { } nullNodePrependSalt && nullNodePrependSalt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrependSalt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The salt that should be appended to the migrated password.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppendSalt { get; set; }
+        public string? AppendSalt { get => _explicitNullValueAppendSalt; set { _explicitNullValueAppendSalt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_salt"); else _explicitNullProperties?.Remove("append_salt"); } }
+        private string? _explicitNullValueAppendSalt = default!;
 #nullable restore
 #else
-        public string AppendSalt { get; set; }
+        public string AppendSalt { get => _explicitNullValueAppendSalt; set { _explicitNullValueAppendSalt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_salt"); else _explicitNullProperties?.Remove("append_salt"); } }
+        private string _explicitNullValueAppendSalt = default!;
 #endif
         /// <summary>The salt that should be prepended to the migrated password.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrependSalt { get; set; }
+        public string? PrependSalt { get => _explicitNullValuePrependSalt; set { _explicitNullValuePrependSalt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepend_salt"); else _explicitNullProperties?.Remove("prepend_salt"); } }
+        private string? _explicitNullValuePrependSalt = default!;
 #nullable restore
 #else
-        public string PrependSalt { get; set; }
+        public string PrependSalt { get => _explicitNullValuePrependSalt; set { _explicitNullValuePrependSalt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepend_salt"); else _explicitNullProperties?.Remove("prepend_salt"); } }
+        private string _explicitNullValuePrependSalt = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("append_salt", AppendSalt);
             writer.WriteStringValue("prepend_salt", PrependSalt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

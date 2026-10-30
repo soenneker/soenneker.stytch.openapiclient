@@ -59,6 +59,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Magic_links.Email.Send
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailSend401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailSend429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailSend500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailSendResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailSendResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

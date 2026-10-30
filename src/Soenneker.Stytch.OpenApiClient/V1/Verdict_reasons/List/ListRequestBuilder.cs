@@ -59,6 +59,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Verdict_reasons.List
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsList401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsList429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsList500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsListResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsListResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

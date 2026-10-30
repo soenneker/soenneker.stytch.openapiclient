@@ -12,80 +12,119 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiConnectedappsV1ConnectedAppsClientsCreateRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("access_token_custom_audience") is { } nullNodeAccessTokenCustomAudience && nullNodeAccessTokenCustomAudience.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessTokenCustomAudience = null;
+            if (parseNode.GetChildNode("access_token_expiry_minutes") is { } nullNodeAccessTokenExpiryMinutes && nullNodeAccessTokenExpiryMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessTokenExpiryMinutes = null;
+            if (parseNode.GetChildNode("access_token_template_content") is { } nullNodeAccessTokenTemplateContent && nullNodeAccessTokenTemplateContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessTokenTemplateContent = null;
+            if (parseNode.GetChildNode("bypass_consent_for_offline_access") is { } nullNodeBypassConsentForOfflineAccess && nullNodeBypassConsentForOfflineAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BypassConsentForOfflineAccess = null;
+            if (parseNode.GetChildNode("client_description") is { } nullNodeClientDescription && nullNodeClientDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientDescription = null;
+            if (parseNode.GetChildNode("client_name") is { } nullNodeClientName && nullNodeClientName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientName = null;
+            if (parseNode.GetChildNode("client_type") is { } nullNodeClientType && nullNodeClientType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientType = null;
+            if (parseNode.GetChildNode("full_access_allowed") is { } nullNodeFullAccessAllowed && nullNodeFullAccessAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FullAccessAllowed = null;
+            if (parseNode.GetChildNode("id_token_template_content") is { } nullNodeIdTokenTemplateContent && nullNodeIdTokenTemplateContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdTokenTemplateContent = null;
+            if (parseNode.GetChildNode("logo_url") is { } nullNodeLogoUrl && nullNodeLogoUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogoUrl = null;
+            if (parseNode.GetChildNode("post_logout_redirect_urls") is { } nullNodePostLogoutRedirectUrls && nullNodePostLogoutRedirectUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostLogoutRedirectUrls = null;
+            if (parseNode.GetChildNode("redirect_urls") is { } nullNodeRedirectUrls && nullNodeRedirectUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectUrls = null;
+        }
+
         /// <summary>The custom audience for the access token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessTokenCustomAudience { get; set; }
+        public string? AccessTokenCustomAudience { get => _explicitNullValueAccessTokenCustomAudience; set { _explicitNullValueAccessTokenCustomAudience = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_token_custom_audience"); else _explicitNullProperties?.Remove("access_token_custom_audience"); } }
+        private string? _explicitNullValueAccessTokenCustomAudience = default!;
 #nullable restore
 #else
-        public string AccessTokenCustomAudience { get; set; }
+        public string AccessTokenCustomAudience { get => _explicitNullValueAccessTokenCustomAudience; set { _explicitNullValueAccessTokenCustomAudience = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_token_custom_audience"); else _explicitNullProperties?.Remove("access_token_custom_audience"); } }
+        private string _explicitNullValueAccessTokenCustomAudience = default!;
 #endif
         /// <summary>The number of minutes before the access token expires. The default is 60 minutes.</summary>
-        public int? AccessTokenExpiryMinutes { get; set; }
+        public int? AccessTokenExpiryMinutes { get => _explicitNullValueAccessTokenExpiryMinutes; set { _explicitNullValueAccessTokenExpiryMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_token_expiry_minutes"); else _explicitNullProperties?.Remove("access_token_expiry_minutes"); } }
+        private int? _explicitNullValueAccessTokenExpiryMinutes = default!;
         /// <summary>The content of the access token custom claims template. The template must be a valid JSON object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessTokenTemplateContent { get; set; }
+        public string? AccessTokenTemplateContent { get => _explicitNullValueAccessTokenTemplateContent; set { _explicitNullValueAccessTokenTemplateContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_token_template_content"); else _explicitNullProperties?.Remove("access_token_template_content"); } }
+        private string? _explicitNullValueAccessTokenTemplateContent = default!;
 #nullable restore
 #else
-        public string AccessTokenTemplateContent { get; set; }
+        public string AccessTokenTemplateContent { get => _explicitNullValueAccessTokenTemplateContent; set { _explicitNullValueAccessTokenTemplateContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_token_template_content"); else _explicitNullProperties?.Remove("access_token_template_content"); } }
+        private string _explicitNullValueAccessTokenTemplateContent = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Valid for first party clients only. If true, the client does not need to request explicit user consent for the `offline_access` scope.</summary>
-        public bool? BypassConsentForOfflineAccess { get; set; }
+        public bool? BypassConsentForOfflineAccess { get => _explicitNullValueBypassConsentForOfflineAccess; set { _explicitNullValueBypassConsentForOfflineAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bypass_consent_for_offline_access"); else _explicitNullProperties?.Remove("bypass_consent_for_offline_access"); } }
+        private bool? _explicitNullValueBypassConsentForOfflineAccess = default!;
         /// <summary>A human-readable description for the client.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientDescription { get; set; }
+        public string? ClientDescription { get => _explicitNullValueClientDescription; set { _explicitNullValueClientDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_description"); else _explicitNullProperties?.Remove("client_description"); } }
+        private string? _explicitNullValueClientDescription = default!;
 #nullable restore
 #else
-        public string ClientDescription { get; set; }
+        public string ClientDescription { get => _explicitNullValueClientDescription; set { _explicitNullValueClientDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_description"); else _explicitNullProperties?.Remove("client_description"); } }
+        private string _explicitNullValueClientDescription = default!;
 #endif
         /// <summary>A human-readable name for the client.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientName { get; set; }
+        public string? ClientName { get => _explicitNullValueClientName; set { _explicitNullValueClientName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_name"); else _explicitNullProperties?.Remove("client_name"); } }
+        private string? _explicitNullValueClientName = default!;
 #nullable restore
 #else
-        public string ClientName { get; set; }
+        public string ClientName { get => _explicitNullValueClientName; set { _explicitNullValueClientName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_name"); else _explicitNullProperties?.Remove("client_name"); } }
+        private string _explicitNullValueClientName = default!;
 #endif
         /// <summary>The client_type property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsCreateRequestClientType? ClientType { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsCreateRequestClientType? ClientType { get => _explicitNullValueClientType; set { _explicitNullValueClientType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_type"); else _explicitNullProperties?.Remove("client_type"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsCreateRequestClientType? _explicitNullValueClientType = default!;
         /// <summary>Valid for first party clients only. If `true`, an authorization token granted to this Client can be exchanged for a full Stytch session.</summary>
-        public bool? FullAccessAllowed { get; set; }
+        public bool? FullAccessAllowed { get => _explicitNullValueFullAccessAllowed; set { _explicitNullValueFullAccessAllowed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("full_access_allowed"); else _explicitNullProperties?.Remove("full_access_allowed"); } }
+        private bool? _explicitNullValueFullAccessAllowed = default!;
         /// <summary>The id_token_template_content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdTokenTemplateContent { get; set; }
+        public string? IdTokenTemplateContent { get => _explicitNullValueIdTokenTemplateContent; set { _explicitNullValueIdTokenTemplateContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id_token_template_content"); else _explicitNullProperties?.Remove("id_token_template_content"); } }
+        private string? _explicitNullValueIdTokenTemplateContent = default!;
 #nullable restore
 #else
-        public string IdTokenTemplateContent { get; set; }
+        public string IdTokenTemplateContent { get => _explicitNullValueIdTokenTemplateContent; set { _explicitNullValueIdTokenTemplateContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id_token_template_content"); else _explicitNullProperties?.Remove("id_token_template_content"); } }
+        private string _explicitNullValueIdTokenTemplateContent = default!;
 #endif
         /// <summary>The logo URL of the Connected App, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LogoUrl { get; set; }
+        public string? LogoUrl { get => _explicitNullValueLogoUrl; set { _explicitNullValueLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo_url"); else _explicitNullProperties?.Remove("logo_url"); } }
+        private string? _explicitNullValueLogoUrl = default!;
 #nullable restore
 #else
-        public string LogoUrl { get; set; }
+        public string LogoUrl { get => _explicitNullValueLogoUrl; set { _explicitNullValueLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo_url"); else _explicitNullProperties?.Remove("logo_url"); } }
+        private string _explicitNullValueLogoUrl = default!;
 #endif
         /// <summary>Array of redirect URI values for use in OIDC Logout flows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PostLogoutRedirectUrls { get; set; }
+        public List<string>? PostLogoutRedirectUrls { get => _explicitNullValuePostLogoutRedirectUrls; set { _explicitNullValuePostLogoutRedirectUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post_logout_redirect_urls"); else _explicitNullProperties?.Remove("post_logout_redirect_urls"); } }
+        private List<string>? _explicitNullValuePostLogoutRedirectUrls = default!;
 #nullable restore
 #else
-        public List<string> PostLogoutRedirectUrls { get; set; }
+        public List<string> PostLogoutRedirectUrls { get => _explicitNullValuePostLogoutRedirectUrls; set { _explicitNullValuePostLogoutRedirectUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post_logout_redirect_urls"); else _explicitNullProperties?.Remove("post_logout_redirect_urls"); } }
+        private List<string> _explicitNullValuePostLogoutRedirectUrls = default!;
 #endif
         /// <summary>Array of redirect URI values for use in OAuth Authorization flows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RedirectUrls { get; set; }
+        public List<string>? RedirectUrls { get => _explicitNullValueRedirectUrls; set { _explicitNullValueRedirectUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_urls"); else _explicitNullProperties?.Remove("redirect_urls"); } }
+        private List<string>? _explicitNullValueRedirectUrls = default!;
 #nullable restore
 #else
-        public List<string> RedirectUrls { get; set; }
+        public List<string> RedirectUrls { get => _explicitNullValueRedirectUrls; set { _explicitNullValueRedirectUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_urls"); else _explicitNullProperties?.Remove("redirect_urls"); } }
+        private List<string> _explicitNullValueRedirectUrls = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsCreateRequest"/> and sets the default values.
@@ -102,7 +141,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsCreateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppsClientsCreateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -145,6 +184,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("logo_url", LogoUrl);
             writer.WriteCollectionOfPrimitiveValues<string>("post_logout_redirect_urls", PostLogoutRedirectUrls);
             writer.WriteCollectionOfPrimitiveValues<string>("redirect_urls", RedirectUrls);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

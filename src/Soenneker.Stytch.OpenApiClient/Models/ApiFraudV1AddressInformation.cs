@@ -11,25 +11,43 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiFraudV1AddressInformation : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("has_known_bounces") is { } nullNodeHasKnownBounces && nullNodeHasKnownBounces.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasKnownBounces = null;
+            if (parseNode.GetChildNode("has_valid_syntax") is { } nullNodeHasValidSyntax && nullNodeHasValidSyntax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasValidSyntax = null;
+            if (parseNode.GetChildNode("is_suspected_role_address") is { } nullNodeIsSuspectedRoleAddress && nullNodeIsSuspectedRoleAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSuspectedRoleAddress = null;
+            if (parseNode.GetChildNode("normalized_email") is { } nullNodeNormalizedEmail && nullNodeNormalizedEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NormalizedEmail = null;
+            if (parseNode.GetChildNode("tumbling_character_count") is { } nullNodeTumblingCharacterCount && nullNodeTumblingCharacterCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TumblingCharacterCount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether email sent to this address is known to have bounced previously.</summary>
-        public bool? HasKnownBounces { get; set; }
+        public bool? HasKnownBounces { get => _explicitNullValueHasKnownBounces; set { _explicitNullValueHasKnownBounces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_known_bounces"); else _explicitNullProperties?.Remove("has_known_bounces"); } }
+        private bool? _explicitNullValueHasKnownBounces = default!;
         /// <summary>Whether this email address is valid.</summary>
-        public bool? HasValidSyntax { get; set; }
+        public bool? HasValidSyntax { get => _explicitNullValueHasValidSyntax; set { _explicitNullValueHasValidSyntax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_valid_syntax"); else _explicitNullProperties?.Remove("has_valid_syntax"); } }
+        private bool? _explicitNullValueHasValidSyntax = default!;
         /// <summary>Whether the local part of the email appears to be a role or group, rather than an individual end user.</summary>
-        public bool? IsSuspectedRoleAddress { get; set; }
+        public bool? IsSuspectedRoleAddress { get => _explicitNullValueIsSuspectedRoleAddress; set { _explicitNullValueIsSuspectedRoleAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_suspected_role_address"); else _explicitNullProperties?.Remove("is_suspected_role_address"); } }
+        private bool? _explicitNullValueIsSuspectedRoleAddress = default!;
         /// <summary>The normalized email address after removing &apos;.&apos; characters and any characters after a &apos;+&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NormalizedEmail { get; set; }
+        public string? NormalizedEmail { get => _explicitNullValueNormalizedEmail; set { _explicitNullValueNormalizedEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_email"); else _explicitNullProperties?.Remove("normalized_email"); } }
+        private string? _explicitNullValueNormalizedEmail = default!;
 #nullable restore
 #else
-        public string NormalizedEmail { get; set; }
+        public string NormalizedEmail { get => _explicitNullValueNormalizedEmail; set { _explicitNullValueNormalizedEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized_email"); else _explicitNullProperties?.Remove("normalized_email"); } }
+        private string _explicitNullValueNormalizedEmail = default!;
 #endif
         /// <summary>The number of &apos;.&apos; and &apos;+&apos; characters in the email address. A higher tumbling count indicates a higher potential for fraud.</summary>
-        public int? TumblingCharacterCount { get; set; }
+        public int? TumblingCharacterCount { get => _explicitNullValueTumblingCharacterCount; set { _explicitNullValueTumblingCharacterCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tumbling_character_count"); else _explicitNullProperties?.Remove("tumbling_character_count"); } }
+        private int? _explicitNullValueTumblingCharacterCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1AddressInformation"/> and sets the default values.
         /// </summary>
@@ -45,7 +63,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1AddressInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1AddressInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1AddressInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,6 +92,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteBoolValue("is_suspected_role_address", IsSuspectedRoleAddress);
             writer.WriteStringValue("normalized_email", NormalizedEmail);
             writer.WriteIntValue("tumbling_character_count", TumblingCharacterCount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

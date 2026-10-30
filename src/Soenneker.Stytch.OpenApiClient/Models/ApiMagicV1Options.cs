@@ -11,13 +11,24 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiMagicV1Options : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ip_match_required") is { } nullNodeIpMatchRequired && nullNodeIpMatchRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpMatchRequired = null;
+            if (parseNode.GetChildNode("user_agent_match_required") is { } nullNodeUserAgentMatchRequired && nullNodeUserAgentMatchRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAgentMatchRequired = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Require that the IP address the Magic Link was requested from matches the IP address it&apos;s clicked from.</summary>
-        public bool? IpMatchRequired { get; set; }
+        public bool? IpMatchRequired { get => _explicitNullValueIpMatchRequired; set { _explicitNullValueIpMatchRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_match_required"); else _explicitNullProperties?.Remove("ip_match_required"); } }
+        private bool? _explicitNullValueIpMatchRequired = default!;
         /// <summary>Require that the user agent the Magic Link was requested from matches the user agent it&apos;s clicked from.</summary>
-        public bool? UserAgentMatchRequired { get; set; }
+        public bool? UserAgentMatchRequired { get => _explicitNullValueUserAgentMatchRequired; set { _explicitNullValueUserAgentMatchRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_agent_match_required"); else _explicitNullProperties?.Remove("user_agent_match_required"); } }
+        private bool? _explicitNullValueUserAgentMatchRequired = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1Options"/> and sets the default values.
         /// </summary>
@@ -33,7 +44,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1Options CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1Options();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1Options(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +67,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("ip_match_required", IpMatchRequired);
             writer.WriteBoolValue("user_agent_match_required", UserAgentMatchRequired);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

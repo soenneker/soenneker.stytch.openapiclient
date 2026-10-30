@@ -11,32 +11,48 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiSessionV1CryptoWalletFactor : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("crypto_wallet_address") is { } nullNodeCryptoWalletAddress && nullNodeCryptoWalletAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletAddress = null;
+            if (parseNode.GetChildNode("crypto_wallet_id") is { } nullNodeCryptoWalletId && nullNodeCryptoWalletId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletId = null;
+            if (parseNode.GetChildNode("crypto_wallet_type") is { } nullNodeCryptoWalletType && nullNodeCryptoWalletType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The crypto_wallet_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CryptoWalletAddress { get; set; }
+        public string? CryptoWalletAddress { get => _explicitNullValueCryptoWalletAddress; set { _explicitNullValueCryptoWalletAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_address"); else _explicitNullProperties?.Remove("crypto_wallet_address"); } }
+        private string? _explicitNullValueCryptoWalletAddress = default!;
 #nullable restore
 #else
-        public string CryptoWalletAddress { get; set; }
+        public string CryptoWalletAddress { get => _explicitNullValueCryptoWalletAddress; set { _explicitNullValueCryptoWalletAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_address"); else _explicitNullProperties?.Remove("crypto_wallet_address"); } }
+        private string _explicitNullValueCryptoWalletAddress = default!;
 #endif
         /// <summary>The crypto_wallet_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CryptoWalletId { get; set; }
+        public string? CryptoWalletId { get => _explicitNullValueCryptoWalletId; set { _explicitNullValueCryptoWalletId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_id"); else _explicitNullProperties?.Remove("crypto_wallet_id"); } }
+        private string? _explicitNullValueCryptoWalletId = default!;
 #nullable restore
 #else
-        public string CryptoWalletId { get; set; }
+        public string CryptoWalletId { get => _explicitNullValueCryptoWalletId; set { _explicitNullValueCryptoWalletId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_id"); else _explicitNullProperties?.Remove("crypto_wallet_id"); } }
+        private string _explicitNullValueCryptoWalletId = default!;
 #endif
         /// <summary>The crypto_wallet_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CryptoWalletType { get; set; }
+        public string? CryptoWalletType { get => _explicitNullValueCryptoWalletType; set { _explicitNullValueCryptoWalletType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_type"); else _explicitNullProperties?.Remove("crypto_wallet_type"); } }
+        private string? _explicitNullValueCryptoWalletType = default!;
 #nullable restore
 #else
-        public string CryptoWalletType { get; set; }
+        public string CryptoWalletType { get => _explicitNullValueCryptoWalletType; set { _explicitNullValueCryptoWalletType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_type"); else _explicitNullProperties?.Remove("crypto_wallet_type"); } }
+        private string _explicitNullValueCryptoWalletType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("crypto_wallet_address", CryptoWalletAddress);
             writer.WriteStringValue("crypto_wallet_id", CryptoWalletId);
             writer.WriteStringValue("crypto_wallet_type", CryptoWalletType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

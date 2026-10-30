@@ -57,6 +57,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Sso.Saml.Item.Connections.Item.E
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlDeleteEncryptionPrivateKey401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlDeleteEncryptionPrivateKey429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlDeleteEncryptionPrivateKey500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlDeleteEncryptionPrivateKeyResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoSamlDeleteEncryptionPrivateKeyResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

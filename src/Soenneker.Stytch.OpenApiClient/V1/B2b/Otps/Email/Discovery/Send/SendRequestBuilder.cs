@@ -59,6 +59,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Otps.Email.Discovery.Send
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoverySend401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoverySend429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoverySend500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoverySendResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

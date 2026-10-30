@@ -2,7 +2,7 @@
   "descriptionHash": "6CA8521B3037D079CBE4831CFCACB662B8DB2D75044AFD505C5C8D17DEFA156273666554CBAF3FABB77EC30311EAE019592A0C9C88D6154A83391F8E29915BA8",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.36.1",
+  "kiotaVersion": "1.37.0",
   "clientClassName": "StytchOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Stytch.OpenApiClient",

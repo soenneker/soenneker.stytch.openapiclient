@@ -57,6 +57,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Webauthn.Credentials.Item.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentials401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentials429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentials500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentialsResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1ListCredentialsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

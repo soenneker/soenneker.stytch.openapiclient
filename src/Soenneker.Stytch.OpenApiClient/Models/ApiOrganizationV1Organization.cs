@@ -11,248 +11,345 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiOrganizationV1Organization : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowed_auth_methods") is { } nullNodeAllowedAuthMethods && nullNodeAllowedAuthMethods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedAuthMethods = null;
+            if (parseNode.GetChildNode("allowed_first_party_connected_apps") is { } nullNodeAllowedFirstPartyConnectedApps && nullNodeAllowedFirstPartyConnectedApps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedFirstPartyConnectedApps = null;
+            if (parseNode.GetChildNode("allowed_mfa_methods") is { } nullNodeAllowedMfaMethods && nullNodeAllowedMfaMethods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedMfaMethods = null;
+            if (parseNode.GetChildNode("allowed_oauth_tenants") is { } nullNodeAllowedOauthTenants && nullNodeAllowedOauthTenants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedOauthTenants = null;
+            if (parseNode.GetChildNode("allowed_third_party_connected_apps") is { } nullNodeAllowedThirdPartyConnectedApps && nullNodeAllowedThirdPartyConnectedApps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedThirdPartyConnectedApps = null;
+            if (parseNode.GetChildNode("auth_methods") is { } nullNodeAuthMethods && nullNodeAuthMethods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthMethods = null;
+            if (parseNode.GetChildNode("claimed_email_domains") is { } nullNodeClaimedEmailDomains && nullNodeClaimedEmailDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClaimedEmailDomains = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("custom_roles") is { } nullNodeCustomRoles && nullNodeCustomRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomRoles = null;
+            if (parseNode.GetChildNode("email_allowed_domains") is { } nullNodeEmailAllowedDomains && nullNodeEmailAllowedDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAllowedDomains = null;
+            if (parseNode.GetChildNode("email_invites") is { } nullNodeEmailInvites && nullNodeEmailInvites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailInvites = null;
+            if (parseNode.GetChildNode("email_jit_provisioning") is { } nullNodeEmailJitProvisioning && nullNodeEmailJitProvisioning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailJitProvisioning = null;
+            if (parseNode.GetChildNode("first_party_connected_apps_allowed_type") is { } nullNodeFirstPartyConnectedAppsAllowedType && nullNodeFirstPartyConnectedAppsAllowedType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstPartyConnectedAppsAllowedType = null;
+            if (parseNode.GetChildNode("mfa_methods") is { } nullNodeMfaMethods && nullNodeMfaMethods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MfaMethods = null;
+            if (parseNode.GetChildNode("mfa_policy") is { } nullNodeMfaPolicy && nullNodeMfaPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MfaPolicy = null;
+            if (parseNode.GetChildNode("oauth_tenant_jit_provisioning") is { } nullNodeOauthTenantJitProvisioning && nullNodeOauthTenantJitProvisioning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OauthTenantJitProvisioning = null;
+            if (parseNode.GetChildNode("organization_external_id") is { } nullNodeOrganizationExternalId && nullNodeOrganizationExternalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationExternalId = null;
+            if (parseNode.GetChildNode("organization_id") is { } nullNodeOrganizationId && nullNodeOrganizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationId = null;
+            if (parseNode.GetChildNode("organization_logo_url") is { } nullNodeOrganizationLogoUrl && nullNodeOrganizationLogoUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationLogoUrl = null;
+            if (parseNode.GetChildNode("organization_name") is { } nullNodeOrganizationName && nullNodeOrganizationName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationName = null;
+            if (parseNode.GetChildNode("organization_slug") is { } nullNodeOrganizationSlug && nullNodeOrganizationSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationSlug = null;
+            if (parseNode.GetChildNode("rbac_email_implicit_role_assignments") is { } nullNodeRbacEmailImplicitRoleAssignments && nullNodeRbacEmailImplicitRoleAssignments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RbacEmailImplicitRoleAssignments = null;
+            if (parseNode.GetChildNode("scim_active_connection") is { } nullNodeScimActiveConnection && nullNodeScimActiveConnection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScimActiveConnection = null;
+            if (parseNode.GetChildNode("sso_active_connections") is { } nullNodeSsoActiveConnections && nullNodeSsoActiveConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SsoActiveConnections = null;
+            if (parseNode.GetChildNode("sso_default_connection_id") is { } nullNodeSsoDefaultConnectionId && nullNodeSsoDefaultConnectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SsoDefaultConnectionId = null;
+            if (parseNode.GetChildNode("sso_jit_provisioning") is { } nullNodeSsoJitProvisioning && nullNodeSsoJitProvisioning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SsoJitProvisioning = null;
+            if (parseNode.GetChildNode("sso_jit_provisioning_allowed_connections") is { } nullNodeSsoJitProvisioningAllowedConnections && nullNodeSsoJitProvisioningAllowedConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SsoJitProvisioningAllowedConnections = null;
+            if (parseNode.GetChildNode("third_party_connected_apps_allowed_type") is { } nullNodeThirdPartyConnectedAppsAllowedType && nullNodeThirdPartyConnectedAppsAllowedType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThirdPartyConnectedAppsAllowedType = null;
+            if (parseNode.GetChildNode("trusted_metadata") is { } nullNodeTrustedMetadata && nullNodeTrustedMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrustedMetadata = null;
+            if (parseNode.GetChildNode("updated_at") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of allowed authentication methods. This list is enforced when `auth_methods` is set to `RESTRICTED`.  The list&apos;s accepted values are: `sso`, `magic_link`, `email_otp`, `password`, `google_oauth`, `microsoft_oauth`, `slack_oauth`, `github_oauth`, and `hubspot_oauth`.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowedAuthMethods { get; set; }
+        public List<string>? AllowedAuthMethods { get => _explicitNullValueAllowedAuthMethods; set { _explicitNullValueAllowedAuthMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_auth_methods"); else _explicitNullProperties?.Remove("allowed_auth_methods"); } }
+        private List<string>? _explicitNullValueAllowedAuthMethods = default!;
 #nullable restore
 #else
-        public List<string> AllowedAuthMethods { get; set; }
+        public List<string> AllowedAuthMethods { get => _explicitNullValueAllowedAuthMethods; set { _explicitNullValueAllowedAuthMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_auth_methods"); else _explicitNullProperties?.Remove("allowed_auth_methods"); } }
+        private List<string> _explicitNullValueAllowedAuthMethods = default!;
 #endif
         /// <summary>An array of first party Connected App IDs that are allowed for the Organization. Only used when the Organization&apos;s `first_party_connected_apps_allowed_type` is `RESTRICTED`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowedFirstPartyConnectedApps { get; set; }
+        public List<string>? AllowedFirstPartyConnectedApps { get => _explicitNullValueAllowedFirstPartyConnectedApps; set { _explicitNullValueAllowedFirstPartyConnectedApps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_first_party_connected_apps"); else _explicitNullProperties?.Remove("allowed_first_party_connected_apps"); } }
+        private List<string>? _explicitNullValueAllowedFirstPartyConnectedApps = default!;
 #nullable restore
 #else
-        public List<string> AllowedFirstPartyConnectedApps { get; set; }
+        public List<string> AllowedFirstPartyConnectedApps { get => _explicitNullValueAllowedFirstPartyConnectedApps; set { _explicitNullValueAllowedFirstPartyConnectedApps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_first_party_connected_apps"); else _explicitNullProperties?.Remove("allowed_first_party_connected_apps"); } }
+        private List<string> _explicitNullValueAllowedFirstPartyConnectedApps = default!;
 #endif
         /// <summary>An array of allowed MFA authentication methods. This list is enforced when `mfa_methods` is set to `RESTRICTED`.  The list&apos;s accepted values are: `sms_otp` and `totp`.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowedMfaMethods { get; set; }
+        public List<string>? AllowedMfaMethods { get => _explicitNullValueAllowedMfaMethods; set { _explicitNullValueAllowedMfaMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mfa_methods"); else _explicitNullProperties?.Remove("allowed_mfa_methods"); } }
+        private List<string>? _explicitNullValueAllowedMfaMethods = default!;
 #nullable restore
 #else
-        public List<string> AllowedMfaMethods { get; set; }
+        public List<string> AllowedMfaMethods { get => _explicitNullValueAllowedMfaMethods; set { _explicitNullValueAllowedMfaMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_mfa_methods"); else _explicitNullProperties?.Remove("allowed_mfa_methods"); } }
+        private List<string> _explicitNullValueAllowedMfaMethods = default!;
 #endif
         /// <summary>A map of allowed OAuth tenants. If this field is not passed in, the Organization will not allow JIT provisioning by OAuth Tenant. Allowed keys are &quot;slack&quot;, &quot;hubspot&quot;, and &quot;github&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationAllowedOAuthTenantsProperty? AllowedOauthTenants { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationAllowedOAuthTenantsProperty? AllowedOauthTenants { get => _explicitNullValueAllowedOauthTenants; set { _explicitNullValueAllowedOauthTenants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_oauth_tenants"); else _explicitNullProperties?.Remove("allowed_oauth_tenants"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationAllowedOAuthTenantsProperty? _explicitNullValueAllowedOauthTenants = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationAllowedOAuthTenantsProperty AllowedOauthTenants { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationAllowedOAuthTenantsProperty AllowedOauthTenants { get => _explicitNullValueAllowedOauthTenants; set { _explicitNullValueAllowedOauthTenants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_oauth_tenants"); else _explicitNullProperties?.Remove("allowed_oauth_tenants"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationAllowedOAuthTenantsProperty _explicitNullValueAllowedOauthTenants = default!;
 #endif
         /// <summary>An array of third party Connected App IDs that are allowed for the Organization. Only used when the Organization&apos;s `third_party_connected_apps_allowed_type` is `RESTRICTED`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowedThirdPartyConnectedApps { get; set; }
+        public List<string>? AllowedThirdPartyConnectedApps { get => _explicitNullValueAllowedThirdPartyConnectedApps; set { _explicitNullValueAllowedThirdPartyConnectedApps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_third_party_connected_apps"); else _explicitNullProperties?.Remove("allowed_third_party_connected_apps"); } }
+        private List<string>? _explicitNullValueAllowedThirdPartyConnectedApps = default!;
 #nullable restore
 #else
-        public List<string> AllowedThirdPartyConnectedApps { get; set; }
+        public List<string> AllowedThirdPartyConnectedApps { get => _explicitNullValueAllowedThirdPartyConnectedApps; set { _explicitNullValueAllowedThirdPartyConnectedApps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_third_party_connected_apps"); else _explicitNullProperties?.Remove("allowed_third_party_connected_apps"); } }
+        private List<string> _explicitNullValueAllowedThirdPartyConnectedApps = default!;
 #endif
         /// <summary>The setting that controls which authentication methods can be used by Members of an Organization. The accepted values are:   `ALL_ALLOWED` – the default setting which allows all authentication methods to be used.   `RESTRICTED` – only methods that comply with `allowed_auth_methods` can be used for authentication. This setting does not apply to Members with `is_breakglass` set to `true`.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthMethods { get; set; }
+        public string? AuthMethods { get => _explicitNullValueAuthMethods; set { _explicitNullValueAuthMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_methods"); else _explicitNullProperties?.Remove("auth_methods"); } }
+        private string? _explicitNullValueAuthMethods = default!;
 #nullable restore
 #else
-        public string AuthMethods { get; set; }
+        public string AuthMethods { get => _explicitNullValueAuthMethods; set { _explicitNullValueAuthMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_methods"); else _explicitNullProperties?.Remove("auth_methods"); } }
+        private string _explicitNullValueAuthMethods = default!;
 #endif
         /// <summary>A list of email domains that are claimed by the Organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ClaimedEmailDomains { get; set; }
+        public List<string>? ClaimedEmailDomains { get => _explicitNullValueClaimedEmailDomains; set { _explicitNullValueClaimedEmailDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claimed_email_domains"); else _explicitNullProperties?.Remove("claimed_email_domains"); } }
+        private List<string>? _explicitNullValueClaimedEmailDomains = default!;
 #nullable restore
 #else
-        public List<string> ClaimedEmailDomains { get; set; }
+        public List<string> ClaimedEmailDomains { get => _explicitNullValueClaimedEmailDomains; set { _explicitNullValueClaimedEmailDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claimed_email_domains"); else _explicitNullProperties?.Remove("claimed_email_domains"); } }
+        private List<string> _explicitNullValueClaimedEmailDomains = default!;
 #endif
         /// <summary>The timestamp of the Organization&apos;s creation. Values conform to the RFC 3339 standard and are expressed in UTC, e.g. `2021-12-29T12:33:09Z`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedAt { get; set; }
+        public string? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string? _explicitNullValueCreatedAt = default!;
 #nullable restore
 #else
-        public string CreatedAt { get; set; }
+        public string CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string _explicitNullValueCreatedAt = default!;
 #endif
         /// <summary>The custom_roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1CustomRole>? CustomRoles { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1CustomRole>? CustomRoles { get => _explicitNullValueCustomRoles; set { _explicitNullValueCustomRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_roles"); else _explicitNullProperties?.Remove("custom_roles"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1CustomRole>? _explicitNullValueCustomRoles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1CustomRole> CustomRoles { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1CustomRole> CustomRoles { get => _explicitNullValueCustomRoles; set { _explicitNullValueCustomRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_roles"); else _explicitNullProperties?.Remove("custom_roles"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1CustomRole> _explicitNullValueCustomRoles = default!;
 #endif
         /// <summary>An array of email domains that allow invites or JIT provisioning for new Members. This list is enforced when either `email_invites` or `email_jit_provisioning` is set to `RESTRICTED`.          Common domains such as `gmail.com` are not allowed. See the [common email domains resource](https://stytch.com/docs/b2b/api/common-email-domains) for the full list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EmailAllowedDomains { get; set; }
+        public List<string>? EmailAllowedDomains { get => _explicitNullValueEmailAllowedDomains; set { _explicitNullValueEmailAllowedDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_allowed_domains"); else _explicitNullProperties?.Remove("email_allowed_domains"); } }
+        private List<string>? _explicitNullValueEmailAllowedDomains = default!;
 #nullable restore
 #else
-        public List<string> EmailAllowedDomains { get; set; }
+        public List<string> EmailAllowedDomains { get => _explicitNullValueEmailAllowedDomains; set { _explicitNullValueEmailAllowedDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_allowed_domains"); else _explicitNullProperties?.Remove("email_allowed_domains"); } }
+        private List<string> _explicitNullValueEmailAllowedDomains = default!;
 #endif
         /// <summary>The authentication setting that controls how a new Member can be invited to an organization by email. The accepted values are:   `ALL_ALLOWED` – any new Member can be invited to join via email.   `RESTRICTED` – only new Members with verified emails that comply with `email_allowed_domains` can be invited via email.   `NOT_ALLOWED` – disable email invites.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailInvites { get; set; }
+        public string? EmailInvites { get => _explicitNullValueEmailInvites; set { _explicitNullValueEmailInvites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_invites"); else _explicitNullProperties?.Remove("email_invites"); } }
+        private string? _explicitNullValueEmailInvites = default!;
 #nullable restore
 #else
-        public string EmailInvites { get; set; }
+        public string EmailInvites { get => _explicitNullValueEmailInvites; set { _explicitNullValueEmailInvites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_invites"); else _explicitNullProperties?.Remove("email_invites"); } }
+        private string _explicitNullValueEmailInvites = default!;
 #endif
         /// <summary>The authentication setting that controls how a new Member can be provisioned by authenticating via Email Magic Link or OAuth. The accepted values are:   `RESTRICTED` – only new Members with verified emails that comply with `email_allowed_domains` can be provisioned upon authentication via Email Magic Link or OAuth.   `NOT_ALLOWED` – the default setting, disables JIT provisioning via Email Magic Link and OAuth.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailJitProvisioning { get; set; }
+        public string? EmailJitProvisioning { get => _explicitNullValueEmailJitProvisioning; set { _explicitNullValueEmailJitProvisioning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_jit_provisioning"); else _explicitNullProperties?.Remove("email_jit_provisioning"); } }
+        private string? _explicitNullValueEmailJitProvisioning = default!;
 #nullable restore
 #else
-        public string EmailJitProvisioning { get; set; }
+        public string EmailJitProvisioning { get => _explicitNullValueEmailJitProvisioning; set { _explicitNullValueEmailJitProvisioning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_jit_provisioning"); else _explicitNullProperties?.Remove("email_jit_provisioning"); } }
+        private string _explicitNullValueEmailJitProvisioning = default!;
 #endif
         /// <summary>The authentication setting that sets the Organization&apos;s policy towards first party Connected Apps. The accepted values are:   `ALL_ALLOWED` – the default setting, any first party Connected App in the Project is permitted for use by Members.   `RESTRICTED` – only first party Connected Apps with IDs in `allowed_first_party_connected_apps` can be used by Members.   `NOT_ALLOWED` – no first party Connected Apps are permitted.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstPartyConnectedAppsAllowedType { get; set; }
+        public string? FirstPartyConnectedAppsAllowedType { get => _explicitNullValueFirstPartyConnectedAppsAllowedType; set { _explicitNullValueFirstPartyConnectedAppsAllowedType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_party_connected_apps_allowed_type"); else _explicitNullProperties?.Remove("first_party_connected_apps_allowed_type"); } }
+        private string? _explicitNullValueFirstPartyConnectedAppsAllowedType = default!;
 #nullable restore
 #else
-        public string FirstPartyConnectedAppsAllowedType { get; set; }
+        public string FirstPartyConnectedAppsAllowedType { get => _explicitNullValueFirstPartyConnectedAppsAllowedType; set { _explicitNullValueFirstPartyConnectedAppsAllowedType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_party_connected_apps_allowed_type"); else _explicitNullProperties?.Remove("first_party_connected_apps_allowed_type"); } }
+        private string _explicitNullValueFirstPartyConnectedAppsAllowedType = default!;
 #endif
         /// <summary>The setting that controls which MFA methods can be used by Members of an Organization. The accepted values are:   `ALL_ALLOWED` – the default setting which allows all authentication methods to be used.   `RESTRICTED` – only methods that comply with `allowed_mfa_methods` can be used for authentication. This setting does not apply to Members with `is_breakglass` set to `true`.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MfaMethods { get; set; }
+        public string? MfaMethods { get => _explicitNullValueMfaMethods; set { _explicitNullValueMfaMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_methods"); else _explicitNullProperties?.Remove("mfa_methods"); } }
+        private string? _explicitNullValueMfaMethods = default!;
 #nullable restore
 #else
-        public string MfaMethods { get; set; }
+        public string MfaMethods { get => _explicitNullValueMfaMethods; set { _explicitNullValueMfaMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_methods"); else _explicitNullProperties?.Remove("mfa_methods"); } }
+        private string _explicitNullValueMfaMethods = default!;
 #endif
         /// <summary>The setting that controls the MFA policy for all Members in the Organization. The accepted values are:   `REQUIRED_FOR_ALL` – All Members within the Organization will be required to complete MFA every time they wish to log in. However, any active Session that existed prior to this setting change will remain valid.   `OPTIONAL` – The default value. The Organization does not require MFA by default for all Members. Members will be required to complete MFA only if their `mfa_enrolled` status is set to true.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MfaPolicy { get; set; }
+        public string? MfaPolicy { get => _explicitNullValueMfaPolicy; set { _explicitNullValueMfaPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_policy"); else _explicitNullProperties?.Remove("mfa_policy"); } }
+        private string? _explicitNullValueMfaPolicy = default!;
 #nullable restore
 #else
-        public string MfaPolicy { get; set; }
+        public string MfaPolicy { get => _explicitNullValueMfaPolicy; set { _explicitNullValueMfaPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_policy"); else _explicitNullProperties?.Remove("mfa_policy"); } }
+        private string _explicitNullValueMfaPolicy = default!;
 #endif
         /// <summary>The authentication setting that controls how a new Member can JIT provision into an organization by tenant. The accepted values are:   `RESTRICTED` – only new Members with tenants in `allowed_oauth_tenants` can JIT provision via tenant.   `NOT_ALLOWED` – the default setting, disables JIT provisioning by OAuth Tenant.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OauthTenantJitProvisioning { get; set; }
+        public string? OauthTenantJitProvisioning { get => _explicitNullValueOauthTenantJitProvisioning; set { _explicitNullValueOauthTenantJitProvisioning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauth_tenant_jit_provisioning"); else _explicitNullProperties?.Remove("oauth_tenant_jit_provisioning"); } }
+        private string? _explicitNullValueOauthTenantJitProvisioning = default!;
 #nullable restore
 #else
-        public string OauthTenantJitProvisioning { get; set; }
+        public string OauthTenantJitProvisioning { get => _explicitNullValueOauthTenantJitProvisioning; set { _explicitNullValueOauthTenantJitProvisioning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauth_tenant_jit_provisioning"); else _explicitNullProperties?.Remove("oauth_tenant_jit_provisioning"); } }
+        private string _explicitNullValueOauthTenantJitProvisioning = default!;
 #endif
         /// <summary>A unique identifier for the organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrganizationExternalId { get; set; }
+        public string? OrganizationExternalId { get => _explicitNullValueOrganizationExternalId; set { _explicitNullValueOrganizationExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_external_id"); else _explicitNullProperties?.Remove("organization_external_id"); } }
+        private string? _explicitNullValueOrganizationExternalId = default!;
 #nullable restore
 #else
-        public string OrganizationExternalId { get; set; }
+        public string OrganizationExternalId { get => _explicitNullValueOrganizationExternalId; set { _explicitNullValueOrganizationExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_external_id"); else _explicitNullProperties?.Remove("organization_external_id"); } }
+        private string _explicitNullValueOrganizationExternalId = default!;
 #endif
         /// <summary>Globally unique UUID that identifies a specific Organization. The `organization_id` is critical to perform operations on an Organization, so be sure to preserve this value. You may also use the organization_slug or organization_external_id here as a convenience.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrganizationId { get; set; }
+        public string? OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
+        private string? _explicitNullValueOrganizationId = default!;
 #nullable restore
 #else
-        public string OrganizationId { get; set; }
+        public string OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
+        private string _explicitNullValueOrganizationId = default!;
 #endif
         /// <summary>The image URL of the Organization logo.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrganizationLogoUrl { get; set; }
+        public string? OrganizationLogoUrl { get => _explicitNullValueOrganizationLogoUrl; set { _explicitNullValueOrganizationLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_logo_url"); else _explicitNullProperties?.Remove("organization_logo_url"); } }
+        private string? _explicitNullValueOrganizationLogoUrl = default!;
 #nullable restore
 #else
-        public string OrganizationLogoUrl { get; set; }
+        public string OrganizationLogoUrl { get => _explicitNullValueOrganizationLogoUrl; set { _explicitNullValueOrganizationLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_logo_url"); else _explicitNullProperties?.Remove("organization_logo_url"); } }
+        private string _explicitNullValueOrganizationLogoUrl = default!;
 #endif
         /// <summary>The name of the Organization. Must be between 1 and 128 characters in length.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrganizationName { get; set; }
+        public string? OrganizationName { get => _explicitNullValueOrganizationName; set { _explicitNullValueOrganizationName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_name"); else _explicitNullProperties?.Remove("organization_name"); } }
+        private string? _explicitNullValueOrganizationName = default!;
 #nullable restore
 #else
-        public string OrganizationName { get; set; }
+        public string OrganizationName { get => _explicitNullValueOrganizationName; set { _explicitNullValueOrganizationName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_name"); else _explicitNullProperties?.Remove("organization_name"); } }
+        private string _explicitNullValueOrganizationName = default!;
 #endif
         /// <summary>The unique URL slug of the Organization. The slug only accepts alphanumeric characters and the following reserved characters: `-` `.` `_` `~`. Must be between 2 and 128 characters in length. Wherever an organization_id is expected in a path or request parameter, you may also use the organization_slug as a convenience.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrganizationSlug { get; set; }
+        public string? OrganizationSlug { get => _explicitNullValueOrganizationSlug; set { _explicitNullValueOrganizationSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_slug"); else _explicitNullProperties?.Remove("organization_slug"); } }
+        private string? _explicitNullValueOrganizationSlug = default!;
 #nullable restore
 #else
-        public string OrganizationSlug { get; set; }
+        public string OrganizationSlug { get => _explicitNullValueOrganizationSlug; set { _explicitNullValueOrganizationSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_slug"); else _explicitNullProperties?.Remove("organization_slug"); } }
+        private string _explicitNullValueOrganizationSlug = default!;
 #endif
         /// <summary>Implicit role assignments based off of email domains.  For each domain-Role pair, all Members whose email addresses have the specified email domain will be granted the  associated Role, regardless of their login method. See the [RBAC guide](https://stytch.com/docs/b2b/guides/rbac/role-assignment)  for more information about role assignment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1EmailImplicitRoleAssignment>? RbacEmailImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1EmailImplicitRoleAssignment>? RbacEmailImplicitRoleAssignments { get => _explicitNullValueRbacEmailImplicitRoleAssignments; set { _explicitNullValueRbacEmailImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rbac_email_implicit_role_assignments"); else _explicitNullProperties?.Remove("rbac_email_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1EmailImplicitRoleAssignment>? _explicitNullValueRbacEmailImplicitRoleAssignments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1EmailImplicitRoleAssignment> RbacEmailImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1EmailImplicitRoleAssignment> RbacEmailImplicitRoleAssignments { get => _explicitNullValueRbacEmailImplicitRoleAssignments; set { _explicitNullValueRbacEmailImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rbac_email_implicit_role_assignments"); else _explicitNullProperties?.Remove("rbac_email_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1EmailImplicitRoleAssignment> _explicitNullValueRbacEmailImplicitRoleAssignments = default!;
 #endif
         /// <summary>The scim_active_connection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveScimConnection? ScimActiveConnection { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveScimConnection? ScimActiveConnection { get => _explicitNullValueScimActiveConnection; set { _explicitNullValueScimActiveConnection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scim_active_connection"); else _explicitNullProperties?.Remove("scim_active_connection"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveScimConnection? _explicitNullValueScimActiveConnection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveScimConnection ScimActiveConnection { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveScimConnection ScimActiveConnection { get => _explicitNullValueScimActiveConnection; set { _explicitNullValueScimActiveConnection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scim_active_connection"); else _explicitNullProperties?.Remove("scim_active_connection"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveScimConnection _explicitNullValueScimActiveConnection = default!;
 #endif
         /// <summary>An array of active [SAML Connection references](https://stytch.com/docs/b2b/api/saml-connection-object) or [OIDC Connection references](https://stytch.com/docs/b2b/api/oidc-connection-object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSsoConnection>? SsoActiveConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSsoConnection>? SsoActiveConnections { get => _explicitNullValueSsoActiveConnections; set { _explicitNullValueSsoActiveConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sso_active_connections"); else _explicitNullProperties?.Remove("sso_active_connections"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSsoConnection>? _explicitNullValueSsoActiveConnections = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSsoConnection> SsoActiveConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSsoConnection> SsoActiveConnections { get => _explicitNullValueSsoActiveConnections; set { _explicitNullValueSsoActiveConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sso_active_connections"); else _explicitNullProperties?.Remove("sso_active_connections"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1ActiveSsoConnection> _explicitNullValueSsoActiveConnections = default!;
 #endif
         /// <summary>The default connection used for SSO when there are multiple active connections.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SsoDefaultConnectionId { get; set; }
+        public string? SsoDefaultConnectionId { get => _explicitNullValueSsoDefaultConnectionId; set { _explicitNullValueSsoDefaultConnectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sso_default_connection_id"); else _explicitNullProperties?.Remove("sso_default_connection_id"); } }
+        private string? _explicitNullValueSsoDefaultConnectionId = default!;
 #nullable restore
 #else
-        public string SsoDefaultConnectionId { get; set; }
+        public string SsoDefaultConnectionId { get => _explicitNullValueSsoDefaultConnectionId; set { _explicitNullValueSsoDefaultConnectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sso_default_connection_id"); else _explicitNullProperties?.Remove("sso_default_connection_id"); } }
+        private string _explicitNullValueSsoDefaultConnectionId = default!;
 #endif
         /// <summary>The authentication setting that controls the JIT provisioning of Members when authenticating via SSO. The accepted values are:   `ALL_ALLOWED` – the default setting, new Members will be automatically provisioned upon successful authentication via any of the Organization&apos;s `sso_active_connections`.   `RESTRICTED` – only new Members with SSO logins that comply with `sso_jit_provisioning_allowed_connections` can be provisioned upon authentication.   `NOT_ALLOWED` – disable JIT provisioning via SSO.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SsoJitProvisioning { get; set; }
+        public string? SsoJitProvisioning { get => _explicitNullValueSsoJitProvisioning; set { _explicitNullValueSsoJitProvisioning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sso_jit_provisioning"); else _explicitNullProperties?.Remove("sso_jit_provisioning"); } }
+        private string? _explicitNullValueSsoJitProvisioning = default!;
 #nullable restore
 #else
-        public string SsoJitProvisioning { get; set; }
+        public string SsoJitProvisioning { get => _explicitNullValueSsoJitProvisioning; set { _explicitNullValueSsoJitProvisioning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sso_jit_provisioning"); else _explicitNullProperties?.Remove("sso_jit_provisioning"); } }
+        private string _explicitNullValueSsoJitProvisioning = default!;
 #endif
         /// <summary>An array of `connection_id`s that reference [SAML Connection objects](https://stytch.com/docs/b2b/api/saml-connection-object).  Only these connections will be allowed to JIT provision Members via SSO when `sso_jit_provisioning` is set to `RESTRICTED`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SsoJitProvisioningAllowedConnections { get; set; }
+        public List<string>? SsoJitProvisioningAllowedConnections { get => _explicitNullValueSsoJitProvisioningAllowedConnections; set { _explicitNullValueSsoJitProvisioningAllowedConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sso_jit_provisioning_allowed_connections"); else _explicitNullProperties?.Remove("sso_jit_provisioning_allowed_connections"); } }
+        private List<string>? _explicitNullValueSsoJitProvisioningAllowedConnections = default!;
 #nullable restore
 #else
-        public List<string> SsoJitProvisioningAllowedConnections { get; set; }
+        public List<string> SsoJitProvisioningAllowedConnections { get => _explicitNullValueSsoJitProvisioningAllowedConnections; set { _explicitNullValueSsoJitProvisioningAllowedConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sso_jit_provisioning_allowed_connections"); else _explicitNullProperties?.Remove("sso_jit_provisioning_allowed_connections"); } }
+        private List<string> _explicitNullValueSsoJitProvisioningAllowedConnections = default!;
 #endif
         /// <summary>The authentication setting that sets the Organization&apos;s policy towards third party Connected Apps. The accepted values are:   `ALL_ALLOWED` – the default setting, any third party Connected App in the Project is permitted for use by Members.   `RESTRICTED` – only third party Connected Apps with IDs in `allowed_first_party_connected_apps` can be used by Members.   `NOT_ALLOWED` – no third party Connected Apps are permitted.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThirdPartyConnectedAppsAllowedType { get; set; }
+        public string? ThirdPartyConnectedAppsAllowedType { get => _explicitNullValueThirdPartyConnectedAppsAllowedType; set { _explicitNullValueThirdPartyConnectedAppsAllowedType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("third_party_connected_apps_allowed_type"); else _explicitNullProperties?.Remove("third_party_connected_apps_allowed_type"); } }
+        private string? _explicitNullValueThirdPartyConnectedAppsAllowedType = default!;
 #nullable restore
 #else
-        public string ThirdPartyConnectedAppsAllowedType { get; set; }
+        public string ThirdPartyConnectedAppsAllowedType { get => _explicitNullValueThirdPartyConnectedAppsAllowedType; set { _explicitNullValueThirdPartyConnectedAppsAllowedType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("third_party_connected_apps_allowed_type"); else _explicitNullProperties?.Remove("third_party_connected_apps_allowed_type"); } }
+        private string _explicitNullValueThirdPartyConnectedAppsAllowedType = default!;
 #endif
         /// <summary>An arbitrary JSON object for storing application-specific data or identity-provider-specific data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationTrustedMetadataProperty? TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationTrustedMetadataProperty? TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationTrustedMetadataProperty? _explicitNullValueTrustedMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationTrustedMetadataProperty TrustedMetadata { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationTrustedMetadataProperty TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationTrustedMetadataProperty _explicitNullValueTrustedMetadata = default!;
 #endif
         /// <summary>The timestamp of when the Organization was last updated. Values conform to the RFC 3339 standard and are expressed in UTC, e.g. `2021-12-29T12:33:09Z`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdatedAt { get; set; }
+        public string? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        private string? _explicitNullValueUpdatedAt = default!;
 #nullable restore
 #else
-        public string UpdatedAt { get; set; }
+        public string UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        private string _explicitNullValueUpdatedAt = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization"/> and sets the default values.
@@ -269,7 +366,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -348,6 +445,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("third_party_connected_apps_allowed_type", ThirdPartyConnectedAppsAllowedType);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationTrustedMetadataProperty>("trusted_metadata", TrustedMetadata);
             writer.WriteStringValue("updated_at", UpdatedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

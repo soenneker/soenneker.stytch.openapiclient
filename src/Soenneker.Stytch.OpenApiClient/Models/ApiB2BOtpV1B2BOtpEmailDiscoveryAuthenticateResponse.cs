@@ -11,51 +11,75 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiB2BOtpV1B2BOtpEmailDiscoveryAuthenticateResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("discovered_organizations") is { } nullNodeDiscoveredOrganizations && nullNodeDiscoveredOrganizations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscoveredOrganizations = null;
+            if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
+            if (parseNode.GetChildNode("intermediate_session_token") is { } nullNodeIntermediateSessionToken && nullNodeIntermediateSessionToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntermediateSessionToken = null;
+            if (parseNode.GetChildNode("intermediate_session_token_expires_at") is { } nullNodeIntermediateSessionTokenExpiresAt && nullNodeIntermediateSessionTokenExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntermediateSessionTokenExpiresAt = null;
+            if (parseNode.GetChildNode("request_id") is { } nullNodeRequestId && nullNodeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestId = null;
+            if (parseNode.GetChildNode("status_code") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of `discovered_organization` objects tied to the `intermediate_session_token`, `session_token`, or `session_jwt`. See the [Discovered Organization Object](https://stytch.com/docs/b2b/api/discovered-organization-object) for complete details.  Note that Organizations will only appear here under any of the following conditions:  1. The end user is already a Member of the Organization.  2. The end user is invited to the Organization.  3. The end user can join the Organization because:      a) The Organization allows JIT provisioning.      b) The Organizations&apos; allowed domains list contains the Member&apos;s email domain.      c) The Organization has at least one other Member with a verified email address with the same domain as the end user (to prevent phishing attacks).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization>? DiscoveredOrganizations { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization>? DiscoveredOrganizations { get => _explicitNullValueDiscoveredOrganizations; set { _explicitNullValueDiscoveredOrganizations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovered_organizations"); else _explicitNullProperties?.Remove("discovered_organizations"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization>? _explicitNullValueDiscoveredOrganizations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization> DiscoveredOrganizations { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization> DiscoveredOrganizations { get => _explicitNullValueDiscoveredOrganizations; set { _explicitNullValueDiscoveredOrganizations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovered_organizations"); else _explicitNullProperties?.Remove("discovered_organizations"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization> _explicitNullValueDiscoveredOrganizations = default!;
 #endif
         /// <summary>The email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailAddress { get; set; }
+        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        private string? _explicitNullValueEmailAddress = default!;
 #nullable restore
 #else
-        public string EmailAddress { get; set; }
+        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        private string _explicitNullValueEmailAddress = default!;
 #endif
         /// <summary>The Intermediate Session Token. This token does not necessarily belong to a specific instance of a Member, but represents a bag of factors that may be converted to a member session. The token can be used with the [OTP SMS Authenticate endpoint](https://stytch.com/docs/b2b/api/authenticate-otp-sms), [TOTP Authenticate endpoint](https://stytch.com/docs/b2b/api/authenticate-totp), or [Recovery Codes Recover endpoint](https://stytch.com/docs/b2b/api/recovery-codes-recover) to complete an MFA flow and log in to the Organization. The token has a default expiry of 10 minutes. It can also be used with the [Exchange Intermediate Session endpoint](https://stytch.com/docs/b2b/api/exchange-intermediate-session) to join a specific Organization that allows the factors represented by the intermediate session token; or the [Create Organization via Discovery endpoint](https://stytch.com/docs/b2b/api/create-organization-via-discovery) to create a new Organization and Member. Intermediate Session Tokens have a default expiry of 10 minutes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntermediateSessionToken { get; set; }
+        public string? IntermediateSessionToken { get => _explicitNullValueIntermediateSessionToken; set { _explicitNullValueIntermediateSessionToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intermediate_session_token"); else _explicitNullProperties?.Remove("intermediate_session_token"); } }
+        private string? _explicitNullValueIntermediateSessionToken = default!;
 #nullable restore
 #else
-        public string IntermediateSessionToken { get; set; }
+        public string IntermediateSessionToken { get => _explicitNullValueIntermediateSessionToken; set { _explicitNullValueIntermediateSessionToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intermediate_session_token"); else _explicitNullProperties?.Remove("intermediate_session_token"); } }
+        private string _explicitNullValueIntermediateSessionToken = default!;
 #endif
         /// <summary>The intermediate_session_token_expires_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IntermediateSessionTokenExpiresAt { get; set; }
+        public string? IntermediateSessionTokenExpiresAt { get => _explicitNullValueIntermediateSessionTokenExpiresAt; set { _explicitNullValueIntermediateSessionTokenExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intermediate_session_token_expires_at"); else _explicitNullProperties?.Remove("intermediate_session_token_expires_at"); } }
+        private string? _explicitNullValueIntermediateSessionTokenExpiresAt = default!;
 #nullable restore
 #else
-        public string IntermediateSessionTokenExpiresAt { get; set; }
+        public string IntermediateSessionTokenExpiresAt { get => _explicitNullValueIntermediateSessionTokenExpiresAt; set { _explicitNullValueIntermediateSessionTokenExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intermediate_session_token_expires_at"); else _explicitNullProperties?.Remove("intermediate_session_token_expires_at"); } }
+        private string _explicitNullValueIntermediateSessionTokenExpiresAt = default!;
 #endif
         /// <summary>Globally unique UUID that is returned with every API call. This value is important to log for debugging purposes; we may ask for this value to help identify a specific API call when helping you debug an issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestId { get; set; }
+        public string? RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
+        private string? _explicitNullValueRequestId = default!;
 #nullable restore
 #else
-        public string RequestId { get; set; }
+        public string RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
+        private string _explicitNullValueRequestId = default!;
 #endif
         /// <summary>The HTTP status code of the response. Stytch follows standard HTTP response status code patterns, e.g. 2XX values equate to success, 3XX values are redirects, 4XX are client errors, and 5XX are server errors.</summary>
-        public int? StatusCode { get; set; }
+        public int? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_code"); else _explicitNullProperties?.Remove("status_code"); } }
+        private int? _explicitNullValueStatusCode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoveryAuthenticateResponse"/> and sets the default values.
         /// </summary>
@@ -71,7 +95,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoveryAuthenticateResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoveryAuthenticateResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BOtpV1B2BOtpEmailDiscoveryAuthenticateResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("intermediate_session_token_expires_at", IntermediateSessionTokenExpiresAt);
             writer.WriteStringValue("request_id", RequestId);
             writer.WriteIntValue("status_code", StatusCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

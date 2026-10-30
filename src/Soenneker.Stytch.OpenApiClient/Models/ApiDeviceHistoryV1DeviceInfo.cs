@@ -11,72 +11,103 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiDeviceHistoryV1DeviceInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ip_address") is { } nullNodeIpAddress && nullNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddress = null;
+            if (parseNode.GetChildNode("ip_address_details") is { } nullNodeIpAddressDetails && nullNodeIpAddressDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddressDetails = null;
+            if (parseNode.GetChildNode("ip_geo_city") is { } nullNodeIpGeoCity && nullNodeIpGeoCity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpGeoCity = null;
+            if (parseNode.GetChildNode("ip_geo_country") is { } nullNodeIpGeoCountry && nullNodeIpGeoCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpGeoCountry = null;
+            if (parseNode.GetChildNode("ip_geo_country_details") is { } nullNodeIpGeoCountryDetails && nullNodeIpGeoCountryDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpGeoCountryDetails = null;
+            if (parseNode.GetChildNode("ip_geo_region") is { } nullNodeIpGeoRegion && nullNodeIpGeoRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpGeoRegion = null;
+            if (parseNode.GetChildNode("visitor_id") is { } nullNodeVisitorId && nullNodeVisitorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisitorId = null;
+            if (parseNode.GetChildNode("visitor_id_details") is { } nullNodeVisitorIdDetails && nullNodeVisitorIdDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisitorIdDetails = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The IP address of the user&apos;s device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IpAddress { get; set; }
+        public string? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
+        private string? _explicitNullValueIpAddress = default!;
 #nullable restore
 #else
-        public string IpAddress { get; set; }
+        public string IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
+        private string _explicitNullValueIpAddress = default!;
 #endif
         /// <summary>The ip_address_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails? IpAddressDetails { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails? IpAddressDetails { get => _explicitNullValueIpAddressDetails; set { _explicitNullValueIpAddressDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address_details"); else _explicitNullProperties?.Remove("ip_address_details"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails? _explicitNullValueIpAddressDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails IpAddressDetails { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails IpAddressDetails { get => _explicitNullValueIpAddressDetails; set { _explicitNullValueIpAddressDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address_details"); else _explicitNullProperties?.Remove("ip_address_details"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails _explicitNullValueIpAddressDetails = default!;
 #endif
         /// <summary>The city where the IP address is located.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IpGeoCity { get; set; }
+        public string? IpGeoCity { get => _explicitNullValueIpGeoCity; set { _explicitNullValueIpGeoCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_geo_city"); else _explicitNullProperties?.Remove("ip_geo_city"); } }
+        private string? _explicitNullValueIpGeoCity = default!;
 #nullable restore
 #else
-        public string IpGeoCity { get; set; }
+        public string IpGeoCity { get => _explicitNullValueIpGeoCity; set { _explicitNullValueIpGeoCity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_geo_city"); else _explicitNullProperties?.Remove("ip_geo_city"); } }
+        private string _explicitNullValueIpGeoCity = default!;
 #endif
         /// <summary>The country code where the IP address is located.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IpGeoCountry { get; set; }
+        public string? IpGeoCountry { get => _explicitNullValueIpGeoCountry; set { _explicitNullValueIpGeoCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_geo_country"); else _explicitNullProperties?.Remove("ip_geo_country"); } }
+        private string? _explicitNullValueIpGeoCountry = default!;
 #nullable restore
 #else
-        public string IpGeoCountry { get; set; }
+        public string IpGeoCountry { get => _explicitNullValueIpGeoCountry; set { _explicitNullValueIpGeoCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_geo_country"); else _explicitNullProperties?.Remove("ip_geo_country"); } }
+        private string _explicitNullValueIpGeoCountry = default!;
 #endif
         /// <summary>The ip_geo_country_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails? IpGeoCountryDetails { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails? IpGeoCountryDetails { get => _explicitNullValueIpGeoCountryDetails; set { _explicitNullValueIpGeoCountryDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_geo_country_details"); else _explicitNullProperties?.Remove("ip_geo_country_details"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails? _explicitNullValueIpGeoCountryDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails IpGeoCountryDetails { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails IpGeoCountryDetails { get => _explicitNullValueIpGeoCountryDetails; set { _explicitNullValueIpGeoCountryDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_geo_country_details"); else _explicitNullProperties?.Remove("ip_geo_country_details"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails _explicitNullValueIpGeoCountryDetails = default!;
 #endif
         /// <summary>The region where the IP address is located.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IpGeoRegion { get; set; }
+        public string? IpGeoRegion { get => _explicitNullValueIpGeoRegion; set { _explicitNullValueIpGeoRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_geo_region"); else _explicitNullProperties?.Remove("ip_geo_region"); } }
+        private string? _explicitNullValueIpGeoRegion = default!;
 #nullable restore
 #else
-        public string IpGeoRegion { get; set; }
+        public string IpGeoRegion { get => _explicitNullValueIpGeoRegion; set { _explicitNullValueIpGeoRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_geo_region"); else _explicitNullProperties?.Remove("ip_geo_region"); } }
+        private string _explicitNullValueIpGeoRegion = default!;
 #endif
         /// <summary>The `visitor_id` (a unique identifier) of the user&apos;s device. See the [Device Fingerprinting documentation](https://stytch.com/docs/fraud/guides/device-fingerprinting/fingerprints) for more details on the `visitor_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VisitorId { get; set; }
+        public string? VisitorId { get => _explicitNullValueVisitorId; set { _explicitNullValueVisitorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_id"); else _explicitNullProperties?.Remove("visitor_id"); } }
+        private string? _explicitNullValueVisitorId = default!;
 #nullable restore
 #else
-        public string VisitorId { get; set; }
+        public string VisitorId { get => _explicitNullValueVisitorId; set { _explicitNullValueVisitorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_id"); else _explicitNullProperties?.Remove("visitor_id"); } }
+        private string _explicitNullValueVisitorId = default!;
 #endif
         /// <summary>The visitor_id_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails? VisitorIdDetails { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails? VisitorIdDetails { get => _explicitNullValueVisitorIdDetails; set { _explicitNullValueVisitorIdDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_id_details"); else _explicitNullProperties?.Remove("visitor_id_details"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails? _explicitNullValueVisitorIdDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails VisitorIdDetails { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails VisitorIdDetails { get => _explicitNullValueVisitorIdDetails; set { _explicitNullValueVisitorIdDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_id_details"); else _explicitNullProperties?.Remove("visitor_id_details"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails _explicitNullValueVisitorIdDetails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceInfo"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +159,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("ip_geo_region", IpGeoRegion);
             writer.WriteStringValue("visitor_id", VisitorId);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiDeviceHistoryV1DeviceAttributeDetails>("visitor_id_details", VisitorIdDetails);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

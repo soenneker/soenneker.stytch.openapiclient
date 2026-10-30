@@ -57,6 +57,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Phone_numbers.Item
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeletePhoneNumber401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeletePhoneNumber429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeletePhoneNumber500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeletePhoneNumberResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1DeletePhoneNumberResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

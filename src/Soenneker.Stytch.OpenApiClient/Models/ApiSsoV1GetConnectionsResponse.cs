@@ -11,43 +11,64 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiSsoV1GetConnectionsResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("external_connections") is { } nullNodeExternalConnections && nullNodeExternalConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalConnections = null;
+            if (parseNode.GetChildNode("oidc_connections") is { } nullNodeOidcConnections && nullNodeOidcConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OidcConnections = null;
+            if (parseNode.GetChildNode("request_id") is { } nullNodeRequestId && nullNodeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestId = null;
+            if (parseNode.GetChildNode("saml_connections") is { } nullNodeSamlConnections && nullNodeSamlConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SamlConnections = null;
+            if (parseNode.GetChildNode("status_code") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The list of [External Connections](https://stytch.com/docs/b2b/api/external-connection-object) owned by this organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1Connection>? ExternalConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1Connection>? ExternalConnections { get => _explicitNullValueExternalConnections; set { _explicitNullValueExternalConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_connections"); else _explicitNullProperties?.Remove("external_connections"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1Connection>? _explicitNullValueExternalConnections = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1Connection> ExternalConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1Connection> ExternalConnections { get => _explicitNullValueExternalConnections; set { _explicitNullValueExternalConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_connections"); else _explicitNullProperties?.Remove("external_connections"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1Connection> _explicitNullValueExternalConnections = default!;
 #endif
         /// <summary>The list of [OIDC Connections](https://stytch.com/docs/b2b/api/oidc-connection-object) owned by this organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection>? OidcConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection>? OidcConnections { get => _explicitNullValueOidcConnections; set { _explicitNullValueOidcConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oidc_connections"); else _explicitNullProperties?.Remove("oidc_connections"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection>? _explicitNullValueOidcConnections = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection> OidcConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection> OidcConnections { get => _explicitNullValueOidcConnections; set { _explicitNullValueOidcConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oidc_connections"); else _explicitNullProperties?.Remove("oidc_connections"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1OidcConnection> _explicitNullValueOidcConnections = default!;
 #endif
         /// <summary>Globally unique UUID that is returned with every API call. This value is important to log for debugging purposes; we may ask for this value to help identify a specific API call when helping you debug an issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestId { get; set; }
+        public string? RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
+        private string? _explicitNullValueRequestId = default!;
 #nullable restore
 #else
-        public string RequestId { get; set; }
+        public string RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
+        private string _explicitNullValueRequestId = default!;
 #endif
         /// <summary>The list of [SAML Connections](https://stytch.com/docs/b2b/api/saml-connection-object) owned by this organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection>? SamlConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection>? SamlConnections { get => _explicitNullValueSamlConnections; set { _explicitNullValueSamlConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_connections"); else _explicitNullProperties?.Remove("saml_connections"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection>? _explicitNullValueSamlConnections = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection> SamlConnections { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection> SamlConnections { get => _explicitNullValueSamlConnections; set { _explicitNullValueSamlConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_connections"); else _explicitNullProperties?.Remove("saml_connections"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection> _explicitNullValueSamlConnections = default!;
 #endif
         /// <summary>The HTTP status code of the response. Stytch follows standard HTTP response status code patterns, e.g. 2XX values equate to success, 3XX values are redirects, 4XX are client errors, and 5XX are server errors.</summary>
-        public int? StatusCode { get; set; }
+        public int? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_code"); else _explicitNullProperties?.Remove("status_code"); } }
+        private int? _explicitNullValueStatusCode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GetConnectionsResponse"/> and sets the default values.
         /// </summary>
@@ -63,7 +84,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GetConnectionsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GetConnectionsResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1GetConnectionsResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("request_id", RequestId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection>("saml_connections", SamlConnections);
             writer.WriteIntValue("status_code", StatusCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

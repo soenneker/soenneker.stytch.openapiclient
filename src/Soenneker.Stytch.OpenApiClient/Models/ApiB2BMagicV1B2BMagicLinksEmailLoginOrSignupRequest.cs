@@ -12,70 +12,104 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiB2BMagicV1B2BMagicLinksEmailLoginOrSignupRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
+            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("login_expiration_minutes") is { } nullNodeLoginExpirationMinutes && nullNodeLoginExpirationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginExpirationMinutes = null;
+            if (parseNode.GetChildNode("login_redirect_url") is { } nullNodeLoginRedirectUrl && nullNodeLoginRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginRedirectUrl = null;
+            if (parseNode.GetChildNode("login_template_id") is { } nullNodeLoginTemplateId && nullNodeLoginTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginTemplateId = null;
+            if (parseNode.GetChildNode("organization_id") is { } nullNodeOrganizationId && nullNodeOrganizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationId = null;
+            if (parseNode.GetChildNode("pkce_code_challenge") is { } nullNodePkceCodeChallenge && nullNodePkceCodeChallenge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PkceCodeChallenge = null;
+            if (parseNode.GetChildNode("signup_expiration_minutes") is { } nullNodeSignupExpirationMinutes && nullNodeSignupExpirationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignupExpirationMinutes = null;
+            if (parseNode.GetChildNode("signup_redirect_url") is { } nullNodeSignupRedirectUrl && nullNodeSignupRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignupRedirectUrl = null;
+            if (parseNode.GetChildNode("signup_template_id") is { } nullNodeSignupTemplateId && nullNodeSignupTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignupTemplateId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The email address of the Member.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailAddress { get; set; }
+        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        private string? _explicitNullValueEmailAddress = default!;
 #nullable restore
 #else
-        public string EmailAddress { get; set; }
+        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        private string _explicitNullValueEmailAddress = default!;
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailLoginOrSignupRequestLocale? Locale { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailLoginOrSignupRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailLoginOrSignupRequestLocale? _explicitNullValueLocale = default!;
         /// <summary>The expiration time, in minutes, for a login Email Magic Link. If not authenticated within this time frame, the email will need to be resent. Defaults to 60 (1 hour) with a minimum of 5 and a maximum of 10080 (1 week).</summary>
-        public int? LoginExpirationMinutes { get; set; }
+        public int? LoginExpirationMinutes { get => _explicitNullValueLoginExpirationMinutes; set { _explicitNullValueLoginExpirationMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_expiration_minutes"); else _explicitNullProperties?.Remove("login_expiration_minutes"); } }
+        private int? _explicitNullValueLoginExpirationMinutes = default!;
         /// <summary>The URL that the Member clicks from the login Email Magic Link. This URL should be an endpoint in the backend server that  verifies the request by querying Stytch&apos;s authenticate endpoint and finishes the login. If this value is not passed, the default login  redirect URL that you set in your Dashboard is used. If you have not set a default login redirect URL, an error is returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LoginRedirectUrl { get; set; }
+        public string? LoginRedirectUrl { get => _explicitNullValueLoginRedirectUrl; set { _explicitNullValueLoginRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_redirect_url"); else _explicitNullProperties?.Remove("login_redirect_url"); } }
+        private string? _explicitNullValueLoginRedirectUrl = default!;
 #nullable restore
 #else
-        public string LoginRedirectUrl { get; set; }
+        public string LoginRedirectUrl { get => _explicitNullValueLoginRedirectUrl; set { _explicitNullValueLoginRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_redirect_url"); else _explicitNullProperties?.Remove("login_redirect_url"); } }
+        private string _explicitNullValueLoginRedirectUrl = default!;
 #endif
         /// <summary>Use a custom template for login emails. By default, it will use your default email template. Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type “Magic Links - Login”.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LoginTemplateId { get; set; }
+        public string? LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
+        private string? _explicitNullValueLoginTemplateId = default!;
 #nullable restore
 #else
-        public string LoginTemplateId { get; set; }
+        public string LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
+        private string _explicitNullValueLoginTemplateId = default!;
 #endif
         /// <summary>Globally unique UUID that identifies a specific Organization. The `organization_id` is critical to perform operations on an Organization, so be sure to preserve this value. You may also use the organization_slug or organization_external_id here as a convenience.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrganizationId { get; set; }
+        public string? OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
+        private string? _explicitNullValueOrganizationId = default!;
 #nullable restore
 #else
-        public string OrganizationId { get; set; }
+        public string OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
+        private string _explicitNullValueOrganizationId = default!;
 #endif
         /// <summary>A base64url encoded SHA256 hash of a one time secret used to validate that the request starts and ends on the same device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PkceCodeChallenge { get; set; }
+        public string? PkceCodeChallenge { get => _explicitNullValuePkceCodeChallenge; set { _explicitNullValuePkceCodeChallenge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_challenge"); else _explicitNullProperties?.Remove("pkce_code_challenge"); } }
+        private string? _explicitNullValuePkceCodeChallenge = default!;
 #nullable restore
 #else
-        public string PkceCodeChallenge { get; set; }
+        public string PkceCodeChallenge { get => _explicitNullValuePkceCodeChallenge; set { _explicitNullValuePkceCodeChallenge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_challenge"); else _explicitNullProperties?.Remove("pkce_code_challenge"); } }
+        private string _explicitNullValuePkceCodeChallenge = default!;
 #endif
         /// <summary>The expiration time, in minutes, for a signup Email Magic Link. If not authenticated within this time frame, the email will need to be resent. Defaults to 60 (1 hour) with a minimum of 5 and a maximum of 10080 (1 week).</summary>
-        public int? SignupExpirationMinutes { get; set; }
+        public int? SignupExpirationMinutes { get => _explicitNullValueSignupExpirationMinutes; set { _explicitNullValueSignupExpirationMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_expiration_minutes"); else _explicitNullProperties?.Remove("signup_expiration_minutes"); } }
+        private int? _explicitNullValueSignupExpirationMinutes = default!;
         /// <summary>The URL the Member clicks from the signup Email Magic Link. This URL should be an endpoint in the backend server that verifies  the request by querying Stytch&apos;s authenticate endpoint and finishes the login. If this value is not passed, the default sign-up redirect URL  that you set in your Dashboard is used. If you have not set a default sign-up redirect URL, an error is returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignupRedirectUrl { get; set; }
+        public string? SignupRedirectUrl { get => _explicitNullValueSignupRedirectUrl; set { _explicitNullValueSignupRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_redirect_url"); else _explicitNullProperties?.Remove("signup_redirect_url"); } }
+        private string? _explicitNullValueSignupRedirectUrl = default!;
 #nullable restore
 #else
-        public string SignupRedirectUrl { get; set; }
+        public string SignupRedirectUrl { get => _explicitNullValueSignupRedirectUrl; set { _explicitNullValueSignupRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_redirect_url"); else _explicitNullProperties?.Remove("signup_redirect_url"); } }
+        private string _explicitNullValueSignupRedirectUrl = default!;
 #endif
         /// <summary>Use a custom template for signup emails. By default, it will use your default email template. The template must be from Stytch&apos;sbuilt-in customizations or a custom HTML email for “Magic Links - Signup”.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignupTemplateId { get; set; }
+        public string? SignupTemplateId { get => _explicitNullValueSignupTemplateId; set { _explicitNullValueSignupTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_template_id"); else _explicitNullProperties?.Remove("signup_template_id"); } }
+        private string? _explicitNullValueSignupTemplateId = default!;
 #nullable restore
 #else
-        public string SignupTemplateId { get; set; }
+        public string SignupTemplateId { get => _explicitNullValueSignupTemplateId; set { _explicitNullValueSignupTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_template_id"); else _explicitNullProperties?.Remove("signup_template_id"); } }
+        private string _explicitNullValueSignupTemplateId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailLoginOrSignupRequest"/> and sets the default values.
@@ -92,7 +126,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailLoginOrSignupRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailLoginOrSignupRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailLoginOrSignupRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -131,6 +165,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteIntValue("signup_expiration_minutes", SignupExpirationMinutes);
             writer.WriteStringValue("signup_redirect_url", SignupRedirectUrl);
             writer.WriteStringValue("signup_template_id", SignupTemplateId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

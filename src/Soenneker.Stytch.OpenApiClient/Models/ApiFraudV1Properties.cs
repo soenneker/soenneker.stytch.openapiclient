@@ -11,24 +11,37 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiFraudV1Properties : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("browser_properties") is { } nullNodeBrowserProperties && nullNodeBrowserProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserProperties = null;
+            if (parseNode.GetChildNode("network_properties") is { } nullNodeNetworkProperties && nullNodeNetworkProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkProperties = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The browser_properties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1BrowserProperties? BrowserProperties { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1BrowserProperties? BrowserProperties { get => _explicitNullValueBrowserProperties; set { _explicitNullValueBrowserProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_properties"); else _explicitNullProperties?.Remove("browser_properties"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1BrowserProperties? _explicitNullValueBrowserProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1BrowserProperties BrowserProperties { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1BrowserProperties BrowserProperties { get => _explicitNullValueBrowserProperties; set { _explicitNullValueBrowserProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_properties"); else _explicitNullProperties?.Remove("browser_properties"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1BrowserProperties _explicitNullValueBrowserProperties = default!;
 #endif
         /// <summary>The network_properties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties? NetworkProperties { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties? NetworkProperties { get => _explicitNullValueNetworkProperties; set { _explicitNullValueNetworkProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_properties"); else _explicitNullProperties?.Remove("network_properties"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties? _explicitNullValueNetworkProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties NetworkProperties { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties NetworkProperties { get => _explicitNullValueNetworkProperties; set { _explicitNullValueNetworkProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_properties"); else _explicitNullProperties?.Remove("network_properties"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties _explicitNullValueNetworkProperties = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Properties"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Properties CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Properties();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Properties(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1BrowserProperties>("browser_properties", BrowserProperties);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties>("network_properties", NetworkProperties);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

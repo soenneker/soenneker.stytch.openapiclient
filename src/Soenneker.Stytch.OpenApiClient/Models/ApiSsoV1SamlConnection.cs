@@ -11,156 +11,221 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiSsoV1SamlConnection : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("acs_url") is { } nullNodeAcsUrl && nullNodeAcsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcsUrl = null;
+            if (parseNode.GetChildNode("allow_gateway_callback") is { } nullNodeAllowGatewayCallback && nullNodeAllowGatewayCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowGatewayCallback = null;
+            if (parseNode.GetChildNode("alternative_acs_url") is { } nullNodeAlternativeAcsUrl && nullNodeAlternativeAcsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlternativeAcsUrl = null;
+            if (parseNode.GetChildNode("alternative_audience_uri") is { } nullNodeAlternativeAudienceUri && nullNodeAlternativeAudienceUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlternativeAudienceUri = null;
+            if (parseNode.GetChildNode("attribute_mapping") is { } nullNodeAttributeMapping && nullNodeAttributeMapping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttributeMapping = null;
+            if (parseNode.GetChildNode("audience_uri") is { } nullNodeAudienceUri && nullNodeAudienceUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceUri = null;
+            if (parseNode.GetChildNode("connection_id") is { } nullNodeConnectionId && nullNodeConnectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectionId = null;
+            if (parseNode.GetChildNode("display_name") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("encryption_private_keys") is { } nullNodeEncryptionPrivateKeys && nullNodeEncryptionPrivateKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncryptionPrivateKeys = null;
+            if (parseNode.GetChildNode("identity_provider") is { } nullNodeIdentityProvider && nullNodeIdentityProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdentityProvider = null;
+            if (parseNode.GetChildNode("idp_entity_id") is { } nullNodeIdpEntityId && nullNodeIdpEntityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdpEntityId = null;
+            if (parseNode.GetChildNode("idp_initiated_auth_disabled") is { } nullNodeIdpInitiatedAuthDisabled && nullNodeIdpInitiatedAuthDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdpInitiatedAuthDisabled = null;
+            if (parseNode.GetChildNode("idp_sso_url") is { } nullNodeIdpSsoUrl && nullNodeIdpSsoUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdpSsoUrl = null;
+            if (parseNode.GetChildNode("nameid_format") is { } nullNodeNameidFormat && nullNodeNameidFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameidFormat = null;
+            if (parseNode.GetChildNode("organization_id") is { } nullNodeOrganizationId && nullNodeOrganizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationId = null;
+            if (parseNode.GetChildNode("saml_connection_implicit_role_assignments") is { } nullNodeSamlConnectionImplicitRoleAssignments && nullNodeSamlConnectionImplicitRoleAssignments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SamlConnectionImplicitRoleAssignments = null;
+            if (parseNode.GetChildNode("saml_group_implicit_role_assignments") is { } nullNodeSamlGroupImplicitRoleAssignments && nullNodeSamlGroupImplicitRoleAssignments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SamlGroupImplicitRoleAssignments = null;
+            if (parseNode.GetChildNode("signing_certificates") is { } nullNodeSigningCertificates && nullNodeSigningCertificates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningCertificates = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("verification_certificates") is { } nullNodeVerificationCertificates && nullNodeVerificationCertificates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationCertificates = null;
+        }
+
         /// <summary>The URL of the Assertion Consumer Service. This value will be passed to the IdP to redirect the Member back to Stytch after a sign-in attempt. Read our [SAML Overview](https://stytch.com/docs/b2b/api/saml-overview) for more info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AcsUrl { get; set; }
+        public string? AcsUrl { get => _explicitNullValueAcsUrl; set { _explicitNullValueAcsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acs_url"); else _explicitNullProperties?.Remove("acs_url"); } }
+        private string? _explicitNullValueAcsUrl = default!;
 #nullable restore
 #else
-        public string AcsUrl { get; set; }
+        public string AcsUrl { get => _explicitNullValueAcsUrl; set { _explicitNullValueAcsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acs_url"); else _explicitNullProperties?.Remove("acs_url"); } }
+        private string _explicitNullValueAcsUrl = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allow_gateway_callback property</summary>
-        public bool? AllowGatewayCallback { get; set; }
+        public bool? AllowGatewayCallback { get => _explicitNullValueAllowGatewayCallback; set { _explicitNullValueAllowGatewayCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_gateway_callback"); else _explicitNullProperties?.Remove("allow_gateway_callback"); } }
+        private bool? _explicitNullValueAllowGatewayCallback = default!;
         /// <summary>An alternative URL to use for the `AssertionConsumerServiceURL` in SP initiated SAML AuthNRequests. This value can be used when you wish to migrate an existing SAML integration to Stytch with zero downtime. Note that you will be responsible for proxying requests sent to the Alternative ACS URL to Stytch. Read our [SSO migration guide](https://stytch.com/docs/b2b/guides/migrations/additional-migration-considerations) for more info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AlternativeAcsUrl { get; set; }
+        public string? AlternativeAcsUrl { get => _explicitNullValueAlternativeAcsUrl; set { _explicitNullValueAlternativeAcsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alternative_acs_url"); else _explicitNullProperties?.Remove("alternative_acs_url"); } }
+        private string? _explicitNullValueAlternativeAcsUrl = default!;
 #nullable restore
 #else
-        public string AlternativeAcsUrl { get; set; }
+        public string AlternativeAcsUrl { get => _explicitNullValueAlternativeAcsUrl; set { _explicitNullValueAlternativeAcsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alternative_acs_url"); else _explicitNullProperties?.Remove("alternative_acs_url"); } }
+        private string _explicitNullValueAlternativeAcsUrl = default!;
 #endif
         /// <summary>An alternative URL to use for the Audience Restriction. This value can be used when you wish to migrate an existing SAML integration to Stytch with zero downtime. Read our [SSO migration guide](https://stytch.com/docs/b2b/guides/migrations/additional-migration-considerations) for more info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AlternativeAudienceUri { get; set; }
+        public string? AlternativeAudienceUri { get => _explicitNullValueAlternativeAudienceUri; set { _explicitNullValueAlternativeAudienceUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alternative_audience_uri"); else _explicitNullProperties?.Remove("alternative_audience_uri"); } }
+        private string? _explicitNullValueAlternativeAudienceUri = default!;
 #nullable restore
 #else
-        public string AlternativeAudienceUri { get; set; }
+        public string AlternativeAudienceUri { get => _explicitNullValueAlternativeAudienceUri; set { _explicitNullValueAlternativeAudienceUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alternative_audience_uri"); else _explicitNullProperties?.Remove("alternative_audience_uri"); } }
+        private string _explicitNullValueAlternativeAudienceUri = default!;
 #endif
         /// <summary>An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values. Required attributes: `email` and one of `full_name` or `first_name` and `last_name`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionAttributeMappingProperty? AttributeMapping { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionAttributeMappingProperty? AttributeMapping { get => _explicitNullValueAttributeMapping; set { _explicitNullValueAttributeMapping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attribute_mapping"); else _explicitNullProperties?.Remove("attribute_mapping"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionAttributeMappingProperty? _explicitNullValueAttributeMapping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionAttributeMappingProperty AttributeMapping { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionAttributeMappingProperty AttributeMapping { get => _explicitNullValueAttributeMapping; set { _explicitNullValueAttributeMapping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attribute_mapping"); else _explicitNullProperties?.Remove("attribute_mapping"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionAttributeMappingProperty _explicitNullValueAttributeMapping = default!;
 #endif
         /// <summary>The URL of the Audience Restriction. This value will indicate that Stytch is the intended audience of an assertion. Read our [SAML Overview](https://stytch.com/docs/b2b/api/saml-overview) for more info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AudienceUri { get; set; }
+        public string? AudienceUri { get => _explicitNullValueAudienceUri; set { _explicitNullValueAudienceUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_uri"); else _explicitNullProperties?.Remove("audience_uri"); } }
+        private string? _explicitNullValueAudienceUri = default!;
 #nullable restore
 #else
-        public string AudienceUri { get; set; }
+        public string AudienceUri { get => _explicitNullValueAudienceUri; set { _explicitNullValueAudienceUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience_uri"); else _explicitNullProperties?.Remove("audience_uri"); } }
+        private string _explicitNullValueAudienceUri = default!;
 #endif
         /// <summary>Globally unique UUID that identifies a specific SAML Connection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConnectionId { get; set; }
+        public string? ConnectionId { get => _explicitNullValueConnectionId; set { _explicitNullValueConnectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connection_id"); else _explicitNullProperties?.Remove("connection_id"); } }
+        private string? _explicitNullValueConnectionId = default!;
 #nullable restore
 #else
-        public string ConnectionId { get; set; }
+        public string ConnectionId { get => _explicitNullValueConnectionId; set { _explicitNullValueConnectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connection_id"); else _explicitNullProperties?.Remove("connection_id"); } }
+        private string _explicitNullValueConnectionId = default!;
 #endif
         /// <summary>A human-readable display name for the connection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>The encryption_private_keys property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1EncryptionPrivateKey>? EncryptionPrivateKeys { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1EncryptionPrivateKey>? EncryptionPrivateKeys { get => _explicitNullValueEncryptionPrivateKeys; set { _explicitNullValueEncryptionPrivateKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encryption_private_keys"); else _explicitNullProperties?.Remove("encryption_private_keys"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1EncryptionPrivateKey>? _explicitNullValueEncryptionPrivateKeys = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1EncryptionPrivateKey> EncryptionPrivateKeys { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1EncryptionPrivateKey> EncryptionPrivateKeys { get => _explicitNullValueEncryptionPrivateKeys; set { _explicitNullValueEncryptionPrivateKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encryption_private_keys"); else _explicitNullProperties?.Remove("encryption_private_keys"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1EncryptionPrivateKey> _explicitNullValueEncryptionPrivateKeys = default!;
 #endif
         /// <summary>Name of the IdP. Enum with possible values: `classlink`, `cyberark`, `duo`, `google-workspace`, `jumpcloud`, `keycloak`, `miniorange`, `microsoft-entra`, `okta`, `onelogin`, `pingfederate`, `rippling`, `salesforce`, `shibboleth`, or `generic`.Specifying a known provider allows Stytch to handle any provider-specific logic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdentityProvider { get; set; }
+        public string? IdentityProvider { get => _explicitNullValueIdentityProvider; set { _explicitNullValueIdentityProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_provider"); else _explicitNullProperties?.Remove("identity_provider"); } }
+        private string? _explicitNullValueIdentityProvider = default!;
 #nullable restore
 #else
-        public string IdentityProvider { get; set; }
+        public string IdentityProvider { get => _explicitNullValueIdentityProvider; set { _explicitNullValueIdentityProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity_provider"); else _explicitNullProperties?.Remove("identity_provider"); } }
+        private string _explicitNullValueIdentityProvider = default!;
 #endif
         /// <summary>A globally unique name for the IdP. This will be provided by the IdP.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdpEntityId { get; set; }
+        public string? IdpEntityId { get => _explicitNullValueIdpEntityId; set { _explicitNullValueIdpEntityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idp_entity_id"); else _explicitNullProperties?.Remove("idp_entity_id"); } }
+        private string? _explicitNullValueIdpEntityId = default!;
 #nullable restore
 #else
-        public string IdpEntityId { get; set; }
+        public string IdpEntityId { get => _explicitNullValueIdpEntityId; set { _explicitNullValueIdpEntityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idp_entity_id"); else _explicitNullProperties?.Remove("idp_entity_id"); } }
+        private string _explicitNullValueIdpEntityId = default!;
 #endif
         /// <summary>Determines whether IDP initiated auth is allowed for a given SAML connection. Defaults to false (IDP Initiated Auth is enabled).</summary>
-        public bool? IdpInitiatedAuthDisabled { get; set; }
+        public bool? IdpInitiatedAuthDisabled { get => _explicitNullValueIdpInitiatedAuthDisabled; set { _explicitNullValueIdpInitiatedAuthDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idp_initiated_auth_disabled"); else _explicitNullProperties?.Remove("idp_initiated_auth_disabled"); } }
+        private bool? _explicitNullValueIdpInitiatedAuthDisabled = default!;
         /// <summary>The URL for which assertions for login requests will be sent. This will be provided by the IdP.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdpSsoUrl { get; set; }
+        public string? IdpSsoUrl { get => _explicitNullValueIdpSsoUrl; set { _explicitNullValueIdpSsoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idp_sso_url"); else _explicitNullProperties?.Remove("idp_sso_url"); } }
+        private string? _explicitNullValueIdpSsoUrl = default!;
 #nullable restore
 #else
-        public string IdpSsoUrl { get; set; }
+        public string IdpSsoUrl { get => _explicitNullValueIdpSsoUrl; set { _explicitNullValueIdpSsoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idp_sso_url"); else _explicitNullProperties?.Remove("idp_sso_url"); } }
+        private string _explicitNullValueIdpSsoUrl = default!;
 #endif
         /// <summary>The NameID format the SAML Connection expects to use. Defaults to `urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NameidFormat { get; set; }
+        public string? NameidFormat { get => _explicitNullValueNameidFormat; set { _explicitNullValueNameidFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nameid_format"); else _explicitNullProperties?.Remove("nameid_format"); } }
+        private string? _explicitNullValueNameidFormat = default!;
 #nullable restore
 #else
-        public string NameidFormat { get; set; }
+        public string NameidFormat { get => _explicitNullValueNameidFormat; set { _explicitNullValueNameidFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nameid_format"); else _explicitNullProperties?.Remove("nameid_format"); } }
+        private string _explicitNullValueNameidFormat = default!;
 #endif
         /// <summary>Globally unique UUID that identifies a specific Organization. The `organization_id` is critical to perform operations on an Organization, so be sure to preserve this value. You may also use the organization_slug or organization_external_id here as a convenience.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrganizationId { get; set; }
+        public string? OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
+        private string? _explicitNullValueOrganizationId = default!;
 #nullable restore
 #else
-        public string OrganizationId { get; set; }
+        public string OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
+        private string _explicitNullValueOrganizationId = default!;
 #endif
         /// <summary>All Members who log in with this SAML connection will implicitly receive the specified Roles. See the [RBAC guide](https://stytch.com/docs/b2b/guides/rbac/role-assignment) for more information about role assignment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment>? SamlConnectionImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment>? SamlConnectionImplicitRoleAssignments { get => _explicitNullValueSamlConnectionImplicitRoleAssignments; set { _explicitNullValueSamlConnectionImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_connection_implicit_role_assignments"); else _explicitNullProperties?.Remove("saml_connection_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment>? _explicitNullValueSamlConnectionImplicitRoleAssignments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment> SamlConnectionImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment> SamlConnectionImplicitRoleAssignments { get => _explicitNullValueSamlConnectionImplicitRoleAssignments; set { _explicitNullValueSamlConnectionImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_connection_implicit_role_assignments"); else _explicitNullProperties?.Remove("saml_connection_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment> _explicitNullValueSamlConnectionImplicitRoleAssignments = default!;
 #endif
         /// <summary>Defines the names of the SAML groups that grant specific role assignments. For each group-Role pair, if a Member logs in with this SAML connection and belongs to the specified SAML group, they will be granted the associated Role. See the [RBAC guide](https://stytch.com/docs/b2b/guides/rbac/role-assignment) for more information about role assignment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment>? SamlGroupImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment>? SamlGroupImplicitRoleAssignments { get => _explicitNullValueSamlGroupImplicitRoleAssignments; set { _explicitNullValueSamlGroupImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_group_implicit_role_assignments"); else _explicitNullProperties?.Remove("saml_group_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment>? _explicitNullValueSamlGroupImplicitRoleAssignments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment> SamlGroupImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment> SamlGroupImplicitRoleAssignments { get => _explicitNullValueSamlGroupImplicitRoleAssignments; set { _explicitNullValueSamlGroupImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_group_implicit_role_assignments"); else _explicitNullProperties?.Remove("saml_group_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment> _explicitNullValueSamlGroupImplicitRoleAssignments = default!;
 #endif
         /// <summary>A list of X.509 certificates Stytch will use to sign its assertion requests. Certificates should be uploaded to the IdP.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate>? SigningCertificates { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate>? SigningCertificates { get => _explicitNullValueSigningCertificates; set { _explicitNullValueSigningCertificates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_certificates"); else _explicitNullProperties?.Remove("signing_certificates"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate>? _explicitNullValueSigningCertificates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate> SigningCertificates { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate> SigningCertificates { get => _explicitNullValueSigningCertificates; set { _explicitNullValueSigningCertificates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_certificates"); else _explicitNullProperties?.Remove("signing_certificates"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate> _explicitNullValueSigningCertificates = default!;
 #endif
         /// <summary>The status of the connection. The possible values are pending or active. See the [Update SAML Connection endpoint](https://stytch.com/docs/b2b/api/update-saml-connection) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get; set; }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get; set; }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>A list of X.509 certificates Stytch will use to validate an assertion callback. Certificates should be populated from the IdP.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate>? VerificationCertificates { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate>? VerificationCertificates { get => _explicitNullValueVerificationCertificates; set { _explicitNullValueVerificationCertificates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_certificates"); else _explicitNullProperties?.Remove("verification_certificates"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate>? _explicitNullValueVerificationCertificates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate> VerificationCertificates { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate> VerificationCertificates { get => _explicitNullValueVerificationCertificates; set { _explicitNullValueVerificationCertificates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_certificates"); else _explicitNullProperties?.Remove("verification_certificates"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate> _explicitNullValueVerificationCertificates = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection"/> and sets the default values.
@@ -177,7 +242,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnection(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -236,6 +301,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate>("signing_certificates", SigningCertificates);
             writer.WriteStringValue("status", Status);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1X509Certificate>("verification_certificates", VerificationCertificates);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

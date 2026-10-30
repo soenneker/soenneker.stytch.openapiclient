@@ -59,6 +59,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Totps.Recover
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1Recover401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1Recover429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1Recover500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1RecoverResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1RecoverResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

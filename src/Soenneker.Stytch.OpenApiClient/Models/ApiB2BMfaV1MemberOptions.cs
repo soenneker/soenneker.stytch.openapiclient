@@ -11,24 +11,37 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiB2BMfaV1MemberOptions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("mfa_phone_number") is { } nullNodeMfaPhoneNumber && nullNodeMfaPhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MfaPhoneNumber = null;
+            if (parseNode.GetChildNode("totp_registration_id") is { } nullNodeTotpRegistrationId && nullNodeTotpRegistrationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotpRegistrationId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Member&apos;s MFA phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MfaPhoneNumber { get; set; }
+        public string? MfaPhoneNumber { get => _explicitNullValueMfaPhoneNumber; set { _explicitNullValueMfaPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_phone_number"); else _explicitNullProperties?.Remove("mfa_phone_number"); } }
+        private string? _explicitNullValueMfaPhoneNumber = default!;
 #nullable restore
 #else
-        public string MfaPhoneNumber { get; set; }
+        public string MfaPhoneNumber { get => _explicitNullValueMfaPhoneNumber; set { _explicitNullValueMfaPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_phone_number"); else _explicitNullProperties?.Remove("mfa_phone_number"); } }
+        private string _explicitNullValueMfaPhoneNumber = default!;
 #endif
         /// <summary>The Member&apos;s MFA TOTP registration ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotpRegistrationId { get; set; }
+        public string? TotpRegistrationId { get => _explicitNullValueTotpRegistrationId; set { _explicitNullValueTotpRegistrationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_registration_id"); else _explicitNullProperties?.Remove("totp_registration_id"); } }
+        private string? _explicitNullValueTotpRegistrationId = default!;
 #nullable restore
 #else
-        public string TotpRegistrationId { get; set; }
+        public string TotpRegistrationId { get => _explicitNullValueTotpRegistrationId; set { _explicitNullValueTotpRegistrationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_registration_id"); else _explicitNullProperties?.Remove("totp_registration_id"); } }
+        private string _explicitNullValueTotpRegistrationId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("mfa_phone_number", MfaPhoneNumber);
             writer.WriteStringValue("totp_registration_id", TotpRegistrationId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

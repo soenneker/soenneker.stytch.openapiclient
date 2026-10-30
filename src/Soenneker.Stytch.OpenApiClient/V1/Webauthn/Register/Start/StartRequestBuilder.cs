@@ -59,6 +59,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Webauthn.Register.Start
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterStart401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterStart429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterStart500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterStartResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiWebauthnV1RegisterStartResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

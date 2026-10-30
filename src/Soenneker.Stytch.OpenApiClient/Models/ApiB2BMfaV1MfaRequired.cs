@@ -11,24 +11,37 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiB2BMfaV1MfaRequired : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("member_options") is { } nullNodeMemberOptions && nullNodeMemberOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberOptions = null;
+            if (parseNode.GetChildNode("secondary_auth_initiated") is { } nullNodeSecondaryAuthInitiated && nullNodeSecondaryAuthInitiated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryAuthInitiated = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The member_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions? MemberOptions { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions? MemberOptions { get => _explicitNullValueMemberOptions; set { _explicitNullValueMemberOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_options"); else _explicitNullProperties?.Remove("member_options"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions? _explicitNullValueMemberOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions MemberOptions { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions MemberOptions { get => _explicitNullValueMemberOptions; set { _explicitNullValueMemberOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_options"); else _explicitNullProperties?.Remove("member_options"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions _explicitNullValueMemberOptions = default!;
 #endif
         /// <summary>If null, indicates that no secondary authentication has been initiated. If equal to &quot;sms_otp&quot;, indicates that the Member has a phone number, and a one time passcode has been sent to the Member&apos;s phone number. No secondary authentication will be initiated during calls to the discovery authenticate or list organizations endpoints, even if the Member has a phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryAuthInitiated { get; set; }
+        public string? SecondaryAuthInitiated { get => _explicitNullValueSecondaryAuthInitiated; set { _explicitNullValueSecondaryAuthInitiated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_auth_initiated"); else _explicitNullProperties?.Remove("secondary_auth_initiated"); } }
+        private string? _explicitNullValueSecondaryAuthInitiated = default!;
 #nullable restore
 #else
-        public string SecondaryAuthInitiated { get; set; }
+        public string SecondaryAuthInitiated { get => _explicitNullValueSecondaryAuthInitiated; set { _explicitNullValueSecondaryAuthInitiated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_auth_initiated"); else _explicitNullProperties?.Remove("secondary_auth_initiated"); } }
+        private string _explicitNullValueSecondaryAuthInitiated = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions>("member_options", MemberOptions);
             writer.WriteStringValue("secondary_auth_initiated", SecondaryAuthInitiated);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

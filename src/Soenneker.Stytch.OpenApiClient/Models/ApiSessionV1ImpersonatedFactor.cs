@@ -11,24 +11,37 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiSessionV1ImpersonatedFactor : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("impersonator_email_address") is { } nullNodeImpersonatorEmailAddress && nullNodeImpersonatorEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImpersonatorEmailAddress = null;
+            if (parseNode.GetChildNode("impersonator_id") is { } nullNodeImpersonatorId && nullNodeImpersonatorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImpersonatorId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The email address of the impersonator.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImpersonatorEmailAddress { get; set; }
+        public string? ImpersonatorEmailAddress { get => _explicitNullValueImpersonatorEmailAddress; set { _explicitNullValueImpersonatorEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonator_email_address"); else _explicitNullProperties?.Remove("impersonator_email_address"); } }
+        private string? _explicitNullValueImpersonatorEmailAddress = default!;
 #nullable restore
 #else
-        public string ImpersonatorEmailAddress { get; set; }
+        public string ImpersonatorEmailAddress { get => _explicitNullValueImpersonatorEmailAddress; set { _explicitNullValueImpersonatorEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonator_email_address"); else _explicitNullProperties?.Remove("impersonator_email_address"); } }
+        private string _explicitNullValueImpersonatorEmailAddress = default!;
 #endif
         /// <summary>For impersonated sessions initiated via the Stytch Dashboard, the `impersonator_id` will be the impersonator&apos;s Stytch Dashboard `member_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImpersonatorId { get; set; }
+        public string? ImpersonatorId { get => _explicitNullValueImpersonatorId; set { _explicitNullValueImpersonatorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonator_id"); else _explicitNullProperties?.Remove("impersonator_id"); } }
+        private string? _explicitNullValueImpersonatorId = default!;
 #nullable restore
 #else
-        public string ImpersonatorId { get; set; }
+        public string ImpersonatorId { get => _explicitNullValueImpersonatorId; set { _explicitNullValueImpersonatorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonator_id"); else _explicitNullProperties?.Remove("impersonator_id"); } }
+        private string _explicitNullValueImpersonatorId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ImpersonatedFactor"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ImpersonatedFactor CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ImpersonatedFactor();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ImpersonatedFactor(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("impersonator_email_address", ImpersonatorEmailAddress);
             writer.WriteStringValue("impersonator_id", ImpersonatorId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

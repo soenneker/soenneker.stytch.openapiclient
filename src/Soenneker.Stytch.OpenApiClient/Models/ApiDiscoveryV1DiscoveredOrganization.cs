@@ -11,42 +11,63 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiDiscoveryV1DiscoveredOrganization : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("member_authenticated") is { } nullNodeMemberAuthenticated && nullNodeMemberAuthenticated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberAuthenticated = null;
+            if (parseNode.GetChildNode("membership") is { } nullNodeMembership && nullNodeMembership.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Membership = null;
+            if (parseNode.GetChildNode("mfa_required") is { } nullNodeMfaRequired && nullNodeMfaRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MfaRequired = null;
+            if (parseNode.GetChildNode("organization") is { } nullNodeOrganization && nullNodeOrganization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Organization = null;
+            if (parseNode.GetChildNode("primary_required") is { } nullNodePrimaryRequired && nullNodePrimaryRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryRequired = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates whether the Member has all of the factors needed to fully authenticate to this Organization. If false, the Member may need to complete an MFA step or complete a different primary authentication flow. See the `primary_required` and `mfa_required` fields for more details on each.</summary>
-        public bool? MemberAuthenticated { get; set; }
+        public bool? MemberAuthenticated { get => _explicitNullValueMemberAuthenticated; set { _explicitNullValueMemberAuthenticated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_authenticated"); else _explicitNullProperties?.Remove("member_authenticated"); } }
+        private bool? _explicitNullValueMemberAuthenticated = default!;
         /// <summary>The membership property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership? Membership { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership? Membership { get => _explicitNullValueMembership; set { _explicitNullValueMembership = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("membership"); else _explicitNullProperties?.Remove("membership"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership? _explicitNullValueMembership = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership Membership { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership Membership { get => _explicitNullValueMembership; set { _explicitNullValueMembership = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("membership"); else _explicitNullProperties?.Remove("membership"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1Membership _explicitNullValueMembership = default!;
 #endif
         /// <summary>The mfa_required property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired? MfaRequired { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired? MfaRequired { get => _explicitNullValueMfaRequired; set { _explicitNullValueMfaRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_required"); else _explicitNullProperties?.Remove("mfa_required"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired? _explicitNullValueMfaRequired = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired MfaRequired { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired MfaRequired { get => _explicitNullValueMfaRequired; set { _explicitNullValueMfaRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_required"); else _explicitNullProperties?.Remove("mfa_required"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired _explicitNullValueMfaRequired = default!;
 #endif
         /// <summary>The organization property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization? Organization { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization? Organization { get => _explicitNullValueOrganization; set { _explicitNullValueOrganization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization"); else _explicitNullProperties?.Remove("organization"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization? _explicitNullValueOrganization = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization Organization { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization Organization { get => _explicitNullValueOrganization; set { _explicitNullValueOrganization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization"); else _explicitNullProperties?.Remove("organization"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization _explicitNullValueOrganization = default!;
 #endif
         /// <summary>The primary_required property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1PrimaryRequired? PrimaryRequired { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1PrimaryRequired? PrimaryRequired { get => _explicitNullValuePrimaryRequired; set { _explicitNullValuePrimaryRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_required"); else _explicitNullProperties?.Remove("primary_required"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1PrimaryRequired? _explicitNullValuePrimaryRequired = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1PrimaryRequired PrimaryRequired { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1PrimaryRequired PrimaryRequired { get => _explicitNullValuePrimaryRequired; set { _explicitNullValuePrimaryRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_required"); else _explicitNullProperties?.Remove("primary_required"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1PrimaryRequired _explicitNullValuePrimaryRequired = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiDiscoveryV1DiscoveredOrganization(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MfaRequired>("mfa_required", MfaRequired);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Organization>("organization", Organization);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1PrimaryRequired>("primary_required", PrimaryRequired);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

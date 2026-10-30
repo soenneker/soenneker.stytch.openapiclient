@@ -57,6 +57,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Debug.Whoami
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiDebugV1Whoami401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiDebugV1Whoami429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiDebugV1Whoami500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiDebugV1WhoamiResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiDebugV1WhoamiResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

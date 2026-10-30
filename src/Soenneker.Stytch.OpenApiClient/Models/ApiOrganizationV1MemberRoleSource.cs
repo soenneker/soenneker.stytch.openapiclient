@@ -11,24 +11,37 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiOrganizationV1MemberRoleSource : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("details") is { } nullNodeDetails && nullNodeDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Details = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An object containing additional metadata about the source assignment. The fields will vary depending  on the role assignment type as follows:   `direct_assignment` – no additional details.   `email_assignment` – will contain the email domain that granted the assignment.    `sso_connection` – will contain the `connection_id` of the SAML connection that granted the assignment.   `sso_connection_group` – will contain the `connection_id` of the SAML connection and the name of the `group`  that granted the assignment.   `scim_connection_group` – will contain the `connection_id` of the SAML connection and the `group_id`  that granted the assignment.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRoleSourceDetailsProperty? Details { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRoleSourceDetailsProperty? Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRoleSourceDetailsProperty? _explicitNullValueDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRoleSourceDetailsProperty Details { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRoleSourceDetailsProperty Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRoleSourceDetailsProperty _explicitNullValueDetails = default!;
 #endif
         /// <summary>The type of role assignment. The possible values are:   `direct_assignment` – an explicitly assigned Role.  Directly assigned roles can be updated by passing in the `roles` argument to the  [Update Member](https://stytch.com/docs/b2b/api/update-member) endpoint.   `email_assignment` – an implicit Role granted by the Member&apos;s email domain, regardless of their login method.  Email implicit role assignments can be updated by passing in the `rbac_email_implicit_role_assignments` argument to  the [Update Organization](https://stytch.com/docs/b2b/api/update-organization) endpoint.   `sso_connection` – an implicit Role granted by the Member&apos;s SSO connection. This is currently only available  for SAML connections and not for OIDC. If the Member has a SAML Member registration with the given connection, this  role assignment will appear in the list. However, for authorization check purposes (in  [sessions authenticate](https://stytch.com/docs/b2b/api/authenticate-session) or in any endpoint that enforces RBAC with session  headers), the Member will only be granted the Role if their session contains an authentication factor with the  specified SAML connection.  SAML connection implicit role assignments can be updated by passing in the  `saml_connection_implicit_role_assignments` argument to the  [Update SAML connection](https://stytch.com/docs/b2b/api/update-saml-connection) endpoint.   `sso_connection_group` – an implicit Role granted by the Member&apos;s SSO connection and group. This is currently only  available for SAML connections and not for OIDC. If the Member has a SAML Member registration with the given  connection, and belongs to a specific group within the IdP, this role assignment will appear in the list. However,  for authorization check purposes (in [sessions authenticate](https://stytch.com/docs/b2b/api/authenticate-session) or in any endpoint  that enforces RBAC with session headers), the Member will only be granted the role if their session contains an  authentication factor with the specified SAML connection.  SAML group implicit role assignments can be updated by passing in the `saml_group_implicit_role_assignments`  argument to the [Update SAML connection](https://stytch.com/docs/b2b/api/update-saml-connection) endpoint.    `scim_connection_group` – an implicit Role granted by the Member&apos;s SCIM connection and group. If the Member has  a SCIM Member registration with the given connection, and belongs to a specific group within the IdP, this role assignment will appear in the list.  SCIM group implicit role assignments can be updated by passing in the `scim_group_implicit_role_assignments`  argument to the [Update SCIM connection](https://stytch.com/docs/b2b/api/update-scim-connection) endpoint.  </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRoleSource"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRoleSource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRoleSource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRoleSource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1MemberRoleSourceDetailsProperty>("details", Details);
             writer.WriteStringValue("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

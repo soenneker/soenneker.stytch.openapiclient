@@ -59,6 +59,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Users.Item.Exchange_primary_factor
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1ExchangePrimaryFactor401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1ExchangePrimaryFactor429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1ExchangePrimaryFactor500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1ExchangePrimaryFactorResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1ExchangePrimaryFactorResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

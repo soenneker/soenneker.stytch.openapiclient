@@ -12,26 +12,41 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiFraudV1FraudVerdictReasonsOverrideRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("override_action") is { } nullNodeOverrideAction && nullNodeOverrideAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideAction = null;
+            if (parseNode.GetChildNode("override_description") is { } nullNodeOverrideDescription && nullNodeOverrideDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideDescription = null;
+            if (parseNode.GetChildNode("verdict_reason") is { } nullNodeVerdictReason && nullNodeVerdictReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerdictReason = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The override_action property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsOverrideRequestAction? OverrideAction { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsOverrideRequestAction? OverrideAction { get => _explicitNullValueOverrideAction; set { _explicitNullValueOverrideAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_action"); else _explicitNullProperties?.Remove("override_action"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsOverrideRequestAction? _explicitNullValueOverrideAction = default!;
         /// <summary>An optional description for the verdict reason override.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverrideDescription { get; set; }
+        public string? OverrideDescription { get => _explicitNullValueOverrideDescription; set { _explicitNullValueOverrideDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_description"); else _explicitNullProperties?.Remove("override_description"); } }
+        private string? _explicitNullValueOverrideDescription = default!;
 #nullable restore
 #else
-        public string OverrideDescription { get; set; }
+        public string OverrideDescription { get => _explicitNullValueOverrideDescription; set { _explicitNullValueOverrideDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_description"); else _explicitNullProperties?.Remove("override_description"); } }
+        private string _explicitNullValueOverrideDescription = default!;
 #endif
         /// <summary>The verdict reason that you wish to override. For a list of possible reasons to override, see [Warning Flags (Verdict Reasons)](https://stytch.com/docs/docs/fraud/guides/device-fingerprinting/reference/warning-flags-verdict-reasons). You may not override the `RULE_MATCH` reason.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerdictReason { get; set; }
+        public string? VerdictReason { get => _explicitNullValueVerdictReason; set { _explicitNullValueVerdictReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verdict_reason"); else _explicitNullProperties?.Remove("verdict_reason"); } }
+        private string? _explicitNullValueVerdictReason = default!;
 #nullable restore
 #else
-        public string VerdictReason { get; set; }
+        public string VerdictReason { get => _explicitNullValueVerdictReason; set { _explicitNullValueVerdictReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verdict_reason"); else _explicitNullProperties?.Remove("verdict_reason"); } }
+        private string _explicitNullValueVerdictReason = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsOverrideRequest"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsOverrideRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsOverrideRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsOverrideRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsOverrideRequestAction>("override_action", OverrideAction);
             writer.WriteStringValue("override_description", OverrideDescription);
             writer.WriteStringValue("verdict_reason", VerdictReason);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

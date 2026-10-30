@@ -11,364 +11,507 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiSessionV1AuthenticationFactor : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amazon_oauth_factor") is { } nullNodeAmazonOauthFactor && nullNodeAmazonOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmazonOauthFactor = null;
+            if (parseNode.GetChildNode("apple_oauth_factor") is { } nullNodeAppleOauthFactor && nullNodeAppleOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppleOauthFactor = null;
+            if (parseNode.GetChildNode("authenticator_app_factor") is { } nullNodeAuthenticatorAppFactor && nullNodeAuthenticatorAppFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticatorAppFactor = null;
+            if (parseNode.GetChildNode("biometric_factor") is { } nullNodeBiometricFactor && nullNodeBiometricFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BiometricFactor = null;
+            if (parseNode.GetChildNode("bitbucket_oauth_factor") is { } nullNodeBitbucketOauthFactor && nullNodeBitbucketOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BitbucketOauthFactor = null;
+            if (parseNode.GetChildNode("coinbase_oauth_factor") is { } nullNodeCoinbaseOauthFactor && nullNodeCoinbaseOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoinbaseOauthFactor = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("crypto_wallet_factor") is { } nullNodeCryptoWalletFactor && nullNodeCryptoWalletFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletFactor = null;
+            if (parseNode.GetChildNode("delivery_method") is { } nullNodeDeliveryMethod && nullNodeDeliveryMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryMethod = null;
+            if (parseNode.GetChildNode("discord_oauth_factor") is { } nullNodeDiscordOauthFactor && nullNodeDiscordOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscordOauthFactor = null;
+            if (parseNode.GetChildNode("email_factor") is { } nullNodeEmailFactor && nullNodeEmailFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailFactor = null;
+            if (parseNode.GetChildNode("embeddable_magic_link_factor") is { } nullNodeEmbeddableMagicLinkFactor && nullNodeEmbeddableMagicLinkFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmbeddableMagicLinkFactor = null;
+            if (parseNode.GetChildNode("facebook_oauth_factor") is { } nullNodeFacebookOauthFactor && nullNodeFacebookOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacebookOauthFactor = null;
+            if (parseNode.GetChildNode("figma_oauth_factor") is { } nullNodeFigmaOauthFactor && nullNodeFigmaOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FigmaOauthFactor = null;
+            if (parseNode.GetChildNode("github_oauth_exchange_factor") is { } nullNodeGithubOauthExchangeFactor && nullNodeGithubOauthExchangeFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GithubOauthExchangeFactor = null;
+            if (parseNode.GetChildNode("github_oauth_factor") is { } nullNodeGithubOauthFactor && nullNodeGithubOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GithubOauthFactor = null;
+            if (parseNode.GetChildNode("git_lab_oauth_factor") is { } nullNodeGitLabOauthFactor && nullNodeGitLabOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GitLabOauthFactor = null;
+            if (parseNode.GetChildNode("google_oauth_exchange_factor") is { } nullNodeGoogleOauthExchangeFactor && nullNodeGoogleOauthExchangeFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleOauthExchangeFactor = null;
+            if (parseNode.GetChildNode("google_oauth_factor") is { } nullNodeGoogleOauthFactor && nullNodeGoogleOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleOauthFactor = null;
+            if (parseNode.GetChildNode("hubspot_oauth_exchange_factor") is { } nullNodeHubspotOauthExchangeFactor && nullNodeHubspotOauthExchangeFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubspotOauthExchangeFactor = null;
+            if (parseNode.GetChildNode("hubspot_oauth_factor") is { } nullNodeHubspotOauthFactor && nullNodeHubspotOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HubspotOauthFactor = null;
+            if (parseNode.GetChildNode("impersonated_factor") is { } nullNodeImpersonatedFactor && nullNodeImpersonatedFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImpersonatedFactor = null;
+            if (parseNode.GetChildNode("instagram_oauth_factor") is { } nullNodeInstagramOauthFactor && nullNodeInstagramOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstagramOauthFactor = null;
+            if (parseNode.GetChildNode("last_authenticated_at") is { } nullNodeLastAuthenticatedAt && nullNodeLastAuthenticatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastAuthenticatedAt = null;
+            if (parseNode.GetChildNode("linked_in_oauth_factor") is { } nullNodeLinkedInOauthFactor && nullNodeLinkedInOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedInOauthFactor = null;
+            if (parseNode.GetChildNode("microsoft_oauth_factor") is { } nullNodeMicrosoftOauthFactor && nullNodeMicrosoftOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MicrosoftOauthFactor = null;
+            if (parseNode.GetChildNode("oauth_access_token_exchange_factor") is { } nullNodeOauthAccessTokenExchangeFactor && nullNodeOauthAccessTokenExchangeFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OauthAccessTokenExchangeFactor = null;
+            if (parseNode.GetChildNode("oidc_sso_factor") is { } nullNodeOidcSsoFactor && nullNodeOidcSsoFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OidcSsoFactor = null;
+            if (parseNode.GetChildNode("phone_number_factor") is { } nullNodePhoneNumberFactor && nullNodePhoneNumberFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumberFactor = null;
+            if (parseNode.GetChildNode("recovery_code_factor") is { } nullNodeRecoveryCodeFactor && nullNodeRecoveryCodeFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecoveryCodeFactor = null;
+            if (parseNode.GetChildNode("salesforce_oauth_factor") is { } nullNodeSalesforceOauthFactor && nullNodeSalesforceOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SalesforceOauthFactor = null;
+            if (parseNode.GetChildNode("saml_sso_factor") is { } nullNodeSamlSsoFactor && nullNodeSamlSsoFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SamlSsoFactor = null;
+            if (parseNode.GetChildNode("shopify_oauth_factor") is { } nullNodeShopifyOauthFactor && nullNodeShopifyOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShopifyOauthFactor = null;
+            if (parseNode.GetChildNode("slack_oauth_exchange_factor") is { } nullNodeSlackOauthExchangeFactor && nullNodeSlackOauthExchangeFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlackOauthExchangeFactor = null;
+            if (parseNode.GetChildNode("slack_oauth_factor") is { } nullNodeSlackOauthFactor && nullNodeSlackOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlackOauthFactor = null;
+            if (parseNode.GetChildNode("snapchat_oauth_factor") is { } nullNodeSnapchatOauthFactor && nullNodeSnapchatOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnapchatOauthFactor = null;
+            if (parseNode.GetChildNode("spotify_oauth_factor") is { } nullNodeSpotifyOauthFactor && nullNodeSpotifyOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpotifyOauthFactor = null;
+            if (parseNode.GetChildNode("steam_oauth_factor") is { } nullNodeSteamOauthFactor && nullNodeSteamOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SteamOauthFactor = null;
+            if (parseNode.GetChildNode("tik_tok_oauth_factor") is { } nullNodeTikTokOauthFactor && nullNodeTikTokOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TikTokOauthFactor = null;
+            if (parseNode.GetChildNode("trusted_auth_token_factor") is { } nullNodeTrustedAuthTokenFactor && nullNodeTrustedAuthTokenFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrustedAuthTokenFactor = null;
+            if (parseNode.GetChildNode("twitch_oauth_factor") is { } nullNodeTwitchOauthFactor && nullNodeTwitchOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwitchOauthFactor = null;
+            if (parseNode.GetChildNode("twitter_oauth_factor") is { } nullNodeTwitterOauthFactor && nullNodeTwitterOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwitterOauthFactor = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("updated_at") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+            if (parseNode.GetChildNode("webauthn_factor") is { } nullNodeWebauthnFactor && nullNodeWebauthnFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebauthnFactor = null;
+            if (parseNode.GetChildNode("yahoo_oauth_factor") is { } nullNodeYahooOauthFactor && nullNodeYahooOauthFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) YahooOauthFactor = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amazon_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AmazonOAuthFactor? AmazonOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AmazonOAuthFactor? AmazonOauthFactor { get => _explicitNullValueAmazonOauthFactor; set { _explicitNullValueAmazonOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amazon_oauth_factor"); else _explicitNullProperties?.Remove("amazon_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AmazonOAuthFactor? _explicitNullValueAmazonOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AmazonOAuthFactor AmazonOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AmazonOAuthFactor AmazonOauthFactor { get => _explicitNullValueAmazonOauthFactor; set { _explicitNullValueAmazonOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amazon_oauth_factor"); else _explicitNullProperties?.Remove("amazon_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AmazonOAuthFactor _explicitNullValueAmazonOauthFactor = default!;
 #endif
         /// <summary>The apple_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AppleOAuthFactor? AppleOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AppleOAuthFactor? AppleOauthFactor { get => _explicitNullValueAppleOauthFactor; set { _explicitNullValueAppleOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_oauth_factor"); else _explicitNullProperties?.Remove("apple_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AppleOAuthFactor? _explicitNullValueAppleOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AppleOAuthFactor AppleOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AppleOAuthFactor AppleOauthFactor { get => _explicitNullValueAppleOauthFactor; set { _explicitNullValueAppleOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apple_oauth_factor"); else _explicitNullProperties?.Remove("apple_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AppleOAuthFactor _explicitNullValueAppleOauthFactor = default!;
 #endif
         /// <summary>The authenticator_app_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticatorAppFactor? AuthenticatorAppFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticatorAppFactor? AuthenticatorAppFactor { get => _explicitNullValueAuthenticatorAppFactor; set { _explicitNullValueAuthenticatorAppFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticator_app_factor"); else _explicitNullProperties?.Remove("authenticator_app_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticatorAppFactor? _explicitNullValueAuthenticatorAppFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticatorAppFactor AuthenticatorAppFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticatorAppFactor AuthenticatorAppFactor { get => _explicitNullValueAuthenticatorAppFactor; set { _explicitNullValueAuthenticatorAppFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticator_app_factor"); else _explicitNullProperties?.Remove("authenticator_app_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticatorAppFactor _explicitNullValueAuthenticatorAppFactor = default!;
 #endif
         /// <summary>The biometric_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1BiometricFactor? BiometricFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1BiometricFactor? BiometricFactor { get => _explicitNullValueBiometricFactor; set { _explicitNullValueBiometricFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biometric_factor"); else _explicitNullProperties?.Remove("biometric_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1BiometricFactor? _explicitNullValueBiometricFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1BiometricFactor BiometricFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1BiometricFactor BiometricFactor { get => _explicitNullValueBiometricFactor; set { _explicitNullValueBiometricFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biometric_factor"); else _explicitNullProperties?.Remove("biometric_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1BiometricFactor _explicitNullValueBiometricFactor = default!;
 #endif
         /// <summary>The bitbucket_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1BitbucketOAuthFactor? BitbucketOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1BitbucketOAuthFactor? BitbucketOauthFactor { get => _explicitNullValueBitbucketOauthFactor; set { _explicitNullValueBitbucketOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_oauth_factor"); else _explicitNullProperties?.Remove("bitbucket_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1BitbucketOAuthFactor? _explicitNullValueBitbucketOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1BitbucketOAuthFactor BitbucketOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1BitbucketOAuthFactor BitbucketOauthFactor { get => _explicitNullValueBitbucketOauthFactor; set { _explicitNullValueBitbucketOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_oauth_factor"); else _explicitNullProperties?.Remove("bitbucket_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1BitbucketOAuthFactor _explicitNullValueBitbucketOauthFactor = default!;
 #endif
         /// <summary>The coinbase_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CoinbaseOAuthFactor? CoinbaseOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CoinbaseOAuthFactor? CoinbaseOauthFactor { get => _explicitNullValueCoinbaseOauthFactor; set { _explicitNullValueCoinbaseOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coinbase_oauth_factor"); else _explicitNullProperties?.Remove("coinbase_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CoinbaseOAuthFactor? _explicitNullValueCoinbaseOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CoinbaseOAuthFactor CoinbaseOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CoinbaseOAuthFactor CoinbaseOauthFactor { get => _explicitNullValueCoinbaseOauthFactor; set { _explicitNullValueCoinbaseOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coinbase_oauth_factor"); else _explicitNullProperties?.Remove("coinbase_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CoinbaseOAuthFactor _explicitNullValueCoinbaseOauthFactor = default!;
 #endif
         /// <summary>The timestamp when the factor was initially authenticated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedAt { get; set; }
+        public string? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string? _explicitNullValueCreatedAt = default!;
 #nullable restore
 #else
-        public string CreatedAt { get; set; }
+        public string CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string _explicitNullValueCreatedAt = default!;
 #endif
         /// <summary>The crypto_wallet_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor? CryptoWalletFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor? CryptoWalletFactor { get => _explicitNullValueCryptoWalletFactor; set { _explicitNullValueCryptoWalletFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_factor"); else _explicitNullProperties?.Remove("crypto_wallet_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor? _explicitNullValueCryptoWalletFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor CryptoWalletFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor CryptoWalletFactor { get => _explicitNullValueCryptoWalletFactor; set { _explicitNullValueCryptoWalletFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_factor"); else _explicitNullProperties?.Remove("crypto_wallet_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1CryptoWalletFactor _explicitNullValueCryptoWalletFactor = default!;
 #endif
         /// <summary>The delivery_method property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionsAuthenticationFactorDeliveryMethod? DeliveryMethod { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionsAuthenticationFactorDeliveryMethod? DeliveryMethod { get => _explicitNullValueDeliveryMethod; set { _explicitNullValueDeliveryMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivery_method"); else _explicitNullProperties?.Remove("delivery_method"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionsAuthenticationFactorDeliveryMethod? _explicitNullValueDeliveryMethod = default!;
         /// <summary>The discord_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1DiscordOAuthFactor? DiscordOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1DiscordOAuthFactor? DiscordOauthFactor { get => _explicitNullValueDiscordOauthFactor; set { _explicitNullValueDiscordOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discord_oauth_factor"); else _explicitNullProperties?.Remove("discord_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1DiscordOAuthFactor? _explicitNullValueDiscordOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1DiscordOAuthFactor DiscordOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1DiscordOAuthFactor DiscordOauthFactor { get => _explicitNullValueDiscordOauthFactor; set { _explicitNullValueDiscordOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discord_oauth_factor"); else _explicitNullProperties?.Remove("discord_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1DiscordOAuthFactor _explicitNullValueDiscordOauthFactor = default!;
 #endif
         /// <summary>The email_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmailFactor? EmailFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmailFactor? EmailFactor { get => _explicitNullValueEmailFactor; set { _explicitNullValueEmailFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_factor"); else _explicitNullProperties?.Remove("email_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmailFactor? _explicitNullValueEmailFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmailFactor EmailFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmailFactor EmailFactor { get => _explicitNullValueEmailFactor; set { _explicitNullValueEmailFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_factor"); else _explicitNullProperties?.Remove("email_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmailFactor _explicitNullValueEmailFactor = default!;
 #endif
         /// <summary>The embeddable_magic_link_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmbeddableMagicLinkFactor? EmbeddableMagicLinkFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmbeddableMagicLinkFactor? EmbeddableMagicLinkFactor { get => _explicitNullValueEmbeddableMagicLinkFactor; set { _explicitNullValueEmbeddableMagicLinkFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("embeddable_magic_link_factor"); else _explicitNullProperties?.Remove("embeddable_magic_link_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmbeddableMagicLinkFactor? _explicitNullValueEmbeddableMagicLinkFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmbeddableMagicLinkFactor EmbeddableMagicLinkFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmbeddableMagicLinkFactor EmbeddableMagicLinkFactor { get => _explicitNullValueEmbeddableMagicLinkFactor; set { _explicitNullValueEmbeddableMagicLinkFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("embeddable_magic_link_factor"); else _explicitNullProperties?.Remove("embeddable_magic_link_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1EmbeddableMagicLinkFactor _explicitNullValueEmbeddableMagicLinkFactor = default!;
 #endif
         /// <summary>The facebook_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1FacebookOAuthFactor? FacebookOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1FacebookOAuthFactor? FacebookOauthFactor { get => _explicitNullValueFacebookOauthFactor; set { _explicitNullValueFacebookOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook_oauth_factor"); else _explicitNullProperties?.Remove("facebook_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1FacebookOAuthFactor? _explicitNullValueFacebookOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1FacebookOAuthFactor FacebookOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1FacebookOAuthFactor FacebookOauthFactor { get => _explicitNullValueFacebookOauthFactor; set { _explicitNullValueFacebookOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook_oauth_factor"); else _explicitNullProperties?.Remove("facebook_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1FacebookOAuthFactor _explicitNullValueFacebookOauthFactor = default!;
 #endif
         /// <summary>The figma_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1FigmaOAuthFactor? FigmaOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1FigmaOAuthFactor? FigmaOauthFactor { get => _explicitNullValueFigmaOauthFactor; set { _explicitNullValueFigmaOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("figma_oauth_factor"); else _explicitNullProperties?.Remove("figma_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1FigmaOAuthFactor? _explicitNullValueFigmaOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1FigmaOAuthFactor FigmaOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1FigmaOAuthFactor FigmaOauthFactor { get => _explicitNullValueFigmaOauthFactor; set { _explicitNullValueFigmaOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("figma_oauth_factor"); else _explicitNullProperties?.Remove("figma_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1FigmaOAuthFactor _explicitNullValueFigmaOauthFactor = default!;
 #endif
         /// <summary>The github_oauth_exchange_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GithubOAuthExchangeFactor? GithubOauthExchangeFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GithubOAuthExchangeFactor? GithubOauthExchangeFactor { get => _explicitNullValueGithubOauthExchangeFactor; set { _explicitNullValueGithubOauthExchangeFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("github_oauth_exchange_factor"); else _explicitNullProperties?.Remove("github_oauth_exchange_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GithubOAuthExchangeFactor? _explicitNullValueGithubOauthExchangeFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GithubOAuthExchangeFactor GithubOauthExchangeFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GithubOAuthExchangeFactor GithubOauthExchangeFactor { get => _explicitNullValueGithubOauthExchangeFactor; set { _explicitNullValueGithubOauthExchangeFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("github_oauth_exchange_factor"); else _explicitNullProperties?.Remove("github_oauth_exchange_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GithubOAuthExchangeFactor _explicitNullValueGithubOauthExchangeFactor = default!;
 #endif
         /// <summary>The github_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GithubOAuthFactor? GithubOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GithubOAuthFactor? GithubOauthFactor { get => _explicitNullValueGithubOauthFactor; set { _explicitNullValueGithubOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("github_oauth_factor"); else _explicitNullProperties?.Remove("github_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GithubOAuthFactor? _explicitNullValueGithubOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GithubOAuthFactor GithubOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GithubOAuthFactor GithubOauthFactor { get => _explicitNullValueGithubOauthFactor; set { _explicitNullValueGithubOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("github_oauth_factor"); else _explicitNullProperties?.Remove("github_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GithubOAuthFactor _explicitNullValueGithubOauthFactor = default!;
 #endif
         /// <summary>The git_lab_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GitLabOAuthFactor? GitLabOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GitLabOAuthFactor? GitLabOauthFactor { get => _explicitNullValueGitLabOauthFactor; set { _explicitNullValueGitLabOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_lab_oauth_factor"); else _explicitNullProperties?.Remove("git_lab_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GitLabOAuthFactor? _explicitNullValueGitLabOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GitLabOAuthFactor GitLabOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GitLabOAuthFactor GitLabOauthFactor { get => _explicitNullValueGitLabOauthFactor; set { _explicitNullValueGitLabOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_lab_oauth_factor"); else _explicitNullProperties?.Remove("git_lab_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GitLabOAuthFactor _explicitNullValueGitLabOauthFactor = default!;
 #endif
         /// <summary>The google_oauth_exchange_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GoogleOAuthExchangeFactor? GoogleOauthExchangeFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GoogleOAuthExchangeFactor? GoogleOauthExchangeFactor { get => _explicitNullValueGoogleOauthExchangeFactor; set { _explicitNullValueGoogleOauthExchangeFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_oauth_exchange_factor"); else _explicitNullProperties?.Remove("google_oauth_exchange_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GoogleOAuthExchangeFactor? _explicitNullValueGoogleOauthExchangeFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GoogleOAuthExchangeFactor GoogleOauthExchangeFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GoogleOAuthExchangeFactor GoogleOauthExchangeFactor { get => _explicitNullValueGoogleOauthExchangeFactor; set { _explicitNullValueGoogleOauthExchangeFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_oauth_exchange_factor"); else _explicitNullProperties?.Remove("google_oauth_exchange_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GoogleOAuthExchangeFactor _explicitNullValueGoogleOauthExchangeFactor = default!;
 #endif
         /// <summary>The google_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GoogleOAuthFactor? GoogleOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GoogleOAuthFactor? GoogleOauthFactor { get => _explicitNullValueGoogleOauthFactor; set { _explicitNullValueGoogleOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_oauth_factor"); else _explicitNullProperties?.Remove("google_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GoogleOAuthFactor? _explicitNullValueGoogleOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GoogleOAuthFactor GoogleOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GoogleOAuthFactor GoogleOauthFactor { get => _explicitNullValueGoogleOauthFactor; set { _explicitNullValueGoogleOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_oauth_factor"); else _explicitNullProperties?.Remove("google_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1GoogleOAuthFactor _explicitNullValueGoogleOauthFactor = default!;
 #endif
         /// <summary>The hubspot_oauth_exchange_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1HubspotOAuthExchangeFactor? HubspotOauthExchangeFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1HubspotOAuthExchangeFactor? HubspotOauthExchangeFactor { get => _explicitNullValueHubspotOauthExchangeFactor; set { _explicitNullValueHubspotOauthExchangeFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_oauth_exchange_factor"); else _explicitNullProperties?.Remove("hubspot_oauth_exchange_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1HubspotOAuthExchangeFactor? _explicitNullValueHubspotOauthExchangeFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1HubspotOAuthExchangeFactor HubspotOauthExchangeFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1HubspotOAuthExchangeFactor HubspotOauthExchangeFactor { get => _explicitNullValueHubspotOauthExchangeFactor; set { _explicitNullValueHubspotOauthExchangeFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_oauth_exchange_factor"); else _explicitNullProperties?.Remove("hubspot_oauth_exchange_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1HubspotOAuthExchangeFactor _explicitNullValueHubspotOauthExchangeFactor = default!;
 #endif
         /// <summary>The hubspot_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1HubspotOAuthFactor? HubspotOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1HubspotOAuthFactor? HubspotOauthFactor { get => _explicitNullValueHubspotOauthFactor; set { _explicitNullValueHubspotOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_oauth_factor"); else _explicitNullProperties?.Remove("hubspot_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1HubspotOAuthFactor? _explicitNullValueHubspotOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1HubspotOAuthFactor HubspotOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1HubspotOAuthFactor HubspotOauthFactor { get => _explicitNullValueHubspotOauthFactor; set { _explicitNullValueHubspotOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hubspot_oauth_factor"); else _explicitNullProperties?.Remove("hubspot_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1HubspotOAuthFactor _explicitNullValueHubspotOauthFactor = default!;
 #endif
         /// <summary>The impersonated_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ImpersonatedFactor? ImpersonatedFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ImpersonatedFactor? ImpersonatedFactor { get => _explicitNullValueImpersonatedFactor; set { _explicitNullValueImpersonatedFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonated_factor"); else _explicitNullProperties?.Remove("impersonated_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ImpersonatedFactor? _explicitNullValueImpersonatedFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ImpersonatedFactor ImpersonatedFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ImpersonatedFactor ImpersonatedFactor { get => _explicitNullValueImpersonatedFactor; set { _explicitNullValueImpersonatedFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonated_factor"); else _explicitNullProperties?.Remove("impersonated_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ImpersonatedFactor _explicitNullValueImpersonatedFactor = default!;
 #endif
         /// <summary>The instagram_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1InstagramOAuthFactor? InstagramOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1InstagramOAuthFactor? InstagramOauthFactor { get => _explicitNullValueInstagramOauthFactor; set { _explicitNullValueInstagramOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram_oauth_factor"); else _explicitNullProperties?.Remove("instagram_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1InstagramOAuthFactor? _explicitNullValueInstagramOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1InstagramOAuthFactor InstagramOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1InstagramOAuthFactor InstagramOauthFactor { get => _explicitNullValueInstagramOauthFactor; set { _explicitNullValueInstagramOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram_oauth_factor"); else _explicitNullProperties?.Remove("instagram_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1InstagramOAuthFactor _explicitNullValueInstagramOauthFactor = default!;
 #endif
         /// <summary>The timestamp when the factor was last authenticated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastAuthenticatedAt { get; set; }
+        public string? LastAuthenticatedAt { get => _explicitNullValueLastAuthenticatedAt; set { _explicitNullValueLastAuthenticatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_authenticated_at"); else _explicitNullProperties?.Remove("last_authenticated_at"); } }
+        private string? _explicitNullValueLastAuthenticatedAt = default!;
 #nullable restore
 #else
-        public string LastAuthenticatedAt { get; set; }
+        public string LastAuthenticatedAt { get => _explicitNullValueLastAuthenticatedAt; set { _explicitNullValueLastAuthenticatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_authenticated_at"); else _explicitNullProperties?.Remove("last_authenticated_at"); } }
+        private string _explicitNullValueLastAuthenticatedAt = default!;
 #endif
         /// <summary>The linked_in_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1LinkedInOAuthFactor? LinkedInOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1LinkedInOAuthFactor? LinkedInOauthFactor { get => _explicitNullValueLinkedInOauthFactor; set { _explicitNullValueLinkedInOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linked_in_oauth_factor"); else _explicitNullProperties?.Remove("linked_in_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1LinkedInOAuthFactor? _explicitNullValueLinkedInOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1LinkedInOAuthFactor LinkedInOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1LinkedInOAuthFactor LinkedInOauthFactor { get => _explicitNullValueLinkedInOauthFactor; set { _explicitNullValueLinkedInOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linked_in_oauth_factor"); else _explicitNullProperties?.Remove("linked_in_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1LinkedInOAuthFactor _explicitNullValueLinkedInOauthFactor = default!;
 #endif
         /// <summary>The microsoft_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1MicrosoftOAuthFactor? MicrosoftOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1MicrosoftOAuthFactor? MicrosoftOauthFactor { get => _explicitNullValueMicrosoftOauthFactor; set { _explicitNullValueMicrosoftOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("microsoft_oauth_factor"); else _explicitNullProperties?.Remove("microsoft_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1MicrosoftOAuthFactor? _explicitNullValueMicrosoftOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1MicrosoftOAuthFactor MicrosoftOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1MicrosoftOAuthFactor MicrosoftOauthFactor { get => _explicitNullValueMicrosoftOauthFactor; set { _explicitNullValueMicrosoftOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("microsoft_oauth_factor"); else _explicitNullProperties?.Remove("microsoft_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1MicrosoftOAuthFactor _explicitNullValueMicrosoftOauthFactor = default!;
 #endif
         /// <summary>The oauth_access_token_exchange_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OAuthAccessTokenExchangeFactor? OauthAccessTokenExchangeFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OAuthAccessTokenExchangeFactor? OauthAccessTokenExchangeFactor { get => _explicitNullValueOauthAccessTokenExchangeFactor; set { _explicitNullValueOauthAccessTokenExchangeFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauth_access_token_exchange_factor"); else _explicitNullProperties?.Remove("oauth_access_token_exchange_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OAuthAccessTokenExchangeFactor? _explicitNullValueOauthAccessTokenExchangeFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OAuthAccessTokenExchangeFactor OauthAccessTokenExchangeFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OAuthAccessTokenExchangeFactor OauthAccessTokenExchangeFactor { get => _explicitNullValueOauthAccessTokenExchangeFactor; set { _explicitNullValueOauthAccessTokenExchangeFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauth_access_token_exchange_factor"); else _explicitNullProperties?.Remove("oauth_access_token_exchange_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OAuthAccessTokenExchangeFactor _explicitNullValueOauthAccessTokenExchangeFactor = default!;
 #endif
         /// <summary>The oidc_sso_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OidcssoFactor? OidcSsoFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OidcssoFactor? OidcSsoFactor { get => _explicitNullValueOidcSsoFactor; set { _explicitNullValueOidcSsoFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oidc_sso_factor"); else _explicitNullProperties?.Remove("oidc_sso_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OidcssoFactor? _explicitNullValueOidcSsoFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OidcssoFactor OidcSsoFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OidcssoFactor OidcSsoFactor { get => _explicitNullValueOidcSsoFactor; set { _explicitNullValueOidcSsoFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oidc_sso_factor"); else _explicitNullProperties?.Remove("oidc_sso_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1OidcssoFactor _explicitNullValueOidcSsoFactor = default!;
 #endif
         /// <summary>The phone_number_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1PhoneNumberFactor? PhoneNumberFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1PhoneNumberFactor? PhoneNumberFactor { get => _explicitNullValuePhoneNumberFactor; set { _explicitNullValuePhoneNumberFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number_factor"); else _explicitNullProperties?.Remove("phone_number_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1PhoneNumberFactor? _explicitNullValuePhoneNumberFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1PhoneNumberFactor PhoneNumberFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1PhoneNumberFactor PhoneNumberFactor { get => _explicitNullValuePhoneNumberFactor; set { _explicitNullValuePhoneNumberFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number_factor"); else _explicitNullProperties?.Remove("phone_number_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1PhoneNumberFactor _explicitNullValuePhoneNumberFactor = default!;
 #endif
         /// <summary>The recovery_code_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1RecoveryCodeFactor? RecoveryCodeFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1RecoveryCodeFactor? RecoveryCodeFactor { get => _explicitNullValueRecoveryCodeFactor; set { _explicitNullValueRecoveryCodeFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recovery_code_factor"); else _explicitNullProperties?.Remove("recovery_code_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1RecoveryCodeFactor? _explicitNullValueRecoveryCodeFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1RecoveryCodeFactor RecoveryCodeFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1RecoveryCodeFactor RecoveryCodeFactor { get => _explicitNullValueRecoveryCodeFactor; set { _explicitNullValueRecoveryCodeFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recovery_code_factor"); else _explicitNullProperties?.Remove("recovery_code_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1RecoveryCodeFactor _explicitNullValueRecoveryCodeFactor = default!;
 #endif
         /// <summary>The salesforce_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SalesforceOAuthFactor? SalesforceOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SalesforceOAuthFactor? SalesforceOauthFactor { get => _explicitNullValueSalesforceOauthFactor; set { _explicitNullValueSalesforceOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesforce_oauth_factor"); else _explicitNullProperties?.Remove("salesforce_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SalesforceOAuthFactor? _explicitNullValueSalesforceOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SalesforceOAuthFactor SalesforceOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SalesforceOAuthFactor SalesforceOauthFactor { get => _explicitNullValueSalesforceOauthFactor; set { _explicitNullValueSalesforceOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salesforce_oauth_factor"); else _explicitNullProperties?.Remove("salesforce_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SalesforceOAuthFactor _explicitNullValueSalesforceOauthFactor = default!;
 #endif
         /// <summary>The saml_sso_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SamlssoFactor? SamlSsoFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SamlssoFactor? SamlSsoFactor { get => _explicitNullValueSamlSsoFactor; set { _explicitNullValueSamlSsoFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_sso_factor"); else _explicitNullProperties?.Remove("saml_sso_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SamlssoFactor? _explicitNullValueSamlSsoFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SamlssoFactor SamlSsoFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SamlssoFactor SamlSsoFactor { get => _explicitNullValueSamlSsoFactor; set { _explicitNullValueSamlSsoFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_sso_factor"); else _explicitNullProperties?.Remove("saml_sso_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SamlssoFactor _explicitNullValueSamlSsoFactor = default!;
 #endif
         /// <summary>The shopify_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ShopifyOAuthFactor? ShopifyOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ShopifyOAuthFactor? ShopifyOauthFactor { get => _explicitNullValueShopifyOauthFactor; set { _explicitNullValueShopifyOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shopify_oauth_factor"); else _explicitNullProperties?.Remove("shopify_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ShopifyOAuthFactor? _explicitNullValueShopifyOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ShopifyOAuthFactor ShopifyOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ShopifyOAuthFactor ShopifyOauthFactor { get => _explicitNullValueShopifyOauthFactor; set { _explicitNullValueShopifyOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shopify_oauth_factor"); else _explicitNullProperties?.Remove("shopify_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1ShopifyOAuthFactor _explicitNullValueShopifyOauthFactor = default!;
 #endif
         /// <summary>The slack_oauth_exchange_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthExchangeFactor? SlackOauthExchangeFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthExchangeFactor? SlackOauthExchangeFactor { get => _explicitNullValueSlackOauthExchangeFactor; set { _explicitNullValueSlackOauthExchangeFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_oauth_exchange_factor"); else _explicitNullProperties?.Remove("slack_oauth_exchange_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthExchangeFactor? _explicitNullValueSlackOauthExchangeFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthExchangeFactor SlackOauthExchangeFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthExchangeFactor SlackOauthExchangeFactor { get => _explicitNullValueSlackOauthExchangeFactor; set { _explicitNullValueSlackOauthExchangeFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_oauth_exchange_factor"); else _explicitNullProperties?.Remove("slack_oauth_exchange_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthExchangeFactor _explicitNullValueSlackOauthExchangeFactor = default!;
 #endif
         /// <summary>The slack_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthFactor? SlackOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthFactor? SlackOauthFactor { get => _explicitNullValueSlackOauthFactor; set { _explicitNullValueSlackOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_oauth_factor"); else _explicitNullProperties?.Remove("slack_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthFactor? _explicitNullValueSlackOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthFactor SlackOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthFactor SlackOauthFactor { get => _explicitNullValueSlackOauthFactor; set { _explicitNullValueSlackOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slack_oauth_factor"); else _explicitNullProperties?.Remove("slack_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SlackOAuthFactor _explicitNullValueSlackOauthFactor = default!;
 #endif
         /// <summary>The snapchat_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SnapchatOAuthFactor? SnapchatOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SnapchatOAuthFactor? SnapchatOauthFactor { get => _explicitNullValueSnapchatOauthFactor; set { _explicitNullValueSnapchatOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snapchat_oauth_factor"); else _explicitNullProperties?.Remove("snapchat_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SnapchatOAuthFactor? _explicitNullValueSnapchatOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SnapchatOAuthFactor SnapchatOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SnapchatOAuthFactor SnapchatOauthFactor { get => _explicitNullValueSnapchatOauthFactor; set { _explicitNullValueSnapchatOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snapchat_oauth_factor"); else _explicitNullProperties?.Remove("snapchat_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SnapchatOAuthFactor _explicitNullValueSnapchatOauthFactor = default!;
 #endif
         /// <summary>The spotify_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SpotifyOAuthFactor? SpotifyOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SpotifyOAuthFactor? SpotifyOauthFactor { get => _explicitNullValueSpotifyOauthFactor; set { _explicitNullValueSpotifyOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spotify_oauth_factor"); else _explicitNullProperties?.Remove("spotify_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SpotifyOAuthFactor? _explicitNullValueSpotifyOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SpotifyOAuthFactor SpotifyOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SpotifyOAuthFactor SpotifyOauthFactor { get => _explicitNullValueSpotifyOauthFactor; set { _explicitNullValueSpotifyOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spotify_oauth_factor"); else _explicitNullProperties?.Remove("spotify_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SpotifyOAuthFactor _explicitNullValueSpotifyOauthFactor = default!;
 #endif
         /// <summary>The steam_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SteamOAuthFactor? SteamOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SteamOAuthFactor? SteamOauthFactor { get => _explicitNullValueSteamOauthFactor; set { _explicitNullValueSteamOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("steam_oauth_factor"); else _explicitNullProperties?.Remove("steam_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SteamOAuthFactor? _explicitNullValueSteamOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SteamOAuthFactor SteamOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SteamOAuthFactor SteamOauthFactor { get => _explicitNullValueSteamOauthFactor; set { _explicitNullValueSteamOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("steam_oauth_factor"); else _explicitNullProperties?.Remove("steam_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SteamOAuthFactor _explicitNullValueSteamOauthFactor = default!;
 #endif
         /// <summary>The tik_tok_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TikTokOAuthFactor? TikTokOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TikTokOAuthFactor? TikTokOauthFactor { get => _explicitNullValueTikTokOauthFactor; set { _explicitNullValueTikTokOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tik_tok_oauth_factor"); else _explicitNullProperties?.Remove("tik_tok_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TikTokOAuthFactor? _explicitNullValueTikTokOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TikTokOAuthFactor TikTokOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TikTokOAuthFactor TikTokOauthFactor { get => _explicitNullValueTikTokOauthFactor; set { _explicitNullValueTikTokOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tik_tok_oauth_factor"); else _explicitNullProperties?.Remove("tik_tok_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TikTokOAuthFactor _explicitNullValueTikTokOauthFactor = default!;
 #endif
         /// <summary>The trusted_auth_token_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TrustedAuthTokenFactor? TrustedAuthTokenFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TrustedAuthTokenFactor? TrustedAuthTokenFactor { get => _explicitNullValueTrustedAuthTokenFactor; set { _explicitNullValueTrustedAuthTokenFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_auth_token_factor"); else _explicitNullProperties?.Remove("trusted_auth_token_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TrustedAuthTokenFactor? _explicitNullValueTrustedAuthTokenFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TrustedAuthTokenFactor TrustedAuthTokenFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TrustedAuthTokenFactor TrustedAuthTokenFactor { get => _explicitNullValueTrustedAuthTokenFactor; set { _explicitNullValueTrustedAuthTokenFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_auth_token_factor"); else _explicitNullProperties?.Remove("trusted_auth_token_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TrustedAuthTokenFactor _explicitNullValueTrustedAuthTokenFactor = default!;
 #endif
         /// <summary>The twitch_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitchOAuthFactor? TwitchOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitchOAuthFactor? TwitchOauthFactor { get => _explicitNullValueTwitchOauthFactor; set { _explicitNullValueTwitchOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twitch_oauth_factor"); else _explicitNullProperties?.Remove("twitch_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitchOAuthFactor? _explicitNullValueTwitchOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitchOAuthFactor TwitchOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitchOAuthFactor TwitchOauthFactor { get => _explicitNullValueTwitchOauthFactor; set { _explicitNullValueTwitchOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twitch_oauth_factor"); else _explicitNullProperties?.Remove("twitch_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitchOAuthFactor _explicitNullValueTwitchOauthFactor = default!;
 #endif
         /// <summary>The twitter_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitterOAuthFactor? TwitterOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitterOAuthFactor? TwitterOauthFactor { get => _explicitNullValueTwitterOauthFactor; set { _explicitNullValueTwitterOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twitter_oauth_factor"); else _explicitNullProperties?.Remove("twitter_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitterOAuthFactor? _explicitNullValueTwitterOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitterOAuthFactor TwitterOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitterOAuthFactor TwitterOauthFactor { get => _explicitNullValueTwitterOauthFactor; set { _explicitNullValueTwitterOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twitter_oauth_factor"); else _explicitNullProperties?.Remove("twitter_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1TwitterOAuthFactor _explicitNullValueTwitterOauthFactor = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionsAuthenticationFactorType? Type { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionsAuthenticationFactorType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1SessionsAuthenticationFactorType? _explicitNullValueType = default!;
         /// <summary>The timestamp when the factor was last updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdatedAt { get; set; }
+        public string? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        private string? _explicitNullValueUpdatedAt = default!;
 #nullable restore
 #else
-        public string UpdatedAt { get; set; }
+        public string UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        private string _explicitNullValueUpdatedAt = default!;
 #endif
         /// <summary>The webauthn_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1WebAuthnFactor? WebauthnFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1WebAuthnFactor? WebauthnFactor { get => _explicitNullValueWebauthnFactor; set { _explicitNullValueWebauthnFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webauthn_factor"); else _explicitNullProperties?.Remove("webauthn_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1WebAuthnFactor? _explicitNullValueWebauthnFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1WebAuthnFactor WebauthnFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1WebAuthnFactor WebauthnFactor { get => _explicitNullValueWebauthnFactor; set { _explicitNullValueWebauthnFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webauthn_factor"); else _explicitNullProperties?.Remove("webauthn_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1WebAuthnFactor _explicitNullValueWebauthnFactor = default!;
 #endif
         /// <summary>The yahoo_oauth_factor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1YahooOAuthFactor? YahooOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1YahooOAuthFactor? YahooOauthFactor { get => _explicitNullValueYahooOauthFactor; set { _explicitNullValueYahooOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("yahoo_oauth_factor"); else _explicitNullProperties?.Remove("yahoo_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1YahooOAuthFactor? _explicitNullValueYahooOauthFactor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1YahooOAuthFactor YahooOauthFactor { get; set; }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1YahooOAuthFactor YahooOauthFactor { get => _explicitNullValueYahooOauthFactor; set { _explicitNullValueYahooOauthFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("yahoo_oauth_factor"); else _explicitNullProperties?.Remove("yahoo_oauth_factor"); } }
+        private global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1YahooOAuthFactor _explicitNullValueYahooOauthFactor = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticationFactor"/> and sets the default values.
@@ -385,7 +528,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticationFactor CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticationFactor();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticationFactor(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -496,6 +639,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("updated_at", UpdatedAt);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1WebAuthnFactor>("webauthn_factor", WebauthnFactor);
             writer.WriteObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1YahooOAuthFactor>("yahoo_oauth_factor", YahooOauthFactor);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

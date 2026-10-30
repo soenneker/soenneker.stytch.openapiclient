@@ -59,6 +59,8 @@ namespace Soenneker.Stytch.OpenApiClient.V1.Passwords.Strength_check
                 { "401", global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1StrengthCheck401Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1StrengthCheck429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1StrengthCheck500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1StrengthCheckResponse>(requestInfo, global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1StrengthCheckResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

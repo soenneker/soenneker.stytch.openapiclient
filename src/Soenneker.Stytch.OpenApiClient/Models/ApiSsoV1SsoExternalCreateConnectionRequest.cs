@@ -12,48 +12,70 @@ namespace Soenneker.Stytch.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApiSsoV1SsoExternalCreateConnectionRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("connection_implicit_role_assignments") is { } nullNodeConnectionImplicitRoleAssignments && nullNodeConnectionImplicitRoleAssignments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectionImplicitRoleAssignments = null;
+            if (parseNode.GetChildNode("display_name") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("external_connection_id") is { } nullNodeExternalConnectionId && nullNodeExternalConnectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalConnectionId = null;
+            if (parseNode.GetChildNode("external_organization_id") is { } nullNodeExternalOrganizationId && nullNodeExternalOrganizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalOrganizationId = null;
+            if (parseNode.GetChildNode("group_implicit_role_assignments") is { } nullNodeGroupImplicitRoleAssignments && nullNodeGroupImplicitRoleAssignments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupImplicitRoleAssignments = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The connection_implicit_role_assignments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment>? ConnectionImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment>? ConnectionImplicitRoleAssignments { get => _explicitNullValueConnectionImplicitRoleAssignments; set { _explicitNullValueConnectionImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connection_implicit_role_assignments"); else _explicitNullProperties?.Remove("connection_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment>? _explicitNullValueConnectionImplicitRoleAssignments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment> ConnectionImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment> ConnectionImplicitRoleAssignments { get => _explicitNullValueConnectionImplicitRoleAssignments; set { _explicitNullValueConnectionImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connection_implicit_role_assignments"); else _explicitNullProperties?.Remove("connection_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlConnectionImplicitRoleAssignment> _explicitNullValueConnectionImplicitRoleAssignments = default!;
 #endif
         /// <summary>A human-readable display name for the connection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display_name"); else _explicitNullProperties?.Remove("display_name"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>Globally unique UUID that identifies a specific SSO connection configured for a different Organization in your Project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalConnectionId { get; set; }
+        public string? ExternalConnectionId { get => _explicitNullValueExternalConnectionId; set { _explicitNullValueExternalConnectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_connection_id"); else _explicitNullProperties?.Remove("external_connection_id"); } }
+        private string? _explicitNullValueExternalConnectionId = default!;
 #nullable restore
 #else
-        public string ExternalConnectionId { get; set; }
+        public string ExternalConnectionId { get => _explicitNullValueExternalConnectionId; set { _explicitNullValueExternalConnectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_connection_id"); else _explicitNullProperties?.Remove("external_connection_id"); } }
+        private string _explicitNullValueExternalConnectionId = default!;
 #endif
         /// <summary>Globally unique UUID that identifies a different Organization within your Project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalOrganizationId { get; set; }
+        public string? ExternalOrganizationId { get => _explicitNullValueExternalOrganizationId; set { _explicitNullValueExternalOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_organization_id"); else _explicitNullProperties?.Remove("external_organization_id"); } }
+        private string? _explicitNullValueExternalOrganizationId = default!;
 #nullable restore
 #else
-        public string ExternalOrganizationId { get; set; }
+        public string ExternalOrganizationId { get => _explicitNullValueExternalOrganizationId; set { _explicitNullValueExternalOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_organization_id"); else _explicitNullProperties?.Remove("external_organization_id"); } }
+        private string _explicitNullValueExternalOrganizationId = default!;
 #endif
         /// <summary>The group_implicit_role_assignments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment>? GroupImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment>? GroupImplicitRoleAssignments { get => _explicitNullValueGroupImplicitRoleAssignments; set { _explicitNullValueGroupImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_implicit_role_assignments"); else _explicitNullProperties?.Remove("group_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment>? _explicitNullValueGroupImplicitRoleAssignments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment> GroupImplicitRoleAssignments { get; set; }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment> GroupImplicitRoleAssignments { get => _explicitNullValueGroupImplicitRoleAssignments; set { _explicitNullValueGroupImplicitRoleAssignments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_implicit_role_assignments"); else _explicitNullProperties?.Remove("group_implicit_role_assignments"); } }
+        private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment> _explicitNullValueGroupImplicitRoleAssignments = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoExternalCreateConnectionRequest"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         public static global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoExternalCreateConnectionRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoExternalCreateConnectionRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SsoExternalCreateConnectionRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             writer.WriteStringValue("external_connection_id", ExternalConnectionId);
             writer.WriteStringValue("external_organization_id", ExternalOrganizationId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiSsoV1SamlGroupImplicitRoleAssignment>("group_implicit_role_assignments", GroupImplicitRoleAssignments);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
