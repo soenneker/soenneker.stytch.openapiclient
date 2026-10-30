@@ -18,8 +18,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("external_metadata") is { } nullNodeExternalMetadata && nullNodeExternalMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalMetadata = null;
-            if (parseNode.GetChildNode("telemetry_id") is { } nullNodeTelemetryId && nullNodeTelemetryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TelemetryId = null;
+            if (parseNode.GetChildNode("external_metadata") is null) { _explicitNullValueExternalMetadata = default!; _explicitNullProperties?.Remove("external_metadata"); }
+            else if (parseNode.GetChildNode("external_metadata") is { } nullNodeExternalMetadata && nullNodeExternalMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalMetadata = null;
+            if (parseNode.GetChildNode("telemetry_id") is null) { _explicitNullValueTelemetryId = default!; _explicitNullProperties?.Remove("telemetry_id"); }
+            else if (parseNode.GetChildNode("telemetry_id") is { } nullNodeTelemetryId && nullNodeTelemetryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TelemetryId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The external_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Metadata? ExternalMetadata { get => _explicitNullValueExternalMetadata; set { _explicitNullValueExternalMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_metadata"); else _explicitNullProperties?.Remove("external_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Metadata? ExternalMetadata { get => _explicitNullValueExternalMetadata; set { _explicitNullValueExternalMetadata = value; AdditionalData?.Remove("external_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_metadata"); else _explicitNullProperties?.Remove("external_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Metadata? _explicitNullValueExternalMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Metadata ExternalMetadata { get => _explicitNullValueExternalMetadata; set { _explicitNullValueExternalMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_metadata"); else _explicitNullProperties?.Remove("external_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Metadata ExternalMetadata { get => _explicitNullValueExternalMetadata; set { _explicitNullValueExternalMetadata = value; AdditionalData?.Remove("external_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_metadata"); else _explicitNullProperties?.Remove("external_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1Metadata _explicitNullValueExternalMetadata = default!;
 #endif
         /// <summary>The telemetry ID associated with the fingerprint getting looked up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TelemetryId { get => _explicitNullValueTelemetryId; set { _explicitNullValueTelemetryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("telemetry_id"); else _explicitNullProperties?.Remove("telemetry_id"); } }
+        public string? TelemetryId { get => _explicitNullValueTelemetryId; set { _explicitNullValueTelemetryId = value; AdditionalData?.Remove("telemetry_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("telemetry_id"); else _explicitNullProperties?.Remove("telemetry_id"); } }
         private string? _explicitNullValueTelemetryId = default!;
 #nullable restore
 #else
-        public string TelemetryId { get => _explicitNullValueTelemetryId; set { _explicitNullValueTelemetryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("telemetry_id"); else _explicitNullProperties?.Remove("telemetry_id"); } }
+        public string TelemetryId { get => _explicitNullValueTelemetryId; set { _explicitNullValueTelemetryId = value; AdditionalData?.Remove("telemetry_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("telemetry_id"); else _explicitNullProperties?.Remove("telemetry_id"); } }
         private string _explicitNullValueTelemetryId = default!;
 #endif
         /// <summary>

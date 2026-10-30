@@ -17,9 +17,12 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("email_id") is { } nullNodeEmailId && nullNodeEmailId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailId = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("provider_subject") is { } nullNodeProviderSubject && nullNodeProviderSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderSubject = null;
+            if (parseNode.GetChildNode("email_id") is null) { _explicitNullValueEmailId = default!; _explicitNullProperties?.Remove("email_id"); }
+            else if (parseNode.GetChildNode("email_id") is { } nullNodeEmailId && nullNodeEmailId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailId = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("provider_subject") is null) { _explicitNullValueProviderSubject = default!; _explicitNullProperties?.Remove("provider_subject"); }
+            else if (parseNode.GetChildNode("provider_subject") is { } nullNodeProviderSubject && nullNodeProviderSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderSubject = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The globally unique UUID of the Member&apos;s email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailId { get => _explicitNullValueEmailId; set { _explicitNullValueEmailId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_id"); else _explicitNullProperties?.Remove("email_id"); } }
+        public string? EmailId { get => _explicitNullValueEmailId; set { _explicitNullValueEmailId = value; AdditionalData?.Remove("email_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_id"); else _explicitNullProperties?.Remove("email_id"); } }
         private string? _explicitNullValueEmailId = default!;
 #nullable restore
 #else
-        public string EmailId { get => _explicitNullValueEmailId; set { _explicitNullValueEmailId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_id"); else _explicitNullProperties?.Remove("email_id"); } }
+        public string EmailId { get => _explicitNullValueEmailId; set { _explicitNullValueEmailId = value; AdditionalData?.Remove("email_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_id"); else _explicitNullProperties?.Remove("email_id"); } }
         private string _explicitNullValueEmailId = default!;
 #endif
         /// <summary>The unique ID of an OAuth registration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The unique identifier for the User within a given OAuth provider. Also commonly called the `sub` or &quot;Subject field&quot; in OAuth protocols.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProviderSubject { get => _explicitNullValueProviderSubject; set { _explicitNullValueProviderSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_subject"); else _explicitNullProperties?.Remove("provider_subject"); } }
+        public string? ProviderSubject { get => _explicitNullValueProviderSubject; set { _explicitNullValueProviderSubject = value; AdditionalData?.Remove("provider_subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_subject"); else _explicitNullProperties?.Remove("provider_subject"); } }
         private string? _explicitNullValueProviderSubject = default!;
 #nullable restore
 #else
-        public string ProviderSubject { get => _explicitNullValueProviderSubject; set { _explicitNullValueProviderSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_subject"); else _explicitNullProperties?.Remove("provider_subject"); } }
+        public string ProviderSubject { get => _explicitNullValueProviderSubject; set { _explicitNullValueProviderSubject = value; AdditionalData?.Remove("provider_subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_subject"); else _explicitNullProperties?.Remove("provider_subject"); } }
         private string _explicitNullValueProviderSubject = default!;
 #endif
         /// <summary>

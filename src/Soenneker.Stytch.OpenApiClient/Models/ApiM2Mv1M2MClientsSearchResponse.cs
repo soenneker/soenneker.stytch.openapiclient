@@ -17,10 +17,14 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("m2m_clients") is { } nullNodeM2mClients && nullNodeM2mClients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) M2mClients = null;
-            if (parseNode.GetChildNode("request_id") is { } nullNodeRequestId && nullNodeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestId = null;
-            if (parseNode.GetChildNode("results_metadata") is { } nullNodeResultsMetadata && nullNodeResultsMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResultsMetadata = null;
-            if (parseNode.GetChildNode("status_code") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
+            if (parseNode.GetChildNode("m2m_clients") is null) { _explicitNullValueM2mClients = default!; _explicitNullProperties?.Remove("m2m_clients"); }
+            else if (parseNode.GetChildNode("m2m_clients") is { } nullNodeM2mClients && nullNodeM2mClients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) M2mClients = null;
+            if (parseNode.GetChildNode("request_id") is null) { _explicitNullValueRequestId = default!; _explicitNullProperties?.Remove("request_id"); }
+            else if (parseNode.GetChildNode("request_id") is { } nullNodeRequestId && nullNodeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestId = null;
+            if (parseNode.GetChildNode("results_metadata") is null) { _explicitNullValueResultsMetadata = default!; _explicitNullProperties?.Remove("results_metadata"); }
+            else if (parseNode.GetChildNode("results_metadata") is { } nullNodeResultsMetadata && nullNodeResultsMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResultsMetadata = null;
+            if (parseNode.GetChildNode("status_code") is null) { _explicitNullValueStatusCode = default!; _explicitNullProperties?.Remove("status_code"); }
+            else if (parseNode.GetChildNode("status_code") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,35 +32,35 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>An array of M2M Clients that match your search query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClient>? M2mClients { get => _explicitNullValueM2mClients; set { _explicitNullValueM2mClients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("m2m_clients"); else _explicitNullProperties?.Remove("m2m_clients"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClient>? M2mClients { get => _explicitNullValueM2mClients; set { _explicitNullValueM2mClients = value; AdditionalData?.Remove("m2m_clients"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("m2m_clients"); else _explicitNullProperties?.Remove("m2m_clients"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClient>? _explicitNullValueM2mClients = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClient> M2mClients { get => _explicitNullValueM2mClients; set { _explicitNullValueM2mClients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("m2m_clients"); else _explicitNullProperties?.Remove("m2m_clients"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClient> M2mClients { get => _explicitNullValueM2mClients; set { _explicitNullValueM2mClients = value; AdditionalData?.Remove("m2m_clients"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("m2m_clients"); else _explicitNullProperties?.Remove("m2m_clients"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClient> _explicitNullValueM2mClients = default!;
 #endif
         /// <summary>Globally unique UUID that is returned with every API call. This value is important to log for debugging purposes; we may ask for this value to help identify a specific API call when helping you debug an issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
+        public string? RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; AdditionalData?.Remove("request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
         private string? _explicitNullValueRequestId = default!;
 #nullable restore
 #else
-        public string RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
+        public string RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; AdditionalData?.Remove("request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_id"); else _explicitNullProperties?.Remove("request_id"); } }
         private string _explicitNullValueRequestId = default!;
 #endif
         /// <summary>The results_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1ResultsMetadata? ResultsMetadata { get => _explicitNullValueResultsMetadata; set { _explicitNullValueResultsMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results_metadata"); else _explicitNullProperties?.Remove("results_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1ResultsMetadata? ResultsMetadata { get => _explicitNullValueResultsMetadata; set { _explicitNullValueResultsMetadata = value; AdditionalData?.Remove("results_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results_metadata"); else _explicitNullProperties?.Remove("results_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1ResultsMetadata? _explicitNullValueResultsMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1ResultsMetadata ResultsMetadata { get => _explicitNullValueResultsMetadata; set { _explicitNullValueResultsMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results_metadata"); else _explicitNullProperties?.Remove("results_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1ResultsMetadata ResultsMetadata { get => _explicitNullValueResultsMetadata; set { _explicitNullValueResultsMetadata = value; AdditionalData?.Remove("results_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results_metadata"); else _explicitNullProperties?.Remove("results_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1ResultsMetadata _explicitNullValueResultsMetadata = default!;
 #endif
         /// <summary>The HTTP status code of the response. Stytch follows standard HTTP response status code patterns, e.g. 2XX values equate to success, 3XX values are redirects, 4XX are client errors, and 5XX are server errors.</summary>
-        public int? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_code"); else _explicitNullProperties?.Remove("status_code"); } }
+        public int? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; AdditionalData?.Remove("status_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_code"); else _explicitNullProperties?.Remove("status_code"); } }
         private int? _explicitNullValueStatusCode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiM2Mv1M2MClientsSearchResponse"/> and sets the default values.

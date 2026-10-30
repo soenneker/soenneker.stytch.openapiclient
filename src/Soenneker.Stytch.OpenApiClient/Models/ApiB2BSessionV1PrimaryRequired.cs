@@ -17,7 +17,8 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowed_auth_methods") is { } nullNodeAllowedAuthMethods && nullNodeAllowedAuthMethods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedAuthMethods = null;
+            if (parseNode.GetChildNode("allowed_auth_methods") is null) { _explicitNullValueAllowedAuthMethods = default!; _explicitNullProperties?.Remove("allowed_auth_methods"); }
+            else if (parseNode.GetChildNode("allowed_auth_methods") is { } nullNodeAllowedAuthMethods && nullNodeAllowedAuthMethods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedAuthMethods = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>Details the auth method that the member must also complete to fulfill the primary authentication requirements of the Organization. For example, a value of `[magic_link]` indicates that the Member must also complete a magic link authentication step. If you have an intermediate session token, you must pass it into that primary authentication step.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowedAuthMethods { get => _explicitNullValueAllowedAuthMethods; set { _explicitNullValueAllowedAuthMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_auth_methods"); else _explicitNullProperties?.Remove("allowed_auth_methods"); } }
+        public List<string>? AllowedAuthMethods { get => _explicitNullValueAllowedAuthMethods; set { _explicitNullValueAllowedAuthMethods = value; AdditionalData?.Remove("allowed_auth_methods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_auth_methods"); else _explicitNullProperties?.Remove("allowed_auth_methods"); } }
         private List<string>? _explicitNullValueAllowedAuthMethods = default!;
 #nullable restore
 #else
-        public List<string> AllowedAuthMethods { get => _explicitNullValueAllowedAuthMethods; set { _explicitNullValueAllowedAuthMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_auth_methods"); else _explicitNullProperties?.Remove("allowed_auth_methods"); } }
+        public List<string> AllowedAuthMethods { get => _explicitNullValueAllowedAuthMethods; set { _explicitNullValueAllowedAuthMethods = value; AdditionalData?.Remove("allowed_auth_methods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_auth_methods"); else _explicitNullProperties?.Remove("allowed_auth_methods"); } }
         private List<string> _explicitNullValueAllowedAuthMethods = default!;
 #endif
         /// <summary>

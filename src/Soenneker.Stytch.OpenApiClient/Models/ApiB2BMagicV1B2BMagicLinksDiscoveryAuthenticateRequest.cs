@@ -18,8 +18,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("discovery_magic_links_token") is { } nullNodeDiscoveryMagicLinksToken && nullNodeDiscoveryMagicLinksToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscoveryMagicLinksToken = null;
-            if (parseNode.GetChildNode("pkce_code_verifier") is { } nullNodePkceCodeVerifier && nullNodePkceCodeVerifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PkceCodeVerifier = null;
+            if (parseNode.GetChildNode("discovery_magic_links_token") is null) { _explicitNullValueDiscoveryMagicLinksToken = default!; _explicitNullProperties?.Remove("discovery_magic_links_token"); }
+            else if (parseNode.GetChildNode("discovery_magic_links_token") is { } nullNodeDiscoveryMagicLinksToken && nullNodeDiscoveryMagicLinksToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscoveryMagicLinksToken = null;
+            if (parseNode.GetChildNode("pkce_code_verifier") is null) { _explicitNullValuePkceCodeVerifier = default!; _explicitNullProperties?.Remove("pkce_code_verifier"); }
+            else if (parseNode.GetChildNode("pkce_code_verifier") is { } nullNodePkceCodeVerifier && nullNodePkceCodeVerifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PkceCodeVerifier = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The Discovery Email Magic Link token to authenticate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiscoveryMagicLinksToken { get => _explicitNullValueDiscoveryMagicLinksToken; set { _explicitNullValueDiscoveryMagicLinksToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_magic_links_token"); else _explicitNullProperties?.Remove("discovery_magic_links_token"); } }
+        public string? DiscoveryMagicLinksToken { get => _explicitNullValueDiscoveryMagicLinksToken; set { _explicitNullValueDiscoveryMagicLinksToken = value; AdditionalData?.Remove("discovery_magic_links_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_magic_links_token"); else _explicitNullProperties?.Remove("discovery_magic_links_token"); } }
         private string? _explicitNullValueDiscoveryMagicLinksToken = default!;
 #nullable restore
 #else
-        public string DiscoveryMagicLinksToken { get => _explicitNullValueDiscoveryMagicLinksToken; set { _explicitNullValueDiscoveryMagicLinksToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_magic_links_token"); else _explicitNullProperties?.Remove("discovery_magic_links_token"); } }
+        public string DiscoveryMagicLinksToken { get => _explicitNullValueDiscoveryMagicLinksToken; set { _explicitNullValueDiscoveryMagicLinksToken = value; AdditionalData?.Remove("discovery_magic_links_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_magic_links_token"); else _explicitNullProperties?.Remove("discovery_magic_links_token"); } }
         private string _explicitNullValueDiscoveryMagicLinksToken = default!;
 #endif
         /// <summary>A base64url encoded one time secret used to validate that the request starts and ends on the same device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PkceCodeVerifier { get => _explicitNullValuePkceCodeVerifier; set { _explicitNullValuePkceCodeVerifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_verifier"); else _explicitNullProperties?.Remove("pkce_code_verifier"); } }
+        public string? PkceCodeVerifier { get => _explicitNullValuePkceCodeVerifier; set { _explicitNullValuePkceCodeVerifier = value; AdditionalData?.Remove("pkce_code_verifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_verifier"); else _explicitNullProperties?.Remove("pkce_code_verifier"); } }
         private string? _explicitNullValuePkceCodeVerifier = default!;
 #nullable restore
 #else
-        public string PkceCodeVerifier { get => _explicitNullValuePkceCodeVerifier; set { _explicitNullValuePkceCodeVerifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_verifier"); else _explicitNullProperties?.Remove("pkce_code_verifier"); } }
+        public string PkceCodeVerifier { get => _explicitNullValuePkceCodeVerifier; set { _explicitNullValuePkceCodeVerifier = value; AdditionalData?.Remove("pkce_code_verifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_verifier"); else _explicitNullProperties?.Remove("pkce_code_verifier"); } }
         private string _explicitNullValuePkceCodeVerifier = default!;
 #endif
         /// <summary>

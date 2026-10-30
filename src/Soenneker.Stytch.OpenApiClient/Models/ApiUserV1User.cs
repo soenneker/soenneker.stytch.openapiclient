@@ -17,25 +17,44 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("biometric_registrations") is { } nullNodeBiometricRegistrations && nullNodeBiometricRegistrations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BiometricRegistrations = null;
-            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
-            if (parseNode.GetChildNode("crypto_wallets") is { } nullNodeCryptoWallets && nullNodeCryptoWallets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWallets = null;
-            if (parseNode.GetChildNode("emails") is { } nullNodeEmails && nullNodeEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Emails = null;
-            if (parseNode.GetChildNode("external_id") is { } nullNodeExternalId && nullNodeExternalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalId = null;
-            if (parseNode.GetChildNode("is_locked") is { } nullNodeIsLocked && nullNodeIsLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsLocked = null;
-            if (parseNode.GetChildNode("lock_created_at") is { } nullNodeLockCreatedAt && nullNodeLockCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockCreatedAt = null;
-            if (parseNode.GetChildNode("lock_expires_at") is { } nullNodeLockExpiresAt && nullNodeLockExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockExpiresAt = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("password") is { } nullNodePassword && nullNodePassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Password = null;
-            if (parseNode.GetChildNode("phone_numbers") is { } nullNodePhoneNumbers && nullNodePhoneNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumbers = null;
-            if (parseNode.GetChildNode("providers") is { } nullNodeProviders && nullNodeProviders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Providers = null;
-            if (parseNode.GetChildNode("roles") is { } nullNodeRoles && nullNodeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Roles = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("totps") is { } nullNodeTotps && nullNodeTotps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Totps = null;
-            if (parseNode.GetChildNode("trusted_metadata") is { } nullNodeTrustedMetadata && nullNodeTrustedMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrustedMetadata = null;
-            if (parseNode.GetChildNode("untrusted_metadata") is { } nullNodeUntrustedMetadata && nullNodeUntrustedMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UntrustedMetadata = null;
-            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
-            if (parseNode.GetChildNode("webauthn_registrations") is { } nullNodeWebauthnRegistrations && nullNodeWebauthnRegistrations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebauthnRegistrations = null;
+            if (parseNode.GetChildNode("biometric_registrations") is null) { _explicitNullValueBiometricRegistrations = default!; _explicitNullProperties?.Remove("biometric_registrations"); }
+            else if (parseNode.GetChildNode("biometric_registrations") is { } nullNodeBiometricRegistrations && nullNodeBiometricRegistrations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BiometricRegistrations = null;
+            if (parseNode.GetChildNode("created_at") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("created_at"); }
+            else if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("crypto_wallets") is null) { _explicitNullValueCryptoWallets = default!; _explicitNullProperties?.Remove("crypto_wallets"); }
+            else if (parseNode.GetChildNode("crypto_wallets") is { } nullNodeCryptoWallets && nullNodeCryptoWallets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWallets = null;
+            if (parseNode.GetChildNode("emails") is null) { _explicitNullValueEmails = default!; _explicitNullProperties?.Remove("emails"); }
+            else if (parseNode.GetChildNode("emails") is { } nullNodeEmails && nullNodeEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Emails = null;
+            if (parseNode.GetChildNode("external_id") is null) { _explicitNullValueExternalId = default!; _explicitNullProperties?.Remove("external_id"); }
+            else if (parseNode.GetChildNode("external_id") is { } nullNodeExternalId && nullNodeExternalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalId = null;
+            if (parseNode.GetChildNode("is_locked") is null) { _explicitNullValueIsLocked = default!; _explicitNullProperties?.Remove("is_locked"); }
+            else if (parseNode.GetChildNode("is_locked") is { } nullNodeIsLocked && nullNodeIsLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsLocked = null;
+            if (parseNode.GetChildNode("lock_created_at") is null) { _explicitNullValueLockCreatedAt = default!; _explicitNullProperties?.Remove("lock_created_at"); }
+            else if (parseNode.GetChildNode("lock_created_at") is { } nullNodeLockCreatedAt && nullNodeLockCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockCreatedAt = null;
+            if (parseNode.GetChildNode("lock_expires_at") is null) { _explicitNullValueLockExpiresAt = default!; _explicitNullProperties?.Remove("lock_expires_at"); }
+            else if (parseNode.GetChildNode("lock_expires_at") is { } nullNodeLockExpiresAt && nullNodeLockExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockExpiresAt = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("password") is null) { _explicitNullValuePassword = default!; _explicitNullProperties?.Remove("password"); }
+            else if (parseNode.GetChildNode("password") is { } nullNodePassword && nullNodePassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Password = null;
+            if (parseNode.GetChildNode("phone_numbers") is null) { _explicitNullValuePhoneNumbers = default!; _explicitNullProperties?.Remove("phone_numbers"); }
+            else if (parseNode.GetChildNode("phone_numbers") is { } nullNodePhoneNumbers && nullNodePhoneNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumbers = null;
+            if (parseNode.GetChildNode("providers") is null) { _explicitNullValueProviders = default!; _explicitNullProperties?.Remove("providers"); }
+            else if (parseNode.GetChildNode("providers") is { } nullNodeProviders && nullNodeProviders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Providers = null;
+            if (parseNode.GetChildNode("roles") is null) { _explicitNullValueRoles = default!; _explicitNullProperties?.Remove("roles"); }
+            else if (parseNode.GetChildNode("roles") is { } nullNodeRoles && nullNodeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Roles = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("totps") is null) { _explicitNullValueTotps = default!; _explicitNullProperties?.Remove("totps"); }
+            else if (parseNode.GetChildNode("totps") is { } nullNodeTotps && nullNodeTotps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Totps = null;
+            if (parseNode.GetChildNode("trusted_metadata") is null) { _explicitNullValueTrustedMetadata = default!; _explicitNullProperties?.Remove("trusted_metadata"); }
+            else if (parseNode.GetChildNode("trusted_metadata") is { } nullNodeTrustedMetadata && nullNodeTrustedMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrustedMetadata = null;
+            if (parseNode.GetChildNode("untrusted_metadata") is null) { _explicitNullValueUntrustedMetadata = default!; _explicitNullProperties?.Remove("untrusted_metadata"); }
+            else if (parseNode.GetChildNode("untrusted_metadata") is { } nullNodeUntrustedMetadata && nullNodeUntrustedMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UntrustedMetadata = null;
+            if (parseNode.GetChildNode("user_id") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("user_id"); }
+            else if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("webauthn_registrations") is null) { _explicitNullValueWebauthnRegistrations = default!; _explicitNullProperties?.Remove("webauthn_registrations"); }
+            else if (parseNode.GetChildNode("webauthn_registrations") is { } nullNodeWebauthnRegistrations && nullNodeWebauthnRegistrations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebauthnRegistrations = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -43,184 +62,184 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>An array that contains a list of all biometric registrations for a given User in the Stytch API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1BiometricRegistration>? BiometricRegistrations { get => _explicitNullValueBiometricRegistrations; set { _explicitNullValueBiometricRegistrations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biometric_registrations"); else _explicitNullProperties?.Remove("biometric_registrations"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1BiometricRegistration>? BiometricRegistrations { get => _explicitNullValueBiometricRegistrations; set { _explicitNullValueBiometricRegistrations = value; AdditionalData?.Remove("biometric_registrations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biometric_registrations"); else _explicitNullProperties?.Remove("biometric_registrations"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1BiometricRegistration>? _explicitNullValueBiometricRegistrations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1BiometricRegistration> BiometricRegistrations { get => _explicitNullValueBiometricRegistrations; set { _explicitNullValueBiometricRegistrations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biometric_registrations"); else _explicitNullProperties?.Remove("biometric_registrations"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1BiometricRegistration> BiometricRegistrations { get => _explicitNullValueBiometricRegistrations; set { _explicitNullValueBiometricRegistrations = value; AdditionalData?.Remove("biometric_registrations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biometric_registrations"); else _explicitNullProperties?.Remove("biometric_registrations"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1BiometricRegistration> _explicitNullValueBiometricRegistrations = default!;
 #endif
         /// <summary>The timestamp of the User&apos;s creation. Values conform to the RFC 3339 standard and are expressed in UTC, e.g. `2021-12-29T12:33:09Z`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        public string? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private string? _explicitNullValueCreatedAt = default!;
 #nullable restore
 #else
-        public string CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        public string CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private string _explicitNullValueCreatedAt = default!;
 #endif
         /// <summary>An array contains a list of all crypto wallets for a given User in the Stytch API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1CryptoWallet>? CryptoWallets { get => _explicitNullValueCryptoWallets; set { _explicitNullValueCryptoWallets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallets"); else _explicitNullProperties?.Remove("crypto_wallets"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1CryptoWallet>? CryptoWallets { get => _explicitNullValueCryptoWallets; set { _explicitNullValueCryptoWallets = value; AdditionalData?.Remove("crypto_wallets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallets"); else _explicitNullProperties?.Remove("crypto_wallets"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1CryptoWallet>? _explicitNullValueCryptoWallets = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1CryptoWallet> CryptoWallets { get => _explicitNullValueCryptoWallets; set { _explicitNullValueCryptoWallets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallets"); else _explicitNullProperties?.Remove("crypto_wallets"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1CryptoWallet> CryptoWallets { get => _explicitNullValueCryptoWallets; set { _explicitNullValueCryptoWallets = value; AdditionalData?.Remove("crypto_wallets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallets"); else _explicitNullProperties?.Remove("crypto_wallets"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1CryptoWallet> _explicitNullValueCryptoWallets = default!;
 #endif
         /// <summary>An array of email objects for the User.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Email>? Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Email>? Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; AdditionalData?.Remove("emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Email>? _explicitNullValueEmails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Email> Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Email> Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; AdditionalData?.Remove("emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Email> _explicitNullValueEmails = default!;
 #endif
         /// <summary>An identifier that can be used in most API calls where a `member_id` is expected. This is a string consisting of alphanumeric, `.`, `_`, `-`, or `|` characters with a maximum length of 128 characters. External IDs must be unique within the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
+        public string? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; AdditionalData?.Remove("external_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
         private string? _explicitNullValueExternalId = default!;
 #nullable restore
 #else
-        public string ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
+        public string ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; AdditionalData?.Remove("external_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
         private string _explicitNullValueExternalId = default!;
 #endif
         /// <summary>Whether the User is temporarily locked due to too many failed authentication attempts. See the [User Locking Guide](https://stytch.com/docs/resources/platform/user-locks) for more information.</summary>
-        public bool? IsLocked { get => _explicitNullValueIsLocked; set { _explicitNullValueIsLocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_locked"); else _explicitNullProperties?.Remove("is_locked"); } }
+        public bool? IsLocked { get => _explicitNullValueIsLocked; set { _explicitNullValueIsLocked = value; AdditionalData?.Remove("is_locked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_locked"); else _explicitNullProperties?.Remove("is_locked"); } }
         private bool? _explicitNullValueIsLocked = default!;
         /// <summary>When the user lock was created, if there is one. Values conform to the RFC 3339 standard and are expressed in UTC, e.g. `2021-12-29T12:33:09Z`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LockCreatedAt { get => _explicitNullValueLockCreatedAt; set { _explicitNullValueLockCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_created_at"); else _explicitNullProperties?.Remove("lock_created_at"); } }
+        public string? LockCreatedAt { get => _explicitNullValueLockCreatedAt; set { _explicitNullValueLockCreatedAt = value; AdditionalData?.Remove("lock_created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_created_at"); else _explicitNullProperties?.Remove("lock_created_at"); } }
         private string? _explicitNullValueLockCreatedAt = default!;
 #nullable restore
 #else
-        public string LockCreatedAt { get => _explicitNullValueLockCreatedAt; set { _explicitNullValueLockCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_created_at"); else _explicitNullProperties?.Remove("lock_created_at"); } }
+        public string LockCreatedAt { get => _explicitNullValueLockCreatedAt; set { _explicitNullValueLockCreatedAt = value; AdditionalData?.Remove("lock_created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_created_at"); else _explicitNullProperties?.Remove("lock_created_at"); } }
         private string _explicitNullValueLockCreatedAt = default!;
 #endif
         /// <summary>When the user lock expires, if there is one. Values conform to the RFC 3339 standard and are expressed in UTC, e.g. `2021-12-29T12:33:09Z`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LockExpiresAt { get => _explicitNullValueLockExpiresAt; set { _explicitNullValueLockExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_expires_at"); else _explicitNullProperties?.Remove("lock_expires_at"); } }
+        public string? LockExpiresAt { get => _explicitNullValueLockExpiresAt; set { _explicitNullValueLockExpiresAt = value; AdditionalData?.Remove("lock_expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_expires_at"); else _explicitNullProperties?.Remove("lock_expires_at"); } }
         private string? _explicitNullValueLockExpiresAt = default!;
 #nullable restore
 #else
-        public string LockExpiresAt { get => _explicitNullValueLockExpiresAt; set { _explicitNullValueLockExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_expires_at"); else _explicitNullProperties?.Remove("lock_expires_at"); } }
+        public string LockExpiresAt { get => _explicitNullValueLockExpiresAt; set { _explicitNullValueLockExpiresAt = value; AdditionalData?.Remove("lock_expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_expires_at"); else _explicitNullProperties?.Remove("lock_expires_at"); } }
         private string _explicitNullValueLockExpiresAt = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name _explicitNullValueName = default!;
 #endif
         /// <summary>The password property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Password? Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Password? Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; AdditionalData?.Remove("password"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Password? _explicitNullValuePassword = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Password Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Password Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; AdditionalData?.Remove("password"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Password _explicitNullValuePassword = default!;
 #endif
         /// <summary>An array of phone number objects linked to the User.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1PhoneNumber>? PhoneNumbers { get => _explicitNullValuePhoneNumbers; set { _explicitNullValuePhoneNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_numbers"); else _explicitNullProperties?.Remove("phone_numbers"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1PhoneNumber>? PhoneNumbers { get => _explicitNullValuePhoneNumbers; set { _explicitNullValuePhoneNumbers = value; AdditionalData?.Remove("phone_numbers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_numbers"); else _explicitNullProperties?.Remove("phone_numbers"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1PhoneNumber>? _explicitNullValuePhoneNumbers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1PhoneNumber> PhoneNumbers { get => _explicitNullValuePhoneNumbers; set { _explicitNullValuePhoneNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_numbers"); else _explicitNullProperties?.Remove("phone_numbers"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1PhoneNumber> PhoneNumbers { get => _explicitNullValuePhoneNumbers; set { _explicitNullValuePhoneNumbers = value; AdditionalData?.Remove("phone_numbers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_numbers"); else _explicitNullProperties?.Remove("phone_numbers"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1PhoneNumber> _explicitNullValuePhoneNumbers = default!;
 #endif
         /// <summary>An array of OAuth `provider` objects linked to the User.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1OAuthProvider>? Providers { get => _explicitNullValueProviders; set { _explicitNullValueProviders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providers"); else _explicitNullProperties?.Remove("providers"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1OAuthProvider>? Providers { get => _explicitNullValueProviders; set { _explicitNullValueProviders = value; AdditionalData?.Remove("providers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providers"); else _explicitNullProperties?.Remove("providers"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1OAuthProvider>? _explicitNullValueProviders = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1OAuthProvider> Providers { get => _explicitNullValueProviders; set { _explicitNullValueProviders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providers"); else _explicitNullProperties?.Remove("providers"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1OAuthProvider> Providers { get => _explicitNullValueProviders; set { _explicitNullValueProviders = value; AdditionalData?.Remove("providers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providers"); else _explicitNullProperties?.Remove("providers"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1OAuthProvider> _explicitNullValueProviders = default!;
 #endif
         /// <summary>Roles assigned to this User.   See the [RBAC guide](https://stytch.com/docs/guides/rbac/role-assignment) for more information about role assignment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
+        public List<string>? Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; AdditionalData?.Remove("roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
         private List<string>? _explicitNullValueRoles = default!;
 #nullable restore
 #else
-        public List<string> Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
+        public List<string> Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; AdditionalData?.Remove("roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
         private List<string> _explicitNullValueRoles = default!;
 #endif
         /// <summary>The status of the User. The possible values are `pending` and `active`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>An array containing a list of all TOTP instances for a given User in the Stytch API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Totp>? Totps { get => _explicitNullValueTotps; set { _explicitNullValueTotps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totps"); else _explicitNullProperties?.Remove("totps"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Totp>? Totps { get => _explicitNullValueTotps; set { _explicitNullValueTotps = value; AdditionalData?.Remove("totps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totps"); else _explicitNullProperties?.Remove("totps"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Totp>? _explicitNullValueTotps = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Totp> Totps { get => _explicitNullValueTotps; set { _explicitNullValueTotps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totps"); else _explicitNullProperties?.Remove("totps"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Totp> Totps { get => _explicitNullValueTotps; set { _explicitNullValueTotps = value; AdditionalData?.Remove("totps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totps"); else _explicitNullProperties?.Remove("totps"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Totp> _explicitNullValueTotps = default!;
 #endif
         /// <summary>The `trusted_metadata` field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserTrustedMetadataProperty? TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserTrustedMetadataProperty? TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; AdditionalData?.Remove("trusted_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserTrustedMetadataProperty? _explicitNullValueTrustedMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserTrustedMetadataProperty TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserTrustedMetadataProperty TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; AdditionalData?.Remove("trusted_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserTrustedMetadataProperty _explicitNullValueTrustedMetadata = default!;
 #endif
         /// <summary>The `untrusted_metadata` field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserUntrustedMetadataProperty? UntrustedMetadata { get => _explicitNullValueUntrustedMetadata; set { _explicitNullValueUntrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untrusted_metadata"); else _explicitNullProperties?.Remove("untrusted_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserUntrustedMetadataProperty? UntrustedMetadata { get => _explicitNullValueUntrustedMetadata; set { _explicitNullValueUntrustedMetadata = value; AdditionalData?.Remove("untrusted_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untrusted_metadata"); else _explicitNullProperties?.Remove("untrusted_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserUntrustedMetadataProperty? _explicitNullValueUntrustedMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserUntrustedMetadataProperty UntrustedMetadata { get => _explicitNullValueUntrustedMetadata; set { _explicitNullValueUntrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untrusted_metadata"); else _explicitNullProperties?.Remove("untrusted_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserUntrustedMetadataProperty UntrustedMetadata { get => _explicitNullValueUntrustedMetadata; set { _explicitNullValueUntrustedMetadata = value; AdditionalData?.Remove("untrusted_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untrusted_metadata"); else _explicitNullProperties?.Remove("untrusted_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1UserUntrustedMetadataProperty _explicitNullValueUntrustedMetadata = default!;
 #endif
         /// <summary>The unique ID of the affected User.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>An array that contains a list of all Passkey or WebAuthn registrations for a given User in the Stytch API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1WebAuthnRegistration>? WebauthnRegistrations { get => _explicitNullValueWebauthnRegistrations; set { _explicitNullValueWebauthnRegistrations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webauthn_registrations"); else _explicitNullProperties?.Remove("webauthn_registrations"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1WebAuthnRegistration>? WebauthnRegistrations { get => _explicitNullValueWebauthnRegistrations; set { _explicitNullValueWebauthnRegistrations = value; AdditionalData?.Remove("webauthn_registrations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webauthn_registrations"); else _explicitNullProperties?.Remove("webauthn_registrations"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1WebAuthnRegistration>? _explicitNullValueWebauthnRegistrations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1WebAuthnRegistration> WebauthnRegistrations { get => _explicitNullValueWebauthnRegistrations; set { _explicitNullValueWebauthnRegistrations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webauthn_registrations"); else _explicitNullProperties?.Remove("webauthn_registrations"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1WebAuthnRegistration> WebauthnRegistrations { get => _explicitNullValueWebauthnRegistrations; set { _explicitNullValueWebauthnRegistrations = value; AdditionalData?.Remove("webauthn_registrations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webauthn_registrations"); else _explicitNullProperties?.Remove("webauthn_registrations"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1WebAuthnRegistration> _explicitNullValueWebauthnRegistrations = default!;
 #endif
         /// <summary>

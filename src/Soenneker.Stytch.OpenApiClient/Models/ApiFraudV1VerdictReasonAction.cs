@@ -17,49 +17,54 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("default_action") is { } nullNodeDefaultAction && nullNodeDefaultAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAction = null;
-            if (parseNode.GetChildNode("override_action") is { } nullNodeOverrideAction && nullNodeOverrideAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideAction = null;
-            if (parseNode.GetChildNode("override_created_at") is { } nullNodeOverrideCreatedAt && nullNodeOverrideCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideCreatedAt = null;
-            if (parseNode.GetChildNode("override_description") is { } nullNodeOverrideDescription && nullNodeOverrideDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideDescription = null;
-            if (parseNode.GetChildNode("verdict_reason") is { } nullNodeVerdictReason && nullNodeVerdictReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerdictReason = null;
+            if (parseNode.GetChildNode("default_action") is null) { _explicitNullValueDefaultAction = default!; _explicitNullProperties?.Remove("default_action"); }
+            else if (parseNode.GetChildNode("default_action") is { } nullNodeDefaultAction && nullNodeDefaultAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultAction = null;
+            if (parseNode.GetChildNode("override_action") is null) { _explicitNullValueOverrideAction = default!; _explicitNullProperties?.Remove("override_action"); }
+            else if (parseNode.GetChildNode("override_action") is { } nullNodeOverrideAction && nullNodeOverrideAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideAction = null;
+            if (parseNode.GetChildNode("override_created_at") is null) { _explicitNullValueOverrideCreatedAt = default!; _explicitNullProperties?.Remove("override_created_at"); }
+            else if (parseNode.GetChildNode("override_created_at") is { } nullNodeOverrideCreatedAt && nullNodeOverrideCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideCreatedAt = null;
+            if (parseNode.GetChildNode("override_description") is null) { _explicitNullValueOverrideDescription = default!; _explicitNullProperties?.Remove("override_description"); }
+            else if (parseNode.GetChildNode("override_description") is { } nullNodeOverrideDescription && nullNodeOverrideDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideDescription = null;
+            if (parseNode.GetChildNode("verdict_reason") is null) { _explicitNullValueVerdictReason = default!; _explicitNullProperties?.Remove("verdict_reason"); }
+            else if (parseNode.GetChildNode("verdict_reason") is { } nullNodeVerdictReason && nullNodeVerdictReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerdictReason = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The default_action property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction? DefaultAction { get => _explicitNullValueDefaultAction; set { _explicitNullValueDefaultAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_action"); else _explicitNullProperties?.Remove("default_action"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction? DefaultAction { get => _explicitNullValueDefaultAction; set { _explicitNullValueDefaultAction = value; AdditionalData?.Remove("default_action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_action"); else _explicitNullProperties?.Remove("default_action"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction? _explicitNullValueDefaultAction = default!;
         /// <summary>The override_action property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction? OverrideAction { get => _explicitNullValueOverrideAction; set { _explicitNullValueOverrideAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_action"); else _explicitNullProperties?.Remove("override_action"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction? OverrideAction { get => _explicitNullValueOverrideAction; set { _explicitNullValueOverrideAction = value; AdditionalData?.Remove("override_action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_action"); else _explicitNullProperties?.Remove("override_action"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction? _explicitNullValueOverrideAction = default!;
         /// <summary>The time when the override was created, if one exists. Values conform to the RFC 3339 standard and are expressed in UTC, e.g. `2021-12-29T12:33:09Z`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverrideCreatedAt { get => _explicitNullValueOverrideCreatedAt; set { _explicitNullValueOverrideCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_created_at"); else _explicitNullProperties?.Remove("override_created_at"); } }
+        public string? OverrideCreatedAt { get => _explicitNullValueOverrideCreatedAt; set { _explicitNullValueOverrideCreatedAt = value; AdditionalData?.Remove("override_created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_created_at"); else _explicitNullProperties?.Remove("override_created_at"); } }
         private string? _explicitNullValueOverrideCreatedAt = default!;
 #nullable restore
 #else
-        public string OverrideCreatedAt { get => _explicitNullValueOverrideCreatedAt; set { _explicitNullValueOverrideCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_created_at"); else _explicitNullProperties?.Remove("override_created_at"); } }
+        public string OverrideCreatedAt { get => _explicitNullValueOverrideCreatedAt; set { _explicitNullValueOverrideCreatedAt = value; AdditionalData?.Remove("override_created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_created_at"); else _explicitNullProperties?.Remove("override_created_at"); } }
         private string _explicitNullValueOverrideCreatedAt = default!;
 #endif
         /// <summary>A description of the override, if one exists.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverrideDescription { get => _explicitNullValueOverrideDescription; set { _explicitNullValueOverrideDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_description"); else _explicitNullProperties?.Remove("override_description"); } }
+        public string? OverrideDescription { get => _explicitNullValueOverrideDescription; set { _explicitNullValueOverrideDescription = value; AdditionalData?.Remove("override_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_description"); else _explicitNullProperties?.Remove("override_description"); } }
         private string? _explicitNullValueOverrideDescription = default!;
 #nullable restore
 #else
-        public string OverrideDescription { get => _explicitNullValueOverrideDescription; set { _explicitNullValueOverrideDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_description"); else _explicitNullProperties?.Remove("override_description"); } }
+        public string OverrideDescription { get => _explicitNullValueOverrideDescription; set { _explicitNullValueOverrideDescription = value; AdditionalData?.Remove("override_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_description"); else _explicitNullProperties?.Remove("override_description"); } }
         private string _explicitNullValueOverrideDescription = default!;
 #endif
         /// <summary>The verdict reason.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerdictReason { get => _explicitNullValueVerdictReason; set { _explicitNullValueVerdictReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verdict_reason"); else _explicitNullProperties?.Remove("verdict_reason"); } }
+        public string? VerdictReason { get => _explicitNullValueVerdictReason; set { _explicitNullValueVerdictReason = value; AdditionalData?.Remove("verdict_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verdict_reason"); else _explicitNullProperties?.Remove("verdict_reason"); } }
         private string? _explicitNullValueVerdictReason = default!;
 #nullable restore
 #else
-        public string VerdictReason { get => _explicitNullValueVerdictReason; set { _explicitNullValueVerdictReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verdict_reason"); else _explicitNullProperties?.Remove("verdict_reason"); } }
+        public string VerdictReason { get => _explicitNullValueVerdictReason; set { _explicitNullValueVerdictReason = value; AdditionalData?.Remove("verdict_reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verdict_reason"); else _explicitNullProperties?.Remove("verdict_reason"); } }
         private string _explicitNullValueVerdictReason = default!;
 #endif
         /// <summary>
@@ -87,8 +92,8 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "default_action", n => { DefaultAction = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction>(); } },
-                { "override_action", n => { OverrideAction = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction>(); } },
+                { "default_action", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDefaultAction = default; _explicitNullProperties?.Remove("default_action"); AdditionalData["default_action"] = unknown; } else { DefaultAction = parsed; AdditionalData.Remove("default_action"); } } },
+                { "override_action", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOverrideAction = default; _explicitNullProperties?.Remove("override_action"); AdditionalData["override_action"] = unknown; } else { OverrideAction = parsed; AdditionalData.Remove("override_action"); } } },
                 { "override_created_at", n => { OverrideCreatedAt = n.GetStringValue(); } },
                 { "override_description", n => { OverrideDescription = n.GetStringValue(); } },
                 { "verdict_reason", n => { VerdictReason = n.GetStringValue(); } },

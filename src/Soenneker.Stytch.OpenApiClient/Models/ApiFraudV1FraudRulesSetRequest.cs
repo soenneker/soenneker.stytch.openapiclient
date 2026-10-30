@@ -18,126 +18,138 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
-            if (parseNode.GetChildNode("asn") is { } nullNodeAsn && nullNodeAsn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Asn = null;
-            if (parseNode.GetChildNode("browser_fingerprint") is { } nullNodeBrowserFingerprint && nullNodeBrowserFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserFingerprint = null;
-            if (parseNode.GetChildNode("browser_id") is { } nullNodeBrowserId && nullNodeBrowserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserId = null;
-            if (parseNode.GetChildNode("cidr_block") is { } nullNodeCidrBlock && nullNodeCidrBlock.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CidrBlock = null;
-            if (parseNode.GetChildNode("country_code") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("expires_in_minutes") is { } nullNodeExpiresInMinutes && nullNodeExpiresInMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresInMinutes = null;
-            if (parseNode.GetChildNode("hardware_fingerprint") is { } nullNodeHardwareFingerprint && nullNodeHardwareFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HardwareFingerprint = null;
-            if (parseNode.GetChildNode("network_fingerprint") is { } nullNodeNetworkFingerprint && nullNodeNetworkFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkFingerprint = null;
-            if (parseNode.GetChildNode("visitor_fingerprint") is { } nullNodeVisitorFingerprint && nullNodeVisitorFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisitorFingerprint = null;
-            if (parseNode.GetChildNode("visitor_id") is { } nullNodeVisitorId && nullNodeVisitorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisitorId = null;
+            if (parseNode.GetChildNode("action") is null) { _explicitNullValueAction = default!; _explicitNullProperties?.Remove("action"); }
+            else if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("asn") is null) { _explicitNullValueAsn = default!; _explicitNullProperties?.Remove("asn"); }
+            else if (parseNode.GetChildNode("asn") is { } nullNodeAsn && nullNodeAsn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Asn = null;
+            if (parseNode.GetChildNode("browser_fingerprint") is null) { _explicitNullValueBrowserFingerprint = default!; _explicitNullProperties?.Remove("browser_fingerprint"); }
+            else if (parseNode.GetChildNode("browser_fingerprint") is { } nullNodeBrowserFingerprint && nullNodeBrowserFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserFingerprint = null;
+            if (parseNode.GetChildNode("browser_id") is null) { _explicitNullValueBrowserId = default!; _explicitNullProperties?.Remove("browser_id"); }
+            else if (parseNode.GetChildNode("browser_id") is { } nullNodeBrowserId && nullNodeBrowserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserId = null;
+            if (parseNode.GetChildNode("cidr_block") is null) { _explicitNullValueCidrBlock = default!; _explicitNullProperties?.Remove("cidr_block"); }
+            else if (parseNode.GetChildNode("cidr_block") is { } nullNodeCidrBlock && nullNodeCidrBlock.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CidrBlock = null;
+            if (parseNode.GetChildNode("country_code") is null) { _explicitNullValueCountryCode = default!; _explicitNullProperties?.Remove("country_code"); }
+            else if (parseNode.GetChildNode("country_code") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("expires_in_minutes") is null) { _explicitNullValueExpiresInMinutes = default!; _explicitNullProperties?.Remove("expires_in_minutes"); }
+            else if (parseNode.GetChildNode("expires_in_minutes") is { } nullNodeExpiresInMinutes && nullNodeExpiresInMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresInMinutes = null;
+            if (parseNode.GetChildNode("hardware_fingerprint") is null) { _explicitNullValueHardwareFingerprint = default!; _explicitNullProperties?.Remove("hardware_fingerprint"); }
+            else if (parseNode.GetChildNode("hardware_fingerprint") is { } nullNodeHardwareFingerprint && nullNodeHardwareFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HardwareFingerprint = null;
+            if (parseNode.GetChildNode("network_fingerprint") is null) { _explicitNullValueNetworkFingerprint = default!; _explicitNullProperties?.Remove("network_fingerprint"); }
+            else if (parseNode.GetChildNode("network_fingerprint") is { } nullNodeNetworkFingerprint && nullNodeNetworkFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkFingerprint = null;
+            if (parseNode.GetChildNode("visitor_fingerprint") is null) { _explicitNullValueVisitorFingerprint = default!; _explicitNullProperties?.Remove("visitor_fingerprint"); }
+            else if (parseNode.GetChildNode("visitor_fingerprint") is { } nullNodeVisitorFingerprint && nullNodeVisitorFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisitorFingerprint = null;
+            if (parseNode.GetChildNode("visitor_id") is null) { _explicitNullValueVisitorId = default!; _explicitNullProperties?.Remove("visitor_id"); }
+            else if (parseNode.GetChildNode("visitor_id") is { } nullNodeVisitorId && nullNodeVisitorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisitorId = null;
         }
 
         /// <summary>The action property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1RuleAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1RuleAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; AdditionalData?.Remove("action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1RuleAction? _explicitNullValueAction = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ASN we want to set a rule for. The ASN must be the string representation of an integer between 0 and 4294967295, inclusive. Only one identifier can be specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Asn { get => _explicitNullValueAsn; set { _explicitNullValueAsn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asn"); else _explicitNullProperties?.Remove("asn"); } }
+        public string? Asn { get => _explicitNullValueAsn; set { _explicitNullValueAsn = value; AdditionalData?.Remove("asn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asn"); else _explicitNullProperties?.Remove("asn"); } }
         private string? _explicitNullValueAsn = default!;
 #nullable restore
 #else
-        public string Asn { get => _explicitNullValueAsn; set { _explicitNullValueAsn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asn"); else _explicitNullProperties?.Remove("asn"); } }
+        public string Asn { get => _explicitNullValueAsn; set { _explicitNullValueAsn = value; AdditionalData?.Remove("asn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asn"); else _explicitNullProperties?.Remove("asn"); } }
         private string _explicitNullValueAsn = default!;
 #endif
         /// <summary>The browser fingerprint we want to set a rule for. Only one identifier can be specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrowserFingerprint { get => _explicitNullValueBrowserFingerprint; set { _explicitNullValueBrowserFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_fingerprint"); else _explicitNullProperties?.Remove("browser_fingerprint"); } }
+        public string? BrowserFingerprint { get => _explicitNullValueBrowserFingerprint; set { _explicitNullValueBrowserFingerprint = value; AdditionalData?.Remove("browser_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_fingerprint"); else _explicitNullProperties?.Remove("browser_fingerprint"); } }
         private string? _explicitNullValueBrowserFingerprint = default!;
 #nullable restore
 #else
-        public string BrowserFingerprint { get => _explicitNullValueBrowserFingerprint; set { _explicitNullValueBrowserFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_fingerprint"); else _explicitNullProperties?.Remove("browser_fingerprint"); } }
+        public string BrowserFingerprint { get => _explicitNullValueBrowserFingerprint; set { _explicitNullValueBrowserFingerprint = value; AdditionalData?.Remove("browser_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_fingerprint"); else _explicitNullProperties?.Remove("browser_fingerprint"); } }
         private string _explicitNullValueBrowserFingerprint = default!;
 #endif
         /// <summary>The browser ID we want to set a rule for. Only one identifier can be specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BrowserId { get => _explicitNullValueBrowserId; set { _explicitNullValueBrowserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_id"); else _explicitNullProperties?.Remove("browser_id"); } }
+        public string? BrowserId { get => _explicitNullValueBrowserId; set { _explicitNullValueBrowserId = value; AdditionalData?.Remove("browser_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_id"); else _explicitNullProperties?.Remove("browser_id"); } }
         private string? _explicitNullValueBrowserId = default!;
 #nullable restore
 #else
-        public string BrowserId { get => _explicitNullValueBrowserId; set { _explicitNullValueBrowserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_id"); else _explicitNullProperties?.Remove("browser_id"); } }
+        public string BrowserId { get => _explicitNullValueBrowserId; set { _explicitNullValueBrowserId = value; AdditionalData?.Remove("browser_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_id"); else _explicitNullProperties?.Remove("browser_id"); } }
         private string _explicitNullValueBrowserId = default!;
 #endif
         /// <summary>The CIDR block we want to set a rule for. You may pass either an IP address or a CIDR block. The CIDR block prefix must be between 16 and 32, inclusive. If an end user&apos;s IP address is within this CIDR block, this rule will be applied. Only one identifier can be specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CidrBlock { get => _explicitNullValueCidrBlock; set { _explicitNullValueCidrBlock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cidr_block"); else _explicitNullProperties?.Remove("cidr_block"); } }
+        public string? CidrBlock { get => _explicitNullValueCidrBlock; set { _explicitNullValueCidrBlock = value; AdditionalData?.Remove("cidr_block"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cidr_block"); else _explicitNullProperties?.Remove("cidr_block"); } }
         private string? _explicitNullValueCidrBlock = default!;
 #nullable restore
 #else
-        public string CidrBlock { get => _explicitNullValueCidrBlock; set { _explicitNullValueCidrBlock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cidr_block"); else _explicitNullProperties?.Remove("cidr_block"); } }
+        public string CidrBlock { get => _explicitNullValueCidrBlock; set { _explicitNullValueCidrBlock = value; AdditionalData?.Remove("cidr_block"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cidr_block"); else _explicitNullProperties?.Remove("cidr_block"); } }
         private string _explicitNullValueCidrBlock = default!;
 #endif
         /// <summary>The country code we want to set a rule for. The country code must be a valid ISO 3166-1 alpha-2 code. You may not set `ALLOW` rules for country codes. Only one identifier can be specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_code"); else _explicitNullProperties?.Remove("country_code"); } }
+        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; AdditionalData?.Remove("country_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_code"); else _explicitNullProperties?.Remove("country_code"); } }
         private string? _explicitNullValueCountryCode = default!;
 #nullable restore
 #else
-        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_code"); else _explicitNullProperties?.Remove("country_code"); } }
+        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; AdditionalData?.Remove("country_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_code"); else _explicitNullProperties?.Remove("country_code"); } }
         private string _explicitNullValueCountryCode = default!;
 #endif
         /// <summary>An optional description for the rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The number of minutes until this rule expires. If no `expires_in_minutes` is specified, then the rule is kept permanently.</summary>
-        public int? ExpiresInMinutes { get => _explicitNullValueExpiresInMinutes; set { _explicitNullValueExpiresInMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_in_minutes"); else _explicitNullProperties?.Remove("expires_in_minutes"); } }
+        public int? ExpiresInMinutes { get => _explicitNullValueExpiresInMinutes; set { _explicitNullValueExpiresInMinutes = value; AdditionalData?.Remove("expires_in_minutes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_in_minutes"); else _explicitNullProperties?.Remove("expires_in_minutes"); } }
         private int? _explicitNullValueExpiresInMinutes = default!;
         /// <summary>The hardware fingerprint we want to set a rule for. Only one identifier can be specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HardwareFingerprint { get => _explicitNullValueHardwareFingerprint; set { _explicitNullValueHardwareFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardware_fingerprint"); else _explicitNullProperties?.Remove("hardware_fingerprint"); } }
+        public string? HardwareFingerprint { get => _explicitNullValueHardwareFingerprint; set { _explicitNullValueHardwareFingerprint = value; AdditionalData?.Remove("hardware_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardware_fingerprint"); else _explicitNullProperties?.Remove("hardware_fingerprint"); } }
         private string? _explicitNullValueHardwareFingerprint = default!;
 #nullable restore
 #else
-        public string HardwareFingerprint { get => _explicitNullValueHardwareFingerprint; set { _explicitNullValueHardwareFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardware_fingerprint"); else _explicitNullProperties?.Remove("hardware_fingerprint"); } }
+        public string HardwareFingerprint { get => _explicitNullValueHardwareFingerprint; set { _explicitNullValueHardwareFingerprint = value; AdditionalData?.Remove("hardware_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardware_fingerprint"); else _explicitNullProperties?.Remove("hardware_fingerprint"); } }
         private string _explicitNullValueHardwareFingerprint = default!;
 #endif
         /// <summary>The network fingerprint we want to set a rule for. Only one identifier can be specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NetworkFingerprint { get => _explicitNullValueNetworkFingerprint; set { _explicitNullValueNetworkFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_fingerprint"); else _explicitNullProperties?.Remove("network_fingerprint"); } }
+        public string? NetworkFingerprint { get => _explicitNullValueNetworkFingerprint; set { _explicitNullValueNetworkFingerprint = value; AdditionalData?.Remove("network_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_fingerprint"); else _explicitNullProperties?.Remove("network_fingerprint"); } }
         private string? _explicitNullValueNetworkFingerprint = default!;
 #nullable restore
 #else
-        public string NetworkFingerprint { get => _explicitNullValueNetworkFingerprint; set { _explicitNullValueNetworkFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_fingerprint"); else _explicitNullProperties?.Remove("network_fingerprint"); } }
+        public string NetworkFingerprint { get => _explicitNullValueNetworkFingerprint; set { _explicitNullValueNetworkFingerprint = value; AdditionalData?.Remove("network_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_fingerprint"); else _explicitNullProperties?.Remove("network_fingerprint"); } }
         private string _explicitNullValueNetworkFingerprint = default!;
 #endif
         /// <summary>The visitor fingerprint we want to set a rule for. Only one identifier can be specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VisitorFingerprint { get => _explicitNullValueVisitorFingerprint; set { _explicitNullValueVisitorFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_fingerprint"); else _explicitNullProperties?.Remove("visitor_fingerprint"); } }
+        public string? VisitorFingerprint { get => _explicitNullValueVisitorFingerprint; set { _explicitNullValueVisitorFingerprint = value; AdditionalData?.Remove("visitor_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_fingerprint"); else _explicitNullProperties?.Remove("visitor_fingerprint"); } }
         private string? _explicitNullValueVisitorFingerprint = default!;
 #nullable restore
 #else
-        public string VisitorFingerprint { get => _explicitNullValueVisitorFingerprint; set { _explicitNullValueVisitorFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_fingerprint"); else _explicitNullProperties?.Remove("visitor_fingerprint"); } }
+        public string VisitorFingerprint { get => _explicitNullValueVisitorFingerprint; set { _explicitNullValueVisitorFingerprint = value; AdditionalData?.Remove("visitor_fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_fingerprint"); else _explicitNullProperties?.Remove("visitor_fingerprint"); } }
         private string _explicitNullValueVisitorFingerprint = default!;
 #endif
         /// <summary>The visitor ID we want to set a rule for. Only one identifier can be specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VisitorId { get => _explicitNullValueVisitorId; set { _explicitNullValueVisitorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_id"); else _explicitNullProperties?.Remove("visitor_id"); } }
+        public string? VisitorId { get => _explicitNullValueVisitorId; set { _explicitNullValueVisitorId = value; AdditionalData?.Remove("visitor_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_id"); else _explicitNullProperties?.Remove("visitor_id"); } }
         private string? _explicitNullValueVisitorId = default!;
 #nullable restore
 #else
-        public string VisitorId { get => _explicitNullValueVisitorId; set { _explicitNullValueVisitorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_id"); else _explicitNullProperties?.Remove("visitor_id"); } }
+        public string VisitorId { get => _explicitNullValueVisitorId; set { _explicitNullValueVisitorId = value; AdditionalData?.Remove("visitor_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitor_id"); else _explicitNullProperties?.Remove("visitor_id"); } }
         private string _explicitNullValueVisitorId = default!;
 #endif
         /// <summary>
@@ -165,7 +177,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1RuleAction>(); } },
+                { "action", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1RuleAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAction = default; _explicitNullProperties?.Remove("action"); AdditionalData["action"] = unknown; } else { Action = parsed; AdditionalData.Remove("action"); } } },
                 { "asn", n => { Asn = n.GetStringValue(); } },
                 { "browser_fingerprint", n => { BrowserFingerprint = n.GetStringValue(); } },
                 { "browser_id", n => { BrowserId = n.GetStringValue(); } },

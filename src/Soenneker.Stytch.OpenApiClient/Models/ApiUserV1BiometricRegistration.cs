@@ -17,8 +17,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("biometric_registration_id") is { } nullNodeBiometricRegistrationId && nullNodeBiometricRegistrationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BiometricRegistrationId = null;
-            if (parseNode.GetChildNode("verified") is { } nullNodeVerified && nullNodeVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verified = null;
+            if (parseNode.GetChildNode("biometric_registration_id") is null) { _explicitNullValueBiometricRegistrationId = default!; _explicitNullProperties?.Remove("biometric_registration_id"); }
+            else if (parseNode.GetChildNode("biometric_registration_id") is { } nullNodeBiometricRegistrationId && nullNodeBiometricRegistrationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BiometricRegistrationId = null;
+            if (parseNode.GetChildNode("verified") is null) { _explicitNullValueVerified = default!; _explicitNullProperties?.Remove("verified"); }
+            else if (parseNode.GetChildNode("verified") is { } nullNodeVerified && nullNodeVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verified = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The unique ID for a biometric registration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BiometricRegistrationId { get => _explicitNullValueBiometricRegistrationId; set { _explicitNullValueBiometricRegistrationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biometric_registration_id"); else _explicitNullProperties?.Remove("biometric_registration_id"); } }
+        public string? BiometricRegistrationId { get => _explicitNullValueBiometricRegistrationId; set { _explicitNullValueBiometricRegistrationId = value; AdditionalData?.Remove("biometric_registration_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biometric_registration_id"); else _explicitNullProperties?.Remove("biometric_registration_id"); } }
         private string? _explicitNullValueBiometricRegistrationId = default!;
 #nullable restore
 #else
-        public string BiometricRegistrationId { get => _explicitNullValueBiometricRegistrationId; set { _explicitNullValueBiometricRegistrationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biometric_registration_id"); else _explicitNullProperties?.Remove("biometric_registration_id"); } }
+        public string BiometricRegistrationId { get => _explicitNullValueBiometricRegistrationId; set { _explicitNullValueBiometricRegistrationId = value; AdditionalData?.Remove("biometric_registration_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("biometric_registration_id"); else _explicitNullProperties?.Remove("biometric_registration_id"); } }
         private string _explicitNullValueBiometricRegistrationId = default!;
 #endif
         /// <summary>The verified boolean denotes whether or not this send method, e.g. phone number, email address, etc., has been successfully authenticated by the User.</summary>
-        public bool? Verified { get => _explicitNullValueVerified; set { _explicitNullValueVerified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified"); else _explicitNullProperties?.Remove("verified"); } }
+        public bool? Verified { get => _explicitNullValueVerified; set { _explicitNullValueVerified = value; AdditionalData?.Remove("verified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified"); else _explicitNullProperties?.Remove("verified"); } }
         private bool? _explicitNullValueVerified = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1BiometricRegistration"/> and sets the default values.

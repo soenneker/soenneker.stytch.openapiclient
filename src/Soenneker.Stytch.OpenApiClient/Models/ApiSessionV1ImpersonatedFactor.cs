@@ -17,8 +17,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("impersonator_email_address") is { } nullNodeImpersonatorEmailAddress && nullNodeImpersonatorEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImpersonatorEmailAddress = null;
-            if (parseNode.GetChildNode("impersonator_id") is { } nullNodeImpersonatorId && nullNodeImpersonatorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImpersonatorId = null;
+            if (parseNode.GetChildNode("impersonator_email_address") is null) { _explicitNullValueImpersonatorEmailAddress = default!; _explicitNullProperties?.Remove("impersonator_email_address"); }
+            else if (parseNode.GetChildNode("impersonator_email_address") is { } nullNodeImpersonatorEmailAddress && nullNodeImpersonatorEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImpersonatorEmailAddress = null;
+            if (parseNode.GetChildNode("impersonator_id") is null) { _explicitNullValueImpersonatorId = default!; _explicitNullProperties?.Remove("impersonator_id"); }
+            else if (parseNode.GetChildNode("impersonator_id") is { } nullNodeImpersonatorId && nullNodeImpersonatorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImpersonatorId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The email address of the impersonator.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImpersonatorEmailAddress { get => _explicitNullValueImpersonatorEmailAddress; set { _explicitNullValueImpersonatorEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonator_email_address"); else _explicitNullProperties?.Remove("impersonator_email_address"); } }
+        public string? ImpersonatorEmailAddress { get => _explicitNullValueImpersonatorEmailAddress; set { _explicitNullValueImpersonatorEmailAddress = value; AdditionalData?.Remove("impersonator_email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonator_email_address"); else _explicitNullProperties?.Remove("impersonator_email_address"); } }
         private string? _explicitNullValueImpersonatorEmailAddress = default!;
 #nullable restore
 #else
-        public string ImpersonatorEmailAddress { get => _explicitNullValueImpersonatorEmailAddress; set { _explicitNullValueImpersonatorEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonator_email_address"); else _explicitNullProperties?.Remove("impersonator_email_address"); } }
+        public string ImpersonatorEmailAddress { get => _explicitNullValueImpersonatorEmailAddress; set { _explicitNullValueImpersonatorEmailAddress = value; AdditionalData?.Remove("impersonator_email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonator_email_address"); else _explicitNullProperties?.Remove("impersonator_email_address"); } }
         private string _explicitNullValueImpersonatorEmailAddress = default!;
 #endif
         /// <summary>For impersonated sessions initiated via the Stytch Dashboard, the `impersonator_id` will be the impersonator&apos;s Stytch Dashboard `member_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImpersonatorId { get => _explicitNullValueImpersonatorId; set { _explicitNullValueImpersonatorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonator_id"); else _explicitNullProperties?.Remove("impersonator_id"); } }
+        public string? ImpersonatorId { get => _explicitNullValueImpersonatorId; set { _explicitNullValueImpersonatorId = value; AdditionalData?.Remove("impersonator_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonator_id"); else _explicitNullProperties?.Remove("impersonator_id"); } }
         private string? _explicitNullValueImpersonatorId = default!;
 #nullable restore
 #else
-        public string ImpersonatorId { get => _explicitNullValueImpersonatorId; set { _explicitNullValueImpersonatorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonator_id"); else _explicitNullProperties?.Remove("impersonator_id"); } }
+        public string ImpersonatorId { get => _explicitNullValueImpersonatorId; set { _explicitNullValueImpersonatorId = value; AdditionalData?.Remove("impersonator_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonator_id"); else _explicitNullProperties?.Remove("impersonator_id"); } }
         private string _explicitNullValueImpersonatorId = default!;
 #endif
         /// <summary>

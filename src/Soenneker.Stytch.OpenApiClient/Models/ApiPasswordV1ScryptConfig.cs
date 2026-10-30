@@ -17,35 +17,40 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("key_length") is { } nullNodeKeyLength && nullNodeKeyLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeyLength = null;
-            if (parseNode.GetChildNode("n_parameter") is { } nullNodeNParameter && nullNodeNParameter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NParameter = null;
-            if (parseNode.GetChildNode("p_parameter") is { } nullNodePParameter && nullNodePParameter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PParameter = null;
-            if (parseNode.GetChildNode("r_parameter") is { } nullNodeRParameter && nullNodeRParameter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RParameter = null;
-            if (parseNode.GetChildNode("salt") is { } nullNodeSalt && nullNodeSalt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Salt = null;
+            if (parseNode.GetChildNode("key_length") is null) { _explicitNullValueKeyLength = default!; _explicitNullProperties?.Remove("key_length"); }
+            else if (parseNode.GetChildNode("key_length") is { } nullNodeKeyLength && nullNodeKeyLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeyLength = null;
+            if (parseNode.GetChildNode("n_parameter") is null) { _explicitNullValueNParameter = default!; _explicitNullProperties?.Remove("n_parameter"); }
+            else if (parseNode.GetChildNode("n_parameter") is { } nullNodeNParameter && nullNodeNParameter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NParameter = null;
+            if (parseNode.GetChildNode("p_parameter") is null) { _explicitNullValuePParameter = default!; _explicitNullProperties?.Remove("p_parameter"); }
+            else if (parseNode.GetChildNode("p_parameter") is { } nullNodePParameter && nullNodePParameter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PParameter = null;
+            if (parseNode.GetChildNode("r_parameter") is null) { _explicitNullValueRParameter = default!; _explicitNullProperties?.Remove("r_parameter"); }
+            else if (parseNode.GetChildNode("r_parameter") is { } nullNodeRParameter && nullNodeRParameter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RParameter = null;
+            if (parseNode.GetChildNode("salt") is null) { _explicitNullValueSalt = default!; _explicitNullProperties?.Remove("salt"); }
+            else if (parseNode.GetChildNode("salt") is { } nullNodeSalt && nullNodeSalt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Salt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The key length, also known as the hash length.</summary>
-        public int? KeyLength { get => _explicitNullValueKeyLength; set { _explicitNullValueKeyLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key_length"); else _explicitNullProperties?.Remove("key_length"); } }
+        public int? KeyLength { get => _explicitNullValueKeyLength; set { _explicitNullValueKeyLength = value; AdditionalData?.Remove("key_length"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key_length"); else _explicitNullProperties?.Remove("key_length"); } }
         private int? _explicitNullValueKeyLength = default!;
         /// <summary>The N value, also known as the iterations count. It must be a power of two greater than 1 and less than 262,145.      If your application&apos;s N parameter is larger than 262,144, please reach out to [support@stytch.com](mailto:support@stytch.com)</summary>
-        public int? NParameter { get => _explicitNullValueNParameter; set { _explicitNullValueNParameter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("n_parameter"); else _explicitNullProperties?.Remove("n_parameter"); } }
+        public int? NParameter { get => _explicitNullValueNParameter; set { _explicitNullValueNParameter = value; AdditionalData?.Remove("n_parameter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("n_parameter"); else _explicitNullProperties?.Remove("n_parameter"); } }
         private int? _explicitNullValueNParameter = default!;
         /// <summary>The p parameter, also known as the parallelism factor.</summary>
-        public int? PParameter { get => _explicitNullValuePParameter; set { _explicitNullValuePParameter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("p_parameter"); else _explicitNullProperties?.Remove("p_parameter"); } }
+        public int? PParameter { get => _explicitNullValuePParameter; set { _explicitNullValuePParameter = value; AdditionalData?.Remove("p_parameter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("p_parameter"); else _explicitNullProperties?.Remove("p_parameter"); } }
         private int? _explicitNullValuePParameter = default!;
         /// <summary>The r parameter, also known as the block size.</summary>
-        public int? RParameter { get => _explicitNullValueRParameter; set { _explicitNullValueRParameter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("r_parameter"); else _explicitNullProperties?.Remove("r_parameter"); } }
+        public int? RParameter { get => _explicitNullValueRParameter; set { _explicitNullValueRParameter = value; AdditionalData?.Remove("r_parameter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("r_parameter"); else _explicitNullProperties?.Remove("r_parameter"); } }
         private int? _explicitNullValueRParameter = default!;
         /// <summary>The salt value, which should be in a base64 encoded string form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Salt { get => _explicitNullValueSalt; set { _explicitNullValueSalt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salt"); else _explicitNullProperties?.Remove("salt"); } }
+        public string? Salt { get => _explicitNullValueSalt; set { _explicitNullValueSalt = value; AdditionalData?.Remove("salt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salt"); else _explicitNullProperties?.Remove("salt"); } }
         private string? _explicitNullValueSalt = default!;
 #nullable restore
 #else
-        public string Salt { get => _explicitNullValueSalt; set { _explicitNullValueSalt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salt"); else _explicitNullProperties?.Remove("salt"); } }
+        public string Salt { get => _explicitNullValueSalt; set { _explicitNullValueSalt = value; AdditionalData?.Remove("salt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("salt"); else _explicitNullProperties?.Remove("salt"); } }
         private string _explicitNullValueSalt = default!;
 #endif
         /// <summary>

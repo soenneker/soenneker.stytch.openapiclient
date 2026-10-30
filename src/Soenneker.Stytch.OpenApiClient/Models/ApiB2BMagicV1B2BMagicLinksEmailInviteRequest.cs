@@ -18,17 +18,28 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
-            if (parseNode.GetChildNode("invited_by_member_id") is { } nullNodeInvitedByMemberId && nullNodeInvitedByMemberId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitedByMemberId = null;
-            if (parseNode.GetChildNode("invite_expiration_minutes") is { } nullNodeInviteExpirationMinutes && nullNodeInviteExpirationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteExpirationMinutes = null;
-            if (parseNode.GetChildNode("invite_redirect_url") is { } nullNodeInviteRedirectUrl && nullNodeInviteRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteRedirectUrl = null;
-            if (parseNode.GetChildNode("invite_template_id") is { } nullNodeInviteTemplateId && nullNodeInviteTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteTemplateId = null;
-            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("organization_id") is { } nullNodeOrganizationId && nullNodeOrganizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationId = null;
-            if (parseNode.GetChildNode("roles") is { } nullNodeRoles && nullNodeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Roles = null;
-            if (parseNode.GetChildNode("trusted_metadata") is { } nullNodeTrustedMetadata && nullNodeTrustedMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrustedMetadata = null;
-            if (parseNode.GetChildNode("untrusted_metadata") is { } nullNodeUntrustedMetadata && nullNodeUntrustedMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UntrustedMetadata = null;
+            if (parseNode.GetChildNode("email_address") is null) { _explicitNullValueEmailAddress = default!; _explicitNullProperties?.Remove("email_address"); }
+            else if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
+            if (parseNode.GetChildNode("invited_by_member_id") is null) { _explicitNullValueInvitedByMemberId = default!; _explicitNullProperties?.Remove("invited_by_member_id"); }
+            else if (parseNode.GetChildNode("invited_by_member_id") is { } nullNodeInvitedByMemberId && nullNodeInvitedByMemberId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitedByMemberId = null;
+            if (parseNode.GetChildNode("invite_expiration_minutes") is null) { _explicitNullValueInviteExpirationMinutes = default!; _explicitNullProperties?.Remove("invite_expiration_minutes"); }
+            else if (parseNode.GetChildNode("invite_expiration_minutes") is { } nullNodeInviteExpirationMinutes && nullNodeInviteExpirationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteExpirationMinutes = null;
+            if (parseNode.GetChildNode("invite_redirect_url") is null) { _explicitNullValueInviteRedirectUrl = default!; _explicitNullProperties?.Remove("invite_redirect_url"); }
+            else if (parseNode.GetChildNode("invite_redirect_url") is { } nullNodeInviteRedirectUrl && nullNodeInviteRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteRedirectUrl = null;
+            if (parseNode.GetChildNode("invite_template_id") is null) { _explicitNullValueInviteTemplateId = default!; _explicitNullProperties?.Remove("invite_template_id"); }
+            else if (parseNode.GetChildNode("invite_template_id") is { } nullNodeInviteTemplateId && nullNodeInviteTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InviteTemplateId = null;
+            if (parseNode.GetChildNode("locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("locale"); }
+            else if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("organization_id") is null) { _explicitNullValueOrganizationId = default!; _explicitNullProperties?.Remove("organization_id"); }
+            else if (parseNode.GetChildNode("organization_id") is { } nullNodeOrganizationId && nullNodeOrganizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationId = null;
+            if (parseNode.GetChildNode("roles") is null) { _explicitNullValueRoles = default!; _explicitNullProperties?.Remove("roles"); }
+            else if (parseNode.GetChildNode("roles") is { } nullNodeRoles && nullNodeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Roles = null;
+            if (parseNode.GetChildNode("trusted_metadata") is null) { _explicitNullValueTrustedMetadata = default!; _explicitNullProperties?.Remove("trusted_metadata"); }
+            else if (parseNode.GetChildNode("trusted_metadata") is { } nullNodeTrustedMetadata && nullNodeTrustedMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrustedMetadata = null;
+            if (parseNode.GetChildNode("untrusted_metadata") is null) { _explicitNullValueUntrustedMetadata = default!; _explicitNullProperties?.Remove("untrusted_metadata"); }
+            else if (parseNode.GetChildNode("untrusted_metadata") is { } nullNodeUntrustedMetadata && nullNodeUntrustedMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UntrustedMetadata = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,97 +47,97 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The email address of the Member.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string? _explicitNullValueEmailAddress = default!;
 #nullable restore
 #else
-        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string _explicitNullValueEmailAddress = default!;
 #endif
         /// <summary>The `member_id` of the Member who sends the invite.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvitedByMemberId { get => _explicitNullValueInvitedByMemberId; set { _explicitNullValueInvitedByMemberId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invited_by_member_id"); else _explicitNullProperties?.Remove("invited_by_member_id"); } }
+        public string? InvitedByMemberId { get => _explicitNullValueInvitedByMemberId; set { _explicitNullValueInvitedByMemberId = value; AdditionalData?.Remove("invited_by_member_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invited_by_member_id"); else _explicitNullProperties?.Remove("invited_by_member_id"); } }
         private string? _explicitNullValueInvitedByMemberId = default!;
 #nullable restore
 #else
-        public string InvitedByMemberId { get => _explicitNullValueInvitedByMemberId; set { _explicitNullValueInvitedByMemberId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invited_by_member_id"); else _explicitNullProperties?.Remove("invited_by_member_id"); } }
+        public string InvitedByMemberId { get => _explicitNullValueInvitedByMemberId; set { _explicitNullValueInvitedByMemberId = value; AdditionalData?.Remove("invited_by_member_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invited_by_member_id"); else _explicitNullProperties?.Remove("invited_by_member_id"); } }
         private string _explicitNullValueInvitedByMemberId = default!;
 #endif
         /// <summary>The expiration time, in minutes, for an invite email. If not accepted within this time frame, the invite will need to be resent. Defaults to 10080 (1 week) with a minimum of 5 and a maximum of 10080.</summary>
-        public int? InviteExpirationMinutes { get => _explicitNullValueInviteExpirationMinutes; set { _explicitNullValueInviteExpirationMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_expiration_minutes"); else _explicitNullProperties?.Remove("invite_expiration_minutes"); } }
+        public int? InviteExpirationMinutes { get => _explicitNullValueInviteExpirationMinutes; set { _explicitNullValueInviteExpirationMinutes = value; AdditionalData?.Remove("invite_expiration_minutes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_expiration_minutes"); else _explicitNullProperties?.Remove("invite_expiration_minutes"); } }
         private int? _explicitNullValueInviteExpirationMinutes = default!;
         /// <summary>The URL that the Member clicks from the invite Email Magic Link. This URL should be an endpoint in the backend server that verifies  the request by querying Stytch&apos;s authenticate endpoint and finishes the invite flow. If this value is not passed, the default `invite_redirect_url`  that you set in your Dashboard is used. If you have not set a default `invite_redirect_url`, an error is returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InviteRedirectUrl { get => _explicitNullValueInviteRedirectUrl; set { _explicitNullValueInviteRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_redirect_url"); else _explicitNullProperties?.Remove("invite_redirect_url"); } }
+        public string? InviteRedirectUrl { get => _explicitNullValueInviteRedirectUrl; set { _explicitNullValueInviteRedirectUrl = value; AdditionalData?.Remove("invite_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_redirect_url"); else _explicitNullProperties?.Remove("invite_redirect_url"); } }
         private string? _explicitNullValueInviteRedirectUrl = default!;
 #nullable restore
 #else
-        public string InviteRedirectUrl { get => _explicitNullValueInviteRedirectUrl; set { _explicitNullValueInviteRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_redirect_url"); else _explicitNullProperties?.Remove("invite_redirect_url"); } }
+        public string InviteRedirectUrl { get => _explicitNullValueInviteRedirectUrl; set { _explicitNullValueInviteRedirectUrl = value; AdditionalData?.Remove("invite_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_redirect_url"); else _explicitNullProperties?.Remove("invite_redirect_url"); } }
         private string _explicitNullValueInviteRedirectUrl = default!;
 #endif
         /// <summary>Use a custom template for invite emails. By default, it will use your default email template. Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type “Magic Links - Invite”.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InviteTemplateId { get => _explicitNullValueInviteTemplateId; set { _explicitNullValueInviteTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_template_id"); else _explicitNullProperties?.Remove("invite_template_id"); } }
+        public string? InviteTemplateId { get => _explicitNullValueInviteTemplateId; set { _explicitNullValueInviteTemplateId = value; AdditionalData?.Remove("invite_template_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_template_id"); else _explicitNullProperties?.Remove("invite_template_id"); } }
         private string? _explicitNullValueInviteTemplateId = default!;
 #nullable restore
 #else
-        public string InviteTemplateId { get => _explicitNullValueInviteTemplateId; set { _explicitNullValueInviteTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_template_id"); else _explicitNullProperties?.Remove("invite_template_id"); } }
+        public string InviteTemplateId { get => _explicitNullValueInviteTemplateId; set { _explicitNullValueInviteTemplateId = value; AdditionalData?.Remove("invite_template_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invite_template_id"); else _explicitNullProperties?.Remove("invite_template_id"); } }
         private string _explicitNullValueInviteTemplateId = default!;
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailInviteRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailInviteRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailInviteRequestLocale? _explicitNullValueLocale = default!;
         /// <summary>The name of the Member.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Globally unique UUID that identifies a specific Organization. The `organization_id` is critical to perform operations on an Organization, so be sure to preserve this value. You may also use the organization_slug or organization_external_id here as a convenience.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
+        public string? OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; AdditionalData?.Remove("organization_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
         private string? _explicitNullValueOrganizationId = default!;
 #nullable restore
 #else
-        public string OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
+        public string OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; AdditionalData?.Remove("organization_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
         private string _explicitNullValueOrganizationId = default!;
 #endif
         /// <summary>Roles to explicitly assign to this Member. See the [RBAC guide](https://stytch.com/docs/b2b/guides/rbac/role-assignment)   for more information about role assignment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
+        public List<string>? Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; AdditionalData?.Remove("roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
         private List<string>? _explicitNullValueRoles = default!;
 #nullable restore
 #else
-        public List<string> Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
+        public List<string> Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; AdditionalData?.Remove("roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
         private List<string> _explicitNullValueRoles = default!;
 #endif
         /// <summary>An arbitrary JSON object for storing application-specific data or identity-provider-specific data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteRequestTrustedMetadataProperty? TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteRequestTrustedMetadataProperty? TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; AdditionalData?.Remove("trusted_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteRequestTrustedMetadataProperty? _explicitNullValueTrustedMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteRequestTrustedMetadataProperty TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteRequestTrustedMetadataProperty TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; AdditionalData?.Remove("trusted_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteRequestTrustedMetadataProperty _explicitNullValueTrustedMetadata = default!;
 #endif
         /// <summary>An arbitrary JSON object of application-specific data. These fields can be edited directly by the  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)  for complete field behavior details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteRequestUntrustedMetadataProperty? UntrustedMetadata { get => _explicitNullValueUntrustedMetadata; set { _explicitNullValueUntrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untrusted_metadata"); else _explicitNullProperties?.Remove("untrusted_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteRequestUntrustedMetadataProperty? UntrustedMetadata { get => _explicitNullValueUntrustedMetadata; set { _explicitNullValueUntrustedMetadata = value; AdditionalData?.Remove("untrusted_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untrusted_metadata"); else _explicitNullProperties?.Remove("untrusted_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteRequestUntrustedMetadataProperty? _explicitNullValueUntrustedMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteRequestUntrustedMetadataProperty UntrustedMetadata { get => _explicitNullValueUntrustedMetadata; set { _explicitNullValueUntrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untrusted_metadata"); else _explicitNullProperties?.Remove("untrusted_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteRequestUntrustedMetadataProperty UntrustedMetadata { get => _explicitNullValueUntrustedMetadata; set { _explicitNullValueUntrustedMetadata = value; AdditionalData?.Remove("untrusted_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untrusted_metadata"); else _explicitNullProperties?.Remove("untrusted_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1B2BMagicLinksEmailInviteRequestUntrustedMetadataProperty _explicitNullValueUntrustedMetadata = default!;
 #endif
         /// <summary>
@@ -159,7 +170,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "invite_redirect_url", n => { InviteRedirectUrl = n.GetStringValue(); } },
                 { "invite_template_id", n => { InviteTemplateId = n.GetStringValue(); } },
                 { "invited_by_member_id", n => { InvitedByMemberId = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailInviteRequestLocale>(); } },
+                { "locale", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailInviteRequestLocale>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLocale = default; _explicitNullProperties?.Remove("locale"); AdditionalData["locale"] = unknown; } else { Locale = parsed; AdditionalData.Remove("locale"); } } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "organization_id", n => { OrganizationId = n.GetStringValue(); } },
                 { "roles", n => { Roles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },

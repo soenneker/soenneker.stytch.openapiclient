@@ -17,8 +17,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("browser_properties") is { } nullNodeBrowserProperties && nullNodeBrowserProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserProperties = null;
-            if (parseNode.GetChildNode("network_properties") is { } nullNodeNetworkProperties && nullNodeNetworkProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkProperties = null;
+            if (parseNode.GetChildNode("browser_properties") is null) { _explicitNullValueBrowserProperties = default!; _explicitNullProperties?.Remove("browser_properties"); }
+            else if (parseNode.GetChildNode("browser_properties") is { } nullNodeBrowserProperties && nullNodeBrowserProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserProperties = null;
+            if (parseNode.GetChildNode("network_properties") is null) { _explicitNullValueNetworkProperties = default!; _explicitNullProperties?.Remove("network_properties"); }
+            else if (parseNode.GetChildNode("network_properties") is { } nullNodeNetworkProperties && nullNodeNetworkProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkProperties = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The browser_properties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1BrowserProperties? BrowserProperties { get => _explicitNullValueBrowserProperties; set { _explicitNullValueBrowserProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_properties"); else _explicitNullProperties?.Remove("browser_properties"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1BrowserProperties? BrowserProperties { get => _explicitNullValueBrowserProperties; set { _explicitNullValueBrowserProperties = value; AdditionalData?.Remove("browser_properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_properties"); else _explicitNullProperties?.Remove("browser_properties"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1BrowserProperties? _explicitNullValueBrowserProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1BrowserProperties BrowserProperties { get => _explicitNullValueBrowserProperties; set { _explicitNullValueBrowserProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_properties"); else _explicitNullProperties?.Remove("browser_properties"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1BrowserProperties BrowserProperties { get => _explicitNullValueBrowserProperties; set { _explicitNullValueBrowserProperties = value; AdditionalData?.Remove("browser_properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser_properties"); else _explicitNullProperties?.Remove("browser_properties"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1BrowserProperties _explicitNullValueBrowserProperties = default!;
 #endif
         /// <summary>The network_properties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties? NetworkProperties { get => _explicitNullValueNetworkProperties; set { _explicitNullValueNetworkProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_properties"); else _explicitNullProperties?.Remove("network_properties"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties? NetworkProperties { get => _explicitNullValueNetworkProperties; set { _explicitNullValueNetworkProperties = value; AdditionalData?.Remove("network_properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_properties"); else _explicitNullProperties?.Remove("network_properties"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties? _explicitNullValueNetworkProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties NetworkProperties { get => _explicitNullValueNetworkProperties; set { _explicitNullValueNetworkProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_properties"); else _explicitNullProperties?.Remove("network_properties"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties NetworkProperties { get => _explicitNullValueNetworkProperties; set { _explicitNullValueNetworkProperties = value; AdditionalData?.Remove("network_properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network_properties"); else _explicitNullProperties?.Remove("network_properties"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties _explicitNullValueNetworkProperties = default!;
 #endif
         /// <summary>

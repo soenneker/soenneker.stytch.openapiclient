@@ -17,7 +17,8 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("totp_id") is { } nullNodeTotpId && nullNodeTotpId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotpId = null;
+            if (parseNode.GetChildNode("totp_id") is null) { _explicitNullValueTotpId = default!; _explicitNullProperties?.Remove("totp_id"); }
+            else if (parseNode.GetChildNode("totp_id") is { } nullNodeTotpId && nullNodeTotpId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotpId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>Globally unique UUID that identifies a TOTP instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotpId { get => _explicitNullValueTotpId; set { _explicitNullValueTotpId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_id"); else _explicitNullProperties?.Remove("totp_id"); } }
+        public string? TotpId { get => _explicitNullValueTotpId; set { _explicitNullValueTotpId = value; AdditionalData?.Remove("totp_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_id"); else _explicitNullProperties?.Remove("totp_id"); } }
         private string? _explicitNullValueTotpId = default!;
 #nullable restore
 #else
-        public string TotpId { get => _explicitNullValueTotpId; set { _explicitNullValueTotpId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_id"); else _explicitNullProperties?.Remove("totp_id"); } }
+        public string TotpId { get => _explicitNullValueTotpId; set { _explicitNullValueTotpId = value; AdditionalData?.Remove("totp_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_id"); else _explicitNullProperties?.Remove("totp_id"); } }
         private string _explicitNullValueTotpId = default!;
 #endif
         /// <summary>

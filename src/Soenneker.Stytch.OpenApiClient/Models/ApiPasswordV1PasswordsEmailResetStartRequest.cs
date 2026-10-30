@@ -18,14 +18,22 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
-            if (parseNode.GetChildNode("code_challenge") is { } nullNodeCodeChallenge && nullNodeCodeChallenge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeChallenge = null;
-            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
-            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("login_redirect_url") is { } nullNodeLoginRedirectUrl && nullNodeLoginRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginRedirectUrl = null;
-            if (parseNode.GetChildNode("reset_password_expiration_minutes") is { } nullNodeResetPasswordExpirationMinutes && nullNodeResetPasswordExpirationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetPasswordExpirationMinutes = null;
-            if (parseNode.GetChildNode("reset_password_redirect_url") is { } nullNodeResetPasswordRedirectUrl && nullNodeResetPasswordRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetPasswordRedirectUrl = null;
-            if (parseNode.GetChildNode("reset_password_template_id") is { } nullNodeResetPasswordTemplateId && nullNodeResetPasswordTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetPasswordTemplateId = null;
+            if (parseNode.GetChildNode("attributes") is null) { _explicitNullValueAttributes = default!; _explicitNullProperties?.Remove("attributes"); }
+            else if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("code_challenge") is null) { _explicitNullValueCodeChallenge = default!; _explicitNullProperties?.Remove("code_challenge"); }
+            else if (parseNode.GetChildNode("code_challenge") is { } nullNodeCodeChallenge && nullNodeCodeChallenge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeChallenge = null;
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("locale"); }
+            else if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("login_redirect_url") is null) { _explicitNullValueLoginRedirectUrl = default!; _explicitNullProperties?.Remove("login_redirect_url"); }
+            else if (parseNode.GetChildNode("login_redirect_url") is { } nullNodeLoginRedirectUrl && nullNodeLoginRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginRedirectUrl = null;
+            if (parseNode.GetChildNode("reset_password_expiration_minutes") is null) { _explicitNullValueResetPasswordExpirationMinutes = default!; _explicitNullProperties?.Remove("reset_password_expiration_minutes"); }
+            else if (parseNode.GetChildNode("reset_password_expiration_minutes") is { } nullNodeResetPasswordExpirationMinutes && nullNodeResetPasswordExpirationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetPasswordExpirationMinutes = null;
+            if (parseNode.GetChildNode("reset_password_redirect_url") is null) { _explicitNullValueResetPasswordRedirectUrl = default!; _explicitNullProperties?.Remove("reset_password_redirect_url"); }
+            else if (parseNode.GetChildNode("reset_password_redirect_url") is { } nullNodeResetPasswordRedirectUrl && nullNodeResetPasswordRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetPasswordRedirectUrl = null;
+            if (parseNode.GetChildNode("reset_password_template_id") is null) { _explicitNullValueResetPasswordTemplateId = default!; _explicitNullProperties?.Remove("reset_password_template_id"); }
+            else if (parseNode.GetChildNode("reset_password_template_id") is { } nullNodeResetPasswordTemplateId && nullNodeResetPasswordTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetPasswordTemplateId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,67 +41,67 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes _explicitNullValueAttributes = default!;
 #endif
         /// <summary>A base64url encoded SHA256 hash of a one time secret used to validate that the request starts and ends on the same device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CodeChallenge { get => _explicitNullValueCodeChallenge; set { _explicitNullValueCodeChallenge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_challenge"); else _explicitNullProperties?.Remove("code_challenge"); } }
+        public string? CodeChallenge { get => _explicitNullValueCodeChallenge; set { _explicitNullValueCodeChallenge = value; AdditionalData?.Remove("code_challenge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_challenge"); else _explicitNullProperties?.Remove("code_challenge"); } }
         private string? _explicitNullValueCodeChallenge = default!;
 #nullable restore
 #else
-        public string CodeChallenge { get => _explicitNullValueCodeChallenge; set { _explicitNullValueCodeChallenge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_challenge"); else _explicitNullProperties?.Remove("code_challenge"); } }
+        public string CodeChallenge { get => _explicitNullValueCodeChallenge; set { _explicitNullValueCodeChallenge = value; AdditionalData?.Remove("code_challenge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_challenge"); else _explicitNullProperties?.Remove("code_challenge"); } }
         private string _explicitNullValueCodeChallenge = default!;
 #endif
         /// <summary>The email of the User that requested the password reset.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartRequestLocale? _explicitNullValueLocale = default!;
         /// <summary>The URL that Users are redirected to upon clicking the &quot;Log in without password&quot; button in password reset emails.      After Users are redirected to the login redirect URL, your application should retrieve the `token` value from the URL parameters and call the [Magic Link Authenticate endpoint](https://stytch.com/docs/api/authenticate-magic-link) to log the User in without requiring a password reset. If this value is not provided, your project&apos;s default login redirect URL will be used. If you have not set a default login redirect URL, an error will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LoginRedirectUrl { get => _explicitNullValueLoginRedirectUrl; set { _explicitNullValueLoginRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_redirect_url"); else _explicitNullProperties?.Remove("login_redirect_url"); } }
+        public string? LoginRedirectUrl { get => _explicitNullValueLoginRedirectUrl; set { _explicitNullValueLoginRedirectUrl = value; AdditionalData?.Remove("login_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_redirect_url"); else _explicitNullProperties?.Remove("login_redirect_url"); } }
         private string? _explicitNullValueLoginRedirectUrl = default!;
 #nullable restore
 #else
-        public string LoginRedirectUrl { get => _explicitNullValueLoginRedirectUrl; set { _explicitNullValueLoginRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_redirect_url"); else _explicitNullProperties?.Remove("login_redirect_url"); } }
+        public string LoginRedirectUrl { get => _explicitNullValueLoginRedirectUrl; set { _explicitNullValueLoginRedirectUrl = value; AdditionalData?.Remove("login_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_redirect_url"); else _explicitNullProperties?.Remove("login_redirect_url"); } }
         private string _explicitNullValueLoginRedirectUrl = default!;
 #endif
         /// <summary>Set the expiration for the password reset, in minutes. By default, it expires in 30 minutes.  The minimum expiration is 5 minutes and the maximum is 7 days (10080 mins).</summary>
-        public int? ResetPasswordExpirationMinutes { get => _explicitNullValueResetPasswordExpirationMinutes; set { _explicitNullValueResetPasswordExpirationMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_expiration_minutes"); else _explicitNullProperties?.Remove("reset_password_expiration_minutes"); } }
+        public int? ResetPasswordExpirationMinutes { get => _explicitNullValueResetPasswordExpirationMinutes; set { _explicitNullValueResetPasswordExpirationMinutes = value; AdditionalData?.Remove("reset_password_expiration_minutes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_expiration_minutes"); else _explicitNullProperties?.Remove("reset_password_expiration_minutes"); } }
         private int? _explicitNullValueResetPasswordExpirationMinutes = default!;
         /// <summary>The URL that the User is redirected to from the reset password magic link. This URL should display your application&apos;s reset password page.  Before rendering the reset page, extract the `token` from the query parameters. On the reset page, collect the new password and complete the flow by calling the corresponding Password Reset by Email endpoint.  If this parameter is not specified, the default Reset Password redirect URL configured in the Dashboard will be used. If you have not set a default Reset Password redirect URL, an error is returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResetPasswordRedirectUrl { get => _explicitNullValueResetPasswordRedirectUrl; set { _explicitNullValueResetPasswordRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_redirect_url"); else _explicitNullProperties?.Remove("reset_password_redirect_url"); } }
+        public string? ResetPasswordRedirectUrl { get => _explicitNullValueResetPasswordRedirectUrl; set { _explicitNullValueResetPasswordRedirectUrl = value; AdditionalData?.Remove("reset_password_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_redirect_url"); else _explicitNullProperties?.Remove("reset_password_redirect_url"); } }
         private string? _explicitNullValueResetPasswordRedirectUrl = default!;
 #nullable restore
 #else
-        public string ResetPasswordRedirectUrl { get => _explicitNullValueResetPasswordRedirectUrl; set { _explicitNullValueResetPasswordRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_redirect_url"); else _explicitNullProperties?.Remove("reset_password_redirect_url"); } }
+        public string ResetPasswordRedirectUrl { get => _explicitNullValueResetPasswordRedirectUrl; set { _explicitNullValueResetPasswordRedirectUrl = value; AdditionalData?.Remove("reset_password_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_redirect_url"); else _explicitNullProperties?.Remove("reset_password_redirect_url"); } }
         private string _explicitNullValueResetPasswordRedirectUrl = default!;
 #endif
         /// <summary>Use a custom template for password reset emails. By default, it will use your default email template.  Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type “Passwords - Password reset”.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResetPasswordTemplateId { get => _explicitNullValueResetPasswordTemplateId; set { _explicitNullValueResetPasswordTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_template_id"); else _explicitNullProperties?.Remove("reset_password_template_id"); } }
+        public string? ResetPasswordTemplateId { get => _explicitNullValueResetPasswordTemplateId; set { _explicitNullValueResetPasswordTemplateId = value; AdditionalData?.Remove("reset_password_template_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_template_id"); else _explicitNullProperties?.Remove("reset_password_template_id"); } }
         private string? _explicitNullValueResetPasswordTemplateId = default!;
 #nullable restore
 #else
-        public string ResetPasswordTemplateId { get => _explicitNullValueResetPasswordTemplateId; set { _explicitNullValueResetPasswordTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_template_id"); else _explicitNullProperties?.Remove("reset_password_template_id"); } }
+        public string ResetPasswordTemplateId { get => _explicitNullValueResetPasswordTemplateId; set { _explicitNullValueResetPasswordTemplateId = value; AdditionalData?.Remove("reset_password_template_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_password_template_id"); else _explicitNullProperties?.Remove("reset_password_template_id"); } }
         private string _explicitNullValueResetPasswordTemplateId = default!;
 #endif
         /// <summary>
@@ -124,7 +132,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "attributes", n => { Attributes = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes>(global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes.CreateFromDiscriminatorValue); } },
                 { "code_challenge", n => { CodeChallenge = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartRequestLocale>(); } },
+                { "locale", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetStartRequestLocale>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLocale = default; _explicitNullProperties?.Remove("locale"); AdditionalData["locale"] = unknown; } else { Locale = parsed; AdditionalData.Remove("locale"); } } },
                 { "login_redirect_url", n => { LoginRedirectUrl = n.GetStringValue(); } },
                 { "reset_password_expiration_minutes", n => { ResetPasswordExpirationMinutes = n.GetIntValue(); } },
                 { "reset_password_redirect_url", n => { ResetPasswordRedirectUrl = n.GetStringValue(); } },

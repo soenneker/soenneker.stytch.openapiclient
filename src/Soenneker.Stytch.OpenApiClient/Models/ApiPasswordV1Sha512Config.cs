@@ -17,8 +17,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("append_salt") is { } nullNodeAppendSalt && nullNodeAppendSalt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppendSalt = null;
-            if (parseNode.GetChildNode("prepend_salt") is { } nullNodePrependSalt && nullNodePrependSalt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrependSalt = null;
+            if (parseNode.GetChildNode("append_salt") is null) { _explicitNullValueAppendSalt = default!; _explicitNullProperties?.Remove("append_salt"); }
+            else if (parseNode.GetChildNode("append_salt") is { } nullNodeAppendSalt && nullNodeAppendSalt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppendSalt = null;
+            if (parseNode.GetChildNode("prepend_salt") is null) { _explicitNullValuePrependSalt = default!; _explicitNullProperties?.Remove("prepend_salt"); }
+            else if (parseNode.GetChildNode("prepend_salt") is { } nullNodePrependSalt && nullNodePrependSalt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrependSalt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The salt that should be appended to the migrated password.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppendSalt { get => _explicitNullValueAppendSalt; set { _explicitNullValueAppendSalt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_salt"); else _explicitNullProperties?.Remove("append_salt"); } }
+        public string? AppendSalt { get => _explicitNullValueAppendSalt; set { _explicitNullValueAppendSalt = value; AdditionalData?.Remove("append_salt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_salt"); else _explicitNullProperties?.Remove("append_salt"); } }
         private string? _explicitNullValueAppendSalt = default!;
 #nullable restore
 #else
-        public string AppendSalt { get => _explicitNullValueAppendSalt; set { _explicitNullValueAppendSalt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_salt"); else _explicitNullProperties?.Remove("append_salt"); } }
+        public string AppendSalt { get => _explicitNullValueAppendSalt; set { _explicitNullValueAppendSalt = value; AdditionalData?.Remove("append_salt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("append_salt"); else _explicitNullProperties?.Remove("append_salt"); } }
         private string _explicitNullValueAppendSalt = default!;
 #endif
         /// <summary>The salt that should be prepended to the migrated password.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrependSalt { get => _explicitNullValuePrependSalt; set { _explicitNullValuePrependSalt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepend_salt"); else _explicitNullProperties?.Remove("prepend_salt"); } }
+        public string? PrependSalt { get => _explicitNullValuePrependSalt; set { _explicitNullValuePrependSalt = value; AdditionalData?.Remove("prepend_salt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepend_salt"); else _explicitNullProperties?.Remove("prepend_salt"); } }
         private string? _explicitNullValuePrependSalt = default!;
 #nullable restore
 #else
-        public string PrependSalt { get => _explicitNullValuePrependSalt; set { _explicitNullValuePrependSalt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepend_salt"); else _explicitNullProperties?.Remove("prepend_salt"); } }
+        public string PrependSalt { get => _explicitNullValuePrependSalt; set { _explicitNullValuePrependSalt = value; AdditionalData?.Remove("prepend_salt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepend_salt"); else _explicitNullProperties?.Remove("prepend_salt"); } }
         private string _explicitNullValuePrependSalt = default!;
 #endif
         /// <summary>

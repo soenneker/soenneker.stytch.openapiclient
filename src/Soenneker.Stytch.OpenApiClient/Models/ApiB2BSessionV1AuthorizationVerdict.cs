@@ -17,23 +17,25 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("authorized") is { } nullNodeAuthorized && nullNodeAuthorized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authorized = null;
-            if (parseNode.GetChildNode("granting_roles") is { } nullNodeGrantingRoles && nullNodeGrantingRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrantingRoles = null;
+            if (parseNode.GetChildNode("authorized") is null) { _explicitNullValueAuthorized = default!; _explicitNullProperties?.Remove("authorized"); }
+            else if (parseNode.GetChildNode("authorized") is { } nullNodeAuthorized && nullNodeAuthorized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authorized = null;
+            if (parseNode.GetChildNode("granting_roles") is null) { _explicitNullValueGrantingRoles = default!; _explicitNullProperties?.Remove("granting_roles"); }
+            else if (parseNode.GetChildNode("granting_roles") is { } nullNodeGrantingRoles && nullNodeGrantingRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrantingRoles = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the Member was authorized to perform the specified action on the specified Resource. Always true if the request succeeds.</summary>
-        public bool? Authorized { get => _explicitNullValueAuthorized; set { _explicitNullValueAuthorized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorized"); else _explicitNullProperties?.Remove("authorized"); } }
+        public bool? Authorized { get => _explicitNullValueAuthorized; set { _explicitNullValueAuthorized = value; AdditionalData?.Remove("authorized"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorized"); else _explicitNullProperties?.Remove("authorized"); } }
         private bool? _explicitNullValueAuthorized = default!;
         /// <summary>The complete list of Roles that gave the Member permission to perform the specified action on the specified Resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? GrantingRoles { get => _explicitNullValueGrantingRoles; set { _explicitNullValueGrantingRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("granting_roles"); else _explicitNullProperties?.Remove("granting_roles"); } }
+        public List<string>? GrantingRoles { get => _explicitNullValueGrantingRoles; set { _explicitNullValueGrantingRoles = value; AdditionalData?.Remove("granting_roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("granting_roles"); else _explicitNullProperties?.Remove("granting_roles"); } }
         private List<string>? _explicitNullValueGrantingRoles = default!;
 #nullable restore
 #else
-        public List<string> GrantingRoles { get => _explicitNullValueGrantingRoles; set { _explicitNullValueGrantingRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("granting_roles"); else _explicitNullProperties?.Remove("granting_roles"); } }
+        public List<string> GrantingRoles { get => _explicitNullValueGrantingRoles; set { _explicitNullValueGrantingRoles = value; AdditionalData?.Remove("granting_roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("granting_roles"); else _explicitNullProperties?.Remove("granting_roles"); } }
         private List<string> _explicitNullValueGrantingRoles = default!;
 #endif
         /// <summary>

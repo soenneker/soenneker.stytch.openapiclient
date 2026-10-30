@@ -17,8 +17,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("password_id") is { } nullNodePasswordId && nullNodePasswordId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PasswordId = null;
-            if (parseNode.GetChildNode("requires_reset") is { } nullNodeRequiresReset && nullNodeRequiresReset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiresReset = null;
+            if (parseNode.GetChildNode("password_id") is null) { _explicitNullValuePasswordId = default!; _explicitNullProperties?.Remove("password_id"); }
+            else if (parseNode.GetChildNode("password_id") is { } nullNodePasswordId && nullNodePasswordId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PasswordId = null;
+            if (parseNode.GetChildNode("requires_reset") is null) { _explicitNullValueRequiresReset = default!; _explicitNullProperties?.Remove("requires_reset"); }
+            else if (parseNode.GetChildNode("requires_reset") is { } nullNodeRequiresReset && nullNodeRequiresReset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiresReset = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The unique ID of a specific password</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PasswordId { get => _explicitNullValuePasswordId; set { _explicitNullValuePasswordId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password_id"); else _explicitNullProperties?.Remove("password_id"); } }
+        public string? PasswordId { get => _explicitNullValuePasswordId; set { _explicitNullValuePasswordId = value; AdditionalData?.Remove("password_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password_id"); else _explicitNullProperties?.Remove("password_id"); } }
         private string? _explicitNullValuePasswordId = default!;
 #nullable restore
 #else
-        public string PasswordId { get => _explicitNullValuePasswordId; set { _explicitNullValuePasswordId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password_id"); else _explicitNullProperties?.Remove("password_id"); } }
+        public string PasswordId { get => _explicitNullValuePasswordId; set { _explicitNullValuePasswordId = value; AdditionalData?.Remove("password_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password_id"); else _explicitNullProperties?.Remove("password_id"); } }
         private string _explicitNullValuePasswordId = default!;
 #endif
         /// <summary>Indicates whether this password requires a password reset</summary>
-        public bool? RequiresReset { get => _explicitNullValueRequiresReset; set { _explicitNullValueRequiresReset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requires_reset"); else _explicitNullProperties?.Remove("requires_reset"); } }
+        public bool? RequiresReset { get => _explicitNullValueRequiresReset; set { _explicitNullValueRequiresReset = value; AdditionalData?.Remove("requires_reset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requires_reset"); else _explicitNullProperties?.Remove("requires_reset"); } }
         private bool? _explicitNullValueRequiresReset = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Password"/> and sets the default values.

@@ -17,17 +17,19 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ip_match_required") is { } nullNodeIpMatchRequired && nullNodeIpMatchRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpMatchRequired = null;
-            if (parseNode.GetChildNode("user_agent_match_required") is { } nullNodeUserAgentMatchRequired && nullNodeUserAgentMatchRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAgentMatchRequired = null;
+            if (parseNode.GetChildNode("ip_match_required") is null) { _explicitNullValueIpMatchRequired = default!; _explicitNullProperties?.Remove("ip_match_required"); }
+            else if (parseNode.GetChildNode("ip_match_required") is { } nullNodeIpMatchRequired && nullNodeIpMatchRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpMatchRequired = null;
+            if (parseNode.GetChildNode("user_agent_match_required") is null) { _explicitNullValueUserAgentMatchRequired = default!; _explicitNullProperties?.Remove("user_agent_match_required"); }
+            else if (parseNode.GetChildNode("user_agent_match_required") is { } nullNodeUserAgentMatchRequired && nullNodeUserAgentMatchRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAgentMatchRequired = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Require that the IP address the Magic Link was requested from matches the IP address it&apos;s clicked from.</summary>
-        public bool? IpMatchRequired { get => _explicitNullValueIpMatchRequired; set { _explicitNullValueIpMatchRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_match_required"); else _explicitNullProperties?.Remove("ip_match_required"); } }
+        public bool? IpMatchRequired { get => _explicitNullValueIpMatchRequired; set { _explicitNullValueIpMatchRequired = value; AdditionalData?.Remove("ip_match_required"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_match_required"); else _explicitNullProperties?.Remove("ip_match_required"); } }
         private bool? _explicitNullValueIpMatchRequired = default!;
         /// <summary>Require that the user agent the Magic Link was requested from matches the user agent it&apos;s clicked from.</summary>
-        public bool? UserAgentMatchRequired { get => _explicitNullValueUserAgentMatchRequired; set { _explicitNullValueUserAgentMatchRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_agent_match_required"); else _explicitNullProperties?.Remove("user_agent_match_required"); } }
+        public bool? UserAgentMatchRequired { get => _explicitNullValueUserAgentMatchRequired; set { _explicitNullValueUserAgentMatchRequired = value; AdditionalData?.Remove("user_agent_match_required"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_agent_match_required"); else _explicitNullProperties?.Remove("user_agent_match_required"); } }
         private bool? _explicitNullValueUserAgentMatchRequired = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1Options"/> and sets the default values.

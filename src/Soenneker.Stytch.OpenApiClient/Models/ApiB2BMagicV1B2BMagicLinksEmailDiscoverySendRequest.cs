@@ -18,60 +18,66 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("discovery_expiration_minutes") is { } nullNodeDiscoveryExpirationMinutes && nullNodeDiscoveryExpirationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscoveryExpirationMinutes = null;
-            if (parseNode.GetChildNode("discovery_redirect_url") is { } nullNodeDiscoveryRedirectUrl && nullNodeDiscoveryRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscoveryRedirectUrl = null;
-            if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
-            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("login_template_id") is { } nullNodeLoginTemplateId && nullNodeLoginTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginTemplateId = null;
-            if (parseNode.GetChildNode("pkce_code_challenge") is { } nullNodePkceCodeChallenge && nullNodePkceCodeChallenge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PkceCodeChallenge = null;
+            if (parseNode.GetChildNode("discovery_expiration_minutes") is null) { _explicitNullValueDiscoveryExpirationMinutes = default!; _explicitNullProperties?.Remove("discovery_expiration_minutes"); }
+            else if (parseNode.GetChildNode("discovery_expiration_minutes") is { } nullNodeDiscoveryExpirationMinutes && nullNodeDiscoveryExpirationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscoveryExpirationMinutes = null;
+            if (parseNode.GetChildNode("discovery_redirect_url") is null) { _explicitNullValueDiscoveryRedirectUrl = default!; _explicitNullProperties?.Remove("discovery_redirect_url"); }
+            else if (parseNode.GetChildNode("discovery_redirect_url") is { } nullNodeDiscoveryRedirectUrl && nullNodeDiscoveryRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscoveryRedirectUrl = null;
+            if (parseNode.GetChildNode("email_address") is null) { _explicitNullValueEmailAddress = default!; _explicitNullProperties?.Remove("email_address"); }
+            else if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
+            if (parseNode.GetChildNode("locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("locale"); }
+            else if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("login_template_id") is null) { _explicitNullValueLoginTemplateId = default!; _explicitNullProperties?.Remove("login_template_id"); }
+            else if (parseNode.GetChildNode("login_template_id") is { } nullNodeLoginTemplateId && nullNodeLoginTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginTemplateId = null;
+            if (parseNode.GetChildNode("pkce_code_challenge") is null) { _explicitNullValuePkceCodeChallenge = default!; _explicitNullProperties?.Remove("pkce_code_challenge"); }
+            else if (parseNode.GetChildNode("pkce_code_challenge") is { } nullNodePkceCodeChallenge && nullNodePkceCodeChallenge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PkceCodeChallenge = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The expiration time, in minutes, for an discovery magic link email. If not accepted within this time frame, the email will need to be resent. Defaults to 60 (1 hour) with a minimum of 5 and a maximum of 10080 (1 week).</summary>
-        public int? DiscoveryExpirationMinutes { get => _explicitNullValueDiscoveryExpirationMinutes; set { _explicitNullValueDiscoveryExpirationMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_expiration_minutes"); else _explicitNullProperties?.Remove("discovery_expiration_minutes"); } }
+        public int? DiscoveryExpirationMinutes { get => _explicitNullValueDiscoveryExpirationMinutes; set { _explicitNullValueDiscoveryExpirationMinutes = value; AdditionalData?.Remove("discovery_expiration_minutes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_expiration_minutes"); else _explicitNullProperties?.Remove("discovery_expiration_minutes"); } }
         private int? _explicitNullValueDiscoveryExpirationMinutes = default!;
         /// <summary>The URL that the end user clicks from the discovery Magic Link. This URL should be an endpoint in the backend server that  verifies the request by querying Stytch&apos;s discovery authenticate endpoint and continues the flow. If this value is not passed, the default  discovery redirect URL that you set in your Dashboard is used. If you have not set a default discovery redirect URL, an error is returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiscoveryRedirectUrl { get => _explicitNullValueDiscoveryRedirectUrl; set { _explicitNullValueDiscoveryRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_redirect_url"); else _explicitNullProperties?.Remove("discovery_redirect_url"); } }
+        public string? DiscoveryRedirectUrl { get => _explicitNullValueDiscoveryRedirectUrl; set { _explicitNullValueDiscoveryRedirectUrl = value; AdditionalData?.Remove("discovery_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_redirect_url"); else _explicitNullProperties?.Remove("discovery_redirect_url"); } }
         private string? _explicitNullValueDiscoveryRedirectUrl = default!;
 #nullable restore
 #else
-        public string DiscoveryRedirectUrl { get => _explicitNullValueDiscoveryRedirectUrl; set { _explicitNullValueDiscoveryRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_redirect_url"); else _explicitNullProperties?.Remove("discovery_redirect_url"); } }
+        public string DiscoveryRedirectUrl { get => _explicitNullValueDiscoveryRedirectUrl; set { _explicitNullValueDiscoveryRedirectUrl = value; AdditionalData?.Remove("discovery_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discovery_redirect_url"); else _explicitNullProperties?.Remove("discovery_redirect_url"); } }
         private string _explicitNullValueDiscoveryRedirectUrl = default!;
 #endif
         /// <summary>The email address of the Member.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string? _explicitNullValueEmailAddress = default!;
 #nullable restore
 #else
-        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string _explicitNullValueEmailAddress = default!;
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailDiscoverySendRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailDiscoverySendRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailDiscoverySendRequestLocale? _explicitNullValueLocale = default!;
         /// <summary>Use a custom template for discovery emails. By default, it will use your default email template. Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type “Magic Links - Login”.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
+        public string? LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; AdditionalData?.Remove("login_template_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
         private string? _explicitNullValueLoginTemplateId = default!;
 #nullable restore
 #else
-        public string LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
+        public string LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; AdditionalData?.Remove("login_template_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
         private string _explicitNullValueLoginTemplateId = default!;
 #endif
         /// <summary>A base64url encoded SHA256 hash of a one time secret used to validate that the request starts and ends on the same device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PkceCodeChallenge { get => _explicitNullValuePkceCodeChallenge; set { _explicitNullValuePkceCodeChallenge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_challenge"); else _explicitNullProperties?.Remove("pkce_code_challenge"); } }
+        public string? PkceCodeChallenge { get => _explicitNullValuePkceCodeChallenge; set { _explicitNullValuePkceCodeChallenge = value; AdditionalData?.Remove("pkce_code_challenge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_challenge"); else _explicitNullProperties?.Remove("pkce_code_challenge"); } }
         private string? _explicitNullValuePkceCodeChallenge = default!;
 #nullable restore
 #else
-        public string PkceCodeChallenge { get => _explicitNullValuePkceCodeChallenge; set { _explicitNullValuePkceCodeChallenge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_challenge"); else _explicitNullProperties?.Remove("pkce_code_challenge"); } }
+        public string PkceCodeChallenge { get => _explicitNullValuePkceCodeChallenge; set { _explicitNullValuePkceCodeChallenge = value; AdditionalData?.Remove("pkce_code_challenge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pkce_code_challenge"); else _explicitNullProperties?.Remove("pkce_code_challenge"); } }
         private string _explicitNullValuePkceCodeChallenge = default!;
 #endif
         /// <summary>
@@ -102,7 +108,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "discovery_expiration_minutes", n => { DiscoveryExpirationMinutes = n.GetIntValue(); } },
                 { "discovery_redirect_url", n => { DiscoveryRedirectUrl = n.GetStringValue(); } },
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailDiscoverySendRequestLocale>(); } },
+                { "locale", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMagicV1MagicLinksEmailDiscoverySendRequestLocale>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLocale = default; _explicitNullProperties?.Remove("locale"); AdditionalData["locale"] = unknown; } else { Locale = parsed; AdditionalData.Remove("locale"); } } },
                 { "login_template_id", n => { LoginTemplateId = n.GetStringValue(); } },
                 { "pkce_code_challenge", n => { PkceCodeChallenge = n.GetStringValue(); } },
             };

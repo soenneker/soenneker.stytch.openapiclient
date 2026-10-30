@@ -18,16 +18,26 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
-            if (parseNode.GetChildNode("code_verifier") is { } nullNodeCodeVerifier && nullNodeCodeVerifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeVerifier = null;
-            if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
-            if (parseNode.GetChildNode("password") is { } nullNodePassword && nullNodePassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Password = null;
-            if (parseNode.GetChildNode("session_custom_claims") is { } nullNodeSessionCustomClaims && nullNodeSessionCustomClaims.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionCustomClaims = null;
-            if (parseNode.GetChildNode("session_duration_minutes") is { } nullNodeSessionDurationMinutes && nullNodeSessionDurationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionDurationMinutes = null;
-            if (parseNode.GetChildNode("session_jwt") is { } nullNodeSessionJwt && nullNodeSessionJwt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionJwt = null;
-            if (parseNode.GetChildNode("session_token") is { } nullNodeSessionToken && nullNodeSessionToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionToken = null;
-            if (parseNode.GetChildNode("telemetry_id") is { } nullNodeTelemetryId && nullNodeTelemetryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TelemetryId = null;
-            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("attributes") is null) { _explicitNullValueAttributes = default!; _explicitNullProperties?.Remove("attributes"); }
+            else if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("code_verifier") is null) { _explicitNullValueCodeVerifier = default!; _explicitNullProperties?.Remove("code_verifier"); }
+            else if (parseNode.GetChildNode("code_verifier") is { } nullNodeCodeVerifier && nullNodeCodeVerifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeVerifier = null;
+            if (parseNode.GetChildNode("options") is null) { _explicitNullValueOptions = default!; _explicitNullProperties?.Remove("options"); }
+            else if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("password") is null) { _explicitNullValuePassword = default!; _explicitNullProperties?.Remove("password"); }
+            else if (parseNode.GetChildNode("password") is { } nullNodePassword && nullNodePassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Password = null;
+            if (parseNode.GetChildNode("session_custom_claims") is null) { _explicitNullValueSessionCustomClaims = default!; _explicitNullProperties?.Remove("session_custom_claims"); }
+            else if (parseNode.GetChildNode("session_custom_claims") is { } nullNodeSessionCustomClaims && nullNodeSessionCustomClaims.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionCustomClaims = null;
+            if (parseNode.GetChildNode("session_duration_minutes") is null) { _explicitNullValueSessionDurationMinutes = default!; _explicitNullProperties?.Remove("session_duration_minutes"); }
+            else if (parseNode.GetChildNode("session_duration_minutes") is { } nullNodeSessionDurationMinutes && nullNodeSessionDurationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionDurationMinutes = null;
+            if (parseNode.GetChildNode("session_jwt") is null) { _explicitNullValueSessionJwt = default!; _explicitNullProperties?.Remove("session_jwt"); }
+            else if (parseNode.GetChildNode("session_jwt") is { } nullNodeSessionJwt && nullNodeSessionJwt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionJwt = null;
+            if (parseNode.GetChildNode("session_token") is null) { _explicitNullValueSessionToken = default!; _explicitNullProperties?.Remove("session_token"); }
+            else if (parseNode.GetChildNode("session_token") is { } nullNodeSessionToken && nullNodeSessionToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionToken = null;
+            if (parseNode.GetChildNode("telemetry_id") is null) { _explicitNullValueTelemetryId = default!; _explicitNullProperties?.Remove("telemetry_id"); }
+            else if (parseNode.GetChildNode("telemetry_id") is { } nullNodeTelemetryId && nullNodeTelemetryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TelemetryId = null;
+            if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
+            else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -35,94 +45,94 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes _explicitNullValueAttributes = default!;
 #endif
         /// <summary>A base64url encoded one time secret used to validate that the request starts and ends on the same device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CodeVerifier { get => _explicitNullValueCodeVerifier; set { _explicitNullValueCodeVerifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_verifier"); else _explicitNullProperties?.Remove("code_verifier"); } }
+        public string? CodeVerifier { get => _explicitNullValueCodeVerifier; set { _explicitNullValueCodeVerifier = value; AdditionalData?.Remove("code_verifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_verifier"); else _explicitNullProperties?.Remove("code_verifier"); } }
         private string? _explicitNullValueCodeVerifier = default!;
 #nullable restore
 #else
-        public string CodeVerifier { get => _explicitNullValueCodeVerifier; set { _explicitNullValueCodeVerifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_verifier"); else _explicitNullProperties?.Remove("code_verifier"); } }
+        public string CodeVerifier { get => _explicitNullValueCodeVerifier; set { _explicitNullValueCodeVerifier = value; AdditionalData?.Remove("code_verifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_verifier"); else _explicitNullProperties?.Remove("code_verifier"); } }
         private string _explicitNullValueCodeVerifier = default!;
 #endif
         /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1Options? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1Options? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1Options? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1Options Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1Options Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1Options _explicitNullValueOptions = default!;
 #endif
         /// <summary>The password for the user. Any UTF8 character is allowed, e.g. spaces, emojis, non-English characters, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        public string? Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; AdditionalData?.Remove("password"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
         private string? _explicitNullValuePassword = default!;
 #nullable restore
 #else
-        public string Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        public string Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; AdditionalData?.Remove("password"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
         private string _explicitNullValuePassword = default!;
 #endif
         /// <summary>Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in `session_duration_minutes`. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.  Custom claims made with reserved claims (&quot;iss&quot;, &quot;sub&quot;, &quot;aud&quot;, &quot;exp&quot;, &quot;nbf&quot;, &quot;iat&quot;, &quot;jti&quot;) will be ignored. Total custom claims size cannot exceed four kilobytes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetRequestSessionCustomClaimsProperty? SessionCustomClaims { get => _explicitNullValueSessionCustomClaims; set { _explicitNullValueSessionCustomClaims = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_custom_claims"); else _explicitNullProperties?.Remove("session_custom_claims"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetRequestSessionCustomClaimsProperty? SessionCustomClaims { get => _explicitNullValueSessionCustomClaims; set { _explicitNullValueSessionCustomClaims = value; AdditionalData?.Remove("session_custom_claims"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_custom_claims"); else _explicitNullProperties?.Remove("session_custom_claims"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetRequestSessionCustomClaimsProperty? _explicitNullValueSessionCustomClaims = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetRequestSessionCustomClaimsProperty SessionCustomClaims { get => _explicitNullValueSessionCustomClaims; set { _explicitNullValueSessionCustomClaims = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_custom_claims"); else _explicitNullProperties?.Remove("session_custom_claims"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetRequestSessionCustomClaimsProperty SessionCustomClaims { get => _explicitNullValueSessionCustomClaims; set { _explicitNullValueSessionCustomClaims = value; AdditionalData?.Remove("session_custom_claims"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_custom_claims"); else _explicitNullProperties?.Remove("session_custom_claims"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsEmailResetRequestSessionCustomClaimsProperty _explicitNullValueSessionCustomClaims = default!;
 #endif
         /// <summary>Set the session lifetime to be this many minutes from now. This will start a new session if one doesn&apos;t already exist,  returning both an opaque `session_token` and `session_jwt` for this session. Remember that the `session_jwt` will have a fixed lifetime of  five minutes regardless of the underlying session duration, and will need to be refreshed over time.  This value must be a minimum of 5 and a maximum of 527040 minutes (366 days).  If a `session_token` or `session_jwt` is provided then a successful authentication will continue to extend the session this many minutes.  If the `session_duration_minutes` parameter is not specified, a Stytch session will not be created.</summary>
-        public int? SessionDurationMinutes { get => _explicitNullValueSessionDurationMinutes; set { _explicitNullValueSessionDurationMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_duration_minutes"); else _explicitNullProperties?.Remove("session_duration_minutes"); } }
+        public int? SessionDurationMinutes { get => _explicitNullValueSessionDurationMinutes; set { _explicitNullValueSessionDurationMinutes = value; AdditionalData?.Remove("session_duration_minutes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_duration_minutes"); else _explicitNullProperties?.Remove("session_duration_minutes"); } }
         private int? _explicitNullValueSessionDurationMinutes = default!;
         /// <summary>The `session_jwt` associated with a User&apos;s existing Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
+        public string? SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; AdditionalData?.Remove("session_jwt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
         private string? _explicitNullValueSessionJwt = default!;
 #nullable restore
 #else
-        public string SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
+        public string SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; AdditionalData?.Remove("session_jwt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
         private string _explicitNullValueSessionJwt = default!;
 #endif
         /// <summary>The `session_token` associated with a User&apos;s existing Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
+        public string? SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; AdditionalData?.Remove("session_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
         private string? _explicitNullValueSessionToken = default!;
 #nullable restore
 #else
-        public string SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
+        public string SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; AdditionalData?.Remove("session_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
         private string _explicitNullValueSessionToken = default!;
 #endif
         /// <summary>If the `telemetry_id` is passed, as part of this request, Stytch will call the [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup) and store the associated fingerprints and IPGEO information for the User. Your workspace must be enabled for Device Fingerprinting to use this feature.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TelemetryId { get => _explicitNullValueTelemetryId; set { _explicitNullValueTelemetryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("telemetry_id"); else _explicitNullProperties?.Remove("telemetry_id"); } }
+        public string? TelemetryId { get => _explicitNullValueTelemetryId; set { _explicitNullValueTelemetryId = value; AdditionalData?.Remove("telemetry_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("telemetry_id"); else _explicitNullProperties?.Remove("telemetry_id"); } }
         private string? _explicitNullValueTelemetryId = default!;
 #nullable restore
 #else
-        public string TelemetryId { get => _explicitNullValueTelemetryId; set { _explicitNullValueTelemetryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("telemetry_id"); else _explicitNullProperties?.Remove("telemetry_id"); } }
+        public string TelemetryId { get => _explicitNullValueTelemetryId; set { _explicitNullValueTelemetryId = value; AdditionalData?.Remove("telemetry_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("telemetry_id"); else _explicitNullProperties?.Remove("telemetry_id"); } }
         private string _explicitNullValueTelemetryId = default!;
 #endif
         /// <summary>The Passwords `token` from the `?token=` query parameter in the URL.      In the redirect URL, the `stytch_token_type` will be `login` or `reset_password`.      See examples and read more about redirect URLs [here](https://stytch.com/docs/workspace-management/redirect-urls).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>

@@ -18,10 +18,14 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("member_id") is { } nullNodeMemberId && nullNodeMemberId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberId = null;
-            if (parseNode.GetChildNode("member_session_id") is { } nullNodeMemberSessionId && nullNodeMemberSessionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberSessionId = null;
-            if (parseNode.GetChildNode("session_jwt") is { } nullNodeSessionJwt && nullNodeSessionJwt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionJwt = null;
-            if (parseNode.GetChildNode("session_token") is { } nullNodeSessionToken && nullNodeSessionToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionToken = null;
+            if (parseNode.GetChildNode("member_id") is null) { _explicitNullValueMemberId = default!; _explicitNullProperties?.Remove("member_id"); }
+            else if (parseNode.GetChildNode("member_id") is { } nullNodeMemberId && nullNodeMemberId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberId = null;
+            if (parseNode.GetChildNode("member_session_id") is null) { _explicitNullValueMemberSessionId = default!; _explicitNullProperties?.Remove("member_session_id"); }
+            else if (parseNode.GetChildNode("member_session_id") is { } nullNodeMemberSessionId && nullNodeMemberSessionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberSessionId = null;
+            if (parseNode.GetChildNode("session_jwt") is null) { _explicitNullValueSessionJwt = default!; _explicitNullProperties?.Remove("session_jwt"); }
+            else if (parseNode.GetChildNode("session_jwt") is { } nullNodeSessionJwt && nullNodeSessionJwt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionJwt = null;
+            if (parseNode.GetChildNode("session_token") is null) { _explicitNullValueSessionToken = default!; _explicitNullProperties?.Remove("session_token"); }
+            else if (parseNode.GetChildNode("session_token") is { } nullNodeSessionToken && nullNodeSessionToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionToken = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>Globally unique UUID that identifies a specific Member. The `member_id` is critical to perform operations on a Member, so be sure to preserve this value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MemberId { get => _explicitNullValueMemberId; set { _explicitNullValueMemberId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_id"); else _explicitNullProperties?.Remove("member_id"); } }
+        public string? MemberId { get => _explicitNullValueMemberId; set { _explicitNullValueMemberId = value; AdditionalData?.Remove("member_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_id"); else _explicitNullProperties?.Remove("member_id"); } }
         private string? _explicitNullValueMemberId = default!;
 #nullable restore
 #else
-        public string MemberId { get => _explicitNullValueMemberId; set { _explicitNullValueMemberId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_id"); else _explicitNullProperties?.Remove("member_id"); } }
+        public string MemberId { get => _explicitNullValueMemberId; set { _explicitNullValueMemberId = value; AdditionalData?.Remove("member_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_id"); else _explicitNullProperties?.Remove("member_id"); } }
         private string _explicitNullValueMemberId = default!;
 #endif
         /// <summary>Globally unique UUID that identifies a specific Session in the Stytch API. The `member_session_id` is critical to perform operations on an Session, so be sure to preserve this value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MemberSessionId { get => _explicitNullValueMemberSessionId; set { _explicitNullValueMemberSessionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_session_id"); else _explicitNullProperties?.Remove("member_session_id"); } }
+        public string? MemberSessionId { get => _explicitNullValueMemberSessionId; set { _explicitNullValueMemberSessionId = value; AdditionalData?.Remove("member_session_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_session_id"); else _explicitNullProperties?.Remove("member_session_id"); } }
         private string? _explicitNullValueMemberSessionId = default!;
 #nullable restore
 #else
-        public string MemberSessionId { get => _explicitNullValueMemberSessionId; set { _explicitNullValueMemberSessionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_session_id"); else _explicitNullProperties?.Remove("member_session_id"); } }
+        public string MemberSessionId { get => _explicitNullValueMemberSessionId; set { _explicitNullValueMemberSessionId = value; AdditionalData?.Remove("member_session_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_session_id"); else _explicitNullProperties?.Remove("member_session_id"); } }
         private string _explicitNullValueMemberSessionId = default!;
 #endif
         /// <summary>The JSON Web Token (JWT) for a given Stytch Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
+        public string? SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; AdditionalData?.Remove("session_jwt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
         private string? _explicitNullValueSessionJwt = default!;
 #nullable restore
 #else
-        public string SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
+        public string SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; AdditionalData?.Remove("session_jwt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
         private string _explicitNullValueSessionJwt = default!;
 #endif
         /// <summary>A secret token for a given Stytch Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
+        public string? SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; AdditionalData?.Remove("session_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
         private string? _explicitNullValueSessionToken = default!;
 #nullable restore
 #else
-        public string SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
+        public string SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; AdditionalData?.Remove("session_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
         private string _explicitNullValueSessionToken = default!;
 #endif
         /// <summary>

@@ -17,10 +17,14 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("crypto_wallet_address") is { } nullNodeCryptoWalletAddress && nullNodeCryptoWalletAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletAddress = null;
-            if (parseNode.GetChildNode("crypto_wallet_id") is { } nullNodeCryptoWalletId && nullNodeCryptoWalletId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletId = null;
-            if (parseNode.GetChildNode("crypto_wallet_type") is { } nullNodeCryptoWalletType && nullNodeCryptoWalletType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletType = null;
-            if (parseNode.GetChildNode("verified") is { } nullNodeVerified && nullNodeVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verified = null;
+            if (parseNode.GetChildNode("crypto_wallet_address") is null) { _explicitNullValueCryptoWalletAddress = default!; _explicitNullProperties?.Remove("crypto_wallet_address"); }
+            else if (parseNode.GetChildNode("crypto_wallet_address") is { } nullNodeCryptoWalletAddress && nullNodeCryptoWalletAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletAddress = null;
+            if (parseNode.GetChildNode("crypto_wallet_id") is null) { _explicitNullValueCryptoWalletId = default!; _explicitNullProperties?.Remove("crypto_wallet_id"); }
+            else if (parseNode.GetChildNode("crypto_wallet_id") is { } nullNodeCryptoWalletId && nullNodeCryptoWalletId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletId = null;
+            if (parseNode.GetChildNode("crypto_wallet_type") is null) { _explicitNullValueCryptoWalletType = default!; _explicitNullProperties?.Remove("crypto_wallet_type"); }
+            else if (parseNode.GetChildNode("crypto_wallet_type") is { } nullNodeCryptoWalletType && nullNodeCryptoWalletType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletType = null;
+            if (parseNode.GetChildNode("verified") is null) { _explicitNullValueVerified = default!; _explicitNullProperties?.Remove("verified"); }
+            else if (parseNode.GetChildNode("verified") is { } nullNodeVerified && nullNodeVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verified = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,35 +32,35 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The actual blockchain address of the User&apos;s crypto wallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CryptoWalletAddress { get => _explicitNullValueCryptoWalletAddress; set { _explicitNullValueCryptoWalletAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_address"); else _explicitNullProperties?.Remove("crypto_wallet_address"); } }
+        public string? CryptoWalletAddress { get => _explicitNullValueCryptoWalletAddress; set { _explicitNullValueCryptoWalletAddress = value; AdditionalData?.Remove("crypto_wallet_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_address"); else _explicitNullProperties?.Remove("crypto_wallet_address"); } }
         private string? _explicitNullValueCryptoWalletAddress = default!;
 #nullable restore
 #else
-        public string CryptoWalletAddress { get => _explicitNullValueCryptoWalletAddress; set { _explicitNullValueCryptoWalletAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_address"); else _explicitNullProperties?.Remove("crypto_wallet_address"); } }
+        public string CryptoWalletAddress { get => _explicitNullValueCryptoWalletAddress; set { _explicitNullValueCryptoWalletAddress = value; AdditionalData?.Remove("crypto_wallet_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_address"); else _explicitNullProperties?.Remove("crypto_wallet_address"); } }
         private string _explicitNullValueCryptoWalletAddress = default!;
 #endif
         /// <summary>The unique ID for a crypto wallet</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CryptoWalletId { get => _explicitNullValueCryptoWalletId; set { _explicitNullValueCryptoWalletId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_id"); else _explicitNullProperties?.Remove("crypto_wallet_id"); } }
+        public string? CryptoWalletId { get => _explicitNullValueCryptoWalletId; set { _explicitNullValueCryptoWalletId = value; AdditionalData?.Remove("crypto_wallet_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_id"); else _explicitNullProperties?.Remove("crypto_wallet_id"); } }
         private string? _explicitNullValueCryptoWalletId = default!;
 #nullable restore
 #else
-        public string CryptoWalletId { get => _explicitNullValueCryptoWalletId; set { _explicitNullValueCryptoWalletId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_id"); else _explicitNullProperties?.Remove("crypto_wallet_id"); } }
+        public string CryptoWalletId { get => _explicitNullValueCryptoWalletId; set { _explicitNullValueCryptoWalletId = value; AdditionalData?.Remove("crypto_wallet_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_id"); else _explicitNullProperties?.Remove("crypto_wallet_id"); } }
         private string _explicitNullValueCryptoWalletId = default!;
 #endif
         /// <summary>The blockchain that the User&apos;s crypto wallet operates on, e.g. Ethereum, Solana, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CryptoWalletType { get => _explicitNullValueCryptoWalletType; set { _explicitNullValueCryptoWalletType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_type"); else _explicitNullProperties?.Remove("crypto_wallet_type"); } }
+        public string? CryptoWalletType { get => _explicitNullValueCryptoWalletType; set { _explicitNullValueCryptoWalletType = value; AdditionalData?.Remove("crypto_wallet_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_type"); else _explicitNullProperties?.Remove("crypto_wallet_type"); } }
         private string? _explicitNullValueCryptoWalletType = default!;
 #nullable restore
 #else
-        public string CryptoWalletType { get => _explicitNullValueCryptoWalletType; set { _explicitNullValueCryptoWalletType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_type"); else _explicitNullProperties?.Remove("crypto_wallet_type"); } }
+        public string CryptoWalletType { get => _explicitNullValueCryptoWalletType; set { _explicitNullValueCryptoWalletType = value; AdditionalData?.Remove("crypto_wallet_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_type"); else _explicitNullProperties?.Remove("crypto_wallet_type"); } }
         private string _explicitNullValueCryptoWalletType = default!;
 #endif
         /// <summary>The verified boolean denotes whether or not this send method, e.g. phone number, email address, etc., has been successfully authenticated by the User.</summary>
-        public bool? Verified { get => _explicitNullValueVerified; set { _explicitNullValueVerified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified"); else _explicitNullProperties?.Remove("verified"); } }
+        public bool? Verified { get => _explicitNullValueVerified; set { _explicitNullValueVerified = value; AdditionalData?.Remove("verified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified"); else _explicitNullProperties?.Remove("verified"); } }
         private bool? _explicitNullValueVerified = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1CryptoWallet"/> and sets the default values.

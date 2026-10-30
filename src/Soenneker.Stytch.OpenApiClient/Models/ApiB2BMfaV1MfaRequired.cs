@@ -17,8 +17,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("member_options") is { } nullNodeMemberOptions && nullNodeMemberOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberOptions = null;
-            if (parseNode.GetChildNode("secondary_auth_initiated") is { } nullNodeSecondaryAuthInitiated && nullNodeSecondaryAuthInitiated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryAuthInitiated = null;
+            if (parseNode.GetChildNode("member_options") is null) { _explicitNullValueMemberOptions = default!; _explicitNullProperties?.Remove("member_options"); }
+            else if (parseNode.GetChildNode("member_options") is { } nullNodeMemberOptions && nullNodeMemberOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberOptions = null;
+            if (parseNode.GetChildNode("secondary_auth_initiated") is null) { _explicitNullValueSecondaryAuthInitiated = default!; _explicitNullProperties?.Remove("secondary_auth_initiated"); }
+            else if (parseNode.GetChildNode("secondary_auth_initiated") is { } nullNodeSecondaryAuthInitiated && nullNodeSecondaryAuthInitiated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryAuthInitiated = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The member_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions? MemberOptions { get => _explicitNullValueMemberOptions; set { _explicitNullValueMemberOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_options"); else _explicitNullProperties?.Remove("member_options"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions? MemberOptions { get => _explicitNullValueMemberOptions; set { _explicitNullValueMemberOptions = value; AdditionalData?.Remove("member_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_options"); else _explicitNullProperties?.Remove("member_options"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions? _explicitNullValueMemberOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions MemberOptions { get => _explicitNullValueMemberOptions; set { _explicitNullValueMemberOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_options"); else _explicitNullProperties?.Remove("member_options"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions MemberOptions { get => _explicitNullValueMemberOptions; set { _explicitNullValueMemberOptions = value; AdditionalData?.Remove("member_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_options"); else _explicitNullProperties?.Remove("member_options"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BMfaV1MemberOptions _explicitNullValueMemberOptions = default!;
 #endif
         /// <summary>If null, indicates that no secondary authentication has been initiated. If equal to &quot;sms_otp&quot;, indicates that the Member has a phone number, and a one time passcode has been sent to the Member&apos;s phone number. No secondary authentication will be initiated during calls to the discovery authenticate or list organizations endpoints, even if the Member has a phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryAuthInitiated { get => _explicitNullValueSecondaryAuthInitiated; set { _explicitNullValueSecondaryAuthInitiated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_auth_initiated"); else _explicitNullProperties?.Remove("secondary_auth_initiated"); } }
+        public string? SecondaryAuthInitiated { get => _explicitNullValueSecondaryAuthInitiated; set { _explicitNullValueSecondaryAuthInitiated = value; AdditionalData?.Remove("secondary_auth_initiated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_auth_initiated"); else _explicitNullProperties?.Remove("secondary_auth_initiated"); } }
         private string? _explicitNullValueSecondaryAuthInitiated = default!;
 #nullable restore
 #else
-        public string SecondaryAuthInitiated { get => _explicitNullValueSecondaryAuthInitiated; set { _explicitNullValueSecondaryAuthInitiated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_auth_initiated"); else _explicitNullProperties?.Remove("secondary_auth_initiated"); } }
+        public string SecondaryAuthInitiated { get => _explicitNullValueSecondaryAuthInitiated; set { _explicitNullValueSecondaryAuthInitiated = value; AdditionalData?.Remove("secondary_auth_initiated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_auth_initiated"); else _explicitNullProperties?.Remove("secondary_auth_initiated"); } }
         private string _explicitNullValueSecondaryAuthInitiated = default!;
 #endif
         /// <summary>

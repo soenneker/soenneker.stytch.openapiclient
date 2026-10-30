@@ -18,7 +18,8 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("impersonation_token") is { } nullNodeImpersonationToken && nullNodeImpersonationToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImpersonationToken = null;
+            if (parseNode.GetChildNode("impersonation_token") is null) { _explicitNullValueImpersonationToken = default!; _explicitNullProperties?.Remove("impersonation_token"); }
+            else if (parseNode.GetChildNode("impersonation_token") is { } nullNodeImpersonationToken && nullNodeImpersonationToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImpersonationToken = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The Member Impersonation token to authenticate. Expires in 5 minutes by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImpersonationToken { get => _explicitNullValueImpersonationToken; set { _explicitNullValueImpersonationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonation_token"); else _explicitNullProperties?.Remove("impersonation_token"); } }
+        public string? ImpersonationToken { get => _explicitNullValueImpersonationToken; set { _explicitNullValueImpersonationToken = value; AdditionalData?.Remove("impersonation_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonation_token"); else _explicitNullProperties?.Remove("impersonation_token"); } }
         private string? _explicitNullValueImpersonationToken = default!;
 #nullable restore
 #else
-        public string ImpersonationToken { get => _explicitNullValueImpersonationToken; set { _explicitNullValueImpersonationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonation_token"); else _explicitNullProperties?.Remove("impersonation_token"); } }
+        public string ImpersonationToken { get => _explicitNullValueImpersonationToken; set { _explicitNullValueImpersonationToken = value; AdditionalData?.Remove("impersonation_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonation_token"); else _explicitNullProperties?.Remove("impersonation_token"); } }
         private string _explicitNullValueImpersonationToken = default!;
 #endif
         /// <summary>

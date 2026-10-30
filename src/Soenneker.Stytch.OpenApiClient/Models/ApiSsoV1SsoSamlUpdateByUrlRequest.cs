@@ -18,7 +18,8 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("metadata_url") is { } nullNodeMetadataUrl && nullNodeMetadataUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetadataUrl = null;
+            if (parseNode.GetChildNode("metadata_url") is null) { _explicitNullValueMetadataUrl = default!; _explicitNullProperties?.Remove("metadata_url"); }
+            else if (parseNode.GetChildNode("metadata_url") is { } nullNodeMetadataUrl && nullNodeMetadataUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetadataUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>A URL that points to the IdP metadata. This will be provided by the IdP.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MetadataUrl { get => _explicitNullValueMetadataUrl; set { _explicitNullValueMetadataUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata_url"); else _explicitNullProperties?.Remove("metadata_url"); } }
+        public string? MetadataUrl { get => _explicitNullValueMetadataUrl; set { _explicitNullValueMetadataUrl = value; AdditionalData?.Remove("metadata_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata_url"); else _explicitNullProperties?.Remove("metadata_url"); } }
         private string? _explicitNullValueMetadataUrl = default!;
 #nullable restore
 #else
-        public string MetadataUrl { get => _explicitNullValueMetadataUrl; set { _explicitNullValueMetadataUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata_url"); else _explicitNullProperties?.Remove("metadata_url"); } }
+        public string MetadataUrl { get => _explicitNullValueMetadataUrl; set { _explicitNullValueMetadataUrl = value; AdditionalData?.Remove("metadata_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata_url"); else _explicitNullProperties?.Remove("metadata_url"); } }
         private string _explicitNullValueMetadataUrl = default!;
 #endif
         /// <summary>

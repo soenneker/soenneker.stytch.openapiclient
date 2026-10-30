@@ -17,11 +17,16 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("asn") is { } nullNodeAsn && nullNodeAsn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Asn = null;
-            if (parseNode.GetChildNode("ip_address") is { } nullNodeIpAddress && nullNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddress = null;
-            if (parseNode.GetChildNode("ip_geolocation") is { } nullNodeIpGeolocation && nullNodeIpGeolocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpGeolocation = null;
-            if (parseNode.GetChildNode("is_proxy") is { } nullNodeIsProxy && nullNodeIsProxy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsProxy = null;
-            if (parseNode.GetChildNode("is_vpn") is { } nullNodeIsVpn && nullNodeIsVpn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsVpn = null;
+            if (parseNode.GetChildNode("asn") is null) { _explicitNullValueAsn = default!; _explicitNullProperties?.Remove("asn"); }
+            else if (parseNode.GetChildNode("asn") is { } nullNodeAsn && nullNodeAsn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Asn = null;
+            if (parseNode.GetChildNode("ip_address") is null) { _explicitNullValueIpAddress = default!; _explicitNullProperties?.Remove("ip_address"); }
+            else if (parseNode.GetChildNode("ip_address") is { } nullNodeIpAddress && nullNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddress = null;
+            if (parseNode.GetChildNode("ip_geolocation") is null) { _explicitNullValueIpGeolocation = default!; _explicitNullProperties?.Remove("ip_geolocation"); }
+            else if (parseNode.GetChildNode("ip_geolocation") is { } nullNodeIpGeolocation && nullNodeIpGeolocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpGeolocation = null;
+            if (parseNode.GetChildNode("is_proxy") is null) { _explicitNullValueIsProxy = default!; _explicitNullProperties?.Remove("is_proxy"); }
+            else if (parseNode.GetChildNode("is_proxy") is { } nullNodeIsProxy && nullNodeIsProxy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsProxy = null;
+            if (parseNode.GetChildNode("is_vpn") is null) { _explicitNullValueIsVpn = default!; _explicitNullProperties?.Remove("is_vpn"); }
+            else if (parseNode.GetChildNode("is_vpn") is { } nullNodeIsVpn && nullNodeIsVpn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsVpn = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,38 +34,38 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The asn property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1AsnProperties? Asn { get => _explicitNullValueAsn; set { _explicitNullValueAsn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asn"); else _explicitNullProperties?.Remove("asn"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1AsnProperties? Asn { get => _explicitNullValueAsn; set { _explicitNullValueAsn = value; AdditionalData?.Remove("asn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asn"); else _explicitNullProperties?.Remove("asn"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1AsnProperties? _explicitNullValueAsn = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1AsnProperties Asn { get => _explicitNullValueAsn; set { _explicitNullValueAsn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asn"); else _explicitNullProperties?.Remove("asn"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1AsnProperties Asn { get => _explicitNullValueAsn; set { _explicitNullValueAsn = value; AdditionalData?.Remove("asn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asn"); else _explicitNullProperties?.Remove("asn"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1AsnProperties _explicitNullValueAsn = default!;
 #endif
         /// <summary>The IP address of the client.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
+        public string? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; AdditionalData?.Remove("ip_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
         private string? _explicitNullValueIpAddress = default!;
 #nullable restore
 #else
-        public string IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
+        public string IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; AdditionalData?.Remove("ip_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
         private string _explicitNullValueIpAddress = default!;
 #endif
         /// <summary>The ip_geolocation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1IpGeoProperties? IpGeolocation { get => _explicitNullValueIpGeolocation; set { _explicitNullValueIpGeolocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_geolocation"); else _explicitNullProperties?.Remove("ip_geolocation"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1IpGeoProperties? IpGeolocation { get => _explicitNullValueIpGeolocation; set { _explicitNullValueIpGeolocation = value; AdditionalData?.Remove("ip_geolocation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_geolocation"); else _explicitNullProperties?.Remove("ip_geolocation"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1IpGeoProperties? _explicitNullValueIpGeolocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1IpGeoProperties IpGeolocation { get => _explicitNullValueIpGeolocation; set { _explicitNullValueIpGeolocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_geolocation"); else _explicitNullProperties?.Remove("ip_geolocation"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1IpGeoProperties IpGeolocation { get => _explicitNullValueIpGeolocation; set { _explicitNullValueIpGeolocation = value; AdditionalData?.Remove("ip_geolocation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_geolocation"); else _explicitNullProperties?.Remove("ip_geolocation"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1IpGeoProperties _explicitNullValueIpGeolocation = default!;
 #endif
         /// <summary>Whether the user is using a proxy.</summary>
-        public bool? IsProxy { get => _explicitNullValueIsProxy; set { _explicitNullValueIsProxy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_proxy"); else _explicitNullProperties?.Remove("is_proxy"); } }
+        public bool? IsProxy { get => _explicitNullValueIsProxy; set { _explicitNullValueIsProxy = value; AdditionalData?.Remove("is_proxy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_proxy"); else _explicitNullProperties?.Remove("is_proxy"); } }
         private bool? _explicitNullValueIsProxy = default!;
         /// <summary>Whether the user is using a VPN.</summary>
-        public bool? IsVpn { get => _explicitNullValueIsVpn; set { _explicitNullValueIsVpn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_vpn"); else _explicitNullProperties?.Remove("is_vpn"); } }
+        public bool? IsVpn { get => _explicitNullValueIsVpn; set { _explicitNullValueIsVpn = value; AdditionalData?.Remove("is_vpn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_vpn"); else _explicitNullProperties?.Remove("is_vpn"); } }
         private bool? _explicitNullValueIsVpn = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1NetworkProperties"/> and sets the default values.

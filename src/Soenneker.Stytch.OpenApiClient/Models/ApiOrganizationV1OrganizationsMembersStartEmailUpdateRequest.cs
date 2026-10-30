@@ -18,49 +18,54 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("delivery_method") is { } nullNodeDeliveryMethod && nullNodeDeliveryMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryMethod = null;
-            if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
-            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("login_redirect_url") is { } nullNodeLoginRedirectUrl && nullNodeLoginRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginRedirectUrl = null;
-            if (parseNode.GetChildNode("login_template_id") is { } nullNodeLoginTemplateId && nullNodeLoginTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginTemplateId = null;
+            if (parseNode.GetChildNode("delivery_method") is null) { _explicitNullValueDeliveryMethod = default!; _explicitNullProperties?.Remove("delivery_method"); }
+            else if (parseNode.GetChildNode("delivery_method") is { } nullNodeDeliveryMethod && nullNodeDeliveryMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeliveryMethod = null;
+            if (parseNode.GetChildNode("email_address") is null) { _explicitNullValueEmailAddress = default!; _explicitNullProperties?.Remove("email_address"); }
+            else if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
+            if (parseNode.GetChildNode("locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("locale"); }
+            else if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("login_redirect_url") is null) { _explicitNullValueLoginRedirectUrl = default!; _explicitNullProperties?.Remove("login_redirect_url"); }
+            else if (parseNode.GetChildNode("login_redirect_url") is { } nullNodeLoginRedirectUrl && nullNodeLoginRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginRedirectUrl = null;
+            if (parseNode.GetChildNode("login_template_id") is null) { _explicitNullValueLoginTemplateId = default!; _explicitNullProperties?.Remove("login_template_id"); }
+            else if (parseNode.GetChildNode("login_template_id") is { } nullNodeLoginTemplateId && nullNodeLoginTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginTemplateId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The delivery_method property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestDeliveryMethod? DeliveryMethod { get => _explicitNullValueDeliveryMethod; set { _explicitNullValueDeliveryMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivery_method"); else _explicitNullProperties?.Remove("delivery_method"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestDeliveryMethod? DeliveryMethod { get => _explicitNullValueDeliveryMethod; set { _explicitNullValueDeliveryMethod = value; AdditionalData?.Remove("delivery_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delivery_method"); else _explicitNullProperties?.Remove("delivery_method"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestDeliveryMethod? _explicitNullValueDeliveryMethod = default!;
         /// <summary>The new email address for the Member.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string? _explicitNullValueEmailAddress = default!;
 #nullable restore
 #else
-        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string _explicitNullValueEmailAddress = default!;
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestLocale? _explicitNullValueLocale = default!;
         /// <summary>The URL that the Member clicks from the login Email Magic Link. This URL should be an endpoint in the backend server that  verifies the request by querying Stytch&apos;s authenticate endpoint and finishes the login. If this value is not passed, the default login  redirect URL that you set in your Dashboard is used. If you have not set a default login redirect URL, an error is returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LoginRedirectUrl { get => _explicitNullValueLoginRedirectUrl; set { _explicitNullValueLoginRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_redirect_url"); else _explicitNullProperties?.Remove("login_redirect_url"); } }
+        public string? LoginRedirectUrl { get => _explicitNullValueLoginRedirectUrl; set { _explicitNullValueLoginRedirectUrl = value; AdditionalData?.Remove("login_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_redirect_url"); else _explicitNullProperties?.Remove("login_redirect_url"); } }
         private string? _explicitNullValueLoginRedirectUrl = default!;
 #nullable restore
 #else
-        public string LoginRedirectUrl { get => _explicitNullValueLoginRedirectUrl; set { _explicitNullValueLoginRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_redirect_url"); else _explicitNullProperties?.Remove("login_redirect_url"); } }
+        public string LoginRedirectUrl { get => _explicitNullValueLoginRedirectUrl; set { _explicitNullValueLoginRedirectUrl = value; AdditionalData?.Remove("login_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_redirect_url"); else _explicitNullProperties?.Remove("login_redirect_url"); } }
         private string _explicitNullValueLoginRedirectUrl = default!;
 #endif
         /// <summary>Use a custom template for login emails. By default, it will use your default email template. Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type “Magic Links - Login”.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
+        public string? LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; AdditionalData?.Remove("login_template_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
         private string? _explicitNullValueLoginTemplateId = default!;
 #nullable restore
 #else
-        public string LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
+        public string LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; AdditionalData?.Remove("login_template_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
         private string _explicitNullValueLoginTemplateId = default!;
 #endif
         /// <summary>
@@ -88,9 +93,9 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "delivery_method", n => { DeliveryMethod = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestDeliveryMethod>(); } },
+                { "delivery_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestDeliveryMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDeliveryMethod = default; _explicitNullProperties?.Remove("delivery_method"); AdditionalData["delivery_method"] = unknown; } else { DeliveryMethod = parsed; AdditionalData.Remove("delivery_method"); } } },
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestLocale>(); } },
+                { "locale", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestLocale>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLocale = default; _explicitNullProperties?.Remove("locale"); AdditionalData["locale"] = unknown; } else { Locale = parsed; AdditionalData.Remove("locale"); } } },
                 { "login_redirect_url", n => { LoginRedirectUrl = n.GetStringValue(); } },
                 { "login_template_id", n => { LoginTemplateId = n.GetStringValue(); } },
             };

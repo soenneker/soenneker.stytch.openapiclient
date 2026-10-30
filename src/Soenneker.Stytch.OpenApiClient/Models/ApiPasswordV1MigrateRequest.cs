@@ -18,23 +18,40 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("argon_2_config") is { } nullNodeArgon2Config && nullNodeArgon2Config.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Argon2Config = null;
-            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
-            if (parseNode.GetChildNode("external_id") is { } nullNodeExternalId && nullNodeExternalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalId = null;
-            if (parseNode.GetChildNode("hash") is { } nullNodeHash && nullNodeHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hash = null;
-            if (parseNode.GetChildNode("hash_type") is { } nullNodeHashType && nullNodeHashType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HashType = null;
-            if (parseNode.GetChildNode("md_5_config") is { } nullNodeMd5Config && nullNodeMd5Config.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Md5Config = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("pbkdf_2_config") is { } nullNodePbkdf2Config && nullNodePbkdf2Config.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pbkdf2Config = null;
-            if (parseNode.GetChildNode("phone_number") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
-            if (parseNode.GetChildNode("roles") is { } nullNodeRoles && nullNodeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Roles = null;
-            if (parseNode.GetChildNode("scrypt_config") is { } nullNodeScryptConfig && nullNodeScryptConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScryptConfig = null;
-            if (parseNode.GetChildNode("set_email_verified") is { } nullNodeSetEmailVerified && nullNodeSetEmailVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetEmailVerified = null;
-            if (parseNode.GetChildNode("set_phone_number_verified") is { } nullNodeSetPhoneNumberVerified && nullNodeSetPhoneNumberVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetPhoneNumberVerified = null;
-            if (parseNode.GetChildNode("sha_1_config") is { } nullNodeSha1Config && nullNodeSha1Config.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sha1Config = null;
-            if (parseNode.GetChildNode("sha_512_config") is { } nullNodeSha512Config && nullNodeSha512Config.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sha512Config = null;
-            if (parseNode.GetChildNode("trusted_metadata") is { } nullNodeTrustedMetadata && nullNodeTrustedMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrustedMetadata = null;
-            if (parseNode.GetChildNode("untrusted_metadata") is { } nullNodeUntrustedMetadata && nullNodeUntrustedMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UntrustedMetadata = null;
+            if (parseNode.GetChildNode("argon_2_config") is null) { _explicitNullValueArgon2Config = default!; _explicitNullProperties?.Remove("argon_2_config"); }
+            else if (parseNode.GetChildNode("argon_2_config") is { } nullNodeArgon2Config && nullNodeArgon2Config.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Argon2Config = null;
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("external_id") is null) { _explicitNullValueExternalId = default!; _explicitNullProperties?.Remove("external_id"); }
+            else if (parseNode.GetChildNode("external_id") is { } nullNodeExternalId && nullNodeExternalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalId = null;
+            if (parseNode.GetChildNode("hash") is null) { _explicitNullValueHash = default!; _explicitNullProperties?.Remove("hash"); }
+            else if (parseNode.GetChildNode("hash") is { } nullNodeHash && nullNodeHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hash = null;
+            if (parseNode.GetChildNode("hash_type") is null) { _explicitNullValueHashType = default!; _explicitNullProperties?.Remove("hash_type"); }
+            else if (parseNode.GetChildNode("hash_type") is { } nullNodeHashType && nullNodeHashType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HashType = null;
+            if (parseNode.GetChildNode("md_5_config") is null) { _explicitNullValueMd5Config = default!; _explicitNullProperties?.Remove("md_5_config"); }
+            else if (parseNode.GetChildNode("md_5_config") is { } nullNodeMd5Config && nullNodeMd5Config.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Md5Config = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("pbkdf_2_config") is null) { _explicitNullValuePbkdf2Config = default!; _explicitNullProperties?.Remove("pbkdf_2_config"); }
+            else if (parseNode.GetChildNode("pbkdf_2_config") is { } nullNodePbkdf2Config && nullNodePbkdf2Config.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pbkdf2Config = null;
+            if (parseNode.GetChildNode("phone_number") is null) { _explicitNullValuePhoneNumber = default!; _explicitNullProperties?.Remove("phone_number"); }
+            else if (parseNode.GetChildNode("phone_number") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
+            if (parseNode.GetChildNode("roles") is null) { _explicitNullValueRoles = default!; _explicitNullProperties?.Remove("roles"); }
+            else if (parseNode.GetChildNode("roles") is { } nullNodeRoles && nullNodeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Roles = null;
+            if (parseNode.GetChildNode("scrypt_config") is null) { _explicitNullValueScryptConfig = default!; _explicitNullProperties?.Remove("scrypt_config"); }
+            else if (parseNode.GetChildNode("scrypt_config") is { } nullNodeScryptConfig && nullNodeScryptConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScryptConfig = null;
+            if (parseNode.GetChildNode("set_email_verified") is null) { _explicitNullValueSetEmailVerified = default!; _explicitNullProperties?.Remove("set_email_verified"); }
+            else if (parseNode.GetChildNode("set_email_verified") is { } nullNodeSetEmailVerified && nullNodeSetEmailVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetEmailVerified = null;
+            if (parseNode.GetChildNode("set_phone_number_verified") is null) { _explicitNullValueSetPhoneNumberVerified = default!; _explicitNullProperties?.Remove("set_phone_number_verified"); }
+            else if (parseNode.GetChildNode("set_phone_number_verified") is { } nullNodeSetPhoneNumberVerified && nullNodeSetPhoneNumberVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetPhoneNumberVerified = null;
+            if (parseNode.GetChildNode("sha_1_config") is null) { _explicitNullValueSha1Config = default!; _explicitNullProperties?.Remove("sha_1_config"); }
+            else if (parseNode.GetChildNode("sha_1_config") is { } nullNodeSha1Config && nullNodeSha1Config.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sha1Config = null;
+            if (parseNode.GetChildNode("sha_512_config") is null) { _explicitNullValueSha512Config = default!; _explicitNullProperties?.Remove("sha_512_config"); }
+            else if (parseNode.GetChildNode("sha_512_config") is { } nullNodeSha512Config && nullNodeSha512Config.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sha512Config = null;
+            if (parseNode.GetChildNode("trusted_metadata") is null) { _explicitNullValueTrustedMetadata = default!; _explicitNullProperties?.Remove("trusted_metadata"); }
+            else if (parseNode.GetChildNode("trusted_metadata") is { } nullNodeTrustedMetadata && nullNodeTrustedMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrustedMetadata = null;
+            if (parseNode.GetChildNode("untrusted_metadata") is null) { _explicitNullValueUntrustedMetadata = default!; _explicitNullProperties?.Remove("untrusted_metadata"); }
+            else if (parseNode.GetChildNode("untrusted_metadata") is { } nullNodeUntrustedMetadata && nullNodeUntrustedMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UntrustedMetadata = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -42,150 +59,150 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The argon_2_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Argon2Config? Argon2Config { get => _explicitNullValueArgon2Config; set { _explicitNullValueArgon2Config = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("argon_2_config"); else _explicitNullProperties?.Remove("argon_2_config"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Argon2Config? Argon2Config { get => _explicitNullValueArgon2Config; set { _explicitNullValueArgon2Config = value; AdditionalData?.Remove("argon_2_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("argon_2_config"); else _explicitNullProperties?.Remove("argon_2_config"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Argon2Config? _explicitNullValueArgon2Config = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Argon2Config Argon2Config { get => _explicitNullValueArgon2Config; set { _explicitNullValueArgon2Config = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("argon_2_config"); else _explicitNullProperties?.Remove("argon_2_config"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Argon2Config Argon2Config { get => _explicitNullValueArgon2Config; set { _explicitNullValueArgon2Config = value; AdditionalData?.Remove("argon_2_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("argon_2_config"); else _explicitNullProperties?.Remove("argon_2_config"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Argon2Config _explicitNullValueArgon2Config = default!;
 #endif
         /// <summary>The email address of the end user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>If a new user is created, this will set an identifier that can be used in API calls wherever a user_id is expected. This is a string consisting of alphanumeric, `.`, `_`, `-`, or `|` characters with a maximum length of 128 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
+        public string? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; AdditionalData?.Remove("external_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
         private string? _explicitNullValueExternalId = default!;
 #nullable restore
 #else
-        public string ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
+        public string ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; AdditionalData?.Remove("external_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_id"); else _explicitNullProperties?.Remove("external_id"); } }
         private string _explicitNullValueExternalId = default!;
 #endif
         /// <summary>The password hash. For a Scrypt or PBKDF2 hash, the hash needs to be a base64 encoded string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Hash { get => _explicitNullValueHash; set { _explicitNullValueHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hash"); else _explicitNullProperties?.Remove("hash"); } }
+        public string? Hash { get => _explicitNullValueHash; set { _explicitNullValueHash = value; AdditionalData?.Remove("hash"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hash"); else _explicitNullProperties?.Remove("hash"); } }
         private string? _explicitNullValueHash = default!;
 #nullable restore
 #else
-        public string Hash { get => _explicitNullValueHash; set { _explicitNullValueHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hash"); else _explicitNullProperties?.Remove("hash"); } }
+        public string Hash { get => _explicitNullValueHash; set { _explicitNullValueHash = value; AdditionalData?.Remove("hash"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hash"); else _explicitNullProperties?.Remove("hash"); } }
         private string _explicitNullValueHash = default!;
 #endif
         /// <summary>The hash_type property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsMigrateRequestHashType? HashType { get => _explicitNullValueHashType; set { _explicitNullValueHashType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hash_type"); else _explicitNullProperties?.Remove("hash_type"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsMigrateRequestHashType? HashType { get => _explicitNullValueHashType; set { _explicitNullValueHashType = value; AdditionalData?.Remove("hash_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hash_type"); else _explicitNullProperties?.Remove("hash_type"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsMigrateRequestHashType? _explicitNullValueHashType = default!;
         /// <summary>The md_5_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config? Md5Config { get => _explicitNullValueMd5Config; set { _explicitNullValueMd5Config = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("md_5_config"); else _explicitNullProperties?.Remove("md_5_config"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config? Md5Config { get => _explicitNullValueMd5Config; set { _explicitNullValueMd5Config = value; AdditionalData?.Remove("md_5_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("md_5_config"); else _explicitNullProperties?.Remove("md_5_config"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config? _explicitNullValueMd5Config = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config Md5Config { get => _explicitNullValueMd5Config; set { _explicitNullValueMd5Config = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("md_5_config"); else _explicitNullProperties?.Remove("md_5_config"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config Md5Config { get => _explicitNullValueMd5Config; set { _explicitNullValueMd5Config = value; AdditionalData?.Remove("md_5_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("md_5_config"); else _explicitNullProperties?.Remove("md_5_config"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config _explicitNullValueMd5Config = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name _explicitNullValueName = default!;
 #endif
         /// <summary>The pbkdf_2_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config? Pbkdf2Config { get => _explicitNullValuePbkdf2Config; set { _explicitNullValuePbkdf2Config = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pbkdf_2_config"); else _explicitNullProperties?.Remove("pbkdf_2_config"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config? Pbkdf2Config { get => _explicitNullValuePbkdf2Config; set { _explicitNullValuePbkdf2Config = value; AdditionalData?.Remove("pbkdf_2_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pbkdf_2_config"); else _explicitNullProperties?.Remove("pbkdf_2_config"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config? _explicitNullValuePbkdf2Config = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config Pbkdf2Config { get => _explicitNullValuePbkdf2Config; set { _explicitNullValuePbkdf2Config = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pbkdf_2_config"); else _explicitNullProperties?.Remove("pbkdf_2_config"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config Pbkdf2Config { get => _explicitNullValuePbkdf2Config; set { _explicitNullValuePbkdf2Config = value; AdditionalData?.Remove("pbkdf_2_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pbkdf_2_config"); else _explicitNullProperties?.Remove("pbkdf_2_config"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config _explicitNullValuePbkdf2Config = default!;
 #endif
         /// <summary>The phone number of the user. The phone number should be in E.164 format (i.e. +1XXXXXXXXXX).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
+        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; AdditionalData?.Remove("phone_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
         private string? _explicitNullValuePhoneNumber = default!;
 #nullable restore
 #else
-        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
+        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; AdditionalData?.Remove("phone_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone_number"); else _explicitNullProperties?.Remove("phone_number"); } }
         private string _explicitNullValuePhoneNumber = default!;
 #endif
         /// <summary>Roles to explicitly assign to this User.   See the [RBAC guide](https://stytch.com/docs/guides/rbac/role-assignment) for more information about role assignment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
+        public List<string>? Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; AdditionalData?.Remove("roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
         private List<string>? _explicitNullValueRoles = default!;
 #nullable restore
 #else
-        public List<string> Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
+        public List<string> Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; AdditionalData?.Remove("roles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
         private List<string> _explicitNullValueRoles = default!;
 #endif
         /// <summary>The scrypt_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1ScryptConfig? ScryptConfig { get => _explicitNullValueScryptConfig; set { _explicitNullValueScryptConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scrypt_config"); else _explicitNullProperties?.Remove("scrypt_config"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1ScryptConfig? ScryptConfig { get => _explicitNullValueScryptConfig; set { _explicitNullValueScryptConfig = value; AdditionalData?.Remove("scrypt_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scrypt_config"); else _explicitNullProperties?.Remove("scrypt_config"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1ScryptConfig? _explicitNullValueScryptConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1ScryptConfig ScryptConfig { get => _explicitNullValueScryptConfig; set { _explicitNullValueScryptConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scrypt_config"); else _explicitNullProperties?.Remove("scrypt_config"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1ScryptConfig ScryptConfig { get => _explicitNullValueScryptConfig; set { _explicitNullValueScryptConfig = value; AdditionalData?.Remove("scrypt_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scrypt_config"); else _explicitNullProperties?.Remove("scrypt_config"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1ScryptConfig _explicitNullValueScryptConfig = default!;
 #endif
         /// <summary>Whether to set the user&apos;s email as verified. This is a dangerous field, incorrect use may lead to users getting erroneously                deduplicated into one User object. This flag should only be set if you can attest that the user owns the email address in question.                </summary>
-        public bool? SetEmailVerified { get => _explicitNullValueSetEmailVerified; set { _explicitNullValueSetEmailVerified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("set_email_verified"); else _explicitNullProperties?.Remove("set_email_verified"); } }
+        public bool? SetEmailVerified { get => _explicitNullValueSetEmailVerified; set { _explicitNullValueSetEmailVerified = value; AdditionalData?.Remove("set_email_verified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("set_email_verified"); else _explicitNullProperties?.Remove("set_email_verified"); } }
         private bool? _explicitNullValueSetEmailVerified = default!;
         /// <summary>Whether to set the user&apos;s phone number as verified. This is a dangerous field, this flag should only be set if you can attest that   the user owns the phone number in question.</summary>
-        public bool? SetPhoneNumberVerified { get => _explicitNullValueSetPhoneNumberVerified; set { _explicitNullValueSetPhoneNumberVerified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("set_phone_number_verified"); else _explicitNullProperties?.Remove("set_phone_number_verified"); } }
+        public bool? SetPhoneNumberVerified { get => _explicitNullValueSetPhoneNumberVerified; set { _explicitNullValueSetPhoneNumberVerified = value; AdditionalData?.Remove("set_phone_number_verified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("set_phone_number_verified"); else _explicitNullProperties?.Remove("set_phone_number_verified"); } }
         private bool? _explicitNullValueSetPhoneNumberVerified = default!;
         /// <summary>The sha_1_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config? Sha1Config { get => _explicitNullValueSha1Config; set { _explicitNullValueSha1Config = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha_1_config"); else _explicitNullProperties?.Remove("sha_1_config"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config? Sha1Config { get => _explicitNullValueSha1Config; set { _explicitNullValueSha1Config = value; AdditionalData?.Remove("sha_1_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha_1_config"); else _explicitNullProperties?.Remove("sha_1_config"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config? _explicitNullValueSha1Config = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config Sha1Config { get => _explicitNullValueSha1Config; set { _explicitNullValueSha1Config = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha_1_config"); else _explicitNullProperties?.Remove("sha_1_config"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config Sha1Config { get => _explicitNullValueSha1Config; set { _explicitNullValueSha1Config = value; AdditionalData?.Remove("sha_1_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha_1_config"); else _explicitNullProperties?.Remove("sha_1_config"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha1Config _explicitNullValueSha1Config = default!;
 #endif
         /// <summary>The sha_512_config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha512Config? Sha512Config { get => _explicitNullValueSha512Config; set { _explicitNullValueSha512Config = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha_512_config"); else _explicitNullProperties?.Remove("sha_512_config"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha512Config? Sha512Config { get => _explicitNullValueSha512Config; set { _explicitNullValueSha512Config = value; AdditionalData?.Remove("sha_512_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha_512_config"); else _explicitNullProperties?.Remove("sha_512_config"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha512Config? _explicitNullValueSha512Config = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha512Config Sha512Config { get => _explicitNullValueSha512Config; set { _explicitNullValueSha512Config = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha_512_config"); else _explicitNullProperties?.Remove("sha_512_config"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha512Config Sha512Config { get => _explicitNullValueSha512Config; set { _explicitNullValueSha512Config = value; AdditionalData?.Remove("sha_512_config"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha_512_config"); else _explicitNullProperties?.Remove("sha_512_config"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Sha512Config _explicitNullValueSha512Config = default!;
 #endif
         /// <summary>The `trusted_metadata` field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestTrustedMetadataProperty? TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestTrustedMetadataProperty? TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; AdditionalData?.Remove("trusted_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestTrustedMetadataProperty? _explicitNullValueTrustedMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestTrustedMetadataProperty TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestTrustedMetadataProperty TrustedMetadata { get => _explicitNullValueTrustedMetadata; set { _explicitNullValueTrustedMetadata = value; AdditionalData?.Remove("trusted_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trusted_metadata"); else _explicitNullProperties?.Remove("trusted_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestTrustedMetadataProperty _explicitNullValueTrustedMetadata = default!;
 #endif
         /// <summary>The `untrusted_metadata` field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestUntrustedMetadataProperty? UntrustedMetadata { get => _explicitNullValueUntrustedMetadata; set { _explicitNullValueUntrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untrusted_metadata"); else _explicitNullProperties?.Remove("untrusted_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestUntrustedMetadataProperty? UntrustedMetadata { get => _explicitNullValueUntrustedMetadata; set { _explicitNullValueUntrustedMetadata = value; AdditionalData?.Remove("untrusted_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untrusted_metadata"); else _explicitNullProperties?.Remove("untrusted_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestUntrustedMetadataProperty? _explicitNullValueUntrustedMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestUntrustedMetadataProperty UntrustedMetadata { get => _explicitNullValueUntrustedMetadata; set { _explicitNullValueUntrustedMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untrusted_metadata"); else _explicitNullProperties?.Remove("untrusted_metadata"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestUntrustedMetadataProperty UntrustedMetadata { get => _explicitNullValueUntrustedMetadata; set { _explicitNullValueUntrustedMetadata = value; AdditionalData?.Remove("untrusted_metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untrusted_metadata"); else _explicitNullProperties?.Remove("untrusted_metadata"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1MigrateRequestUntrustedMetadataProperty _explicitNullValueUntrustedMetadata = default!;
 #endif
         /// <summary>
@@ -217,7 +234,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
                 { "hash", n => { Hash = n.GetStringValue(); } },
-                { "hash_type", n => { HashType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsMigrateRequestHashType>(); } },
+                { "hash_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1PasswordsMigrateRequestHashType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueHashType = default; _explicitNullProperties?.Remove("hash_type"); AdditionalData["hash_type"] = unknown; } else { HashType = parsed; AdditionalData.Remove("hash_type"); } } },
                 { "md_5_config", n => { Md5Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Md5Config.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name.CreateFromDiscriminatorValue); } },
                 { "pbkdf_2_config", n => { Pbkdf2Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Pbkdf2Config.CreateFromDiscriminatorValue); } },

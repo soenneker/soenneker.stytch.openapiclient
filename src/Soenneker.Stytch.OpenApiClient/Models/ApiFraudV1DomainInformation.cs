@@ -17,17 +17,19 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("has_mx_or_a_record") is { } nullNodeHasMxOrARecord && nullNodeHasMxOrARecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasMxOrARecord = null;
-            if (parseNode.GetChildNode("is_disposable_domain") is { } nullNodeIsDisposableDomain && nullNodeIsDisposableDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDisposableDomain = null;
+            if (parseNode.GetChildNode("has_mx_or_a_record") is null) { _explicitNullValueHasMxOrARecord = default!; _explicitNullProperties?.Remove("has_mx_or_a_record"); }
+            else if (parseNode.GetChildNode("has_mx_or_a_record") is { } nullNodeHasMxOrARecord && nullNodeHasMxOrARecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasMxOrARecord = null;
+            if (parseNode.GetChildNode("is_disposable_domain") is null) { _explicitNullValueIsDisposableDomain = default!; _explicitNullProperties?.Remove("is_disposable_domain"); }
+            else if (parseNode.GetChildNode("is_disposable_domain") is { } nullNodeIsDisposableDomain && nullNodeIsDisposableDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDisposableDomain = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the email has appropriate DNS records to deliver a message.</summary>
-        public bool? HasMxOrARecord { get => _explicitNullValueHasMxOrARecord; set { _explicitNullValueHasMxOrARecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_mx_or_a_record"); else _explicitNullProperties?.Remove("has_mx_or_a_record"); } }
+        public bool? HasMxOrARecord { get => _explicitNullValueHasMxOrARecord; set { _explicitNullValueHasMxOrARecord = value; AdditionalData?.Remove("has_mx_or_a_record"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_mx_or_a_record"); else _explicitNullProperties?.Remove("has_mx_or_a_record"); } }
         private bool? _explicitNullValueHasMxOrARecord = default!;
         /// <summary>Whether the email domain is known to be disposable.</summary>
-        public bool? IsDisposableDomain { get => _explicitNullValueIsDisposableDomain; set { _explicitNullValueIsDisposableDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_disposable_domain"); else _explicitNullProperties?.Remove("is_disposable_domain"); } }
+        public bool? IsDisposableDomain { get => _explicitNullValueIsDisposableDomain; set { _explicitNullValueIsDisposableDomain = value; AdditionalData?.Remove("is_disposable_domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_disposable_domain"); else _explicitNullProperties?.Remove("is_disposable_domain"); } }
         private bool? _explicitNullValueIsDisposableDomain = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1DomainInformation"/> and sets the default values.

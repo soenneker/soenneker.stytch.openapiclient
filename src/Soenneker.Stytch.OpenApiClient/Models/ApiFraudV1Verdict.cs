@@ -17,64 +17,71 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
-            if (parseNode.GetChildNode("detected_device_type") is { } nullNodeDetectedDeviceType && nullNodeDetectedDeviceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetectedDeviceType = null;
-            if (parseNode.GetChildNode("is_authentic_device") is { } nullNodeIsAuthenticDevice && nullNodeIsAuthenticDevice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAuthenticDevice = null;
-            if (parseNode.GetChildNode("reasons") is { } nullNodeReasons && nullNodeReasons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reasons = null;
-            if (parseNode.GetChildNode("rule_match_identifier") is { } nullNodeRuleMatchIdentifier && nullNodeRuleMatchIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleMatchIdentifier = null;
-            if (parseNode.GetChildNode("rule_match_type") is { } nullNodeRuleMatchType && nullNodeRuleMatchType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleMatchType = null;
-            if (parseNode.GetChildNode("verdict_reason_overrides") is { } nullNodeVerdictReasonOverrides && nullNodeVerdictReasonOverrides.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerdictReasonOverrides = null;
+            if (parseNode.GetChildNode("action") is null) { _explicitNullValueAction = default!; _explicitNullProperties?.Remove("action"); }
+            else if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("detected_device_type") is null) { _explicitNullValueDetectedDeviceType = default!; _explicitNullProperties?.Remove("detected_device_type"); }
+            else if (parseNode.GetChildNode("detected_device_type") is { } nullNodeDetectedDeviceType && nullNodeDetectedDeviceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetectedDeviceType = null;
+            if (parseNode.GetChildNode("is_authentic_device") is null) { _explicitNullValueIsAuthenticDevice = default!; _explicitNullProperties?.Remove("is_authentic_device"); }
+            else if (parseNode.GetChildNode("is_authentic_device") is { } nullNodeIsAuthenticDevice && nullNodeIsAuthenticDevice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAuthenticDevice = null;
+            if (parseNode.GetChildNode("reasons") is null) { _explicitNullValueReasons = default!; _explicitNullProperties?.Remove("reasons"); }
+            else if (parseNode.GetChildNode("reasons") is { } nullNodeReasons && nullNodeReasons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reasons = null;
+            if (parseNode.GetChildNode("rule_match_identifier") is null) { _explicitNullValueRuleMatchIdentifier = default!; _explicitNullProperties?.Remove("rule_match_identifier"); }
+            else if (parseNode.GetChildNode("rule_match_identifier") is { } nullNodeRuleMatchIdentifier && nullNodeRuleMatchIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleMatchIdentifier = null;
+            if (parseNode.GetChildNode("rule_match_type") is null) { _explicitNullValueRuleMatchType = default!; _explicitNullProperties?.Remove("rule_match_type"); }
+            else if (parseNode.GetChildNode("rule_match_type") is { } nullNodeRuleMatchType && nullNodeRuleMatchType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleMatchType = null;
+            if (parseNode.GetChildNode("verdict_reason_overrides") is null) { _explicitNullValueVerdictReasonOverrides = default!; _explicitNullProperties?.Remove("verdict_reason_overrides"); }
+            else if (parseNode.GetChildNode("verdict_reason_overrides") is { } nullNodeVerdictReasonOverrides && nullNodeVerdictReasonOverrides.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerdictReasonOverrides = null;
         }
 
         /// <summary>The action property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; AdditionalData?.Remove("action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictAction? _explicitNullValueAction = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The operating system and architecture that took the fingerprint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DetectedDeviceType { get => _explicitNullValueDetectedDeviceType; set { _explicitNullValueDetectedDeviceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detected_device_type"); else _explicitNullProperties?.Remove("detected_device_type"); } }
+        public string? DetectedDeviceType { get => _explicitNullValueDetectedDeviceType; set { _explicitNullValueDetectedDeviceType = value; AdditionalData?.Remove("detected_device_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detected_device_type"); else _explicitNullProperties?.Remove("detected_device_type"); } }
         private string? _explicitNullValueDetectedDeviceType = default!;
 #nullable restore
 #else
-        public string DetectedDeviceType { get => _explicitNullValueDetectedDeviceType; set { _explicitNullValueDetectedDeviceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detected_device_type"); else _explicitNullProperties?.Remove("detected_device_type"); } }
+        public string DetectedDeviceType { get => _explicitNullValueDetectedDeviceType; set { _explicitNullValueDetectedDeviceType = value; AdditionalData?.Remove("detected_device_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detected_device_type"); else _explicitNullProperties?.Remove("detected_device_type"); } }
         private string _explicitNullValueDetectedDeviceType = default!;
 #endif
         /// <summary>The assessment of whether this is an authentic device. It will be false if hardware or browser deception is detected.</summary>
-        public bool? IsAuthenticDevice { get => _explicitNullValueIsAuthenticDevice; set { _explicitNullValueIsAuthenticDevice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_authentic_device"); else _explicitNullProperties?.Remove("is_authentic_device"); } }
+        public bool? IsAuthenticDevice { get => _explicitNullValueIsAuthenticDevice; set { _explicitNullValueIsAuthenticDevice = value; AdditionalData?.Remove("is_authentic_device"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_authentic_device"); else _explicitNullProperties?.Remove("is_authentic_device"); } }
         private bool? _explicitNullValueIsAuthenticDevice = default!;
         /// <summary>A set of contextual clues to inform why a `CHALLENGE` or `BLOCK` action was suggested. For a list of possible Reasons, see [Warning Flags (Verdict Reasons)](https://stytch.com/docs/docs/fraud/guides/device-fingerprinting/reference/warning-flags-verdict-reasons).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Reasons { get => _explicitNullValueReasons; set { _explicitNullValueReasons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasons"); else _explicitNullProperties?.Remove("reasons"); } }
+        public List<string>? Reasons { get => _explicitNullValueReasons; set { _explicitNullValueReasons = value; AdditionalData?.Remove("reasons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasons"); else _explicitNullProperties?.Remove("reasons"); } }
         private List<string>? _explicitNullValueReasons = default!;
 #nullable restore
 #else
-        public List<string> Reasons { get => _explicitNullValueReasons; set { _explicitNullValueReasons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasons"); else _explicitNullProperties?.Remove("reasons"); } }
+        public List<string> Reasons { get => _explicitNullValueReasons; set { _explicitNullValueReasons = value; AdditionalData?.Remove("reasons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reasons"); else _explicitNullProperties?.Remove("reasons"); } }
         private List<string> _explicitNullValueReasons = default!;
 #endif
         /// <summary>The rule that was applied (e.g. a specific visitor ID value), if any. This field will only be present if there is a `RULE_MATCH` reason in the list of verdict reasons.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuleMatchIdentifier { get => _explicitNullValueRuleMatchIdentifier; set { _explicitNullValueRuleMatchIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule_match_identifier"); else _explicitNullProperties?.Remove("rule_match_identifier"); } }
+        public string? RuleMatchIdentifier { get => _explicitNullValueRuleMatchIdentifier; set { _explicitNullValueRuleMatchIdentifier = value; AdditionalData?.Remove("rule_match_identifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule_match_identifier"); else _explicitNullProperties?.Remove("rule_match_identifier"); } }
         private string? _explicitNullValueRuleMatchIdentifier = default!;
 #nullable restore
 #else
-        public string RuleMatchIdentifier { get => _explicitNullValueRuleMatchIdentifier; set { _explicitNullValueRuleMatchIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule_match_identifier"); else _explicitNullProperties?.Remove("rule_match_identifier"); } }
+        public string RuleMatchIdentifier { get => _explicitNullValueRuleMatchIdentifier; set { _explicitNullValueRuleMatchIdentifier = value; AdditionalData?.Remove("rule_match_identifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule_match_identifier"); else _explicitNullProperties?.Remove("rule_match_identifier"); } }
         private string _explicitNullValueRuleMatchIdentifier = default!;
 #endif
         /// <summary>The rule_match_type property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1RuleType? RuleMatchType { get => _explicitNullValueRuleMatchType; set { _explicitNullValueRuleMatchType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule_match_type"); else _explicitNullProperties?.Remove("rule_match_type"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1RuleType? RuleMatchType { get => _explicitNullValueRuleMatchType; set { _explicitNullValueRuleMatchType = value; AdditionalData?.Remove("rule_match_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule_match_type"); else _explicitNullProperties?.Remove("rule_match_type"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1RuleType? _explicitNullValueRuleMatchType = default!;
         /// <summary>A list of verdict reason overrides that were applied, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonOverride>? VerdictReasonOverrides { get => _explicitNullValueVerdictReasonOverrides; set { _explicitNullValueVerdictReasonOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verdict_reason_overrides"); else _explicitNullProperties?.Remove("verdict_reason_overrides"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonOverride>? VerdictReasonOverrides { get => _explicitNullValueVerdictReasonOverrides; set { _explicitNullValueVerdictReasonOverrides = value; AdditionalData?.Remove("verdict_reason_overrides"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verdict_reason_overrides"); else _explicitNullProperties?.Remove("verdict_reason_overrides"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonOverride>? _explicitNullValueVerdictReasonOverrides = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonOverride> VerdictReasonOverrides { get => _explicitNullValueVerdictReasonOverrides; set { _explicitNullValueVerdictReasonOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verdict_reason_overrides"); else _explicitNullProperties?.Remove("verdict_reason_overrides"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonOverride> VerdictReasonOverrides { get => _explicitNullValueVerdictReasonOverrides; set { _explicitNullValueVerdictReasonOverrides = value; AdditionalData?.Remove("verdict_reason_overrides"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verdict_reason_overrides"); else _explicitNullProperties?.Remove("verdict_reason_overrides"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonOverride> _explicitNullValueVerdictReasonOverrides = default!;
 #endif
         /// <summary>
@@ -102,12 +109,12 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictAction>(); } },
+                { "action", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAction = default; _explicitNullProperties?.Remove("action"); AdditionalData["action"] = unknown; } else { Action = parsed; AdditionalData.Remove("action"); } } },
                 { "detected_device_type", n => { DetectedDeviceType = n.GetStringValue(); } },
                 { "is_authentic_device", n => { IsAuthenticDevice = n.GetBoolValue(); } },
                 { "reasons", n => { Reasons = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "rule_match_identifier", n => { RuleMatchIdentifier = n.GetStringValue(); } },
-                { "rule_match_type", n => { RuleMatchType = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1RuleType>(); } },
+                { "rule_match_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1RuleType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRuleMatchType = default; _explicitNullProperties?.Remove("rule_match_type"); AdditionalData["rule_match_type"] = unknown; } else { RuleMatchType = parsed; AdditionalData.Remove("rule_match_type"); } } },
                 { "verdict_reason_overrides", n => { VerdictReasonOverrides = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonOverride>(global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1VerdictReasonOverride.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }

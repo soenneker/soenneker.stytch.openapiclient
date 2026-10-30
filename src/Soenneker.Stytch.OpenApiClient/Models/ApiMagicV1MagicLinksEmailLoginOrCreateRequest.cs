@@ -18,17 +18,28 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
-            if (parseNode.GetChildNode("code_challenge") is { } nullNodeCodeChallenge && nullNodeCodeChallenge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeChallenge = null;
-            if (parseNode.GetChildNode("create_user_as_pending") is { } nullNodeCreateUserAsPending && nullNodeCreateUserAsPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateUserAsPending = null;
-            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
-            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
-            if (parseNode.GetChildNode("login_expiration_minutes") is { } nullNodeLoginExpirationMinutes && nullNodeLoginExpirationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginExpirationMinutes = null;
-            if (parseNode.GetChildNode("login_magic_link_url") is { } nullNodeLoginMagicLinkUrl && nullNodeLoginMagicLinkUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginMagicLinkUrl = null;
-            if (parseNode.GetChildNode("login_template_id") is { } nullNodeLoginTemplateId && nullNodeLoginTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginTemplateId = null;
-            if (parseNode.GetChildNode("signup_expiration_minutes") is { } nullNodeSignupExpirationMinutes && nullNodeSignupExpirationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignupExpirationMinutes = null;
-            if (parseNode.GetChildNode("signup_magic_link_url") is { } nullNodeSignupMagicLinkUrl && nullNodeSignupMagicLinkUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignupMagicLinkUrl = null;
-            if (parseNode.GetChildNode("signup_template_id") is { } nullNodeSignupTemplateId && nullNodeSignupTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignupTemplateId = null;
+            if (parseNode.GetChildNode("attributes") is null) { _explicitNullValueAttributes = default!; _explicitNullProperties?.Remove("attributes"); }
+            else if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("code_challenge") is null) { _explicitNullValueCodeChallenge = default!; _explicitNullProperties?.Remove("code_challenge"); }
+            else if (parseNode.GetChildNode("code_challenge") is { } nullNodeCodeChallenge && nullNodeCodeChallenge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeChallenge = null;
+            if (parseNode.GetChildNode("create_user_as_pending") is null) { _explicitNullValueCreateUserAsPending = default!; _explicitNullProperties?.Remove("create_user_as_pending"); }
+            else if (parseNode.GetChildNode("create_user_as_pending") is { } nullNodeCreateUserAsPending && nullNodeCreateUserAsPending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateUserAsPending = null;
+            if (parseNode.GetChildNode("email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("email"); }
+            else if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("locale") is null) { _explicitNullValueLocale = default!; _explicitNullProperties?.Remove("locale"); }
+            else if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("login_expiration_minutes") is null) { _explicitNullValueLoginExpirationMinutes = default!; _explicitNullProperties?.Remove("login_expiration_minutes"); }
+            else if (parseNode.GetChildNode("login_expiration_minutes") is { } nullNodeLoginExpirationMinutes && nullNodeLoginExpirationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginExpirationMinutes = null;
+            if (parseNode.GetChildNode("login_magic_link_url") is null) { _explicitNullValueLoginMagicLinkUrl = default!; _explicitNullProperties?.Remove("login_magic_link_url"); }
+            else if (parseNode.GetChildNode("login_magic_link_url") is { } nullNodeLoginMagicLinkUrl && nullNodeLoginMagicLinkUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginMagicLinkUrl = null;
+            if (parseNode.GetChildNode("login_template_id") is null) { _explicitNullValueLoginTemplateId = default!; _explicitNullProperties?.Remove("login_template_id"); }
+            else if (parseNode.GetChildNode("login_template_id") is { } nullNodeLoginTemplateId && nullNodeLoginTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoginTemplateId = null;
+            if (parseNode.GetChildNode("signup_expiration_minutes") is null) { _explicitNullValueSignupExpirationMinutes = default!; _explicitNullProperties?.Remove("signup_expiration_minutes"); }
+            else if (parseNode.GetChildNode("signup_expiration_minutes") is { } nullNodeSignupExpirationMinutes && nullNodeSignupExpirationMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignupExpirationMinutes = null;
+            if (parseNode.GetChildNode("signup_magic_link_url") is null) { _explicitNullValueSignupMagicLinkUrl = default!; _explicitNullProperties?.Remove("signup_magic_link_url"); }
+            else if (parseNode.GetChildNode("signup_magic_link_url") is { } nullNodeSignupMagicLinkUrl && nullNodeSignupMagicLinkUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignupMagicLinkUrl = null;
+            if (parseNode.GetChildNode("signup_template_id") is null) { _explicitNullValueSignupTemplateId = default!; _explicitNullProperties?.Remove("signup_template_id"); }
+            else if (parseNode.GetChildNode("signup_template_id") is { } nullNodeSignupTemplateId && nullNodeSignupTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignupTemplateId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,83 +47,83 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; AdditionalData?.Remove("attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiAttributeV1Attributes _explicitNullValueAttributes = default!;
 #endif
         /// <summary>A base64url encoded SHA256 hash of a one time secret used to validate that the request starts and ends on the same device.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CodeChallenge { get => _explicitNullValueCodeChallenge; set { _explicitNullValueCodeChallenge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_challenge"); else _explicitNullProperties?.Remove("code_challenge"); } }
+        public string? CodeChallenge { get => _explicitNullValueCodeChallenge; set { _explicitNullValueCodeChallenge = value; AdditionalData?.Remove("code_challenge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_challenge"); else _explicitNullProperties?.Remove("code_challenge"); } }
         private string? _explicitNullValueCodeChallenge = default!;
 #nullable restore
 #else
-        public string CodeChallenge { get => _explicitNullValueCodeChallenge; set { _explicitNullValueCodeChallenge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_challenge"); else _explicitNullProperties?.Remove("code_challenge"); } }
+        public string CodeChallenge { get => _explicitNullValueCodeChallenge; set { _explicitNullValueCodeChallenge = value; AdditionalData?.Remove("code_challenge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_challenge"); else _explicitNullProperties?.Remove("code_challenge"); } }
         private string _explicitNullValueCodeChallenge = default!;
 #endif
         /// <summary>Flag for whether or not to save a user as pending vs active in Stytch. Defaults to false.        If true, users will be saved with status pending in Stytch&apos;s backend until authenticated.        If false, users will be created as active. An example usage of        a true flag would be to require users to verify their phone by entering the OTP code before creating        an account for them.</summary>
-        public bool? CreateUserAsPending { get => _explicitNullValueCreateUserAsPending; set { _explicitNullValueCreateUserAsPending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_user_as_pending"); else _explicitNullProperties?.Remove("create_user_as_pending"); } }
+        public bool? CreateUserAsPending { get => _explicitNullValueCreateUserAsPending; set { _explicitNullValueCreateUserAsPending = value; AdditionalData?.Remove("create_user_as_pending"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_user_as_pending"); else _explicitNullProperties?.Remove("create_user_as_pending"); } }
         private bool? _explicitNullValueCreateUserAsPending = default!;
         /// <summary>The email address of the end user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The locale property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailLoginOrCreateRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailLoginOrCreateRequestLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; AdditionalData?.Remove("locale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailLoginOrCreateRequestLocale? _explicitNullValueLocale = default!;
         /// <summary>Set the expiration for the login email magic link, in minutes. By default, it expires in 1 hour. The minimum expiration is 5 minutes and the maximum is 7 days (10080 mins).</summary>
-        public int? LoginExpirationMinutes { get => _explicitNullValueLoginExpirationMinutes; set { _explicitNullValueLoginExpirationMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_expiration_minutes"); else _explicitNullProperties?.Remove("login_expiration_minutes"); } }
+        public int? LoginExpirationMinutes { get => _explicitNullValueLoginExpirationMinutes; set { _explicitNullValueLoginExpirationMinutes = value; AdditionalData?.Remove("login_expiration_minutes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_expiration_minutes"); else _explicitNullProperties?.Remove("login_expiration_minutes"); } }
         private int? _explicitNullValueLoginExpirationMinutes = default!;
         /// <summary>The URL the end user clicks from the login Email Magic Link. This should be a URL that your app receives and parses and subsequently send an API request to authenticate the Magic Link and log in the User. If this value is not passed, the default login redirect URL that you set in your Dashboard is used. If you have not set a default login redirect URL, an error is returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LoginMagicLinkUrl { get => _explicitNullValueLoginMagicLinkUrl; set { _explicitNullValueLoginMagicLinkUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_magic_link_url"); else _explicitNullProperties?.Remove("login_magic_link_url"); } }
+        public string? LoginMagicLinkUrl { get => _explicitNullValueLoginMagicLinkUrl; set { _explicitNullValueLoginMagicLinkUrl = value; AdditionalData?.Remove("login_magic_link_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_magic_link_url"); else _explicitNullProperties?.Remove("login_magic_link_url"); } }
         private string? _explicitNullValueLoginMagicLinkUrl = default!;
 #nullable restore
 #else
-        public string LoginMagicLinkUrl { get => _explicitNullValueLoginMagicLinkUrl; set { _explicitNullValueLoginMagicLinkUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_magic_link_url"); else _explicitNullProperties?.Remove("login_magic_link_url"); } }
+        public string LoginMagicLinkUrl { get => _explicitNullValueLoginMagicLinkUrl; set { _explicitNullValueLoginMagicLinkUrl = value; AdditionalData?.Remove("login_magic_link_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_magic_link_url"); else _explicitNullProperties?.Remove("login_magic_link_url"); } }
         private string _explicitNullValueLoginMagicLinkUrl = default!;
 #endif
         /// <summary>Use a custom template for login emails. By default, it will use your default email template. Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type “Magic links - Login”.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
+        public string? LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; AdditionalData?.Remove("login_template_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
         private string? _explicitNullValueLoginTemplateId = default!;
 #nullable restore
 #else
-        public string LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
+        public string LoginTemplateId { get => _explicitNullValueLoginTemplateId; set { _explicitNullValueLoginTemplateId = value; AdditionalData?.Remove("login_template_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_template_id"); else _explicitNullProperties?.Remove("login_template_id"); } }
         private string _explicitNullValueLoginTemplateId = default!;
 #endif
         /// <summary>Set the expiration for the sign-up email magic link, in minutes. By default, it expires in 1 week. The minimum expiration is 5 minutes and the maximum is 7 days (10080 mins).</summary>
-        public int? SignupExpirationMinutes { get => _explicitNullValueSignupExpirationMinutes; set { _explicitNullValueSignupExpirationMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_expiration_minutes"); else _explicitNullProperties?.Remove("signup_expiration_minutes"); } }
+        public int? SignupExpirationMinutes { get => _explicitNullValueSignupExpirationMinutes; set { _explicitNullValueSignupExpirationMinutes = value; AdditionalData?.Remove("signup_expiration_minutes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_expiration_minutes"); else _explicitNullProperties?.Remove("signup_expiration_minutes"); } }
         private int? _explicitNullValueSignupExpirationMinutes = default!;
         /// <summary>The URL the end user clicks from the sign-up Email Magic Link. This should be a URL that your app receives and parses and subsequently send an API request to authenticate the Magic Link and sign-up the User. If this value is not passed, the default sign-up redirect URL that you set in your Dashboard is used. If you have not set a default sign-up redirect URL, an error is returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignupMagicLinkUrl { get => _explicitNullValueSignupMagicLinkUrl; set { _explicitNullValueSignupMagicLinkUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_magic_link_url"); else _explicitNullProperties?.Remove("signup_magic_link_url"); } }
+        public string? SignupMagicLinkUrl { get => _explicitNullValueSignupMagicLinkUrl; set { _explicitNullValueSignupMagicLinkUrl = value; AdditionalData?.Remove("signup_magic_link_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_magic_link_url"); else _explicitNullProperties?.Remove("signup_magic_link_url"); } }
         private string? _explicitNullValueSignupMagicLinkUrl = default!;
 #nullable restore
 #else
-        public string SignupMagicLinkUrl { get => _explicitNullValueSignupMagicLinkUrl; set { _explicitNullValueSignupMagicLinkUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_magic_link_url"); else _explicitNullProperties?.Remove("signup_magic_link_url"); } }
+        public string SignupMagicLinkUrl { get => _explicitNullValueSignupMagicLinkUrl; set { _explicitNullValueSignupMagicLinkUrl = value; AdditionalData?.Remove("signup_magic_link_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_magic_link_url"); else _explicitNullProperties?.Remove("signup_magic_link_url"); } }
         private string _explicitNullValueSignupMagicLinkUrl = default!;
 #endif
         /// <summary>Use a custom template for sign-up emails. By default, it will use your default email template. Templates can be added in the [Stytch dashboard](https://stytch.com/dashboard/templates) using our built-in customization options or custom HTML templates with type “Magic links - Sign-up”.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignupTemplateId { get => _explicitNullValueSignupTemplateId; set { _explicitNullValueSignupTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_template_id"); else _explicitNullProperties?.Remove("signup_template_id"); } }
+        public string? SignupTemplateId { get => _explicitNullValueSignupTemplateId; set { _explicitNullValueSignupTemplateId = value; AdditionalData?.Remove("signup_template_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_template_id"); else _explicitNullProperties?.Remove("signup_template_id"); } }
         private string? _explicitNullValueSignupTemplateId = default!;
 #nullable restore
 #else
-        public string SignupTemplateId { get => _explicitNullValueSignupTemplateId; set { _explicitNullValueSignupTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_template_id"); else _explicitNullProperties?.Remove("signup_template_id"); } }
+        public string SignupTemplateId { get => _explicitNullValueSignupTemplateId; set { _explicitNullValueSignupTemplateId = value; AdditionalData?.Remove("signup_template_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signup_template_id"); else _explicitNullProperties?.Remove("signup_template_id"); } }
         private string _explicitNullValueSignupTemplateId = default!;
 #endif
         /// <summary>
@@ -144,7 +155,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
                 { "code_challenge", n => { CodeChallenge = n.GetStringValue(); } },
                 { "create_user_as_pending", n => { CreateUserAsPending = n.GetBoolValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailLoginOrCreateRequestLocale>(); } },
+                { "locale", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiMagicV1MagicLinksEmailLoginOrCreateRequestLocale>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLocale = default; _explicitNullProperties?.Remove("locale"); AdditionalData["locale"] = unknown; } else { Locale = parsed; AdditionalData.Remove("locale"); } } },
                 { "login_expiration_minutes", n => { LoginExpirationMinutes = n.GetIntValue(); } },
                 { "login_magic_link_url", n => { LoginMagicLinkUrl = n.GetStringValue(); } },
                 { "login_template_id", n => { LoginTemplateId = n.GetStringValue(); } },

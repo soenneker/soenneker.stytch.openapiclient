@@ -18,12 +18,18 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("crypto_wallet_address") is { } nullNodeCryptoWalletAddress && nullNodeCryptoWalletAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletAddress = null;
-            if (parseNode.GetChildNode("crypto_wallet_type") is { } nullNodeCryptoWalletType && nullNodeCryptoWalletType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletType = null;
-            if (parseNode.GetChildNode("session_jwt") is { } nullNodeSessionJwt && nullNodeSessionJwt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionJwt = null;
-            if (parseNode.GetChildNode("session_token") is { } nullNodeSessionToken && nullNodeSessionToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionToken = null;
-            if (parseNode.GetChildNode("siwe_params") is { } nullNodeSiweParams && nullNodeSiweParams.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiweParams = null;
-            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("crypto_wallet_address") is null) { _explicitNullValueCryptoWalletAddress = default!; _explicitNullProperties?.Remove("crypto_wallet_address"); }
+            else if (parseNode.GetChildNode("crypto_wallet_address") is { } nullNodeCryptoWalletAddress && nullNodeCryptoWalletAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletAddress = null;
+            if (parseNode.GetChildNode("crypto_wallet_type") is null) { _explicitNullValueCryptoWalletType = default!; _explicitNullProperties?.Remove("crypto_wallet_type"); }
+            else if (parseNode.GetChildNode("crypto_wallet_type") is { } nullNodeCryptoWalletType && nullNodeCryptoWalletType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CryptoWalletType = null;
+            if (parseNode.GetChildNode("session_jwt") is null) { _explicitNullValueSessionJwt = default!; _explicitNullProperties?.Remove("session_jwt"); }
+            else if (parseNode.GetChildNode("session_jwt") is { } nullNodeSessionJwt && nullNodeSessionJwt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionJwt = null;
+            if (parseNode.GetChildNode("session_token") is null) { _explicitNullValueSessionToken = default!; _explicitNullProperties?.Remove("session_token"); }
+            else if (parseNode.GetChildNode("session_token") is { } nullNodeSessionToken && nullNodeSessionToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionToken = null;
+            if (parseNode.GetChildNode("siwe_params") is null) { _explicitNullValueSiweParams = default!; _explicitNullProperties?.Remove("siwe_params"); }
+            else if (parseNode.GetChildNode("siwe_params") is { } nullNodeSiweParams && nullNodeSiweParams.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiweParams = null;
+            if (parseNode.GetChildNode("user_id") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("user_id"); }
+            else if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,61 +37,61 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The crypto wallet address to authenticate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CryptoWalletAddress { get => _explicitNullValueCryptoWalletAddress; set { _explicitNullValueCryptoWalletAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_address"); else _explicitNullProperties?.Remove("crypto_wallet_address"); } }
+        public string? CryptoWalletAddress { get => _explicitNullValueCryptoWalletAddress; set { _explicitNullValueCryptoWalletAddress = value; AdditionalData?.Remove("crypto_wallet_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_address"); else _explicitNullProperties?.Remove("crypto_wallet_address"); } }
         private string? _explicitNullValueCryptoWalletAddress = default!;
 #nullable restore
 #else
-        public string CryptoWalletAddress { get => _explicitNullValueCryptoWalletAddress; set { _explicitNullValueCryptoWalletAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_address"); else _explicitNullProperties?.Remove("crypto_wallet_address"); } }
+        public string CryptoWalletAddress { get => _explicitNullValueCryptoWalletAddress; set { _explicitNullValueCryptoWalletAddress = value; AdditionalData?.Remove("crypto_wallet_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_address"); else _explicitNullProperties?.Remove("crypto_wallet_address"); } }
         private string _explicitNullValueCryptoWalletAddress = default!;
 #endif
         /// <summary>The type of wallet to authenticate. Currently `ethereum` and `solana` are supported. Wallets for any EVM-compatible chains (such as Polygon or BSC) are also supported and are grouped under the `ethereum` type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CryptoWalletType { get => _explicitNullValueCryptoWalletType; set { _explicitNullValueCryptoWalletType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_type"); else _explicitNullProperties?.Remove("crypto_wallet_type"); } }
+        public string? CryptoWalletType { get => _explicitNullValueCryptoWalletType; set { _explicitNullValueCryptoWalletType = value; AdditionalData?.Remove("crypto_wallet_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_type"); else _explicitNullProperties?.Remove("crypto_wallet_type"); } }
         private string? _explicitNullValueCryptoWalletType = default!;
 #nullable restore
 #else
-        public string CryptoWalletType { get => _explicitNullValueCryptoWalletType; set { _explicitNullValueCryptoWalletType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_type"); else _explicitNullProperties?.Remove("crypto_wallet_type"); } }
+        public string CryptoWalletType { get => _explicitNullValueCryptoWalletType; set { _explicitNullValueCryptoWalletType = value; AdditionalData?.Remove("crypto_wallet_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crypto_wallet_type"); else _explicitNullProperties?.Remove("crypto_wallet_type"); } }
         private string _explicitNullValueCryptoWalletType = default!;
 #endif
         /// <summary>The `session_jwt` associated with a User&apos;s existing Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
+        public string? SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; AdditionalData?.Remove("session_jwt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
         private string? _explicitNullValueSessionJwt = default!;
 #nullable restore
 #else
-        public string SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
+        public string SessionJwt { get => _explicitNullValueSessionJwt; set { _explicitNullValueSessionJwt = value; AdditionalData?.Remove("session_jwt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_jwt"); else _explicitNullProperties?.Remove("session_jwt"); } }
         private string _explicitNullValueSessionJwt = default!;
 #endif
         /// <summary>The `session_token` associated with a User&apos;s existing Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
+        public string? SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; AdditionalData?.Remove("session_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
         private string? _explicitNullValueSessionToken = default!;
 #nullable restore
 #else
-        public string SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
+        public string SessionToken { get => _explicitNullValueSessionToken; set { _explicitNullValueSessionToken = value; AdditionalData?.Remove("session_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_token"); else _explicitNullProperties?.Remove("session_token"); } }
         private string _explicitNullValueSessionToken = default!;
 #endif
         /// <summary>The siwe_params property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParams? SiweParams { get => _explicitNullValueSiweParams; set { _explicitNullValueSiweParams = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("siwe_params"); else _explicitNullProperties?.Remove("siwe_params"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParams? SiweParams { get => _explicitNullValueSiweParams; set { _explicitNullValueSiweParams = value; AdditionalData?.Remove("siwe_params"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("siwe_params"); else _explicitNullProperties?.Remove("siwe_params"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParams? _explicitNullValueSiweParams = default!;
 #nullable restore
 #else
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParams SiweParams { get => _explicitNullValueSiweParams; set { _explicitNullValueSiweParams = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("siwe_params"); else _explicitNullProperties?.Remove("siwe_params"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParams SiweParams { get => _explicitNullValueSiweParams; set { _explicitNullValueSiweParams = value; AdditionalData?.Remove("siwe_params"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("siwe_params"); else _explicitNullProperties?.Remove("siwe_params"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiCryptoWalletV1SiweParams _explicitNullValueSiweParams = default!;
 #endif
         /// <summary>The unique ID of a specific User. You may use an `external_id` here if one is set for the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>

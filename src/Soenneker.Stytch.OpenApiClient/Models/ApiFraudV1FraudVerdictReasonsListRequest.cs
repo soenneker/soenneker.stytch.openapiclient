@@ -18,13 +18,14 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("overrides_only") is { } nullNodeOverridesOnly && nullNodeOverridesOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverridesOnly = null;
+            if (parseNode.GetChildNode("overrides_only") is null) { _explicitNullValueOverridesOnly = default!; _explicitNullProperties?.Remove("overrides_only"); }
+            else if (parseNode.GetChildNode("overrides_only") is { } nullNodeOverridesOnly && nullNodeOverridesOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverridesOnly = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to return only verdict reasons that have overrides set. Defaults to false.</summary>
-        public bool? OverridesOnly { get => _explicitNullValueOverridesOnly; set { _explicitNullValueOverridesOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overrides_only"); else _explicitNullProperties?.Remove("overrides_only"); } }
+        public bool? OverridesOnly { get => _explicitNullValueOverridesOnly; set { _explicitNullValueOverridesOnly = value; AdditionalData?.Remove("overrides_only"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overrides_only"); else _explicitNullProperties?.Remove("overrides_only"); } }
         private bool? _explicitNullValueOverridesOnly = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonsListRequest"/> and sets the default values.

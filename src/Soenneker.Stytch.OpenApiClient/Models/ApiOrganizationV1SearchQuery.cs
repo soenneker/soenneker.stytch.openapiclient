@@ -17,8 +17,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("operands") is { } nullNodeOperands && nullNodeOperands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operands = null;
-            if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("operands") is null) { _explicitNullValueOperands = default!; _explicitNullProperties?.Remove("operands"); }
+            else if (parseNode.GetChildNode("operands") is { } nullNodeOperands && nullNodeOperands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operands = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>An array of operand objects that contains all of the filters and values to apply to your search query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty>? Operands { get => _explicitNullValueOperands; set { _explicitNullValueOperands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operands"); else _explicitNullProperties?.Remove("operands"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty>? Operands { get => _explicitNullValueOperands; set { _explicitNullValueOperands = value; AdditionalData?.Remove("operands"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operands"); else _explicitNullProperties?.Remove("operands"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty>? _explicitNullValueOperands = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty> Operands { get => _explicitNullValueOperands; set { _explicitNullValueOperands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operands"); else _explicitNullProperties?.Remove("operands"); } }
+        public List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty> Operands { get => _explicitNullValueOperands; set { _explicitNullValueOperands = value; AdditionalData?.Remove("operands"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operands"); else _explicitNullProperties?.Remove("operands"); } }
         private List<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty> _explicitNullValueOperands = default!;
 #endif
         /// <summary>The operator property</summary>
-        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsSearchQueryOperator? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        public global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsSearchQueryOperator? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
         private global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsSearchQueryOperator? _explicitNullValueOperator = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQuery"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "operands", n => { Operands = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1SearchQueryOperandsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsSearchQueryOperator>(); } },
+                { "operator", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsSearchQueryOperator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperator = default; _explicitNullProperties?.Remove("operator"); AdditionalData["operator"] = unknown; } else { Operator = parsed; AdditionalData.Remove("operator"); } } },
             };
         }
         /// <summary>

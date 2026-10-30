@@ -17,9 +17,12 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("recovery_codes") is { } nullNodeRecoveryCodes && nullNodeRecoveryCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecoveryCodes = null;
-            if (parseNode.GetChildNode("totp_id") is { } nullNodeTotpId && nullNodeTotpId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotpId = null;
-            if (parseNode.GetChildNode("verified") is { } nullNodeVerified && nullNodeVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verified = null;
+            if (parseNode.GetChildNode("recovery_codes") is null) { _explicitNullValueRecoveryCodes = default!; _explicitNullProperties?.Remove("recovery_codes"); }
+            else if (parseNode.GetChildNode("recovery_codes") is { } nullNodeRecoveryCodes && nullNodeRecoveryCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecoveryCodes = null;
+            if (parseNode.GetChildNode("totp_id") is null) { _explicitNullValueTotpId = default!; _explicitNullProperties?.Remove("totp_id"); }
+            else if (parseNode.GetChildNode("totp_id") is { } nullNodeTotpId && nullNodeTotpId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotpId = null;
+            if (parseNode.GetChildNode("verified") is null) { _explicitNullValueVerified = default!; _explicitNullProperties?.Remove("verified"); }
+            else if (parseNode.GetChildNode("verified") is { } nullNodeVerified && nullNodeVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Verified = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,25 +30,25 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The recovery codes used to authenticate the user without an authenticator app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RecoveryCodes { get => _explicitNullValueRecoveryCodes; set { _explicitNullValueRecoveryCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recovery_codes"); else _explicitNullProperties?.Remove("recovery_codes"); } }
+        public List<string>? RecoveryCodes { get => _explicitNullValueRecoveryCodes; set { _explicitNullValueRecoveryCodes = value; AdditionalData?.Remove("recovery_codes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recovery_codes"); else _explicitNullProperties?.Remove("recovery_codes"); } }
         private List<string>? _explicitNullValueRecoveryCodes = default!;
 #nullable restore
 #else
-        public List<string> RecoveryCodes { get => _explicitNullValueRecoveryCodes; set { _explicitNullValueRecoveryCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recovery_codes"); else _explicitNullProperties?.Remove("recovery_codes"); } }
+        public List<string> RecoveryCodes { get => _explicitNullValueRecoveryCodes; set { _explicitNullValueRecoveryCodes = value; AdditionalData?.Remove("recovery_codes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recovery_codes"); else _explicitNullProperties?.Remove("recovery_codes"); } }
         private List<string> _explicitNullValueRecoveryCodes = default!;
 #endif
         /// <summary>The unique ID for a TOTP instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotpId { get => _explicitNullValueTotpId; set { _explicitNullValueTotpId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_id"); else _explicitNullProperties?.Remove("totp_id"); } }
+        public string? TotpId { get => _explicitNullValueTotpId; set { _explicitNullValueTotpId = value; AdditionalData?.Remove("totp_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_id"); else _explicitNullProperties?.Remove("totp_id"); } }
         private string? _explicitNullValueTotpId = default!;
 #nullable restore
 #else
-        public string TotpId { get => _explicitNullValueTotpId; set { _explicitNullValueTotpId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_id"); else _explicitNullProperties?.Remove("totp_id"); } }
+        public string TotpId { get => _explicitNullValueTotpId; set { _explicitNullValueTotpId = value; AdditionalData?.Remove("totp_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_id"); else _explicitNullProperties?.Remove("totp_id"); } }
         private string _explicitNullValueTotpId = default!;
 #endif
         /// <summary>The verified boolean denotes whether or not this send method, e.g. phone number, email address, etc., has been successfully authenticated by the User.</summary>
-        public bool? Verified { get => _explicitNullValueVerified; set { _explicitNullValueVerified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified"); else _explicitNullProperties?.Remove("verified"); } }
+        public bool? Verified { get => _explicitNullValueVerified; set { _explicitNullValueVerified = value; AdditionalData?.Remove("verified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified"); else _explicitNullProperties?.Remove("verified"); } }
         private bool? _explicitNullValueVerified = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stytch.OpenApiClient.Models.ApiTotpV1Totp"/> and sets the default values.

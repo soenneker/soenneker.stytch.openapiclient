@@ -17,8 +17,10 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("mfa_phone_number") is { } nullNodeMfaPhoneNumber && nullNodeMfaPhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MfaPhoneNumber = null;
-            if (parseNode.GetChildNode("totp_registration_id") is { } nullNodeTotpRegistrationId && nullNodeTotpRegistrationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotpRegistrationId = null;
+            if (parseNode.GetChildNode("mfa_phone_number") is null) { _explicitNullValueMfaPhoneNumber = default!; _explicitNullProperties?.Remove("mfa_phone_number"); }
+            else if (parseNode.GetChildNode("mfa_phone_number") is { } nullNodeMfaPhoneNumber && nullNodeMfaPhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MfaPhoneNumber = null;
+            if (parseNode.GetChildNode("totp_registration_id") is null) { _explicitNullValueTotpRegistrationId = default!; _explicitNullProperties?.Remove("totp_registration_id"); }
+            else if (parseNode.GetChildNode("totp_registration_id") is { } nullNodeTotpRegistrationId && nullNodeTotpRegistrationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotpRegistrationId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The Member&apos;s MFA phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MfaPhoneNumber { get => _explicitNullValueMfaPhoneNumber; set { _explicitNullValueMfaPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_phone_number"); else _explicitNullProperties?.Remove("mfa_phone_number"); } }
+        public string? MfaPhoneNumber { get => _explicitNullValueMfaPhoneNumber; set { _explicitNullValueMfaPhoneNumber = value; AdditionalData?.Remove("mfa_phone_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_phone_number"); else _explicitNullProperties?.Remove("mfa_phone_number"); } }
         private string? _explicitNullValueMfaPhoneNumber = default!;
 #nullable restore
 #else
-        public string MfaPhoneNumber { get => _explicitNullValueMfaPhoneNumber; set { _explicitNullValueMfaPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_phone_number"); else _explicitNullProperties?.Remove("mfa_phone_number"); } }
+        public string MfaPhoneNumber { get => _explicitNullValueMfaPhoneNumber; set { _explicitNullValueMfaPhoneNumber = value; AdditionalData?.Remove("mfa_phone_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mfa_phone_number"); else _explicitNullProperties?.Remove("mfa_phone_number"); } }
         private string _explicitNullValueMfaPhoneNumber = default!;
 #endif
         /// <summary>The Member&apos;s MFA TOTP registration ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotpRegistrationId { get => _explicitNullValueTotpRegistrationId; set { _explicitNullValueTotpRegistrationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_registration_id"); else _explicitNullProperties?.Remove("totp_registration_id"); } }
+        public string? TotpRegistrationId { get => _explicitNullValueTotpRegistrationId; set { _explicitNullValueTotpRegistrationId = value; AdditionalData?.Remove("totp_registration_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_registration_id"); else _explicitNullProperties?.Remove("totp_registration_id"); } }
         private string? _explicitNullValueTotpRegistrationId = default!;
 #nullable restore
 #else
-        public string TotpRegistrationId { get => _explicitNullValueTotpRegistrationId; set { _explicitNullValueTotpRegistrationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_registration_id"); else _explicitNullProperties?.Remove("totp_registration_id"); } }
+        public string TotpRegistrationId { get => _explicitNullValueTotpRegistrationId; set { _explicitNullValueTotpRegistrationId = value; AdditionalData?.Remove("totp_registration_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totp_registration_id"); else _explicitNullProperties?.Remove("totp_registration_id"); } }
         private string _explicitNullValueTotpRegistrationId = default!;
 #endif
         /// <summary>

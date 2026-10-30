@@ -17,7 +17,8 @@ namespace Soenneker.Stytch.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("embedded_id") is { } nullNodeEmbeddedId && nullNodeEmbeddedId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmbeddedId = null;
+            if (parseNode.GetChildNode("embedded_id") is null) { _explicitNullValueEmbeddedId = default!; _explicitNullProperties?.Remove("embedded_id"); }
+            else if (parseNode.GetChildNode("embedded_id") is { } nullNodeEmbeddedId && nullNodeEmbeddedId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmbeddedId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <summary>The embedded_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmbeddedId { get => _explicitNullValueEmbeddedId; set { _explicitNullValueEmbeddedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("embedded_id"); else _explicitNullProperties?.Remove("embedded_id"); } }
+        public string? EmbeddedId { get => _explicitNullValueEmbeddedId; set { _explicitNullValueEmbeddedId = value; AdditionalData?.Remove("embedded_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("embedded_id"); else _explicitNullProperties?.Remove("embedded_id"); } }
         private string? _explicitNullValueEmbeddedId = default!;
 #nullable restore
 #else
-        public string EmbeddedId { get => _explicitNullValueEmbeddedId; set { _explicitNullValueEmbeddedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("embedded_id"); else _explicitNullProperties?.Remove("embedded_id"); } }
+        public string EmbeddedId { get => _explicitNullValueEmbeddedId; set { _explicitNullValueEmbeddedId = value; AdditionalData?.Remove("embedded_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("embedded_id"); else _explicitNullProperties?.Remove("embedded_id"); } }
         private string _explicitNullValueEmbeddedId = default!;
 #endif
         /// <summary>
