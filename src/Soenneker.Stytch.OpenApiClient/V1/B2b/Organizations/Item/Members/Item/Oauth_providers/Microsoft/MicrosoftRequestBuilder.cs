@@ -76,7 +76,7 @@ namespace Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Stytch.OpenApiClient.V1.B2b.Organizations.Item.Members.Item.Oauth_providers.Microsoft.MicrosoftRequestBuilder.MicrosoftRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.stytch.com", "/v1/b2b/organizations/{organizationId}/members/{memberId}/oauth_providers/microsoft", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
