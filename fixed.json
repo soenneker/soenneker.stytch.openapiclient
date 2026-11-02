@@ -14,10 +14,6 @@
     {
       "url": "https://api.stytch.com",
       "description": "Production server"
-    },
-    {
-      "url": "https://test.stytch.com",
-      "description": "Test server"
     }
   ],
   "paths": {
@@ -27737,10 +27733,6 @@
           }
         }
       },
-      "ApiConnectedappsV1ConnectedAppsClientsGetRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiConnectedappsV1ConnectedAppsClientsGetResponse": {
         "required": [
           "request_id",
@@ -27917,10 +27909,6 @@
           ]
         }
       },
-      "ApiConnectedappsV1ConnectedAppsClientsSecretsRotateCancelRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiConnectedappsV1ConnectedAppsClientsSecretsRotateCancelResponse": {
         "required": [
           "request_id",
@@ -27943,10 +27931,6 @@
           }
         }
       },
-      "ApiConnectedappsV1ConnectedAppsClientsSecretsRotateRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiConnectedappsV1ConnectedAppsClientsSecretsRotateResponse": {
         "required": [
           "request_id",
@@ -27968,10 +27952,6 @@
             "format": "int32"
           }
         }
-      },
-      "ApiConnectedappsV1ConnectedAppsClientsSecretsRotateStartRequest": {
-        "type": "object",
-        "description": "Request type"
       },
       "ApiConnectedappsV1ConnectedAppsClientsSecretsRotateStartResponse": {
         "required": [
@@ -28670,22 +28650,6 @@
           }
         }
       },
-      "ApiB2BScimV1B2BScimConnectionGetGroupsRequest": {
-        "type": "object",
-        "properties": {
-          "cursor": {
-            "type": "string",
-            "description": "The \u0060cursor\u0060 field allows you to paginate through your results. Each result array is limited to 1000 results. If your query returns more than 1000 results, you will need to paginate the responses using the \u0060cursor\u0060. If you receive a response that includes a non-null \u0060next_cursor\u0060 in the \u0060results_metadata\u0060 object, repeat the search call with the \u0060next_cursor\u0060 value set to the \u0060cursor\u0060 field to retrieve the next page of results. Continue to make search calls until the \u0060next_cursor\u0060 in the response is null."
-          },
-          "limit": {
-            "minimum": 0,
-            "type": "integer",
-            "description": "The number of search results to return per page. The default limit is 100. A maximum of 1000 results can be returned by a single search request. If the total size of your result set is greater than one page size, you must paginate the response. See the \u0060cursor\u0060 field.",
-            "format": "int32"
-          }
-        },
-        "description": "Request type"
-      },
       "ApiB2BScimV1B2BScimConnectionGetGroupsResponse": {
         "required": [
           "scim_groups",
@@ -28710,10 +28674,6 @@
           }
         }
       },
-      "ApiB2BScimV1B2BScimConnectionGetRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiB2BScimV1B2BScimConnectionGetResponse": {
         "required": [
           "request_id",
@@ -28734,10 +28694,6 @@
             "$ref": "#/components/schemas/ApiB2BScimV1ScimConnection"
           }
         }
-      },
-      "ApiB2BScimV1B2BScimConnectionRotateCancelRequest": {
-        "type": "object",
-        "description": "Request type"
       },
       "ApiB2BScimV1B2BScimConnectionRotateCancelResponse": {
         "required": [
@@ -28760,10 +28716,6 @@
           }
         }
       },
-      "ApiB2BScimV1B2BScimConnectionRotateCompleteRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiB2BScimV1B2BScimConnectionRotateCompleteResponse": {
         "required": [
           "request_id",
@@ -28784,10 +28736,6 @@
             "$ref": "#/components/schemas/ApiB2BScimV1ScimConnection"
           }
         }
-      },
-      "ApiB2BScimV1B2BScimConnectionRotateStartRequest": {
-        "type": "object",
-        "description": "Request type"
       },
       "ApiB2BScimV1B2BScimConnectionRotateStartResponse": {
         "required": [
@@ -29784,10 +29732,6 @@
           }
         }
       },
-      "ApiOrganizationV1ConnectedAppsRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiOrganizationV1ConnectedAppsResponse": {
         "required": [
           "request_id",
@@ -29991,10 +29935,6 @@
           }
         }
       },
-      "ApiOrganizationV1GetConnectedAppRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiOrganizationV1GetConnectedAppResponse": {
         "required": [
           "connected_app_id",
@@ -30038,10 +29978,6 @@
           }
         }
       },
-      "ApiOrganizationV1GetRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiOrganizationV1GetResponse": {
         "required": [
           "request_id",
@@ -30063,9 +29999,6 @@
             "format": "int32"
           }
         }
-      },
-      "ApiOrganizationV1MetricsRequest": {
-        "type": "object"
       },
       "ApiOrganizationV1MetricsResponse": {
         "required": [
@@ -30488,16 +30421,6 @@
           }
         }
       },
-      "ApiOrganizationV1OrganizationsMembersDangerouslyGetRequest": {
-        "type": "object",
-        "properties": {
-          "include_deleted": {
-            "type": "boolean",
-            "description": "Whether to include deleted Members in the response. Defaults to false."
-          }
-        },
-        "description": "Request type"
-      },
       "ApiOrganizationV1OrganizationsMembersDeleteExternalIdResponse": {
         "required": [
           "request_id",
@@ -30642,10 +30565,6 @@
           }
         }
       },
-      "ApiOrganizationV1OrganizationsMembersGetConnectedAppsRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiOrganizationV1OrganizationsMembersGetConnectedAppsResponse": {
         "required": [
           "request_id",
@@ -30670,20 +30589,6 @@
             "format": "int32"
           }
         }
-      },
-      "ApiOrganizationV1OrganizationsMembersGetRequest": {
-        "type": "object",
-        "properties": {
-          "member_id": {
-            "type": "string",
-            "description": "Globally unique UUID that identifies a specific Member. The \u0060member_id\u0060 is critical to perform operations on a Member, so be sure to preserve this value. You may use an external_id here if one is set for the member."
-          },
-          "email_address": {
-            "type": "string",
-            "description": "The email address of the Member."
-          }
-        },
-        "description": "Request type"
       },
       "ApiOrganizationV1OrganizationsMembersGetResponse": {
         "required": [
@@ -30716,16 +30621,6 @@
           }
         }
       },
-      "ApiOrganizationV1OrganizationsMembersOidcProviderInformationRequest": {
-        "type": "object",
-        "properties": {
-          "include_refresh_token": {
-            "type": "boolean",
-            "description": "Whether to return the refresh token Stytch has stored for the OAuth Provider. Defaults to false. **Important:** If your application exchanges the refresh token, Stytch may not be able to automatically refresh access tokens in the future."
-          }
-        },
-        "description": "Request type"
-      },
       "ApiOrganizationV1OrganizationsMembersOidcProvidersResponse": {
         "required": [
           "request_id",
@@ -30751,10 +30646,6 @@
             "format": "int32"
           }
         }
-      },
-      "ApiOrganizationV1OrganizationsMembersReactivateRequest": {
-        "type": "object",
-        "description": "Request type"
       },
       "ApiOrganizationV1OrganizationsMembersReactivateResponse": {
         "required": [
@@ -31268,20 +31159,6 @@
           }
         }
       },
-      "ApiOrganizationV1OrganizationsMembersOAuthProvidersProviderInformationRequest": {
-        "type": "object",
-        "properties": {
-          "include_refresh_token": {
-            "type": "boolean",
-            "description": "Whether to return the refresh token Stytch has stored for the OAuth Provider. Defaults to false. **Important:** If your application exchanges the refresh token, Stytch may not be able to automatically refresh access tokens in the future."
-          }
-        },
-        "description": "Request type"
-      },
-      "ApiOrganizationV1OrganizationsMembersOAuthProvidersSlackRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiOrganizationV1OrganizationsMembersOAuthProvidersSlackResponse": {
         "required": [
           "request_id",
@@ -31312,10 +31189,6 @@
             "format": "int32"
           }
         }
-      },
-      "ApiOrganizationV1OrganizationsMembersConnectedAppsRevokeRequest": {
-        "type": "object",
-        "description": "Request type"
       },
       "ApiOrganizationV1OrganizationsMembersConnectedAppsRevokeResponse": {
         "required": [
@@ -32034,10 +31907,6 @@
           }
         }
       },
-      "ApiUserV1ConnectedAppsRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiUserV1ConnectedAppsResponse": {
         "required": [
           "request_id",
@@ -32450,10 +32319,6 @@
           }
         }
       },
-      "ApiUserV1GetRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiUserV1GetResponse": {
         "required": [
           "request_id",
@@ -32574,10 +32439,6 @@
             "type": "string"
           }
         }
-      },
-      "ApiUserV1RevokeRequest": {
-        "type": "object",
-        "description": "Request type"
       },
       "ApiUserV1RevokeResponse": {
         "required": [
@@ -33941,10 +33802,6 @@
           }
         }
       },
-      "ApiSessionV1GetJwksRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiSessionV1GetJwksResponse": {
         "required": [
           "keys",
@@ -33970,19 +33827,6 @@
             "format": "int32"
           }
         }
-      },
-      "ApiSessionV1GetRequest": {
-        "required": [
-          "user_id"
-        ],
-        "type": "object",
-        "properties": {
-          "user_id": {
-            "type": "string",
-            "description": "The \u0060user_id\u0060 to get active Sessions for. You may use an \u0060external_id\u0060 here if one is set for the user."
-          }
-        },
-        "description": "Request type"
       },
       "ApiSessionV1GetResponse": {
         "required": [
@@ -34874,10 +34718,6 @@
           }
         }
       },
-      "ApiB2BSessionV1GetJwksRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiB2BSessionV1GetJwksResponse": {
         "required": [
           "keys",
@@ -34903,24 +34743,6 @@
             "format": "int32"
           }
         }
-      },
-      "ApiB2BSessionV1GetRequest": {
-        "required": [
-          "organization_id",
-          "member_id"
-        ],
-        "type": "object",
-        "properties": {
-          "organization_id": {
-            "type": "string",
-            "description": "Globally unique UUID that identifies a specific Organization. The \u0060organization_id\u0060 is critical to perform operations on an Organization, so be sure to preserve this value. You may also use the organization_slug or organization_external_id here as a convenience."
-          },
-          "member_id": {
-            "type": "string",
-            "description": "Globally unique UUID that identifies a specific Member. The \u0060member_id\u0060 is critical to perform operations on a Member, so be sure to preserve this value. You may use an external_id here if one is set for the member."
-          }
-        },
-        "description": "Request type"
       },
       "ApiB2BSessionV1GetResponse": {
         "required": [
@@ -35387,10 +35209,6 @@
           }
         }
       },
-      "ApiB2BRbacV1PolicyRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiB2BRbacV1PolicyResponse": {
         "required": [
           "request_id",
@@ -35411,10 +35229,6 @@
             "$ref": "#/components/schemas/ApiB2BRbacV1PolicyBody"
           }
         }
-      },
-      "ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyRequest": {
-        "type": "object",
-        "description": "Request type"
       },
       "ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyResponse": {
         "required": [
@@ -35471,10 +35285,6 @@
             "format": "int32"
           }
         }
-      },
-      "ApiB2BRecoveryCodesV1GetRequest": {
-        "type": "object",
-        "description": "Request type"
       },
       "ApiB2BRecoveryCodesV1GetResponse": {
         "required": [
@@ -36084,10 +35894,6 @@
           }
         }
       },
-      "ApiConsumerRbacV1PolicyRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiConsumerRbacV1PolicyResponse": {
         "required": [
           "request_id",
@@ -36351,9 +36157,6 @@
             "description": "A system-specific identifier that may be used to uniquely refer to the sign-in request."
           }
         }
-      },
-      "ApiDebugV1WhoamiRequest": {
-        "type": "object"
       },
       "ApiDebugV1WhoamiResponse": {
         "required": [
@@ -38394,10 +38197,6 @@
           }
         }
       },
-      "ApiM2Mv1M2MClientsGetRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiM2Mv1M2MClientsGetResponse": {
         "required": [
           "request_id",
@@ -38539,10 +38338,6 @@
           ]
         }
       },
-      "ApiM2Mv1M2MClientsSecretsRotateCancelRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiM2Mv1M2MClientsSecretsRotateCancelResponse": {
         "required": [
           "request_id",
@@ -38565,10 +38360,6 @@
           }
         }
       },
-      "ApiM2Mv1M2MClientsSecretsRotateRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiM2Mv1M2MClientsSecretsRotateResponse": {
         "required": [
           "request_id",
@@ -38590,10 +38381,6 @@
             "format": "int32"
           }
         }
-      },
-      "ApiM2Mv1M2MClientsSecretsRotateStartRequest": {
-        "type": "object",
-        "description": "Request type"
       },
       "ApiM2Mv1M2MClientsSecretsRotateStartResponse": {
         "required": [
@@ -43984,9 +43771,6 @@
           }
         }
       },
-      "ApiProjectV1MetricsRequest": {
-        "type": "object"
-      },
       "ApiProjectV1MetricsResponse": {
         "required": [
           "request_id",
@@ -44549,10 +44333,6 @@
             "format": "int32"
           }
         }
-      },
-      "ApiSsoV1GetConnectionsRequest": {
-        "type": "object",
-        "description": "Request type"
       },
       "ApiSsoV1GetConnectionsResponse": {
         "required": [
@@ -45912,10 +45692,6 @@
           }
         }
       },
-      "ApiWebauthnV1ListCredentialsRequest": {
-        "type": "object",
-        "description": "Request type"
-      },
       "ApiWebauthnV1ListCredentialsResponse": {
         "required": [
           "credentials",
@@ -46132,352 +45908,6 @@
             "$ref": "#/components/schemas/ApiUserV1WebAuthnRegistration"
           }
         }
-      },
-      "ApiOrganizationV1MemberTrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
-      },
-      "ApiOrganizationV1MemberUntrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object of application-specific data. These fields can be edited directly by the\n  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)\n  for complete field behavior details."
-      },
-      "ApiOrganizationV1MemberRoleSourceDetails": {
-        "type": "object",
-        "description": "An object containing additional metadata about the source assignment. The fields will vary depending\n  on the role assignment type as follows:\n \n  \u0060direct_assignment\u0060 \u2013 no additional details.\n \n  \u0060email_assignment\u0060 \u2013 will contain the email domain that granted the assignment.\n  \n  \u0060sso_connection\u0060 \u2013 will contain the \u0060connection_id\u0060 of the SAML connection that granted the assignment.\n \n  \u0060sso_connection_group\u0060 \u2013 will contain the \u0060connection_id\u0060 of the SAML connection and the name of the \u0060group\u0060\n  that granted the assignment.\n \n  \u0060scim_connection_group\u0060 \u2013 will contain the \u0060connection_id\u0060 of the SAML connection and the \u0060group_id\u0060\n  that granted the assignment.\n  "
-      },
-      "ApiOrganizationV1OrganizationTrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
-      },
-      "ApiOrganizationV1OrganizationAllowedOAuthTenants": {
-        "type": "object",
-        "description": "A map of allowed OAuth tenants. If this field is not passed in, the Organization will not allow JIT provisioning by OAuth Tenant. Allowed keys are \u0022slack\u0022, \u0022hubspot\u0022, and \u0022github\u0022."
-      },
-      "ApiOrganizationV1SsoRegistrationSsoAttributes": {
-        "type": "object",
-        "description": "An object for storing SSO attributes brought over from the identity provider."
-      },
-      "ApiOrganizationV1SearchQueryOperandsItem": {
-        "type": "object"
-      },
-      "ApiOrganizationV1CreateRequestTrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
-      },
-      "ApiOrganizationV1CreateRequestAllowedOAuthTenants": {
-        "type": "object",
-        "description": "A map of allowed OAuth tenants. If this field is not passed in, the Organization will not allow JIT provisioning by OAuth Tenant. Allowed keys are \u0022slack\u0022, \u0022hubspot\u0022, and \u0022github\u0022."
-      },
-      "ApiOrganizationV1UpdateRequestTrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data.\n          If a session header is passed into the request, this field may **not** be passed into the request. You cannot\n          update trusted metadata when acting as a Member."
-      },
-      "ApiOrganizationV1UpdateRequestAllowedOAuthTenants": {
-        "type": "object",
-        "description": "A map of allowed OAuth tenants. If this field is not passed in, the Organization will not allow JIT provisioning by OAuth Tenant. Allowed keys are \u0022slack\u0022, \u0022hubspot\u0022, and \u0022github\u0022.\n\nIf this field is provided and a session header is passed into the request, the Member Session must have permission to perform the \u0060update.settings.allowed-oauth-tenants\u0060 action on the \u0060stytch.organization\u0060 Resource."
-      },
-      "ApiOrganizationV1OrganizationsMembersCreateRequestTrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
-      },
-      "ApiOrganizationV1OrganizationsMembersCreateRequestUntrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object of application-specific data. These fields can be edited directly by the\n  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)\n  for complete field behavior details."
-      },
-      "ApiOrganizationV1OrganizationsMembersSearchResponseOrganizations": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/ApiOrganizationV1Organization"
-        }
-      },
-      "ApiOrganizationV1OrganizationsMembersUpdateRequestTrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data.\n          If a session header is passed into the request, this field may **not** be passed into the request. You cannot\n          update trusted metadata when acting as a Member."
-      },
-      "ApiOrganizationV1OrganizationsMembersUpdateRequestUntrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object of application-specific data. These fields can be edited directly by the\n  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)\n  for complete field behavior details.\n\nIf this field is provided and a session header is passed into the request, the Member Session must have permission to perform the \u0060update.info.untrusted-metadata\u0060 action on the \u0060stytch.member\u0060 Resource. Alternatively, if the Member Session matches the Member associated with the \u0060member_id\u0060 passed in the request, the authorization check will also allow a Member Session that has permission to perform the \u0060update.info.untrusted-metadata\u0060 action on the \u0060stytch.self\u0060 Resource."
-      },
-      "ApiUserV1SearchUsersQueryOperandsItem": {
-        "type": "object"
-      },
-      "ApiUserV1UserTrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiUserV1UserUntrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiUserV1CreateRequestTrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiUserV1CreateRequestUntrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiUserV1GetResponseTrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiUserV1GetResponseUntrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiUserV1UpdateRequestTrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiUserV1UpdateRequestUntrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiSessionV1SessionCustomClaims": {
-        "type": "object",
-        "description": "The custom claims map for a Session. Claims can be added to a session during a Sessions authenticate call."
-      },
-      "ApiSessionV1AttestRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiSessionV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiSessionV1ExchangeAccessTokenRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiSessionV1MigrateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BSessionV1MemberSessionCustomClaims": {
-        "type": "object",
-        "description": "The custom claims map for a Session. Claims can be added to a session during a Sessions authenticate call."
-      },
-      "ApiB2BSessionV1AttestRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BSessionV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BSessionV1ExchangeAccessTokenRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BSessionV1ExchangeRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BSessionV1MigrateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BRecoveryCodesV1RecoverRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BTotpV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiCryptoWalletV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiDiscoveryV1MembershipDetails": {
-        "type": "object",
-        "description": "An object containing additional metadata about the membership, if available."
-      },
-      "ApiDiscoveryV1DiscoveryIntermediateSessionsExchangeRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiDiscoveryV1DiscoveryOrganizationsCreateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiDiscoveryV1DiscoveryOrganizationsCreateRequestTrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
-      },
-      "ApiDiscoveryV1DiscoveryOrganizationsCreateRequestAllowedOAuthTenants": {
-        "type": "object",
-        "description": "A map of allowed OAuth tenants. If this field is not passed in, the Organization will not allow JIT provisioning by OAuth Tenant. Allowed keys are \u0022slack\u0022, \u0022hubspot\u0022, and \u0022github\u0022."
-      },
-      "ApiFraudV1FraudFingerprintLookupResponseRawSignals": {
-        "type": "object",
-        "description": "The raw device attributes, such as screen size, that were collected by the Device Fingerprinting product to generate the fingerprints and verdict. You must be specifically enabled for the raw signals feature to see this field. You can find documentation for the specific fields in the [guides](https://stytch.com/docs/fraud/guides/device-fingerprinting/reference/raw-signals)."
-      },
-      "ApiM2Mv1M2MClientTrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object for storing application-specific data."
-      },
-      "ApiM2Mv1M2MClientWithClientSecretTrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object for storing application-specific data."
-      },
-      "ApiM2Mv1M2MClientWithNextClientSecretTrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object for storing application-specific data."
-      },
-      "ApiM2Mv1M2MSearchQueryOperandsItem": {
-        "type": "object"
-      },
-      "ApiM2Mv1M2MClientsCreateRequestTrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiM2Mv1M2MClientsUpdateRequestTrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiMagicV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiMagicV1MagicLinksEmailInviteRequestTrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiMagicV1MagicLinksEmailInviteRequestUntrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiB2BMagicV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BMagicV1B2BMagicLinksEmailInviteRequestTrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
-      },
-      "ApiB2BMagicV1B2BMagicLinksEmailInviteRequestUntrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object of application-specific data. These fields can be edited directly by the\n  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)\n  for complete field behavior details."
-      },
-      "ApiB2BoAuthV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequestSessionCustomClaims": {
-        "type": "object"
-      },
-      "ApiB2BOtpV1B2BOtpSmsAuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BOtpV1B2BOtpEmailAuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiPasswordV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiPasswordV1CreateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiPasswordV1CreateRequestTrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiPasswordV1CreateRequestUntrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiPasswordV1MigrateRequestTrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiPasswordV1MigrateRequestUntrustedMetadata": {
-        "type": "object",
-        "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
-      },
-      "ApiPasswordV1PasswordsEmailResetRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiPasswordV1PasswordsExistingPasswordResetRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiPasswordV1PasswordsSessionResetRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BPasswordV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BPasswordV1MigrateRequestTrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
-      },
-      "ApiB2BPasswordV1MigrateRequestUntrustedMetadata": {
-        "type": "object",
-        "description": "An arbitrary JSON object of application-specific data. These fields can be edited directly by the\n  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)\n  for complete field behavior details."
-      },
-      "ApiB2BPasswordV1B2BPasswordsEmailResetRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BPasswordV1B2BPasswordsSessionResetRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiOAuthV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiOtpV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiSsoV1OidcConnectionAttributeMapping": {
-        "type": "object",
-        "description": "An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values, which will appear on the member\u0027s Trusted Metadata."
-      },
-      "ApiSsoV1SamlConnectionAttributeMapping": {
-        "type": "object",
-        "description": "An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values. Required attributes: \u0060email\u0060 and one of \u0060full_name\u0060 or \u0060first_name\u0060 and \u0060last_name\u0060."
-      },
-      "ApiSsoV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiSsoV1SsoOidcUpdateConnectionRequestAttributeMapping": {
-        "type": "object",
-        "description": "An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values, which will appear on the member\u0027s Trusted Metadata."
-      },
-      "ApiSsoV1SsoSamlUpdateConnectionRequestAttributeMapping": {
-        "type": "object",
-        "description": "An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values. Required attributes: \u0060email\u0060 and one of \u0060full_name\u0060 or \u0060first_name\u0060 and \u0060last_name\u0060."
-      },
-      "ApiTotpV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiTotpV1RecoverRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiWebauthnV1AuthenticateRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
-      },
-      "ApiWebauthnV1RegisterRequestSessionCustomClaims": {
-        "type": "object",
-        "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
       },
       "ApiConnectedappsV1ConnectedAppsClientsGet401Response": {
         "type": "object",
@@ -58071,10 +57501,6 @@
           }
         }
       },
-      "ExamplePayload": {
-        "type": "object",
-        "description": "Placeholder schema for path example refs"
-      },
       "ApiConnectedappsV1ConnectedAppsClientsSecretsRotateStartRequestRequestBody": {
         "type": "object",
         "description": "Request type"
@@ -58481,5 +57907,587 @@
     {
       "basicAuth": []
     }
-  ]
+  ],
+  "x-client-original-servers": [
+    {
+      "url": "https://api.stytch.com",
+      "description": "Production server"
+    },
+    {
+      "url": "https://test.stytch.com",
+      "description": "Test server"
+    }
+  ],
+  "x-client-unused-schemas": {
+    "ApiConnectedappsV1ConnectedAppsClientsGetRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiConnectedappsV1ConnectedAppsClientsSecretsRotateCancelRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiConnectedappsV1ConnectedAppsClientsSecretsRotateRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiConnectedappsV1ConnectedAppsClientsSecretsRotateStartRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiB2BScimV1B2BScimConnectionGetGroupsRequest": {
+      "type": "object",
+      "properties": {
+        "cursor": {
+          "type": "string",
+          "description": "The \u0060cursor\u0060 field allows you to paginate through your results. Each result array is limited to 1000 results. If your query returns more than 1000 results, you will need to paginate the responses using the \u0060cursor\u0060. If you receive a response that includes a non-null \u0060next_cursor\u0060 in the \u0060results_metadata\u0060 object, repeat the search call with the \u0060next_cursor\u0060 value set to the \u0060cursor\u0060 field to retrieve the next page of results. Continue to make search calls until the \u0060next_cursor\u0060 in the response is null."
+        },
+        "limit": {
+          "minimum": 0,
+          "type": "integer",
+          "description": "The number of search results to return per page. The default limit is 100. A maximum of 1000 results can be returned by a single search request. If the total size of your result set is greater than one page size, you must paginate the response. See the \u0060cursor\u0060 field.",
+          "format": "int32"
+        }
+      },
+      "description": "Request type"
+    },
+    "ApiB2BScimV1B2BScimConnectionGetRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiB2BScimV1B2BScimConnectionRotateCancelRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiB2BScimV1B2BScimConnectionRotateCompleteRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiB2BScimV1B2BScimConnectionRotateStartRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiOrganizationV1ConnectedAppsRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiOrganizationV1GetConnectedAppRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiOrganizationV1GetRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiOrganizationV1MetricsRequest": {
+      "type": "object"
+    },
+    "ApiOrganizationV1OrganizationsMembersDangerouslyGetRequest": {
+      "type": "object",
+      "properties": {
+        "include_deleted": {
+          "type": "boolean",
+          "description": "Whether to include deleted Members in the response. Defaults to false."
+        }
+      },
+      "description": "Request type"
+    },
+    "ApiOrganizationV1OrganizationsMembersGetConnectedAppsRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiOrganizationV1OrganizationsMembersGetRequest": {
+      "type": "object",
+      "properties": {
+        "member_id": {
+          "type": "string",
+          "description": "Globally unique UUID that identifies a specific Member. The \u0060member_id\u0060 is critical to perform operations on a Member, so be sure to preserve this value. You may use an external_id here if one is set for the member."
+        },
+        "email_address": {
+          "type": "string",
+          "description": "The email address of the Member."
+        }
+      },
+      "description": "Request type"
+    },
+    "ApiOrganizationV1OrganizationsMembersOidcProviderInformationRequest": {
+      "type": "object",
+      "properties": {
+        "include_refresh_token": {
+          "type": "boolean",
+          "description": "Whether to return the refresh token Stytch has stored for the OAuth Provider. Defaults to false. **Important:** If your application exchanges the refresh token, Stytch may not be able to automatically refresh access tokens in the future."
+        }
+      },
+      "description": "Request type"
+    },
+    "ApiOrganizationV1OrganizationsMembersReactivateRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiOrganizationV1OrganizationsMembersOAuthProvidersProviderInformationRequest": {
+      "type": "object",
+      "properties": {
+        "include_refresh_token": {
+          "type": "boolean",
+          "description": "Whether to return the refresh token Stytch has stored for the OAuth Provider. Defaults to false. **Important:** If your application exchanges the refresh token, Stytch may not be able to automatically refresh access tokens in the future."
+        }
+      },
+      "description": "Request type"
+    },
+    "ApiOrganizationV1OrganizationsMembersOAuthProvidersSlackRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiOrganizationV1OrganizationsMembersConnectedAppsRevokeRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiUserV1ConnectedAppsRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiUserV1GetRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiUserV1RevokeRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiSessionV1GetJwksRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiSessionV1GetRequest": {
+      "required": [
+        "user_id"
+      ],
+      "type": "object",
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "description": "The \u0060user_id\u0060 to get active Sessions for. You may use an \u0060external_id\u0060 here if one is set for the user."
+        }
+      },
+      "description": "Request type"
+    },
+    "ApiB2BSessionV1GetJwksRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiB2BSessionV1GetRequest": {
+      "required": [
+        "organization_id",
+        "member_id"
+      ],
+      "type": "object",
+      "properties": {
+        "organization_id": {
+          "type": "string",
+          "description": "Globally unique UUID that identifies a specific Organization. The \u0060organization_id\u0060 is critical to perform operations on an Organization, so be sure to preserve this value. You may also use the organization_slug or organization_external_id here as a convenience."
+        },
+        "member_id": {
+          "type": "string",
+          "description": "Globally unique UUID that identifies a specific Member. The \u0060member_id\u0060 is critical to perform operations on a Member, so be sure to preserve this value. You may use an external_id here if one is set for the member."
+        }
+      },
+      "description": "Request type"
+    },
+    "ApiB2BRbacV1PolicyRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiB2BRbacV1B2BRbacOrganizationsGetOrgPolicyRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiB2BRecoveryCodesV1GetRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiConsumerRbacV1PolicyRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiDebugV1WhoamiRequest": {
+      "type": "object"
+    },
+    "ApiM2Mv1M2MClientsGetRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiM2Mv1M2MClientsSecretsRotateCancelRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiM2Mv1M2MClientsSecretsRotateRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiM2Mv1M2MClientsSecretsRotateStartRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiProjectV1MetricsRequest": {
+      "type": "object"
+    },
+    "ApiSsoV1GetConnectionsRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiWebauthnV1ListCredentialsRequest": {
+      "type": "object",
+      "description": "Request type"
+    },
+    "ApiOrganizationV1MemberTrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
+    },
+    "ApiOrganizationV1MemberUntrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object of application-specific data. These fields can be edited directly by the\n  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)\n  for complete field behavior details."
+    },
+    "ApiOrganizationV1MemberRoleSourceDetails": {
+      "type": "object",
+      "description": "An object containing additional metadata about the source assignment. The fields will vary depending\n  on the role assignment type as follows:\n \n  \u0060direct_assignment\u0060 \u2013 no additional details.\n \n  \u0060email_assignment\u0060 \u2013 will contain the email domain that granted the assignment.\n  \n  \u0060sso_connection\u0060 \u2013 will contain the \u0060connection_id\u0060 of the SAML connection that granted the assignment.\n \n  \u0060sso_connection_group\u0060 \u2013 will contain the \u0060connection_id\u0060 of the SAML connection and the name of the \u0060group\u0060\n  that granted the assignment.\n \n  \u0060scim_connection_group\u0060 \u2013 will contain the \u0060connection_id\u0060 of the SAML connection and the \u0060group_id\u0060\n  that granted the assignment.\n  "
+    },
+    "ApiOrganizationV1OrganizationTrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
+    },
+    "ApiOrganizationV1OrganizationAllowedOAuthTenants": {
+      "type": "object",
+      "description": "A map of allowed OAuth tenants. If this field is not passed in, the Organization will not allow JIT provisioning by OAuth Tenant. Allowed keys are \u0022slack\u0022, \u0022hubspot\u0022, and \u0022github\u0022."
+    },
+    "ApiOrganizationV1SsoRegistrationSsoAttributes": {
+      "type": "object",
+      "description": "An object for storing SSO attributes brought over from the identity provider."
+    },
+    "ApiOrganizationV1SearchQueryOperandsItem": {
+      "type": "object"
+    },
+    "ApiOrganizationV1CreateRequestTrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
+    },
+    "ApiOrganizationV1CreateRequestAllowedOAuthTenants": {
+      "type": "object",
+      "description": "A map of allowed OAuth tenants. If this field is not passed in, the Organization will not allow JIT provisioning by OAuth Tenant. Allowed keys are \u0022slack\u0022, \u0022hubspot\u0022, and \u0022github\u0022."
+    },
+    "ApiOrganizationV1UpdateRequestTrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data.\n          If a session header is passed into the request, this field may **not** be passed into the request. You cannot\n          update trusted metadata when acting as a Member."
+    },
+    "ApiOrganizationV1UpdateRequestAllowedOAuthTenants": {
+      "type": "object",
+      "description": "A map of allowed OAuth tenants. If this field is not passed in, the Organization will not allow JIT provisioning by OAuth Tenant. Allowed keys are \u0022slack\u0022, \u0022hubspot\u0022, and \u0022github\u0022.\n\nIf this field is provided and a session header is passed into the request, the Member Session must have permission to perform the \u0060update.settings.allowed-oauth-tenants\u0060 action on the \u0060stytch.organization\u0060 Resource."
+    },
+    "ApiOrganizationV1OrganizationsMembersCreateRequestTrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
+    },
+    "ApiOrganizationV1OrganizationsMembersCreateRequestUntrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object of application-specific data. These fields can be edited directly by the\n  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)\n  for complete field behavior details."
+    },
+    "ApiOrganizationV1OrganizationsMembersSearchResponseOrganizations": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/ApiOrganizationV1Organization"
+      }
+    },
+    "ApiOrganizationV1OrganizationsMembersUpdateRequestTrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data.\n          If a session header is passed into the request, this field may **not** be passed into the request. You cannot\n          update trusted metadata when acting as a Member."
+    },
+    "ApiOrganizationV1OrganizationsMembersUpdateRequestUntrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object of application-specific data. These fields can be edited directly by the\n  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)\n  for complete field behavior details.\n\nIf this field is provided and a session header is passed into the request, the Member Session must have permission to perform the \u0060update.info.untrusted-metadata\u0060 action on the \u0060stytch.member\u0060 Resource. Alternatively, if the Member Session matches the Member associated with the \u0060member_id\u0060 passed in the request, the authorization check will also allow a Member Session that has permission to perform the \u0060update.info.untrusted-metadata\u0060 action on the \u0060stytch.self\u0060 Resource."
+    },
+    "ApiUserV1SearchUsersQueryOperandsItem": {
+      "type": "object"
+    },
+    "ApiUserV1UserTrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiUserV1UserUntrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiUserV1CreateRequestTrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiUserV1CreateRequestUntrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiUserV1GetResponseTrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiUserV1GetResponseUntrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiUserV1UpdateRequestTrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiUserV1UpdateRequestUntrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiSessionV1SessionCustomClaims": {
+      "type": "object",
+      "description": "The custom claims map for a Session. Claims can be added to a session during a Sessions authenticate call."
+    },
+    "ApiSessionV1AttestRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiSessionV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiSessionV1ExchangeAccessTokenRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiSessionV1MigrateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BSessionV1MemberSessionCustomClaims": {
+      "type": "object",
+      "description": "The custom claims map for a Session. Claims can be added to a session during a Sessions authenticate call."
+    },
+    "ApiB2BSessionV1AttestRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BSessionV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BSessionV1ExchangeAccessTokenRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BSessionV1ExchangeRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BSessionV1MigrateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BRecoveryCodesV1RecoverRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BTotpV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiCryptoWalletV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiDiscoveryV1MembershipDetails": {
+      "type": "object",
+      "description": "An object containing additional metadata about the membership, if available."
+    },
+    "ApiDiscoveryV1DiscoveryIntermediateSessionsExchangeRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiDiscoveryV1DiscoveryOrganizationsCreateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiDiscoveryV1DiscoveryOrganizationsCreateRequestTrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
+    },
+    "ApiDiscoveryV1DiscoveryOrganizationsCreateRequestAllowedOAuthTenants": {
+      "type": "object",
+      "description": "A map of allowed OAuth tenants. If this field is not passed in, the Organization will not allow JIT provisioning by OAuth Tenant. Allowed keys are \u0022slack\u0022, \u0022hubspot\u0022, and \u0022github\u0022."
+    },
+    "ApiFraudV1FraudFingerprintLookupResponseRawSignals": {
+      "type": "object",
+      "description": "The raw device attributes, such as screen size, that were collected by the Device Fingerprinting product to generate the fingerprints and verdict. You must be specifically enabled for the raw signals feature to see this field. You can find documentation for the specific fields in the [guides](https://stytch.com/docs/fraud/guides/device-fingerprinting/reference/raw-signals)."
+    },
+    "ApiM2Mv1M2MClientTrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object for storing application-specific data."
+    },
+    "ApiM2Mv1M2MClientWithClientSecretTrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object for storing application-specific data."
+    },
+    "ApiM2Mv1M2MClientWithNextClientSecretTrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object for storing application-specific data."
+    },
+    "ApiM2Mv1M2MSearchQueryOperandsItem": {
+      "type": "object"
+    },
+    "ApiM2Mv1M2MClientsCreateRequestTrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiM2Mv1M2MClientsUpdateRequestTrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiMagicV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiMagicV1MagicLinksEmailInviteRequestTrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiMagicV1MagicLinksEmailInviteRequestUntrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiB2BMagicV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BMagicV1B2BMagicLinksEmailInviteRequestTrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
+    },
+    "ApiB2BMagicV1B2BMagicLinksEmailInviteRequestUntrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object of application-specific data. These fields can be edited directly by the\n  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)\n  for complete field behavior details."
+    },
+    "ApiB2BoAuthV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BoAuthV1B2BoAuthDiscoveryAuthenticateRequestSessionCustomClaims": {
+      "type": "object"
+    },
+    "ApiB2BOtpV1B2BOtpSmsAuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BOtpV1B2BOtpEmailAuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiPasswordV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiPasswordV1CreateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiPasswordV1CreateRequestTrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiPasswordV1CreateRequestUntrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiPasswordV1MigrateRequestTrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060trusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiPasswordV1MigrateRequestUntrustedMetadata": {
+      "type": "object",
+      "description": "The \u0060untrusted_metadata\u0060 field contains an arbitrary JSON object of application-specific data. Untrusted metadata can be edited by end users directly via the SDK, and **cannot be used to store critical information.** See the [Metadata](https://stytch.com/docs/api/metadata) reference for complete field behavior details."
+    },
+    "ApiPasswordV1PasswordsEmailResetRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiPasswordV1PasswordsExistingPasswordResetRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiPasswordV1PasswordsSessionResetRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BPasswordV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BPasswordV1MigrateRequestTrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object for storing application-specific data or identity-provider-specific data."
+    },
+    "ApiB2BPasswordV1MigrateRequestUntrustedMetadata": {
+      "type": "object",
+      "description": "An arbitrary JSON object of application-specific data. These fields can be edited directly by the\n  frontend SDK, and should not be used to store critical information. See the [Metadata resource](https://stytch.com/docs/b2b/api/metadata)\n  for complete field behavior details."
+    },
+    "ApiB2BPasswordV1B2BPasswordsEmailResetRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BPasswordV1B2BPasswordsSessionResetRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiB2BPasswordV1B2BPasswordsExistingPasswordResetRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiOAuthV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiOtpV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiSsoV1OidcConnectionAttributeMapping": {
+      "type": "object",
+      "description": "An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values, which will appear on the member\u0027s Trusted Metadata."
+    },
+    "ApiSsoV1SamlConnectionAttributeMapping": {
+      "type": "object",
+      "description": "An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values. Required attributes: \u0060email\u0060 and one of \u0060full_name\u0060 or \u0060first_name\u0060 and \u0060last_name\u0060."
+    },
+    "ApiSsoV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in\n  \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To\n  delete a key, supply a null value. Custom claims made with reserved claims (\u0060iss\u0060, \u0060sub\u0060, \u0060aud\u0060, \u0060exp\u0060, \u0060nbf\u0060, \u0060iat\u0060, \u0060jti\u0060) will be ignored.\n  Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiSsoV1SsoOidcUpdateConnectionRequestAttributeMapping": {
+      "type": "object",
+      "description": "An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values, which will appear on the member\u0027s Trusted Metadata."
+    },
+    "ApiSsoV1SsoSamlUpdateConnectionRequestAttributeMapping": {
+      "type": "object",
+      "description": "An object that represents the attributes used to identify a Member. This object will map the IdP-defined User attributes to Stytch-specific values. Required attributes: \u0060email\u0060 and one of \u0060full_name\u0060 or \u0060first_name\u0060 and \u0060last_name\u0060."
+    },
+    "ApiTotpV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiTotpV1RecoverRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiWebauthnV1AuthenticateRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ApiWebauthnV1RegisterRequestSessionCustomClaims": {
+      "type": "object",
+      "description": "Add a custom claims map to the Session being authenticated. Claims are only created if a Session is initialized by providing a value in \u0060session_duration_minutes\u0060. Claims will be included on the Session object and in the JWT. To update a key in an existing Session, supply a new value. To delete a key, supply a null value.\n\n  Custom claims made with reserved claims (\u0022iss\u0022, \u0022sub\u0022, \u0022aud\u0022, \u0022exp\u0022, \u0022nbf\u0022, \u0022iat\u0022, \u0022jti\u0022) will be ignored. Total custom claims size cannot exceed four kilobytes."
+    },
+    "ExamplePayload": {
+      "type": "object",
+      "description": "Placeholder schema for path example refs"
+    }
+  }
 }
