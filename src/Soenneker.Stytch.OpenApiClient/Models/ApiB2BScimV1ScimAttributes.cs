@@ -313,7 +313,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(23)
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "addresses", n => { Addresses = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1Address>(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BScimV1Address.CreateFromDiscriminatorValue)?.AsList(); } },

@@ -92,7 +92,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "bearer_token_expires_at", n => { BearerTokenExpiresAt = n.GetStringValue(); } },
                 { "bearer_token_last_four", n => { BearerTokenLastFour = n.GetStringValue(); } },

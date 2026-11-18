@@ -121,7 +121,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "crypto_wallets", n => { CryptoWallets = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1CryptoWallet>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1CryptoWallet.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "emails", n => { Emails = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Email>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Email.CreateFromDiscriminatorValue)?.AsList(); } },

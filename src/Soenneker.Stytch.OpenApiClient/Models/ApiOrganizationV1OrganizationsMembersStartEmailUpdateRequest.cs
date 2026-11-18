@@ -91,7 +91,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "delivery_method", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1OrganizationsMembersStartEmailUpdateRequestDeliveryMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDeliveryMethod = default; _explicitNullProperties?.Remove("delivery_method"); AdditionalData["delivery_method"] = unknown; } else { DeliveryMethod = parsed; AdditionalData.Remove("delivery_method"); } } },
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },

@@ -98,7 +98,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "authorization_check", n => { AuthorizationCheck = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthorizationCheck>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthorizationCheck.CreateFromDiscriminatorValue); } },
                 { "session_custom_claims", n => { SessionCustomClaims = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateRequestSessionCustomClaimsProperty>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AuthenticateRequestSessionCustomClaimsProperty.CreateFromDiscriminatorValue); } },

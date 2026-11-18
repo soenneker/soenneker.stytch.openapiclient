@@ -114,7 +114,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "client", n => { Client = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppPublic>(global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedAppPublic.CreateFromDiscriminatorValue); } },
                 { "consent_required", n => { ConsentRequired = n.GetBoolValue(); } },

@@ -134,7 +134,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name>(global::Soenneker.Stytch.OpenApiClient.Models.ApiUserV1Name.CreateFromDiscriminatorValue); } },

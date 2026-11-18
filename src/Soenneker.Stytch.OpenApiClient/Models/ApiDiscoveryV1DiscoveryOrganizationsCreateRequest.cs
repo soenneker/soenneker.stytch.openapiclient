@@ -324,7 +324,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(25)
             {
                 { "allowed_auth_methods", n => { AllowedAuthMethods = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "allowed_first_party_connected_apps", n => { AllowedFirstPartyConnectedApps = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },

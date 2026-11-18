@@ -582,7 +582,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(46)
             {
                 { "amazon_oauth_factor", n => { AmazonOauthFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AmazonOAuthFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AmazonOAuthFactor.CreateFromDiscriminatorValue); } },
                 { "apple_oauth_factor", n => { AppleOauthFactor = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AppleOAuthFactor>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1AppleOAuthFactor.CreateFromDiscriminatorValue); } },

@@ -204,7 +204,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "allow_gateway_callback", n => { AllowGatewayCallback = n.GetBoolValue(); } },
                 { "alternative_acs_url", n => { AlternativeAcsUrl = n.GetStringValue(); } },

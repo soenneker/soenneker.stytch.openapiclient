@@ -133,7 +133,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "member", n => { Member = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member>(global::Soenneker.Stytch.OpenApiClient.Models.ApiOrganizationV1Member.CreateFromDiscriminatorValue); } },
                 { "member_session", n => { MemberSession = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1MemberSession>(global::Soenneker.Stytch.OpenApiClient.Models.ApiB2BSessionV1MemberSession.CreateFromDiscriminatorValue); } },

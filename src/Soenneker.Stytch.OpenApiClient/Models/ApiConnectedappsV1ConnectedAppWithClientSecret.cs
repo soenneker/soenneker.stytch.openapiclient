@@ -239,7 +239,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(18)
             {
                 { "access_token_custom_audience", n => { AccessTokenCustomAudience = n.GetStringValue(); } },
                 { "access_token_expiry_minutes", n => { AccessTokenExpiryMinutes = n.GetIntValue(); } },

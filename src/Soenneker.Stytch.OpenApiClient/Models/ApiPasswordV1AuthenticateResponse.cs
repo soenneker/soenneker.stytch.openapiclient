@@ -133,7 +133,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "request_id", n => { RequestId = n.GetStringValue(); } },
                 { "session", n => { Session = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1Session>(global::Soenneker.Stytch.OpenApiClient.Models.ApiSessionV1Session.CreateFromDiscriminatorValue); } },

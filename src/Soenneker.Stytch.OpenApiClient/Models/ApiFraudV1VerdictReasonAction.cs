@@ -90,7 +90,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "default_action", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDefaultAction = default; _explicitNullProperties?.Remove("default_action"); AdditionalData["default_action"] = unknown; } else { DefaultAction = parsed; AdditionalData.Remove("default_action"); } } },
                 { "override_action", n => { var parsed = n.GetEnumValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiFraudV1FraudVerdictReasonActionAction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOverrideAction = default; _explicitNullProperties?.Remove("override_action"); AdditionalData["override_action"] = unknown; } else { OverrideAction = parsed; AdditionalData.Remove("override_action"); } } },

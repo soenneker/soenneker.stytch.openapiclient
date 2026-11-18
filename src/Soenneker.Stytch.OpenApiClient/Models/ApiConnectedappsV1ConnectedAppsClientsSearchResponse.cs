@@ -85,7 +85,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "connected_apps", n => { ConnectedApps = n.GetCollectionOfObjectValues<global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedApp>(global::Soenneker.Stytch.OpenApiClient.Models.ApiConnectedappsV1ConnectedApp.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "request_id", n => { RequestId = n.GetStringValue(); } },

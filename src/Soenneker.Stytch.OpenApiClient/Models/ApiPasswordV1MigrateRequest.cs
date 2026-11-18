@@ -228,7 +228,7 @@ namespace Soenneker.Stytch.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(17)
             {
                 { "argon_2_config", n => { Argon2Config = n.GetObjectValue<global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Argon2Config>(global::Soenneker.Stytch.OpenApiClient.Models.ApiPasswordV1Argon2Config.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
